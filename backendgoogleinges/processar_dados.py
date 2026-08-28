@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-processar_dados.py - Pipeline de Processamento, Renomeacao e Cronologia Forense
-Analisa todos os ficheiros descarregados da Google Drive e Gmail,
-extrai datas canonicas, renomeia as folhas e organiza cronologicamente.
+processar_dados.py - Pipeline de Processamento, Renomeacao e Organizacao por Grupos Forenses
+Analisa e categoriza todos os ficheiros em:
+1. Ordem Cronologica Estrita
+2. Tipologia Documental
+3. Grupos Tematicos Forenses (Tribunal, Provas WhatsApp, Societario/Spark, Imoveis, Servicos)
 """
 
 import os
@@ -21,7 +23,7 @@ from typing import Any, Dict, List, Optional
 # Configuracao de Logging
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s - [PROCESSADOR-DADOS] - %(levelname)s - %(message)s"
+    format="%(asctime)s - [PROCESSADOR-GRUPOS] - %(levelname)s - %(message)s"
 )
 logger = logging.getLogger("processar_dados")
 
@@ -30,10 +32,10 @@ RAW_DIR = BASE_DIR / "data" / "raw"
 PROCESSED_DIR = BASE_DIR / "data" / "processed"
 CHRONO_DIR = PROCESSED_DIR / "01_CRONOLOGICO"
 TYPOLOGY_DIR = PROCESSED_DIR / "02_POR_TIPOLOGIA"
-PAGES_DIR = PROCESSED_DIR / "03_FOLHAS_INDIVIDUAIS"
+GROUPS_DIR = PROCESSED_DIR / "03_POR_GRUPOS_TEMATICOS"
 INDEX_DIR = PROCESSED_DIR / "_index"
 
-for d in [CHRONO_DIR, TYPOLOGY_DIR, PAGES_DIR, INDEX_DIR]:
+for d in [CHRONO_DIR, TYPOLOGY_DIR, GROUPS_DIR, INDEX_DIR]:
     d.mkdir(parents=True, exist_ok=True)
 
 DATE_REGEXES = [
@@ -113,8 +115,24 @@ def detect_document_type(filepath: Path, content_sample: str = "") -> str:
     return "DOCUMENTO_GERAL"
 
 
+def detect_thematic_group(filepath: Path, content_sample: str = "") -> str:
+    """Classifica o documento num grupo tematico/operacional."""
+    text = (filepath.name + " " + content_sample).lower()
+
+    if any(k in text for k in ["15547", "3719", "citius", "citacao", "notificacao", "oficio", "tribunal"]):
+        return "01_PROCESSO_JUDICIAL_15547"
+    elif any(k in text for k in ["whatsapp", "filipe delgado", "nuno duarte", "chat", "confissao"]):
+        return "02_PROVAS_CONFISSAO_WHATSAPP"
+    elif any(k in text for k in ["spark", "celtis", "scr", "holding", "quota", "capital", "societario", "sociedade"]):
+        return "03_SOCIETARIO_SPARK_VENTURE"
+    elif any(k in text for k in ["palmeira", "cecilio", "sky", "heaven", "family", "penthouse", "arrendamento", "imovel", "propriedade"]):
+        return "04_IMOVEIS_E_PATRIMONIO"
+    elif any(k in text for k in ["agua", "epal", "edp", "luz", "gas", "contador", "fatura", "recibo", "despesa"]):
+        return "05_DESPESAS_E_SERVICOS"
+    return "06_DOCUMENTACAO_E_SUPORTE_GERAL"
+
+
 def safe_copy(src: Path, dst: Path):
-    """Copia ficheiro garantindo que permissões de escrita são tratadas."""
     try:
         if dst.exists():
             try:
@@ -128,7 +146,7 @@ def safe_copy(src: Path, dst: Path):
 
 def process_all_files():
     logger.info("=" * 70)
-    logger.info("🚀 A INICIAR PROCESSAMENTO E ORGANIZACAO CRONOLOGICA FORENSE")
+    logger.info("🚀 A INICIAR PROCESSAMENTO E ORGANIZACAO POR GRUPOS FORENSES")
     logger.info(f"📂 Origem: {RAW_DIR}")
     logger.info(f"📂 Destino: {PROCESSED_DIR}")
     logger.info("=" * 70)
@@ -138,7 +156,7 @@ def process_all_files():
         logger.warning("⚠️ Nenhum ficheiro encontrado em data/raw/ para processar.")
         return
 
-    logger.info(f"Encontrados {len(all_raw_files)} ficheiros brutos em data/raw/ para análise.")
+    logger.info(f"Encontrados {len(all_raw_files)} ficheiros para análise e agrupamento.")
 
     records = []
 
@@ -154,6 +172,7 @@ def process_all_files():
 
         date_str = detect_canonical_date(f, sample_text)
         doc_type = detect_document_type(f, sample_text)
+        doc_group = detect_thematic_group(f, sample_text)
         sha256 = get_sha256(f)
         clean_name = sanitize(f.stem)
 
@@ -165,12 +184,13 @@ def process_all_files():
             "standard_name": standard_name,
             "date": date_str,
             "type": doc_type,
+            "group": doc_group,
             "size_bytes": f.stat().st_size if f.exists() else 0,
             "sha256": sha256
         })
 
     # Ordenacao cronologica estrita
-    records.sort(key=lambda r: (r["date"], r["type"], r["standard_name"]))
+    records.sort(key=lambda r: (r["date"], r["group"], r["type"], r["standard_name"]))
 
     for idx, r in enumerate(records, start=1):
         seq_prefix = f"{idx:04d}_"
@@ -186,17 +206,22 @@ def process_all_files():
         type_target_dir.mkdir(parents=True, exist_ok=True)
         safe_copy(Path(r["original_path"]), type_target_dir / r["standard_name"])
 
-    # Gravar Master Chronology JSONL
+        # 3. Copia por Grupo Tematico
+        group_target_dir = GROUPS_DIR / r["group"]
+        group_target_dir.mkdir(parents=True, exist_ok=True)
+        safe_copy(Path(r["original_path"]), group_target_dir / chrono_name)
+
+    # Gravar Master Chronology JSONL com Grupos
     master_jsonl = INDEX_DIR / "MASTER_CHRONOLOGY.jsonl"
     with open(master_jsonl, "w", encoding="utf-8") as out_f:
         for r in records:
             out_f.write(json.dumps(r, ensure_ascii=False) + "\n")
 
-    # Gerar HTML Interativo
+    # Gerar HTML Interativo com Filtros por Grupo
     generate_html_report(records, INDEX_DIR / "CRONOLOGIA_INTERATIVA.html")
 
     logger.info("=" * 70)
-    logger.info(f"🎉 CONCLUIDO! {len(records)} ficheiros organizados com sucesso.")
+    logger.info(f"🎉 CONCLUIDO! {len(records)} ficheiros organizados em 3 vistas (Cronológica, Tipologia e Grupos Temáticos).")
     logger.info(f"📄 Indice Mestre: {master_jsonl}")
     logger.info(f"🌐 Relatorio Visual: {INDEX_DIR / 'CRONOLOGIA_INTERATIVA.html'}")
     logger.info("=" * 70)
@@ -204,10 +229,14 @@ def process_all_files():
 
 def generate_html_report(records: List[Dict[str, Any]], out_path: Path):
     rows = []
+    groups_count = {}
     for r in records:
+        g = r["group"]
+        groups_count[g] = groups_count.get(g, 0) + 1
         rows.append(f"""
-        <tr>
+        <tr data-group="{r['group']}" data-type="{r['type']}">
             <td><strong>{r['date']}</strong></td>
+            <td><span class="group-tag">{r['group']}</span></td>
             <td><span class="badge {r['type']}">{r['type']}</span></td>
             <td><code>{r['chrono_name']}</code></td>
             <td><small>{r['original_name']}</small></td>
@@ -216,19 +245,33 @@ def generate_html_report(records: List[Dict[str, Any]], out_path: Path):
         </tr>
         """)
 
+    group_cards = []
+    for g, count in sorted(groups_count.items()):
+        group_cards.append(f"""
+        <div class="stat-card" onclick="filterGroup('{g}')" style="cursor:pointer;" title="Clique para filtrar">
+            <div class="stat-val">{count}</div>
+            <div class="stat-lbl">{g}</div>
+        </div>
+        """)
+
     html_content = f"""<!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Cronologia Mestre Forense - YKF</title>
+    <title>Cronologia e Grupos Temáticos Forenses - YKF</title>
     <style>
         body {{ font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 24px; }}
         h1 {{ color: #38bdf8; margin-bottom: 8px; }}
         .subtitle {{ color: #94a3b8; margin-bottom: 24px; }}
-        .stats {{ display: flex; gap: 16px; margin-bottom: 24px; }}
-        .stat-card {{ background: #1e293b; padding: 16px 24px; border-radius: 8px; border-left: 4px solid #38bdf8; }}
+        .stats {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }}
+        .stat-card {{ background: #1e293b; padding: 16px; border-radius: 8px; border-left: 4px solid #38bdf8; transition: transform 0.2s, background 0.2s; }}
+        .stat-card:hover {{ background: #293548; transform: translateY(-2px); }}
         .stat-val {{ font-size: 24px; font-weight: bold; color: #fff; }}
-        .stat-lbl {{ font-size: 12px; color: #94a3b8; text-transform: uppercase; }}
+        .stat-lbl {{ font-size: 11px; color: #94a3b8; text-transform: uppercase; margin-top: 4px; }}
+        .filters {{ margin-bottom: 16px; display: flex; gap: 10px; align-items: center; }}
+        input[type="text"] {{ background: #1e293b; border: 1px solid #334155; color: #fff; padding: 8px 12px; border-radius: 6px; width: 300px; }}
+        button {{ background: #38bdf8; color: #0f172a; font-weight: bold; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; }}
+        button:hover {{ background: #7dd3fc; }}
         table {{ width: 100%; border-collapse: collapse; background: #1e293b; border-radius: 8px; overflow: hidden; }}
         th, td {{ padding: 12px 16px; text-align: left; border-bottom: 1px solid #334155; }}
         th {{ background: #0f172a; color: #94a3b8; font-weight: 600; text-transform: uppercase; font-size: 12px; }}
@@ -239,21 +282,32 @@ def generate_html_report(records: List[Dict[str, Any]], out_path: Path):
         .COMUNICACAO {{ background: #16a34a; color: #fff; }}
         .SOCIETARIO {{ background: #d97706; color: #fff; }}
         .DOCUMENTO_GERAL {{ background: #64748b; color: #fff; }}
+        .group-tag {{ background: #334155; color: #38bdf8; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }}
         code {{ background: #0f172a; padding: 2px 6px; border-radius: 4px; color: #38bdf8; font-size: 13px; }}
     </style>
 </head>
 <body>
-    <h1>📋 Cronologia Mestre e Indice Forense</h1>
-    <div class="subtitle">Processamento e Organizacao Cronologica de Provas e Folhas do Tribunal</div>
+    <h1>📋 Cronologia e Grupos Temáticos Forenses</h1>
+    <div class="subtitle">Organização Automatizada de Documentos, Peças e Provas em 3 Vistas Estruturadas</div>
+    
     <div class="stats">
-        <div class="stat-card"><div class="stat-val">{len(records)}</div><div class="stat-lbl">Total de Documentos</div></div>
-        <div class="stat-card"><div class="stat-val">{len(set(r['date'] for r in records))}</div><div class="stat-lbl">Datas Distintas</div></div>
-        <div class="stat-card"><div class="stat-val">{sum(r['size_bytes'] for r in records) / (1024*1024):.2f} MB</div><div class="stat-lbl">Volume Total</div></div>
+        <div class="stat-card" onclick="resetFilter()" style="cursor:pointer; border-left-color: #4ade80;">
+            <div class="stat-val">{len(records)}</div>
+            <div class="stat-lbl">Todos os Documentos</div>
+        </div>
+        {"".join(group_cards)}
     </div>
-    <table>
+
+    <div class="filters">
+        <input type="text" id="search" placeholder="🔍 Pesquisar em todos os campos..." onkeyup="filterTable()">
+        <button onclick="resetFilter()">Ver Todos</button>
+    </div>
+
+    <table id="docTable">
         <thead>
             <tr>
                 <th>Data Canónica</th>
+                <th>Grupo Temático</th>
                 <th>Tipologia</th>
                 <th>Nome Renomeado (Cronológico)</th>
                 <th>Ficheiro Original</th>
@@ -265,6 +319,24 @@ def generate_html_report(records: List[Dict[str, Any]], out_path: Path):
             {"".join(rows)}
         </tbody>
     </table>
+
+    <script>
+        function filterTable() {{
+            let input = document.getElementById("search").value.toLowerCase();
+            let rows = document.querySelectorAll("#docTable tbody tr");
+            rows.forEach(r => {{
+                r.style.display = r.innerText.toLowerCase().includes(input) ? "" : "none";
+            }});
+        }}
+        function filterGroup(groupName) {{
+            document.getElementById("search").value = groupName;
+            filterTable();
+        }}
+        function resetFilter() {{
+            document.getElementById("search").value = "";
+            filterTable();
+        }}
+    </script>
 </body>
 </html>
 """
