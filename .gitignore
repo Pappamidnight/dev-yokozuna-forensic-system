@@ -88,8 +88,12 @@ logs/*.log
 *.wsl
 AI/*.wsl
 
-*.wsl
-AI/*.wsl
-
-*.wsl
-AI/*.wsl
+# Secrets and API Keys
+.env
+*.env
+credentials.json
+token.json
+api_keys.json
+**/config/credentials.json
+**/config/token.json
+**/config/api_keys.json
