@@ -1,0 +1,95 @@
+# ==============================================================================
+# .gitignore - Dev Yokozuna Forensic Multi-Agent Repository (Optimized)
+# ==============================================================================
+
+# Executables, Installers & Large Binaries (> 50MB)
+*.exe
+*.msi
+*.iso
+*.dll
+AI/*.exe
+
+# Heavy Database States & Local SQLite Vector Stores
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+Projects/RAG_FORENSE_SOCIETARIO/state/*.db
+Projects/INGESTAO_SPARK_VENTURE/state/*.db
+
+# Large Raw Index JSONL Dumps (> 50MB)
+OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/*.jsonl
+Projects/Ficheiros Escritos Canónicos/_index/*.jsonl
+*.jsonl
+
+# Sub-repositories and Raw Archives
+Projects/blindada-agent/
+Projects/Ficheiros Escritos Canónicos/
+Archive/
+Sandbox/
+Labs/
+INGESTAO-*/
+
+# Python Caches & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+build/
+dist/
+*.egg-info/
+
+# OS Files & Temporary Dumps
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+.DS_Store
+
+# IDE & Editor Specific
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Large Ephemeral Logs
+logs/*.log
+*.log
+
+# Compressed Archives
+*.tar.gz
+*.zip
+*.rar
+*.7z
+
+# Always Include Schemas, Code, Documentation, Goldensets and Reports
+!requirements*.txt
+!*.md
+!*.json
+!*.bat
+!*.ps1
+!*.py
+!gold_dataset/*.json
+!assets/eval/*.json
+!vault/**/*.md
+!site/**/*.html
+
+*.wsl
+AI/*.wsl
+
+*.wsl
+AI/*.wsl
+
+*.wsl
+AI/*.wsl

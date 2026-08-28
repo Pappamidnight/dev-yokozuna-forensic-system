@@ -1,0 +1,14 @@
+{
+  "id": "b22de00f-a5a1-46fa-ab87-b41a5ede144c",
+  "name": "Dev",
+  "projectResources": {
+    "resources": [
+      {
+        "folderUri": "file:///c%3A/Users/Yokozuna/Dev"
+      }
+    ]
+  },
+  "settings": {},
+  "updatedAt": "2026-08-27T20:08:41.545101600Z",
+  "isWorkspaceOnly": false
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel da Defesa de Nuno Duarte - Ecossistema Forense</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #090d16;
+            --bg-card: #131b2e;
+            --bg-card-hover: #1c2744;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --accent-cyan: #06b6d4;
+            --accent-emerald: #10b981;
+            --border-color: #243252;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            padding: 2.5rem 1.5rem;
+            line-height: 1.6;
+        }
+        .container { max-width: 1240px; margin: 0 auto; }
+        header {
+            background: linear-gradient(135deg, #131b2e 0%, #090d16 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        h1 { font-size: 1.85rem; font-weight: 700; color: #ffffff; }
+        .sub { color: var(--text-secondary); margin-top: 0.25rem; font-size: 0.95rem; }
+        .header-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+        .stat-box {
+            background: rgba(9, 13, 22, 0.6);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.85rem 1rem;
+        }
+        .stat-label { font-size: 0.72rem; text-transform: uppercase; color: var(--text-secondary); letter-spacing: 0.05em; }
+        .stat-val { font-size: 1.25rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; color: var(--accent-cyan); }
+        .stat-val.success { color: var(--accent-emerald); }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .card:hover { transform: translateY(-2px); border-color: var(--accent-cyan); }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+        .proc-id { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--accent-cyan); font-size: 1.05rem; }
+        .badge-status { background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald); border: 1px solid rgba(16, 185, 129, 0.4); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; }
+        .agent-title { font-size: 1rem; font-weight: 600; color: #ffffff; margin-bottom: 0.5rem; }
+        .normas { font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 0.5rem; }
+        .tese { font-size: 0.88rem; color: #cbd5e1; margin-bottom: 1.25rem; }
+        .card-footer { padding-top: 0.75rem; border-top: 1px solid var(--border-color); }
+        .btn-peca {
+            display: inline-block;
+            background: #1e293b;
+            color: var(--accent-cyan);
+            border: 1px solid var(--border-color);
+            padding: 0.45rem 0.85rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .btn-peca:hover { background: var(--accent-cyan); color: #090d16; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Painel dos Agentes Estrategicos de Defesa de Nuno Duarte</h1>
+            <div class="sub">Sistema Deterministico Dev Yokozuna - Conformidade Estrita com o Contrato Frozen Judge v2.5</div>
+            <div class="header-stats">
+                <div class="stat-box">
+                    <div class="stat-label">Agentes de Defesa Ativos</div>
+                    <div class="stat-val success">6 Agentes</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Processos Cobertos</div>
+                    <div class="stat-val">4 Centrais + Penal</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Frozen Judge Status</div>
+                    <div class="stat-val success">100 / 100 [PASS]</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Factos Documentados</div>
+                    <div class="stat-val">48,619</div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="grid">
+                
+        <div class="card">
+            <div class="card-header">
+                <span class="proc-id">10153/24.7T8LSB</span>
+                <span class="badge-status">BLINDADO</span>
+            </div>
+            <div class="agent-title">Agente de Defesa: Inexigibilidade de Titulo e Retencao TPA Unicre</div>
+            <div class="normas"><strong>Fundamento:</strong> Art. 729.º al. a) e 731.º do CPC c/c Art. 847.º do Codigo Civil</div>
+            <div class="tese">Nulidade e inexigibilidade da divida de € 105.633 face a retencao na fonte direta TPA de € 52.285 operada pela Unicre e omitida na liquidacao executiva.</div>
+            <div class="card-footer">
+                <a href="file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/04_DOCUMENTOS_CITIUS_E_PECAS/PECA_EMBARGOS_EXECUCAO_10153.md" target="_blank" class="btn-peca">Abrir Peca: PECA_EMBARGOS_EXECUCAO_10153.md</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="proc-id">23142/22.7T8LSB</span>
+                <span class="badge-status">BLINDADO</span>
+            </div>
+            <div class="agent-title">Agente de Defesa: Nulidade Absoluta da Citacao e Domicilio Fiscal Ativo</div>
+            <div class="normas"><strong>Fundamento:</strong> Art. 188.º n.º 1 al. e), 191.º e 195.º do CPC c/c Art. 20.º da CRP</div>
+            <div class="tese">Nulidade insanavel da citacao por certidao negativa forjada, comprovando-se domicilio fiscal ativo na AT e contribuicoes regulares ininterruptas na Seguranca Social.</div>
+            <div class="card-footer">
+                <a href="file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/04_DOCUMENTOS_CITIUS_E_PECAS/REQUERIMENTO_NULIDADE_CITACAO_23142.md" target="_blank" class="btn-peca">Abrir Peca: REQUERIMENTO_NULIDADE_CITACAO_23142.md</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="proc-id">15547/26.0T8LSB</span>
+                <span class="badge-status">BLINDADO</span>
+            </div>
+            <div class="agent-title">Agente de Defesa: Propriedade Plena e Litisconsorcio de Teresa de Jesus Martins</div>
+            <div class="normas"><strong>Fundamento:</strong> Art. 1311.º e 892.º do Codigo Civil c/c Art. 33.º do CPC</div>
+            <div class="tese">Propriedade plena da titular Teresa de Jesus Martins e nulidade absoluta de qualquer ato de alienacao executiva sem o seu consentimento e intervencao formal.</div>
+            <div class="card-footer">
+                <a href="file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/04_DOCUMENTOS_CITIUS_E_PECAS/ARTICULADO_LITISCONSORCIO_15547.md" target="_blank" class="btn-peca">Abrir Peca: ARTICULADO_LITISCONSORCIO_15547.md</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="proc-id">3719/25.0T8LSB</span>
+                <span class="badge-status">BLINDADO</span>
+            </div>
+            <div class="agent-title">Agente de Defesa: Providencia Cautelar Urgente e Tutela da Habitacao</div>
+            <div class="normas"><strong>Fundamento:</strong> Art. 362.º, 368.º e 377.º do CPC c/c Art. 65.º da CRP</div>
+            <div class="tese">Restituicao provisoria de posse e tutela cautelar urgente da habitacao propria e permanente da familia face a atos de desapossamento nulos.</div>
+            <div class="card-footer">
+                <a href="file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/04_DOCUMENTOS_CITIUS_E_PECAS/PROVIDENCIA_CAUTELAR_POSSE_3719.md" target="_blank" class="btn-peca">Abrir Peca: PROVIDENCIA_CAUTELAR_POSSE_3719.md</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="proc-id">ARRENTELA_DEFESA_PENAL</span>
+                <span class="badge-status">BLINDADO</span>
+            </div>
+            <div class="agent-title">Agente de Defesa: Responsabilidade Penal, Deontologica e Falsidade Documental</div>
+            <div class="normas"><strong>Fundamento:</strong> Art. 369.º, 370.º e 373.º do Codigo Penal c/c Estatuto da Ordem dos Advogados</div>
+            <div class="tese">Participacao criminal por falsidade de depoimento/certidao negativa e participacao disciplinar por violacao grave de deveres deontologicos de patrocinio.</div>
+            <div class="card-footer">
+                <a href="file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/04_DOCUMENTOS_CITIUS_E_PECAS/PARTICIPACAO_PENAL_E_DISCIPLINAR.md" target="_blank" class="btn-peca">Abrir Peca: PARTICIPACAO_PENAL_E_DISCIPLINAR.md</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <span class="proc-id">ACERVO_GLOBAL_NUNO_DUARTE</span>
+                <span class="badge-status">BLINDADO</span>
+            </div>
+            <div class="agent-title">Agente de Sintese: Consolidacao Forense e Manifestos Citius</div>
+            <div class="normas"><strong>Fundamento:</strong> Portaria n.º 280/2013 (Tramitacao Eletronica Citius) c/c Protocolo Deterministico</div>
+            <div class="tese">Consolidacao de todas as certidoes, comprovativos bancarios, matriciais e extratos com hash SHA-256 indexado para submissao formal.</div>
+            <div class="card-footer">
+                <a href="file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/04_DOCUMENTOS_CITIUS_E_PECAS/ESTRATEGIA_DEFESA_NUNO_DUARTE_CONSOLIDADA.md" target="_blank" class="btn-peca">Abrir Peca: ESTRATEGIA_DEFESA_NUNO_DUARTE_CONSOLIDADA.md</a>
+            </div>
+        </div>
+        
+            </div>
+        </main>
+    </div>
+</body>
+</html>

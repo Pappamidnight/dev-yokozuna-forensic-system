@@ -1,0 +1,53 @@
+{
+  "version": "2.0.0",
+  "pipeline_name": "Pipeline Deterministico Agentes Canonicos Dev",
+  "execution_order": [
+    "P0_MCP_CHECK",
+    "P1_INVENTORY_SCAN",
+    "P2_DETERMINISTIC_EXTRACTION",
+    "P3_PYDANTIC_VALIDATION",
+    "P4_CHAIN_LINKING",
+    "P5_FACTS_CONSOLIDATION",
+    "P6_FOUR_LAYER_ENGINE",
+    "P7_DEFENSE_SYNTHESIS",
+    "P8_PERSISTENCE_INDEX"
+  ],
+  "agents_mapping": {
+    "00_Indice_E_MOCs": {
+      "agent": "agente-indice-mocs",
+      "weight": 0.70,
+      "level": "INDICE"
+    },
+    "01_PDFs_Oficiais": {
+      "agent": "agente-pdfs-oficiais",
+      "weight": 1.00,
+      "level": "OFICIAL"
+    },
+    "02_Minutas_E_Rascunhos": {
+      "agent": "agente-minutas",
+      "weight": 0.25,
+      "level": "BAIXA"
+    },
+    "03_Contratos_E_Acordos": {
+      "agent": "agente-contratos",
+      "weight": 0.95,
+      "level": "ALTA"
+    },
+    "04_Processos_E_Pecas_Escritas": {
+      "agent": "agente-pecas",
+      "weight": 0.98,
+      "level": "OFICIAL"
+    },
+    "05_Correspondencia_E_Comunicacoes": {
+      "agent": "agente-correspondencia",
+      "weight": 0.85,
+      "level": "MEDIA"
+    }
+  },
+  "rules": {
+    "zero_hallucinations": true,
+    "immutable_canonicals": true,
+    "human_gate_required": true,
+    "output_directory": "C:\\Users\\Yokozuna\\Dev\\Projects\\Ficheiros Escritos Canónicos\\_index"
+  }
+}

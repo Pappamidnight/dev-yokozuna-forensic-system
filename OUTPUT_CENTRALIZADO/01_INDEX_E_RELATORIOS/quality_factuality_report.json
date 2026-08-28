@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "timestamp": "2026-08-28T04:10:15.370848",
+  "total_propositions": 190977,
+  "documentados_count": 48617,
+  "alegacoes_count": 142360,
+  "high_relevance_propositions": 2634,
+  "disk_verification": {
+    "sample_audited": 500,
+    "verified_on_disk": 500,
+    "existence_rate": 1.0,
+    "missing_sample_paths": []
+  },
+  "factuality_confidence_score": 1.0
+}

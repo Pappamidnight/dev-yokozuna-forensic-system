@@ -1,0 +1,82 @@
+{
+  "version": "2.2.0",
+  "dataset_name": "Golden Dataset Forense Yokozuna Dev (Frozen Judge v2.5)",
+  "description": "Conjunto dourado de referencia e ground-truth com clausulas petreas do Contrato Frozen Judge Gateway.",
+  "target_processes": [
+    {
+      "process_id": "10153/24.7T8LSB",
+      "expected_min_acts": 3,
+      "clausula_petrea": "Inexigibilidade e Retencao Unicre de 52.285 EUR face a alegada divida de 105.633 EUR (Art 729 CPC e Art 847 CC)",
+      "montante_alegado": 105633.00,
+      "montante_retido_tpa": 52285.00,
+      "key_acts": [
+        {"type": "CONTESTACAO", "support": "DOCUMENTADO", "evidence_level": "OFICIAL"},
+        {"type": "CITACAO", "support": "DOCUMENTADO", "evidence_level": "OFICIAL"}
+      ],
+      "known_gaps": []
+    },
+    {
+      "process_id": "23142/22.7T8LSB",
+      "expected_min_acts": 10,
+      "clausula_petrea": "Nulidade Absoluta da Citacao e Domicilio Fiscal Ativo (Art 188 n.1 al. e e Art 191 CPC)",
+      "key_acts": [
+        {"type": "SENTENCA", "support": "DOCUMENTADO", "evidence_level": "OFICIAL"},
+        {"type": "ACORDAO", "support": "DOCUMENTADO", "evidence_level": "OFICIAL"},
+        {"type": "CITACAO", "support": "DOCUMENTADO", "evidence_level": "OFICIAL"}
+      ],
+      "known_gaps": []
+    },
+    {
+      "process_id": "15547/26.0T8LSB",
+      "expected_min_acts": 1,
+      "clausula_petrea": "Propriedade Plena, Direito Sucessorio e Litisconsorcio Necessario de Teresa de Jesus Martins (Art 1311, 892 CC e Art 33 CPC)",
+      "key_acts": [
+        {"type": "CONTRATO", "support": "DOCUMENTADO", "evidence_level": "ALTA"}
+      ],
+      "known_gaps": []
+    },
+    {
+      "process_id": "3719/25.0T8LSB",
+      "expected_min_acts": 5,
+      "clausula_petrea": "Tutela Cautelar Urgente, Primazia da Habitacao e Posse (Art 362 CPC e Art 65 CRP)",
+      "key_acts": [
+        {"type": "DESPACHO", "support": "DOCUMENTADO", "evidence_level": "OFICIAL"},
+        {"type": "CITACAO", "support": "DOCUMENTADO", "evidence_level": "OFICIAL"}
+      ],
+      "known_gaps": []
+    }
+  ],
+  "negative_test_cases": [
+    {
+      "test_name": "bloqueio_minuta_despacho",
+      "folder": "02_Minutas_E_Rascunhos",
+      "forbidden_type": "DESPACHO",
+      "forbidden_support": "DOCUMENTADO",
+      "rule": "Nenhum ficheiro em 02_Minutas_E_Rascunhos pode ser qualificado como DESPACHO ou DOCUMENTADO"
+    },
+    {
+      "test_name": "bloqueio_indice_como_prova",
+      "folder": "00_Indice_E_MOCs",
+      "forbidden_evidence_level": "OFICIAL",
+      "rule": "Indices e MOCs nunca substituem a prova material original"
+    },
+    {
+      "test_name": "bloqueio_alegacao_documentada",
+      "item_type": "ALEGACAO",
+      "forbidden_support": "DOCUMENTADO",
+      "rule": "Alegacoes de partes nunca podem ter suporte DOCUMENTADO (exigem INDICIADO ou NAO_INDICIADO)"
+    },
+    {
+      "test_name": "regra_0_criptografica",
+      "rule": "Proibicao estrita de factos ou montantes sem hash SHA-256 valido"
+    }
+  ],
+  "quality_thresholds": {
+    "min_precision": 0.95,
+    "min_recall": 0.90,
+    "min_f1_score": 0.92,
+    "min_pydantic_validity": 1.00,
+    "rule_compliance_rate": 1.00,
+    "frozen_judge_target_score": 100
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "filesystem-dev-yokozuna": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\Users\\Yokozuna\\Dev"
+      ]
+    }
+  }
+}

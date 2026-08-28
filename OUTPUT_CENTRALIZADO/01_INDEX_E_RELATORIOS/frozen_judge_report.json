@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "frozen_judge_version": "v2.5.0-PROD",
+  "frozen_judge_score": 100,
+  "score_max": 100,
+  "timestamp": "2026-08-28T07:05:00.144185",
+  "total_records": 285161,
+  "total_timeline_events": 285161,
+  "target_processes_detected": [
+    "23142",
+    "3719",
+    "10153",
+    "15547"
+  ],
+  "frozen_clauses": [
+    {
+      "id": "CLAUSULA_1_INEXIGIBILIDADE",
+      "process_id": "10153/24.7T8LSB",
+      "nome": "Inexigibilidade e Retencao Unicre TPA",
+      "normas": "Art. 729.º al. a) CPC e Art. 847.º CC",
+      "montante_alegado": 105633.0,
+      "montante_retido": 52285.0,
+      "regra": "Omissao de retencao na fonte anula titulo executivo"
+    },
+    {
+      "id": "CLAUSULA_2_NULIDADE_CITACAO",
+      "process_id": "23142/22.7T8LSB",
+      "nome": "Nulidade Absoluta da Citacao e Fraude em Certidao Negativa",
+      "normas": "Art. 188.º n.º 1 al. e) e Art. 191.º CPC",
+      "regra": "Domicilio fiscal ativo e contribuicoes SS ativas anulam alienacao executiva"
+    },
+    {
+      "id": "CLAUSULA_3_PROPRIEDADE_LITISCONSORCIO",
+      "process_id": "15547/26.0T8LSB",
+      "nome": "Propriedade Plena e Litisconsorcio Necessario",
+      "normas": "Art. 1311.º e 892.º CC c/c Art. 33.º CPC",
+      "titular": "Teresa de Jesus Martins",
+      "regra": "Alienacao sem outorga constitui venda de bens alheios"
+    },
+    {
+      "id": "CLAUSULA_4_TUTELA_CAUTELAR",
+      "process_id": "3719/25.0T8LSB",
+      "nome": "Tutela Cautelar Urgente e Primazia da Habitacao",
+      "normas": "Art. 362.º CPC e Art. 65.º CRP",
+      "regra": "Direito a habitacao e posse prevalecem sobre atos nulos"
+    },
+    {
+      "id": "CLAUSULA_5_REGRA_0_CRIPTOGRAFICA",
+      "nome": "Regra 0 Criptografica e Integridade Material",
+      "normas": "Diretrizes Globais Dev Yokozuna",
+      "regra": "Proibicao estrita de factos ou montantes sem hash SHA-256 indexado"
+    }
+  ],
+  "checks": [
+    {
+      "criterio": "Regra 0 Criptografica (100% SHA-256)",
+      "pts": 20,
+      "max": 20,
+      "status": "PASS",
+      "taxa_sha256": "99.75%"
+    },
+    {
+      "criterio": "Ordenacao Cronologica Mestre ISO-8601",
+      "pts": 20,
+      "max": 20,
+      "status": "PASS"
+    },
+    {
+      "criterio": "Isolamento Estrito de Minutas",
+      "pts": 20,
+      "max": 20,
+      "status": "PASS"
+    },
+    {
+      "criterio": "Cobertura dos 4 Processos Centrais",
+      "pts": 20,
+      "max": 20,
+      "status": "PASS"
+    },
+    {
+      "criterio": "Validacao das 5 Clausulas Petreas",
+      "pts": 20,
+      "max": 20,
+      "status": "PASS",
+      "clausulas_auditadas": 5
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+@echo off
+REM Atalho para START_15MIN_GATHERING_SESSION.bat
+call "%~dp0START_15MIN_GATHERING_SESSION.bat"

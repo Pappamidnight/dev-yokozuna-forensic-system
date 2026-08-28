@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Wiki & Knowledge Vault — Dev Yokozuna</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0b0f19;
+            --bg-card: #151d30;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-emerald: #10b981;
+            --accent-purple: #a855f7;
+            --border-color: #263352;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            padding: 2rem 1.5rem;
+            line-height: 1.6;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        header {
+            background: linear-gradient(135deg, #151d30 0%, #0b0f19 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        h1 { font-size: 2rem; color: var(--accent-blue); margin-bottom: 0.5rem; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: transform 0.2s, border-color 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-blue);
+        }
+        .card h3 { font-size: 1.2rem; color: var(--accent-blue); margin-bottom: 0.5rem; }
+        .card p { color: var(--text-secondary); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LLM Knowledge Wiki & Vault Forense</h1>
+            <p style="color: var(--text-secondary);">Enciclopedia Estruturada de Processos Judiciais, Entidades Societarias e Doutrina | Compilado em: 2026-08-28 06:34:57</p>
+        </header>
+
+        <div class="grid">
+            <a href="articles/15547_reivindicacao_propriedade.html" class="card">
+                <div style="font-size: 0.8rem; color: var(--accent-emerald); font-weight: 600; margin-bottom: 0.4rem;">01 Processos Judiciais</div>
+                <h3>15547 Reivindicacao Propriedade</h3>
+                <p>Artigo estruturado com links e referencias de direito material e factual.</p>
+            </a>
+            <a href="articles/spark_celtis_scr_sa.html" class="card">
+                <div style="font-size: 0.8rem; color: var(--accent-emerald); font-weight: 600; margin-bottom: 0.4rem;">02 Entidades Societarias</div>
+                <h3>Spark Celtis Scr Sa</h3>
+                <p>Artigo estruturado com links e referencias de direito material e factual.</p>
+            </a>
+            <a href="articles/confissao_extrajudicial_whatsapp_art358.html" class="card">
+                <div style="font-size: 0.8rem; color: var(--accent-emerald); font-weight: 600; margin-bottom: 0.4rem;">03 Doutrina E Provas</div>
+                <h3>Confissao Extrajudicial Whatsapp Art358</h3>
+                <p>Artigo estruturado com links e referencias de direito material e factual.</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

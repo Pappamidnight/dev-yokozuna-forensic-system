@@ -1,0 +1,67 @@
+{
+  "config": {
+    "estados_probatorios": [
+      "FACTO_DOCUMENTADO",
+      "ALEGACAO",
+      "INFERENCIA",
+      "TESE_DEFESA",
+      "POR_VALIDAR"
+    ],
+    "foco": "Defesa e organizacao probatoria deterministica",
+    "politica_raw": "READ_ONLY",
+    "processo_id": "15547/26.0T8LSB",
+    "regras": {
+      "confissao_extrajudicial_requer_validacao_juridica": true,
+      "exigir_suporte_textual_para_facto_documentado": true,
+      "nao_inventar_factos": true,
+      "raw_apenas_leitura": true
+    },
+    "termos_chave": [
+      "15547",
+      "3719",
+      "Filipe Delgado",
+      "Nuno Duarte",
+      "Rua da Palmeira",
+      "31",
+      "33",
+      "Sky",
+      "Heaven",
+      "Family",
+      "Penthouse",
+      "EPAL",
+      "agua",
+      "luz",
+      "gas",
+      "reserva",
+      "renda",
+      "hotel"
+    ]
+  },
+  "counts": {
+    "claims": 40,
+    "cronologia": 30,
+    "eval_failures": 0,
+    "evidencias": 25,
+    "fragmentos": 40,
+    "graph_edges": 232,
+    "graph_nodes": 84,
+    "lacunas": 5,
+    "rotas": 65
+  },
+  "generated_at": "2026-08-28T05:35:36.165746Z",
+  "outputs": {
+    "claims": "C:\\Users\\Yokozuna\\Dev\\Projects\\INGESTAO_15547_PRO\\outputs\\jsonl\\claims.jsonl",
+    "cronologia": "C:\\Users\\Yokozuna\\Dev\\Projects\\INGESTAO_15547_PRO\\outputs\\jsonl\\cronologia.jsonl",
+    "evidencias": "C:\\Users\\Yokozuna\\Dev\\Projects\\INGESTAO_15547_PRO\\outputs\\jsonl\\evidencias.jsonl",
+    "fragmentos": "C:\\Users\\Yokozuna\\Dev\\Projects\\INGESTAO_15547_PRO\\outputs\\jsonl\\fragmentos.jsonl",
+    "frozen_judge_eval": "C:\\Users\\Yokozuna\\Dev\\Projects\\INGESTAO_15547_PRO\\outputs\\evals\\frozen_judge_eval.json",
+    "graph_edges": "C:\\Users\\Yokozuna\\Dev\\Projects\\INGESTAO_15547_PRO\\outputs\\graph\\edges.jsonl",
+    "graph_nodes": "C:\\Users\\Yokozuna\\Dev\\Projects\\INGESTAO_15547_PRO\\outputs\\graph\\nodes.jsonl",
+    "lacunas": "C:\\Users\\Yokozuna\\Dev\\Projects\\INGESTAO_15547_PRO\\outputs\\jsonl\\lacunas.jsonl",
+    "relatorio": "C:\\Users\\Yokozuna\\Dev\\Projects\\INGESTAO_15547_PRO\\outputs\\markdown\\RELATORIO_15547.md",
+    "rotas": "C:\\Users\\Yokozuna\\Dev\\Projects\\INGESTAO_15547_PRO\\outputs\\jsonl\\rotas_workflow.jsonl"
+  },
+  "processo_id": "15547/26.0T8LSB",
+  "raw_root": "C:\\Users\\Yokozuna\\Dev\\Projects\\INGESTAO_15547_PRO\\raw",
+  "warnings": []
+}

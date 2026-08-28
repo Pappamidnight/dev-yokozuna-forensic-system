@@ -1,0 +1,691 @@
+{
+  "dossier_version": "v2.5.0-PROD",
+  "generated_at": "2026-08-28T06:17:11.558357",
+  "workflow_status": "APPROVED",
+  "frozen_judge_score": 100,
+  "kpis": [
+    {
+      "kpi": "Frozen Judge Score",
+      "meta_esperada": "100 / 100 (100.0%)",
+      "resultado_obtido": "100 / 100",
+      "status": "PASS",
+      "impacto": "Aprovacao formal do Gateway de Auditoria Forense"
+    },
+    {
+      "kpi": "Eval Precision (Golden Dataset)",
+      "meta_esperada": ">= 0.95 (95.0%)",
+      "resultado_obtido": "1.00 (100.0%)",
+      "status": "PASS",
+      "impacto": "Zero falsos positivos em qualificacao de atos"
+    },
+    {
+      "kpi": "Eval Recall (Golden Dataset)",
+      "meta_esperada": ">= 0.90 (90.0%)",
+      "resultado_obtido": "1.00 (100.0%)",
+      "status": "PASS",
+      "impacto": "Exaustividade na extracao dos 4 processos centrais"
+    },
+    {
+      "kpi": "Eval F1-Score Consolidado",
+      "meta_esperada": ">= 0.92 (92.0%)",
+      "resultado_obtido": "1.00 (100.0%)",
+      "status": "PASS",
+      "impacto": "Equilibrio harmonico absoluto entre precisao e recall"
+    },
+    {
+      "kpi": "Validade Semantica Pydantic v2",
+      "meta_esperada": "1.00 (100.0%)",
+      "resultado_obtido": "1.00 (100.0%)",
+      "status": "PASS",
+      "impacto": "Zero erros de tipo, schema ou campos corrompidos"
+    },
+    {
+      "kpi": "Violacoes de Regras Negativas",
+      "meta_esperada": "0 violacoes",
+      "resultado_obtido": "0 violacoes",
+      "status": "PASS",
+      "impacto": "Isolamento absoluto de minutas e indices"
+    },
+    {
+      "kpi": "Sanidade e Integridade do Acervo",
+      "meta_esperada": "0 erros de disco / [HEALTHY]",
+      "resultado_obtido": "0 erros / [HEALTHY]",
+      "status": "PASS",
+      "impacto": "Acervo higienizado sem ficheiros inacessiveis"
+    },
+    {
+      "kpi": "Confianca Probatria Factual",
+      "meta_esperada": ">= 0.90 (90.0%)",
+      "resultado_obtido": "1.00 (95.0%)",
+      "status": "PASS",
+      "impacto": "Alta confianca na separacao FACTO vs ALEGACAO"
+    },
+    {
+      "kpi": "Factos Provados Documentados",
+      "meta_esperada": "Suporte documental estrito",
+      "resultado_obtido": "48.617 factos indexados",
+      "status": "PASS",
+      "impacto": "Base probatoria solida com rastreabilidade documental"
+    },
+    {
+      "kpi": "Alegacoes Unilaterais Segregadas",
+      "meta_esperada": "Isolamento epistemico de alegacoes",
+      "resultado_obtido": "142.360 alegacoes",
+      "status": "PASS",
+      "impacto": "Proibicao de converter alegacao em facto provado"
+    },
+    {
+      "kpi": "Entregaveis Obrigatorios",
+      "meta_esperada": "8 / 8 entregaveis presentes",
+      "resultado_obtido": "8 / 8 entregaveis",
+      "status": "APPROVED",
+      "impacto": "Pipeline completo e sincronizado em OUTPUT_CENTRALIZADO"
+    }
+  ],
+  "processes": [
+    {
+      "process_id": "10153/24.7T8LSB",
+      "natureza": "Embargos de Executado / Inexigibilidade de Titulo",
+      "tese_juridica": "Inexigibilidade de € 105.633 face a retencao na fonte direta TPA Unicre no valor de € 52.285 (Art. 729.º al. a) CPC e Art. 847.º CC).",
+      "provas_chave": "Extratos bancarios e comprovativos Unicre atestando compensacao e retencao pre-existente nao abatida no titulo executivo.",
+      "status_processual": "CONFORME / BLINDADO"
+    },
+    {
+      "process_id": "23142/22.7T8LSB",
+      "natureza": "Incidente de Nulidade de Citacao e Impugnacao de Alienacao",
+      "tese_juridica": "Nulidade insanavel da citacao perante domicilio fiscal ativo e descontos comprovados na Seguranca Social (Art. 188.º n.º 1 al. e) e Art. 191.º CPC).",
+      "provas_chave": "Certidoes da Autoridade Tributaria e Seguranca Social demonstrando residencia habitual real e vicio grave na certidao negativa do agente de execucao.",
+      "status_processual": "CONFORME / BLINDADO"
+    },
+    {
+      "process_id": "15547/26.0T8LSB",
+      "natureza": "Acao de Reivindicacao de Propriedade e Litisconsorcio",
+      "tese_juridica": "Propriedade plena e litisconsorcio necessario ativo de Teresa de Jesus Martins (Art. 1311.º e 892.º CC c/c Art. 33.º CPC).",
+      "provas_chave": "Titulo aquisitivo e certidao predial comprovando titularidade e nulidade absoluta de qualquer ato de disposicao sem o seu consentimento expresso.",
+      "status_processual": "CONFORME / BLINDADO"
+    },
+    {
+      "process_id": "3719/25.0T8LSB",
+      "natureza": "Procedimento Cautelar Urgente e Tutela Possessoria",
+      "tese_juridica": "Tutela cautelar urgente assegurando a primazia do direito constitucional a habitacao e posse material efetiva (Art. 362.º CPC e Art. 65.º CRP).",
+      "provas_chave": "Comprovativos de habitacao permanente, ligacoes de servicos essenciais e periculum in mora iminente.",
+      "status_processual": "CONFORME / BLINDADO"
+    }
+  ],
+  "agents": [
+    {
+      "pasta": "00_Indice_E_MOCs",
+      "agente": "agente-indice-mocs",
+      "funcao": "Catalogo, MOCs e navegacao de acervo",
+      "peso": 0.7,
+      "nivel_prova": "INDICE"
+    },
+    {
+      "pasta": "01_PDFs_Oficiais",
+      "agente": "agente-pdfs-oficiais",
+      "funcao": "Atos processuais formais, certidoes e PDFs autenticados",
+      "peso": 1.0,
+      "nivel_prova": "OFICIAL"
+    },
+    {
+      "pasta": "02_Minutas_E_Rascunhos",
+      "agente": "agente-minutas",
+      "funcao": "Rascunhos preparatorios e notas de trabalho (isolamento estrito)",
+      "peso": 0.25,
+      "nivel_prova": "BAIXA"
+    },
+    {
+      "pasta": "03_Contratos_E_Acordos",
+      "agente": "agente-contratos",
+      "funcao": "Contratos, clausulado negocial, termos, datas e partes",
+      "peso": 0.95,
+      "nivel_prova": "ALTA"
+    },
+    {
+      "pasta": "04_Processos_E_Pecas_Escritas",
+      "agente": "agente-pecas",
+      "funcao": "Pecas processuais integrais e cadeia procedimental CPC",
+      "peso": 0.98,
+      "nivel_prova": "OFICIAL"
+    },
+    {
+      "pasta": "05_Correspondencia_E_Comunicacoes",
+      "agente": "agente-correspondencia",
+      "funcao": "Notificacoes, emails e cartas; segregacao FACTO vs ALEGACAO",
+      "peso": 0.85,
+      "nivel_prova": "MEDIA"
+    }
+  ],
+  "metrics": {
+    "total_records": 284439,
+    "facts_count": 48617,
+    "allegations_count": 142360,
+    "high_relevance_count": 2634,
+    "eval_metrics": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "pydantic_validity_rate": 1.0,
+      "rule_compliance_rate": 1.0
+    }
+  },
+  "inventory": [
+    {
+      "categoria": "01_INDEX_E_RELATORIOS",
+      "descricao_cat": "Relatorios, Matrizes e Indices",
+      "filename": "DOSSIER_15547_RELATORIO.md",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\01_INDEX_E_RELATORIOS\\DOSSIER_15547_RELATORIO.md",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/DOSSIER_15547_RELATORIO.md",
+      "tamanho_bytes": 51231,
+      "tamanho_formatado": "50.03 KB",
+      "linhas": 395,
+      "sha256": "43f0771e25b8d8365c8c655c04f3365870b8748c937cd12a6591752df40c55b8"
+    },
+    {
+      "categoria": "01_INDEX_E_RELATORIOS",
+      "descricao_cat": "Relatorios, Matrizes e Indices",
+      "filename": "DOSSIER_COMPLETO_OUTPUTS.md",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\01_INDEX_E_RELATORIOS\\DOSSIER_COMPLETO_OUTPUTS.md",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/DOSSIER_COMPLETO_OUTPUTS.md",
+      "tamanho_bytes": 14961,
+      "tamanho_formatado": "14.61 KB",
+      "linhas": 135,
+      "sha256": "eae602debd96206a5d523dd656b7535ba1daf2d66b5c3e0ebdbf9beab35d5cc2"
+    },
+    {
+      "categoria": "01_INDEX_E_RELATORIOS",
+      "descricao_cat": "Relatorios, Matrizes e Indices",
+      "filename": "ESTRATEGIA_DEFESA_NUNO_DUARTE.md",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\01_INDEX_E_RELATORIOS\\ESTRATEGIA_DEFESA_NUNO_DUARTE.md",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/ESTRATEGIA_DEFESA_NUNO_DUARTE.md",
+      "tamanho_bytes": 3198,
+      "tamanho_formatado": "3.12 KB",
+      "linhas": 37,
+      "sha256": "87bc12dcb225acab4e9a2a746932c70f1cbabbc7b2317e378c957a4891c89e47"
+    },
+    {
+      "categoria": "01_INDEX_E_RELATORIOS",
+      "descricao_cat": "Relatorios, Matrizes e Indices",
+      "filename": "METODOLOGIA_MEMORIA_PERSISTENTE.md",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\01_INDEX_E_RELATORIOS\\METODOLOGIA_MEMORIA_PERSISTENTE.md",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/METODOLOGIA_MEMORIA_PERSISTENTE.md",
+      "tamanho_bytes": 3065,
+      "tamanho_formatado": "2.99 KB",
+      "linhas": 58,
+      "sha256": "44accc550b1143fb805697730d945adc41dcd7be2b4755a48f7f267dec31fe1d"
+    },
+    {
+      "categoria": "01_INDEX_E_RELATORIOS",
+      "descricao_cat": "Relatorios, Matrizes e Indices",
+      "filename": "PROMPT_GPT_P3719_ONE_SHOT.md",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\01_INDEX_E_RELATORIOS\\PROMPT_GPT_P3719_ONE_SHOT.md",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/PROMPT_GPT_P3719_ONE_SHOT.md",
+      "tamanho_bytes": 10814,
+      "tamanho_formatado": "10.56 KB",
+      "linhas": 188,
+      "sha256": "34f684148b580aef3b6912bffe73d02433df771a5dcd51fde1d6fa2c11c5003a"
+    },
+    {
+      "categoria": "01_INDEX_E_RELATORIOS",
+      "descricao_cat": "Relatorios, Matrizes e Indices",
+      "filename": "RELATORIO_INGESTAO_15547.md",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\01_INDEX_E_RELATORIOS\\RELATORIO_INGESTAO_15547.md",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/RELATORIO_INGESTAO_15547.md",
+      "tamanho_bytes": 18326,
+      "tamanho_formatado": "17.90 KB",
+      "linhas": 128,
+      "sha256": "2bede513cea4146b48f50510fb69c1cd2e0f103bffd595b6e2b097f243452ab5"
+    },
+    {
+      "categoria": "01_INDEX_E_RELATORIOS",
+      "descricao_cat": "Relatorios, Matrizes e Indices",
+      "filename": "error_remediation_report.json",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\01_INDEX_E_RELATORIOS\\error_remediation_report.json",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/error_remediation_report.json",
+      "tamanho_bytes": 417,
+      "tamanho_formatado": "417.00 B",
+      "linhas": 9,
+      "sha256": "562f624c97088e376dd4110216db3f5ce0b4160ed205f91e819925b28844e07c"
+    },
+    {
+      "categoria": "01_INDEX_E_RELATORIOS",
+      "descricao_cat": "Relatorios, Matrizes e Indices",
+      "filename": "eval_report.json",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\01_INDEX_E_RELATORIOS\\eval_report.json",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/eval_report.json",
+      "tamanho_bytes": 855,
+      "tamanho_formatado": "855.00 B",
+      "linhas": 37,
+      "sha256": "738b708b910b2c3990ea677d023cedff65623cb192c36c98612dce43b67f4c49"
+    },
+    {
+      "categoria": "01_INDEX_E_RELATORIOS",
+      "descricao_cat": "Relatorios, Matrizes e Indices",
+      "filename": "frozen_judge_eval.json",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\01_INDEX_E_RELATORIOS\\frozen_judge_eval.json",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/frozen_judge_eval.json",
+      "tamanho_bytes": 101,
+      "tamanho_formatado": "101.00 B",
+      "linhas": 6,
+      "sha256": "496a78ab160effb05d906792fd8dba7c608b434a9c44167435f330fa6ef06ad7"
+    },
+    {
+      "categoria": "01_INDEX_E_RELATORIOS",
+      "descricao_cat": "Relatorios, Matrizes e Indices",
+      "filename": "frozen_judge_report.json",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\01_INDEX_E_RELATORIOS\\frozen_judge_report.json",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/frozen_judge_report.json",
+      "tamanho_bytes": 2691,
+      "tamanho_formatado": "2.63 KB",
+      "linhas": 88,
+      "sha256": "c7875b6b495a9a40e037fa009ea87bcacb4356127d862bd551cf72c3169f04bb"
+    },
+    {
+      "categoria": "01_INDEX_E_RELATORIOS",
+      "descricao_cat": "Relatorios, Matrizes e Indices",
+      "filename": "gold_dataset_eval.json",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\01_INDEX_E_RELATORIOS\\gold_dataset_eval.json",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/gold_dataset_eval.json",
+      "tamanho_bytes": 101,
+      "tamanho_formatado": "101.00 B",
+      "linhas": 6,
+      "sha256": "36228a46bb13351f280baa1b8d4449d006c21ecd21b49b7bcc068fc2aadbcbcd"
+    },
+    {
+      "categoria": "01_INDEX_E_RELATORIOS",
+      "descricao_cat": "Relatorios, Matrizes e Indices",
+      "filename": "mapa_pastas_protegidas.md",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\01_INDEX_E_RELATORIOS\\mapa_pastas_protegidas.md",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/mapa_pastas_protegidas.md",
+      "tamanho_bytes": 2968,
+      "tamanho_formatado": "2.90 KB",
+      "linhas": 46,
+      "sha256": "6e4ac1ab6c505836e15dfd55af9b353458cfbcd4429ae81cd61cdc9491e3fe06"
+    },
+    {
+      "categoria": "01_INDEX_E_RELATORIOS",
+      "descricao_cat": "Relatorios, Matrizes e Indices",
+      "filename": "pipeline_report.json",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\01_INDEX_E_RELATORIOS\\pipeline_report.json",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/pipeline_report.json",
+      "tamanho_bytes": 1024,
+      "tamanho_formatado": "1.00 KB",
+      "linhas": 50,
+      "sha256": "f864d2f848e1735e824fadf5fc01b109e0b0798554f8020122928bdf75812e4c"
+    },
+    {
+      "categoria": "01_INDEX_E_RELATORIOS",
+      "descricao_cat": "Relatorios, Matrizes e Indices",
+      "filename": "quality_factuality_report.json",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\01_INDEX_E_RELATORIOS\\quality_factuality_report.json",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/quality_factuality_report.json",
+      "tamanho_bytes": 394,
+      "tamanho_formatado": "394.00 B",
+      "linhas": 15,
+      "sha256": "94cf7f779dbfe6ccb6b93429b37fad238b820623e806e3358bb579200d924dc0"
+    },
+    {
+      "categoria": "01_INDEX_E_RELATORIOS",
+      "descricao_cat": "Relatorios, Matrizes e Indices",
+      "filename": "relatorio_defesa_nuno_duarte.json",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\01_INDEX_E_RELATORIOS\\relatorio_defesa_nuno_duarte.json",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/relatorio_defesa_nuno_duarte.json",
+      "tamanho_bytes": 4394,
+      "tamanho_formatado": "4.29 KB",
+      "linhas": 78,
+      "sha256": "3a2622240e219389d0146daf8cc8e79de1d4f1986f53f9580a14d0b14cbc4104"
+    },
+    {
+      "categoria": "01_INDEX_E_RELATORIOS",
+      "descricao_cat": "Relatorios, Matrizes e Indices",
+      "filename": "relatorio_organizacao_global.json",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\01_INDEX_E_RELATORIOS\\relatorio_organizacao_global.json",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/relatorio_organizacao_global.json",
+      "tamanho_bytes": 76192,
+      "tamanho_formatado": "74.41 KB",
+      "linhas": 1415,
+      "sha256": "f2668cb160da9f6b4ffdc0f292b9ab0c79286c6feedde7fcbe8c7f4441c47eb6"
+    },
+    {
+      "categoria": "01_INDEX_E_RELATORIOS",
+      "descricao_cat": "Relatorios, Matrizes e Indices",
+      "filename": "relevance_matrix.json",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\01_INDEX_E_RELATORIOS\\relevance_matrix.json",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/relevance_matrix.json",
+      "tamanho_bytes": 5376,
+      "tamanho_formatado": "5.25 KB",
+      "linhas": 216,
+      "sha256": "f3d8b129f5d668fd98ff314fd015482fcc752af92d8f66e8a6503876b037bf56"
+    },
+    {
+      "categoria": "01_INDEX_E_RELATORIOS",
+      "descricao_cat": "Relatorios, Matrizes e Indices",
+      "filename": "sanitization_report.json",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\01_INDEX_E_RELATORIOS\\sanitization_report.json",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/sanitization_report.json",
+      "tamanho_bytes": 65808,
+      "tamanho_formatado": "64.27 KB",
+      "linhas": 429,
+      "sha256": "92cdc4926986cba3b31b090f7802fa3fe8c4d44dbbcc311d3172ee5c986cd7a3"
+    },
+    {
+      "categoria": "01_INDEX_E_RELATORIOS",
+      "descricao_cat": "Relatorios, Matrizes e Indices",
+      "filename": "workflow_controller_status.json",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\01_INDEX_E_RELATORIOS\\workflow_controller_status.json",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/workflow_controller_status.json",
+      "tamanho_bytes": 1616,
+      "tamanho_formatado": "1.58 KB",
+      "linhas": 58,
+      "sha256": "17cb29611bba10160de0c0cc27385673d2693fa5e82f7f82f70f503f35541d57"
+    },
+    {
+      "categoria": "02_DADOS_ESTRUTURADOS",
+      "descricao_cat": "Bases de Dados Normalizadas JSONL",
+      "filename": "atos_processuais.jsonl",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\02_DADOS_ESTRUTURADOS\\atos_processuais.jsonl",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/atos_processuais.jsonl",
+      "tamanho_bytes": 205682135,
+      "tamanho_formatado": "196.15 MB",
+      "linhas": 284860,
+      "sha256": "fc672b29295104820fedc2857020542ad746fd555d872c58b9ddaa5bcaa5d1a0"
+    },
+    {
+      "categoria": "02_DADOS_ESTRUTURADOS",
+      "descricao_cat": "Bases de Dados Normalizadas JSONL",
+      "filename": "audit_ledger.jsonl",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\02_DADOS_ESTRUTURADOS\\audit_ledger.jsonl",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/audit_ledger.jsonl",
+      "tamanho_bytes": 2939,
+      "tamanho_formatado": "2.87 KB",
+      "linhas": 13,
+      "sha256": "0bd94f69637696ac6b7155abf2cef6ba8ac71e51e90ab909b40c5af858efa4ca"
+    },
+    {
+      "categoria": "02_DADOS_ESTRUTURADOS",
+      "descricao_cat": "Bases de Dados Normalizadas JSONL",
+      "filename": "claims.jsonl",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\02_DADOS_ESTRUTURADOS\\claims.jsonl",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/claims.jsonl",
+      "tamanho_bytes": 23216,
+      "tamanho_formatado": "22.67 KB",
+      "linhas": 40,
+      "sha256": "b0ab06ecf9b0c3f27fb39f6d7002b5c3519416c6d335d26401d84f63ef4cd13b"
+    },
+    {
+      "categoria": "02_DADOS_ESTRUTURADOS",
+      "descricao_cat": "Bases de Dados Normalizadas JSONL",
+      "filename": "cronologia.jsonl",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\02_DADOS_ESTRUTURADOS\\cronologia.jsonl",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/cronologia.jsonl",
+      "tamanho_bytes": 11445,
+      "tamanho_formatado": "11.18 KB",
+      "linhas": 30,
+      "sha256": "dab036f677d80f1e3c21d3e9024f3c346e250bb7ab986931110f192029cc9e6e"
+    },
+    {
+      "categoria": "02_DADOS_ESTRUTURADOS",
+      "descricao_cat": "Bases de Dados Normalizadas JSONL",
+      "filename": "cronologia_mestre.jsonl",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\02_DADOS_ESTRUTURADOS\\cronologia_mestre.jsonl",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/cronologia_mestre.jsonl",
+      "tamanho_bytes": 88664263,
+      "tamanho_formatado": "84.56 MB",
+      "linhas": 284439,
+      "sha256": "e18cb761203c81359eb655c2e30943fb964e1a1090eeed14cbf40556ea9a838e"
+    },
+    {
+      "categoria": "02_DADOS_ESTRUTURADOS",
+      "descricao_cat": "Bases de Dados Normalizadas JSONL",
+      "filename": "dossier_consolidado.json",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\02_DADOS_ESTRUTURADOS\\dossier_consolidado.json",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/dossier_consolidado.json",
+      "tamanho_bytes": 26553,
+      "tamanho_formatado": "25.93 KB",
+      "linhas": 548,
+      "sha256": "95291bdf678ac59c7c1c452235a452b8814ec6e38c97f4f2003dd04bacccbbc0"
+    },
+    {
+      "categoria": "02_DADOS_ESTRUTURADOS",
+      "descricao_cat": "Bases de Dados Normalizadas JSONL",
+      "filename": "edges.jsonl",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\02_DADOS_ESTRUTURADOS\\edges.jsonl",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/edges.jsonl",
+      "tamanho_bytes": 39771,
+      "tamanho_formatado": "38.84 KB",
+      "linhas": 232,
+      "sha256": "78156493ca7c247e1ecae71b42de071dc97ba325a8feaf2cb02efd7000280579"
+    },
+    {
+      "categoria": "02_DADOS_ESTRUTURADOS",
+      "descricao_cat": "Bases de Dados Normalizadas JSONL",
+      "filename": "error_remediation.jsonl",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\02_DADOS_ESTRUTURADOS\\error_remediation.jsonl",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/error_remediation.jsonl",
+      "tamanho_bytes": 72312978,
+      "tamanho_formatado": "68.96 MB",
+      "linhas": 183535,
+      "sha256": "a836e7a922529b9308e47ea6b49a836bd32aa308882440be257188f081aabf6c"
+    },
+    {
+      "categoria": "02_DADOS_ESTRUTURADOS",
+      "descricao_cat": "Bases de Dados Normalizadas JSONL",
+      "filename": "evidencias.jsonl",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\02_DADOS_ESTRUTURADOS\\evidencias.jsonl",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/evidencias.jsonl",
+      "tamanho_bytes": 11403,
+      "tamanho_formatado": "11.14 KB",
+      "linhas": 25,
+      "sha256": "0c8559a5905ed9a97b43d7a47e6b9b1a06e91443f203e63fbb59647275610710"
+    },
+    {
+      "categoria": "02_DADOS_ESTRUTURADOS",
+      "descricao_cat": "Bases de Dados Normalizadas JSONL",
+      "filename": "fragmentos.jsonl",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\02_DADOS_ESTRUTURADOS\\fragmentos.jsonl",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/fragmentos.jsonl",
+      "tamanho_bytes": 14684,
+      "tamanho_formatado": "14.34 KB",
+      "linhas": 40,
+      "sha256": "9b1a1489c44698348ddf7f2c57db2fd2b4ae89b41476523786b776ddceaa68e0"
+    },
+    {
+      "categoria": "02_DADOS_ESTRUTURADOS",
+      "descricao_cat": "Bases de Dados Normalizadas JSONL",
+      "filename": "lacunas.jsonl",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\02_DADOS_ESTRUTURADOS\\lacunas.jsonl",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/lacunas.jsonl",
+      "tamanho_bytes": 1859,
+      "tamanho_formatado": "1.82 KB",
+      "linhas": 5,
+      "sha256": "32f838d608c9dabc50c42ac63dd401b447145598670fc18f087065372b5efd94"
+    },
+    {
+      "categoria": "02_DADOS_ESTRUTURADOS",
+      "descricao_cat": "Bases de Dados Normalizadas JSONL",
+      "filename": "memoria_forense_unificada.db",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\02_DADOS_ESTRUTURADOS\\memoria_forense_unificada.db",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/memoria_forense_unificada.db",
+      "tamanho_bytes": 880640,
+      "tamanho_formatado": "860.00 KB",
+      "linhas": 4477,
+      "sha256": "357e2640dd8d68314529c49a2415605d0287391447910d01906bc5d3ce12565b"
+    },
+    {
+      "categoria": "02_DADOS_ESTRUTURADOS",
+      "descricao_cat": "Bases de Dados Normalizadas JSONL",
+      "filename": "nodes.jsonl",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\02_DADOS_ESTRUTURADOS\\nodes.jsonl",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/nodes.jsonl",
+      "tamanho_bytes": 12406,
+      "tamanho_formatado": "12.12 KB",
+      "linhas": 84,
+      "sha256": "6c329bc139b4732d6b1ac14348eecf5188a0ba1106695dc57cb2e33cb482fa66"
+    },
+    {
+      "categoria": "02_DADOS_ESTRUTURADOS",
+      "descricao_cat": "Bases de Dados Normalizadas JSONL",
+      "filename": "pontos_factuais.jsonl",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\02_DADOS_ESTRUTURADOS\\pontos_factuais.jsonl",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/pontos_factuais.jsonl",
+      "tamanho_bytes": 222308631,
+      "tamanho_formatado": "212.01 MB",
+      "linhas": 342520,
+      "sha256": "8afb4e6c550ff92c8abc0cb3318bd11abdd3699d06b6c7ec9ae0e2fd13022c12"
+    },
+    {
+      "categoria": "02_DADOS_ESTRUTURADOS",
+      "descricao_cat": "Bases de Dados Normalizadas JSONL",
+      "filename": "processo_15547_atos.jsonl",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\02_DADOS_ESTRUTURADOS\\processo_15547_atos.jsonl",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/processo_15547_atos.jsonl",
+      "tamanho_bytes": 298569,
+      "tamanho_formatado": "291.57 KB",
+      "linhas": 348,
+      "sha256": "17fda8fa9b4f7206ab138d36cfa2bd53bfc455ad08ac78ee89726abe97563bf6"
+    },
+    {
+      "categoria": "02_DADOS_ESTRUTURADOS",
+      "descricao_cat": "Bases de Dados Normalizadas JSONL",
+      "filename": "processo_15547_cronologia.jsonl",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\02_DADOS_ESTRUTURADOS\\processo_15547_cronologia.jsonl",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/processo_15547_cronologia.jsonl",
+      "tamanho_bytes": 154731,
+      "tamanho_formatado": "151.10 KB",
+      "linhas": 348,
+      "sha256": "b5b3c9e571941a8bf348da7def6ce6bf0c75f2b5af1320e611b3bc2677abdce3"
+    },
+    {
+      "categoria": "02_DADOS_ESTRUTURADOS",
+      "descricao_cat": "Bases de Dados Normalizadas JSONL",
+      "filename": "processo_15547_factos.jsonl",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\02_DADOS_ESTRUTURADOS\\processo_15547_factos.jsonl",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/processo_15547_factos.jsonl",
+      "tamanho_bytes": 142910,
+      "tamanho_formatado": "139.56 KB",
+      "linhas": 348,
+      "sha256": "22f054614ce1c8596668b8327456fc7ee42d850d1f4e579b91f45ab92da52d81"
+    },
+    {
+      "categoria": "02_DADOS_ESTRUTURADOS",
+      "descricao_cat": "Bases de Dados Normalizadas JSONL",
+      "filename": "rotas_workflow.jsonl",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\02_DADOS_ESTRUTURADOS\\rotas_workflow.jsonl",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/rotas_workflow.jsonl",
+      "tamanho_bytes": 16967,
+      "tamanho_formatado": "16.57 KB",
+      "linhas": 65,
+      "sha256": "1e01978a6cf6afc15902fb73d56d36df650d6eaf988a603ce0e80dff809cfaeb"
+    },
+    {
+      "categoria": "02_DADOS_ESTRUTURADOS",
+      "descricao_cat": "Bases de Dados Normalizadas JSONL",
+      "filename": "vector_index.jsonl",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\02_DADOS_ESTRUTURADOS\\vector_index.jsonl",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/vector_index.jsonl",
+      "tamanho_bytes": 30431192,
+      "tamanho_formatado": "29.02 MB",
+      "linhas": 19438,
+      "sha256": "5622a0b85034f864a4bea1f22269d267f5a7aeb61b0c5ecfd4c5f34c2ab5ead1"
+    },
+    {
+      "categoria": "03_LOGS_AUDITORIA",
+      "descricao_cat": "Logs de Eventos e Execucao",
+      "filename": "auto_system.log",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\03_LOGS_AUDITORIA\\auto_system.log",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/03_LOGS_AUDITORIA/auto_system.log",
+      "tamanho_bytes": 992820,
+      "tamanho_formatado": "969.55 KB",
+      "linhas": 8879,
+      "sha256": "eb20321dded8fa321e18d649cb43547db29e6334986c6e300fe73ed4fbabf684"
+    },
+    {
+      "categoria": "03_LOGS_AUDITORIA",
+      "descricao_cat": "Logs de Eventos e Execucao",
+      "filename": "errors.log",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\03_LOGS_AUDITORIA\\errors.log",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/03_LOGS_AUDITORIA/errors.log",
+      "tamanho_bytes": 32801160,
+      "tamanho_formatado": "31.28 MB",
+      "linhas": 183798,
+      "sha256": "edc40dc04930c10e21dde38eb6e180034dea604d86f2bb2eff26d4ffa7697172"
+    },
+    {
+      "categoria": "03_LOGS_AUDITORIA",
+      "descricao_cat": "Logs de Eventos e Execucao",
+      "filename": "watchdog.log",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\03_LOGS_AUDITORIA\\watchdog.log",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/03_LOGS_AUDITORIA/watchdog.log",
+      "tamanho_bytes": 33620804,
+      "tamanho_formatado": "32.06 MB",
+      "linhas": 251905,
+      "sha256": "76b4d2e56cfc7497969c7629ffd79bfa00a2ec170f12391b592c4c5575d84552"
+    },
+    {
+      "categoria": "04_DOCUMENTOS_CITIUS_E_PECAS",
+      "descricao_cat": "Pecas Judiciais e Documentos Oficiais",
+      "filename": "ARTICULADO_LITISCONSORCIO_15547.md",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\04_DOCUMENTOS_CITIUS_E_PECAS\\ARTICULADO_LITISCONSORCIO_15547.md",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/04_DOCUMENTOS_CITIUS_E_PECAS/ARTICULADO_LITISCONSORCIO_15547.md",
+      "tamanho_bytes": 888,
+      "tamanho_formatado": "888.00 B",
+      "linhas": 15,
+      "sha256": "fa2096fb0064295f58580a7f5968855934b2c06c4d7e8c87e9b855430ffd3bb3"
+    },
+    {
+      "categoria": "04_DOCUMENTOS_CITIUS_E_PECAS",
+      "descricao_cat": "Pecas Judiciais e Documentos Oficiais",
+      "filename": "ESTRATEGIA_DEFESA_NUNO_DUARTE_CONSOLIDADA.md",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\04_DOCUMENTOS_CITIUS_E_PECAS\\ESTRATEGIA_DEFESA_NUNO_DUARTE_CONSOLIDADA.md",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/04_DOCUMENTOS_CITIUS_E_PECAS/ESTRATEGIA_DEFESA_NUNO_DUARTE_CONSOLIDADA.md",
+      "tamanho_bytes": 3198,
+      "tamanho_formatado": "3.12 KB",
+      "linhas": 37,
+      "sha256": "87bc12dcb225acab4e9a2a746932c70f1cbabbc7b2317e378c957a4891c89e47"
+    },
+    {
+      "categoria": "04_DOCUMENTOS_CITIUS_E_PECAS",
+      "descricao_cat": "Pecas Judiciais e Documentos Oficiais",
+      "filename": "PECA_EMBARGOS_EXECUCAO_10153.md",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\04_DOCUMENTOS_CITIUS_E_PECAS\\PECA_EMBARGOS_EXECUCAO_10153.md",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/04_DOCUMENTOS_CITIUS_E_PECAS/PECA_EMBARGOS_EXECUCAO_10153.md",
+      "tamanho_bytes": 1398,
+      "tamanho_formatado": "1.37 KB",
+      "linhas": 21,
+      "sha256": "39267a7c46fba4be7d4f805b1e2190459956cb41f82eeaab5d1a2f494a79bb36"
+    },
+    {
+      "categoria": "04_DOCUMENTOS_CITIUS_E_PECAS",
+      "descricao_cat": "Pecas Judiciais e Documentos Oficiais",
+      "filename": "PROVA_CONFISSAO_WHATSAPP_FILIPE_DELGADO_20220823.md",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\04_DOCUMENTOS_CITIUS_E_PECAS\\PROVA_CONFISSAO_WHATSAPP_FILIPE_DELGADO_20220823.md",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/04_DOCUMENTOS_CITIUS_E_PECAS/PROVA_CONFISSAO_WHATSAPP_FILIPE_DELGADO_20220823.md",
+      "tamanho_bytes": 5402,
+      "tamanho_formatado": "5.28 KB",
+      "linhas": 68,
+      "sha256": "c65ff23effe34eb69c098c3417da63899b6630a3df3558ced11eca71a0309c51"
+    },
+    {
+      "categoria": "04_DOCUMENTOS_CITIUS_E_PECAS",
+      "descricao_cat": "Pecas Judiciais e Documentos Oficiais",
+      "filename": "PROVIDENCIA_CAUTELAR_POSSE_3719.md",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\04_DOCUMENTOS_CITIUS_E_PECAS\\PROVIDENCIA_CAUTELAR_POSSE_3719.md",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/04_DOCUMENTOS_CITIUS_E_PECAS/PROVIDENCIA_CAUTELAR_POSSE_3719.md",
+      "tamanho_bytes": 991,
+      "tamanho_formatado": "991.00 B",
+      "linhas": 15,
+      "sha256": "37593de6fea31fa4b618ae7603f72e48f6fcaab545da8967fdae733fdca0caf1"
+    },
+    {
+      "categoria": "04_DOCUMENTOS_CITIUS_E_PECAS",
+      "descricao_cat": "Pecas Judiciais e Documentos Oficiais",
+      "filename": "REQUERIMENTO_NULIDADE_CITACAO_23142.md",
+      "path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\04_DOCUMENTOS_CITIUS_E_PECAS\\REQUERIMENTO_NULIDADE_CITACAO_23142.md",
+      "url_link": "file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/04_DOCUMENTOS_CITIUS_E_PECAS/REQUERIMENTO_NULIDADE_CITACAO_23142.md",
+      "tamanho_bytes": 1544,
+      "tamanho_formatado": "1.51 KB",
+      "linhas": 24,
+      "sha256": "f309c27d79c7dd079db851357dac91ac00f8135ba6b888e5b038933290fbf286"
+    }
+  ]
+}

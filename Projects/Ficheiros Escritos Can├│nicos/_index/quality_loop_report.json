@@ -1,0 +1,8 @@
+{
+  "status": "SUCESSO",
+  "total_registos_analisados": 0,
+  "duplicados_identificados": 0,
+  "registos_corrigidos": 0,
+  "processos_avaliados": 0,
+  "scores_por_processo": {}
+}

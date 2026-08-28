@@ -1,0 +1,15 @@
+{
+  "frozen_judge_score": 100,
+  "generated_at": "2026-08-28T08:15:33.379138+00:00",
+  "outputs": {
+    "entidades": "C:\\Users\\Yokozuna\\Dev\\Projects\\INGESTAO_SPARK_VENTURE\\outputs\\jsonl\\entidades_societarias.jsonl",
+    "grafo_nodes": "C:\\Users\\Yokozuna\\Dev\\Projects\\INGESTAO_SPARK_VENTURE\\outputs\\graph\\nodes.jsonl",
+    "html": "C:\\Users\\Yokozuna\\Dev\\Projects\\INGESTAO_SPARK_VENTURE\\outputs\\html\\PAINEL_SPARK_VENTURE.html",
+    "markdown": "C:\\Users\\Yokozuna\\Dev\\Projects\\INGESTAO_SPARK_VENTURE\\outputs\\markdown\\RELATORIO_SPARK_VENTURE.md"
+  },
+  "project_name": "INGESTAO_SPARK_VENTURE",
+  "status": "PASS",
+  "total_entities": 12,
+  "total_evidences": 1639,
+  "total_relations": 4
+}

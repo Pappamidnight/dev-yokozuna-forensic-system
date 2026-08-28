@@ -1,0 +1,25 @@
+# ==============================================================================
+# requirements_full_stack.txt - Dev Yokozuna Enterprise Full Stack
+# ==============================================================================
+
+# Core Pydantic AI & Schemas
+pydantic>=2.12.0
+pydantic-ai-slim>=2.35.0
+pydantic-graph>=2.35.0
+
+# System, Automation & Watchdog
+watchdog>=6.0.0
+pyyaml>=6.0.0
+
+# Data Science, Machine Learning & Analytics
+numpy>=2.0.0
+pandas>=3.0.0
+scipy>=1.18.0
+scikit-learn>=1.9.0
+
+# Graph Knowledge Engine
+networkx>=3.6.0
+
+# Databases & Search Drivers
+psycopg2-binary>=2.9.10
+elasticsearch>=9.5.0

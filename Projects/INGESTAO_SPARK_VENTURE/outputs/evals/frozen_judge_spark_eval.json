@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "cobertura_entidades_nucleares": true,
+    "entidades_registadas_cmvm": true,
+    "integridade_relacoes_societarias": true,
+    "regra_0_criptografica": true,
+    "segregacao_capital_risco": true
+  },
+  "frozen_judge_score": 100,
+  "total_entities_audited": 12,
+  "total_evidences_audited": 1639,
+  "total_relations_audited": 4,
+  "verdict": "APPROVED_CORPORATE_ROUTING"
+}

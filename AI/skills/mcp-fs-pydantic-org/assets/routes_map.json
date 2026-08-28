@@ -1,0 +1,57 @@
+{
+  "version": "2.0.0",
+  "name": "Mapa de Rotas e Integracao de Pastas Dev",
+  "root": "C:\\Users\\Yokozuna\\Dev",
+  "routes": {
+    "canonical_acervo": {
+      "base_path": "Projects\\Ficheiros Escritos Canónicos",
+      "subfolders": {
+        "00_Indice_E_MOCs": {"agent": "agente-indice-mocs", "weight": 0.70, "level": "INDICE"},
+        "01_PDFs_Oficiais": {"agent": "agente-pdfs-oficiais", "weight": 1.00, "level": "OFICIAL"},
+        "02_Minutas_E_Rascunhos": {"agent": "agente-minutas", "weight": 0.25, "level": "BAIXA"},
+        "03_Contratos_E_Acordos": {"agent": "agente-contratos", "weight": 0.95, "level": "ALTA"},
+        "04_Processos_E_Pecas_Escritas": {"agent": "agente-pecas", "weight": 0.98, "level": "OFICIAL"},
+        "05_Correspondencia_E_Comunicacoes": {"agent": "agente-correspondencia", "weight": 0.85, "level": "MEDIA"},
+        "_index": {"role": "OUTPUT_INDEX", "auto_safe": true}
+      }
+    },
+    "data_stages": {
+      "01_INICIAL": {"level": "OFICIAL", "role": "Peticoes e requerimentos executivos"},
+      "02_CONTESTACAO": {"level": "OFICIAL", "role": "Contestacoes e oposicoes a penhora"},
+      "03_PROVAS": {"level": "OFICIAL", "role": "Extratos, faturas e comprovativos materiais"},
+      "04_ALEGACOES": {"level": "VALIDADO", "role": "Articulados e memorias juridicas"},
+      "05_SENTENCA": {"level": "OFICIAL", "role": "Sentencas, despachos saneadores e acordaos"},
+      "06_RECURSOS": {"level": "OFICIAL", "role": "Recursos para Tribunal da Relacao e Supremo"}
+    },
+    "blindada_agent": {
+      "base_path": "Projects\\blindada-agent",
+      "core_processes": [
+        "3719-25.0T8LSB",
+        "10153-24.7T8LSB",
+        "23142-22.7T8LSB",
+        "15547-26.0T8LSB"
+      ],
+      "data_routes": {
+        "indexes": "data\\indexes",
+        "processos": "data\\processos",
+        "intervenientes": "data\\intervenientes",
+        "cronologias": "data\\cronologias",
+        "atos_processuais": "data\\atos_processuais",
+        "graph_memory": "data\\graph_memory"
+      }
+    },
+    "infrastructure": {
+      "AI": {"role": "Diretrizes globais, skills e configs", "path": "AI"},
+      "Backend": {"role": "Modelos Pydantic v2 e schemas", "path": "Backend\\pydantic-ai"},
+      "Labs": {"role": "Prototipos e testes rapidos", "path": "Labs\\Pydantic"},
+      "Sandbox": {"role": "Investigacao cruzada e simulacao", "path": "Sandbox"}
+    }
+  },
+  "execution_flow": {
+    "step_1": "Watchdog monitoriza alteracoes em tempo real",
+    "step_2": "Scanner deterministico extrai atos e SHA-256",
+    "step_3": "Validador Pydantic bloqueia incoerencias semanticas",
+    "step_4": "Construcao de cadeias processuais e deteccao de lacunas",
+    "step_5": "Persistencia de relatorios em _index e atualizacao de tree_dirs.md"
+  }
+}

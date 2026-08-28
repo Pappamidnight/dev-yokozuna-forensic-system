@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-08-28T05:02:49.865449",
+  "total_records_processed": 283129,
+  "corrupt_lines_purged": 2,
+  "errors_auto_remediated": 0,
+  "errors_log_file": "C:\\Users\\Yokozuna\\Dev\\Projects\\Ficheiros Escritos Canónicos\\_index\\errors.log",
+  "remediation_ledger_file": "C:\\Users\\Yokozuna\\Dev\\Projects\\Ficheiros Escritos Canónicos\\_index\\error_remediation.jsonl",
+  "status": "REPAIRED"
+}

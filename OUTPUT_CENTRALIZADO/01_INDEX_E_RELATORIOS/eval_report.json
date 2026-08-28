@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "evaluated_at": "2026-08-28T07:04:56.778281",
+  "golden_dataset_version": "2.2.0",
+  "total_records_evaluated": 285161,
+  "metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "pydantic_validity_rate": 1.0,
+    "rule_compliance_rate": 1.0
+  },
+  "target_processes_evaluation": {
+    "10153/24.7T8LSB": {
+      "expected_min": 3,
+      "actual_found": 120,
+      "status": "PASS"
+    },
+    "23142/22.7T8LSB": {
+      "expected_min": 10,
+      "actual_found": 917,
+      "status": "PASS"
+    },
+    "15547/26.0T8LSB": {
+      "expected_min": 1,
+      "actual_found": 172,
+      "status": "PASS"
+    },
+    "3719/25.0T8LSB": {
+      "expected_min": 5,
+      "actual_found": 771,
+      "status": "PASS"
+    }
+  },
+  "negative_rule_violations_count": 0,
+  "violations": []
+}

@@ -1,0 +1,38 @@
+{
+  "processo_id": "15547/26.0T8LSB",
+  "foco": "Defesa e organizacao probatoria deterministica",
+  "politica_raw": "READ_ONLY",
+  "estados_probatorios": [
+    "FACTO_DOCUMENTADO",
+    "ALEGACAO",
+    "INFERENCIA",
+    "TESE_DEFESA",
+    "POR_VALIDAR"
+  ],
+  "regras": {
+    "nao_inventar_factos": true,
+    "exigir_suporte_textual_para_facto_documentado": true,
+    "confissao_extrajudicial_requer_validacao_juridica": true,
+    "raw_apenas_leitura": true
+  },
+  "termos_chave": [
+    "15547",
+    "3719",
+    "Filipe Delgado",
+    "Nuno Duarte",
+    "Rua da Palmeira",
+    "31",
+    "33",
+    "Sky",
+    "Heaven",
+    "Family",
+    "Penthouse",
+    "EPAL",
+    "agua",
+    "luz",
+    "gas",
+    "reserva",
+    "renda",
+    "hotel"
+  ]
+}

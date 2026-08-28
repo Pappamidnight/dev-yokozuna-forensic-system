@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "mcp-fs-pydantic-org": {
+      "command": "python",
+      "args": [
+        "-m",
+        "mcp_server_filesystem",
+        "C:\\Users\\Yokozuna\\Dev\\Projects\\Ficheiros Escritos Canónicos\\00_Indice_E_MOCs",
+        "C:\\Users\\Yokozuna\\Dev\\Projects\\Ficheiros Escritos Canónicos\\01_PDFs_Oficiais",
+        "C:\\Users\\Yokozuna\\Dev\\Projects\\Ficheiros Escritos Canónicos\\02_Minutas_E_Rascunhos",
+        "C:\\Users\\Yokozuna\\Dev\\Projects\\Ficheiros Escritos Canónicos\\03_Contratos_E_Acordos",
+        "C:\\Users\\Yokozuna\\Dev\\Projects\\Ficheiros Escritos Canónicos\\04_Processos_E_Pecas_Escritas",
+        "C:\\Users\\Yokozuna\\Dev\\Projects\\Ficheiros Escritos Canónicos\\05_Correspondencia_E_Comunicacoes"
+      ],
+      "env": {
+        "PYTHONPATH": "C:\\Users\\Yokozuna\\Dev\\Backend\\pydantic-ai\\src"
+      }
+    }
+  }
+}

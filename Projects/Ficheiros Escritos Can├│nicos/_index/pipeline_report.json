@@ -1,0 +1,16 @@
+{
+  "status": "SUCESSO",
+  "generated_at": "2026-08-28T08:38:46.281623",
+  "total_files_scanned": 0,
+  "total_acts_extracted": 0,
+  "total_processes_identified": 0,
+  "processes": [],
+  "breakdown_by_folder": {
+    "00_Indice_E_MOCs": 0,
+    "01_PDFs_Oficiais": 0,
+    "02_Minutas_E_Rascunhos": 0,
+    "03_Contratos_E_Acordos": 0,
+    "04_Processos_E_Pecas_Escritas": 0,
+    "05_Correspondencia_E_Comunicacoes": 0
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OrganizationReport",
+  "type": "object",
+  "properties": {
+    "total_files": {"type": "integer"},
+    "unique_hashes": {"type": "integer"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "counts_by_kind": {
+      "type": "object",
+      "additionalProperties": {"type": "integer"}
+    },
+    "counts_by_evidence_level": {
+      "type": "object",
+      "additionalProperties": {"type": "integer"}
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {"type": "string"},
+          "relpath": {"type": "string"},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "kind": {"type": "string"},
+          "suporte": {"type": "string", "enum": ["DOCUMENTADO", "INDICIADO", "NAO_INDICIADO"]},
+          "process_id": {"type": ["string", "null"]},
+          "evidence_level": {"type": "string"}
+        },
+        "required": ["path", "relpath", "kind", "suporte"]
+      }
+    }
+  },
+  "required": ["total_files", "unique_hashes", "generated_at", "records"]
+}
