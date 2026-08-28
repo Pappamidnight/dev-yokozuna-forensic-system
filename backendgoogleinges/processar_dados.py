@@ -10,6 +10,7 @@ import os
 import re
 import sys
 import json
+import stat
 import shutil
 import hashlib
 import logging
@@ -56,14 +57,16 @@ def sanitize(text: str) -> str:
 
 def get_sha256(filepath: Path) -> str:
     h = hashlib.sha256()
-    with open(filepath, "rb") as f:
-        while chunk := f.read(65536):
-            h.update(chunk)
-    return h.hexdigest()
+    try:
+        with open(filepath, "rb") as f:
+            while chunk := f.read(65536):
+                h.update(chunk)
+        return h.hexdigest()
+    except Exception:
+        return ""
 
 
 def detect_canonical_date(filepath: Path, content_sample: str = "") -> str:
-    # 1. Tentar extrair do nome do ficheiro
     filename = filepath.name
     for rgx in DATE_REGEXES:
         m = rgx.search(filename)
@@ -77,7 +80,6 @@ def detect_canonical_date(filepath: Path, content_sample: str = "") -> str:
             d = f"{int(gd.get('day', 1)):02d}"
             return f"{y}-{mo}-{d}"
 
-    # 2. Tentar extrair do conteudo de texto
     if content_sample:
         for rgx in DATE_REGEXES:
             m = rgx.search(content_sample[:2000])
@@ -91,9 +93,11 @@ def detect_canonical_date(filepath: Path, content_sample: str = "") -> str:
                 d = f"{int(gd.get('day', 1)):02d}"
                 return f"{y}-{mo}-{d}"
 
-    # 3. Fallback: data de modificacao do ficheiro
-    mtime = filepath.stat().st_mtime
-    return datetime.fromtimestamp(mtime).strftime("%Y-%m-%d")
+    try:
+        mtime = filepath.stat().st_mtime
+        return datetime.fromtimestamp(mtime).strftime("%Y-%m-%d")
+    except Exception:
+        return "2026-08-28"
 
 
 def detect_document_type(filepath: Path, content_sample: str = "") -> str:
@@ -109,6 +113,19 @@ def detect_document_type(filepath: Path, content_sample: str = "") -> str:
     return "DOCUMENTO_GERAL"
 
 
+def safe_copy(src: Path, dst: Path):
+    """Copia ficheiro garantindo que permissões de escrita são tratadas."""
+    try:
+        if dst.exists():
+            try:
+                os.chmod(dst, stat.S_IWRITE | stat.S_IREAD)
+            except Exception:
+                pass
+        shutil.copy2(src, dst)
+    except Exception as e:
+        logger.warning(f"Aviso ao copiar {src.name} para {dst.name}: {e}")
+
+
 def process_all_files():
     logger.info("=" * 70)
     logger.info("🚀 A INICIAR PROCESSAMENTO E ORGANIZACAO CRONOLOGICA FORENSE")
@@ -118,15 +135,17 @@ def process_all_files():
 
     all_raw_files = [f for f in RAW_DIR.rglob("*") if f.is_file() and not f.name.endswith(".json")]
     if not all_raw_files:
-        logger.warning("⚠️ Nenhum ficheiro encontrado em data/raw/ para processar ainda.")
-        logger.info("Execute primeiro o download com 'executar_ingestao_google.bat'.")
+        logger.warning("⚠️ Nenhum ficheiro encontrado em data/raw/ para processar.")
         return
+
+    logger.info(f"Encontrados {len(all_raw_files)} ficheiros brutos em data/raw/ para análise.")
 
     records = []
 
     for f in all_raw_files:
         sample_text = ""
-        if f.suffix.lower() in [".txt", ".md", ".jsonl", ".csv"]:
+        ext = f.suffix.lower()
+        if ext in [".txt", ".md", ".jsonl", ".csv"]:
             try:
                 with open(f, "r", encoding="utf-8", errors="ignore") as fh:
                     sample_text = fh.read(4000)
@@ -137,7 +156,6 @@ def process_all_files():
         doc_type = detect_document_type(f, sample_text)
         sha256 = get_sha256(f)
         clean_name = sanitize(f.stem)
-        ext = f.suffix.lower()
 
         standard_name = f"{date_str}_{doc_type}_{clean_name}{ext}"
 
@@ -147,7 +165,7 @@ def process_all_files():
             "standard_name": standard_name,
             "date": date_str,
             "type": doc_type,
-            "size_bytes": f.stat().st_size,
+            "size_bytes": f.stat().st_size if f.exists() else 0,
             "sha256": sha256
         })
 
@@ -161,14 +179,12 @@ def process_all_files():
 
         # 1. Copia Cronologica
         chrono_target = CHRONO_DIR / chrono_name
-        shutil.copy2(r["original_path"], chrono_target)
+        safe_copy(Path(r["original_path"]), chrono_target)
 
         # 2. Copia por Tipologia
         type_target_dir = TYPOLOGY_DIR / r["type"]
         type_target_dir.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(r["original_path"], type_target_dir / r["standard_name"])
-
-        logger.info(f"✅ [{idx:03d}] {r['date']} | {r['type']} -> {chrono_name}")
+        safe_copy(Path(r["original_path"]), type_target_dir / r["standard_name"])
 
     # Gravar Master Chronology JSONL
     master_jsonl = INDEX_DIR / "MASTER_CHRONOLOGY.jsonl"
