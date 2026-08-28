@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-google_ingest.py - Motor de Ingestão de Dados Google (Gmail & Google Drive)
-Descarrega, valida com SHA-256 e reorganiza processos judiciais, provas e anexos localmente.
+google_ingest.py - Extrator e Sincronizador TOTAL Google (Drive Completo + Gmail Completo)
+Descarrega TODAS as pastas/ficheiros da Google Drive e TODOS os emails/anexos do Gmail.
 """
 
 import os
@@ -14,35 +14,35 @@ import hashlib
 import argparse
 import logging
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Set
 
 # Configuração de Logging
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s - [GOOGLE-INGEST] - %(levelname)s - %(message)s"
+    format="%(asctime)s - [TOTAL-INGEST] - %(levelname)s - %(message)s"
 )
-logger = logging.getLogger("google_ingest")
+logger = logging.getLogger("total_ingest")
 
 SCOPES = [
-    "https://www.googleapis.com/auth/gmail.readonly",
-    "https://www.googleapis.com/auth/drive.readonly"
+    "https://www.googleapis.com/auth/drive.readonly",
+    "https://www.googleapis.com/auth/gmail.readonly"
 ]
 
-DEFAULT_GMAIL_LABELS = [
-    "3719/25.0T8LSB",
-    "ANALISTA",
-    "CENTENARIO",
-    "Finpartner"
-]
 
-DEFAULT_GDRIVE_FOLDERS = [
-    "1 TRIBUNAL",
-    "MAPA PROVAS",
-    "SPARK 2926",
-    "02 Assuntos Jurídicos Críticos: Foco total na documentação",
-    "01 Negócio/Projeto Principal: Estrutura, Processos, Ferramen",
-    "_KB"
-]
+def load_env_file(env_path: Path) -> Dict[str, str]:
+    """Lê variáveis do ficheiro .env."""
+    env_vars = {}
+    if not env_path.exists():
+        return env_vars
+    with open(env_path, "r", encoding="utf-8", errors="ignore") as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            k, v = line.split("=", 1)
+            env_vars[k.strip()] = v.strip().strip('"').strip("'")
+            os.environ[k.strip()] = v.strip().strip('"').strip("'")
+    return env_vars
 
 
 def sanitize_filename(name: str) -> str:
@@ -61,140 +61,277 @@ def get_file_hash(filepath: Path) -> str:
     return hasher.hexdigest()
 
 
-class GoogleIngestor:
-    def __init__(self, base_output_dir: Path, credentials_path: Optional[Path] = None):
+class GoogleTotalIngestor:
+    def __init__(self, base_output_dir: Path, env_path: Optional[Path] = None):
         self.base_output_dir = Path(base_output_dir)
-        self.gmail_dir = self.base_output_dir / "gmail"
-        self.gdrive_dir = self.base_output_dir / "gdrive"
+        self.gdrive_dir = self.base_output_dir / "gdrive_completo"
+        self.gmail_dir = self.base_output_dir / "gmail_completo"
         self.index_dir = self.base_output_dir / "_index"
 
-        for d in [self.gmail_dir, self.gdrive_dir, self.index_dir]:
+        for d in [self.gdrive_dir, self.gmail_dir, self.index_dir]:
             d.mkdir(parents=True, exist_ok=True)
 
         package_dir = Path(__file__).resolve().parent
-        self.credentials_path = credentials_path or (package_dir / "config" / "credentials.json")
+        self.env_path = env_path or (package_dir / ".env")
+        self.env_vars = load_env_file(self.env_path)
+
+        self.credentials_path = package_dir / "config" / "credentials.json"
         self.token_path = package_dir / "config" / "token.json"
         self.creds = None
-        self.gmail_service = None
         self.drive_service = None
+        self.gmail_service = None
 
     def authenticate(self) -> bool:
-        """Autentica via OAuth2 local usando Google Auth Libraries."""
+        """Autentica via Tokens do .env, API Key, token.json ou OAuth."""
         try:
-            from google.auth.transport.requests import Request
             from google.oauth2.credentials import Credentials
-            from google_auth_oauthlib.flow import InstalledAppFlow
             from googleapiclient.discovery import build
         except ImportError:
             logger.error("❌ Bibliotecas da Google não instaladas!")
-            logger.info("Por favor instale: pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib")
+            logger.info("Instale com: pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib")
             return False
 
+        # 1. Tentar autenticar com GOOGLE_ACCESS_TOKEN e REFRESH_TOKEN do .env
+        access_token = self.env_vars.get("GOOGLE_ACCESS_TOKEN") or os.environ.get("GOOGLE_ACCESS_TOKEN")
+        refresh_token = self.env_vars.get("GOOGLE_REFRESH_TOKEN") or os.environ.get("GOOGLE_REFRESH_TOKEN")
+
+        if access_token:
+            logger.info("🔑 A inicializar com Tokens do .env...")
+            try:
+                self.creds = Credentials(
+                    token=access_token,
+                    refresh_token=refresh_token,
+                    token_uri="https://oauth2.googleapis.com/token",
+                    scopes=SCOPES
+                )
+                self.drive_service = build("drive", "v3", credentials=self.creds)
+                self.gmail_service = build("gmail", "v1", credentials=self.creds)
+                logger.info("✅ Conectado com sucesso ao Google Drive e Gmail via Token!")
+                return True
+            except Exception as e:
+                logger.warning(f"Aviso ao inicializar credenciais: {e}")
+
+        # 2. Tentar token.json existente
         if self.token_path.exists():
             try:
                 self.creds = Credentials.from_authorized_user_file(str(self.token_path), SCOPES)
+                self.drive_service = build("drive", "v3", credentials=self.creds)
+                self.gmail_service = build("gmail", "v1", credentials=self.creds)
+                logger.info("✅ Autenticado via token.json!")
+                return True
             except Exception as e:
-                logger.warning(f"Erro ao carregar token existente: {e}")
+                logger.warning(f"Erro no token.json: {e}")
 
-        if not self.creds or not self.creds.valid:
-            if self.creds and self.creds.expired and self.creds.refresh_token:
-                try:
-                    logger.info("🔄 A atualizar token expirado...")
-                    self.creds.refresh(Request())
-                except Exception as e:
-                    logger.warning(f"Falha ao renovar token: {e}")
-                    self.creds = None
-
-            if not self.creds:
-                if not self.credentials_path.exists():
-                    logger.error(f"❌ Ficheiro de credenciais não encontrado em: {self.credentials_path}")
-                    logger.info("📋 Como obter em 2 passos:")
-                    logger.info("1. Aceda a https://console.cloud.google.com/apis/credentials")
-                    logger.info("2. Crie um 'OAuth Client ID' (Desktop App), descarregue o JSON e guarde como:")
-                    logger.info(f"   {self.credentials_path}")
-                    return False
-
-                logger.info("🌐 A abrir navegador para autorização Google OAuth...")
+        # 3. Fallback para credentials.json (OAuth)
+        if self.credentials_path.exists():
+            try:
+                from google_auth_oauthlib.flow import InstalledAppFlow
                 flow = InstalledAppFlow.from_client_secrets_file(str(self.credentials_path), SCOPES)
                 self.creds = flow.run_local_server(port=0)
+                with open(self.token_path, "w") as token:
+                    token.write(self.creds.to_json())
+                self.drive_service = build("drive", "v3", credentials=self.creds)
+                self.gmail_service = build("gmail", "v1", credentials=self.creds)
+                logger.info("✅ Autenticado via OAuth!")
+                return True
+            except Exception as e:
+                logger.error(f"Erro OAuth: {e}")
 
-            self.token_path.parent.mkdir(parents=True, exist_ok=True)
-            with open(self.token_path, "w") as token:
-                token.write(self.creds.to_json())
-            logger.info(f"✅ Token guardado com sucesso em: {self.token_path}")
+        # 4. Fallback para GOOGLE_API_KEY (Apenas Drive público)
+        api_key = self.env_vars.get("GOOGLE_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+        if api_key and not api_key.startswith("AIzaSyA_SUA_CHAVE"):
+            logger.info("🔑 A utilizar GOOGLE_API_KEY do .env...")
+            try:
+                self.drive_service = build("drive", "v3", developerKey=api_key)
+                logger.info("✅ Conectado ao Google Drive via API Key!")
+                return True
+            except Exception as e:
+                logger.warning(f"Erro API Key: {e}")
 
-        try:
-            self.gmail_service = build("gmail", "v1", credentials=self.creds)
-            self.drive_service = build("drive", "v3", credentials=self.creds)
-            logger.info("✅ Autenticação Google API concluída com sucesso.")
-            return True
-        except Exception as e:
-            logger.error(f"❌ Erro ao inicializar serviços Google: {e}")
-            return False
+        logger.error("❌ Nenhuma credencial válida encontrada.")
+        return False
 
-    def ingest_gmail_label(self, label_name: str) -> List[Dict[str, Any]]:
-        """Descarrega todas as mensagens e anexos de uma label do Gmail."""
-        if not self.gmail_service:
-            logger.error("Gmail service não autenticado.")
+    # =========================================================================
+    # EXTRAÇÃO TOTAL DA GOOGLE DRIVE
+    # =========================================================================
+    def sync_all_drive(self) -> List[Dict[str, Any]]:
+        """Varre e descarrega TODA a Google Drive a partir da raiz."""
+        if not self.drive_service:
+            logger.error("Drive service indisponível.")
             return []
 
-        logger.info(f"📥 A processar label do Gmail: {label_name}")
+        logger.info("🚀 A INICIAR EXTRAÇÃO TOTAL DO GOOGLE DRIVE...")
         results = []
-        safe_label = sanitize_filename(label_name)
-        target_dir = self.gmail_dir / safe_label
-        target_dir.mkdir(parents=True, exist_ok=True)
-
-        query = f'label:"{label_name}"'
         try:
-            response = self.gmail_service.users().messages().list(userId="me", q=query).execute()
-            messages = response.get("messages", [])
+            self._download_drive_folder_recursive("root", self.gdrive_dir, results)
+        except Exception as e:
+            logger.error(f"Erro durante extração total da Drive: {e}")
+        logger.info(f"✅ Extração do Drive concluída! Total de ficheiros: {len(results)}")
+        return results
 
-            while "nextPageToken" in response:
-                page_token = response["nextPageToken"]
-                response = self.gmail_service.users().messages().list(userId="me", q=query, pageToken=page_token).execute()
-                messages.extend(response.get("messages", []))
+    def _download_drive_folder_recursive(self, folder_id: str, current_dir: Path, results: List[Dict[str, Any]]):
+        from googleapiclient.http import MediaIoBaseDownload
+        import io
 
-            logger.info(f"Encontradas {len(messages)} mensagens para a label '{label_name}'.")
+        current_dir.mkdir(parents=True, exist_ok=True)
+        page_token = None
 
-            for msg_summary in messages:
-                msg_id = msg_summary["id"]
-                msg = self.gmail_service.users().messages().get(userId="me", id=msg_id, format="full").execute()
-                
-                payload = msg.get("payload", {})
-                headers = {h["name"].lower(): h["value"] for h in payload.get("headers", [])}
-                subject = headers.get("subject", "Sem_Assunto")
-                sender = headers.get("from", "Desconhecido")
-                date_str = headers.get("date", "")
-                
-                safe_subject = sanitize_filename(subject)
-                email_folder = target_dir / f"{msg_id}_{safe_subject[:40]}"
-                email_folder.mkdir(parents=True, exist_ok=True)
+        while True:
+            query = f"'{folder_id}' in parents and trashed = false"
+            res = self.drive_service.files().list(
+                q=query,
+                pageSize=100,
+                pageToken=page_token,
+                fields="nextPageToken, files(id, name, mimeType, size, modifiedTime)"
+            ).execute()
 
-                body_content = self._extract_body(payload)
-                email_meta = {
-                    "id": msg_id,
-                    "label": label_name,
-                    "subject": subject,
-                    "from": sender,
-                    "date": date_str,
-                    "attachments": []
-                }
+            items = res.get("files", [])
+            for item in items:
+                item_id = item["id"]
+                item_name = item["name"]
+                mime_type = item["mimeType"]
 
-                email_md_path = email_folder / "email_body.md"
-                with open(email_md_path, "w", encoding="utf-8") as f:
-                    f.write(f"# {subject}\n\n")
-                    f.write(f"- **De:** {sender}\n")
-                    f.write(f"- **Data:** {date_str}\n")
-                    f.write(f"- **Label:** {label_name}\n")
-                    f.write(f"- **ID:** {msg_id}\n\n---\n\n")
-                    f.write(body_content)
+                if mime_type == "application/vnd.google-apps.folder":
+                    sub_dir = current_dir / sanitize_filename(item_name)
+                    logger.info(f"📁 Entrando na pasta: {sub_dir.relative_to(self.gdrive_dir)}")
+                    self._download_drive_folder_recursive(item_id, sub_dir, results)
+                else:
+                    safe_name = sanitize_filename(item_name)
+                    file_path = current_dir / safe_name
 
-                self._download_attachments(msg_id, payload, email_folder, email_meta)
-                results.append(email_meta)
+                    try:
+                        if mime_type == "application/vnd.google-apps.document":
+                            safe_name = f"{Path(safe_name).stem}.pdf"
+                            file_path = current_dir / safe_name
+                            request = self.drive_service.files().export_media(fileId=item_id, mimeType="application/pdf")
+                        elif mime_type == "application/vnd.google-apps.spreadsheet":
+                            safe_name = f"{Path(safe_name).stem}.xlsx"
+                            file_path = current_dir / safe_name
+                            request = self.drive_service.files().export_media(
+                                fileId=item_id,
+                                mimeType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                            )
+                        elif mime_type == "application/vnd.google-apps.presentation":
+                            safe_name = f"{Path(safe_name).stem}.pdf"
+                            file_path = current_dir / safe_name
+                            request = self.drive_service.files().export_media(fileId=item_id, mimeType="application/pdf")
+                        else:
+                            request = self.drive_service.files().get_media(fileId=item_id)
+
+                        # Evita descarregar novamente se o ficheiro já existir localmente
+                        if not file_path.exists():
+                            logger.info(f"  ⬇️ A descarregar ficheiro: {safe_name}")
+                            fh = io.FileIO(str(file_path), "wb")
+                            downloader = MediaIoBaseDownload(fh, request)
+                            done = False
+                            while not done:
+                                status, done = downloader.next_chunk()
+                        else:
+                            logger.info(f"  ⚡ Já existe localmente: {safe_name}")
+
+                        sha256 = get_file_hash(file_path)
+                        results.append({
+                            "id": item_id,
+                            "name": safe_name,
+                            "path": str(file_path),
+                            "size_bytes": file_path.stat().st_size,
+                            "sha256": sha256,
+                            "modified": item.get("modifiedTime", "")
+                        })
+                    except Exception as e:
+                        logger.error(f"  ❌ Erro ao transferir '{item_name}': {e}")
+
+            page_token = res.get("nextPageToken")
+            if not page_token:
+                break
+
+    # =========================================================================
+    # EXTRAÇÃO TOTAL DO GMAIL (TODAS AS LABELS E EMAILS)
+    # =========================================================================
+    def sync_all_gmail(self) -> List[Dict[str, Any]]:
+        """Varre e descarrega TODOS os emails e anexos de todas as labels."""
+        if not self.gmail_service:
+            logger.warning("Gmail service não disponível. A ignorar Gmail.")
+            return []
+
+        logger.info("🚀 A INICIAR EXTRAÇÃO TOTAL DO GMAIL...")
+        results = []
+        try:
+            # Obter todas as labels da conta
+            labels_res = self.gmail_service.users().labels().list(userId="me").execute()
+            user_labels = labels_res.get("labels", [])
+            logger.info(f"📋 Encontradas {len(user_labels)} labels no Gmail.")
+
+            for lbl in user_labels:
+                lbl_name = lbl["name"]
+                # Ignorar categorias automáticas spam/trash
+                if lbl_name in ["SPAM", "TRASH", "DRAFT", "CHAT"]:
+                    continue
+
+                safe_label = sanitize_filename(lbl_name)
+                lbl_dir = self.gmail_dir / safe_label
+                lbl_dir.mkdir(parents=True, exist_ok=True)
+
+                query = f'label:"{lbl_name}"'
+                page_token = None
+                logger.info(f"📥 A extrair emails da label: '{lbl_name}'")
+
+                while True:
+                    res = self.gmail_service.users().messages().list(
+                        userId="me", q=query, pageToken=page_token, maxResults=100
+                    ).execute()
+                    messages = res.get("messages", [])
+
+                    for msg_ref in messages:
+                        msg_id = msg_ref["id"]
+                        try:
+                            msg = self.gmail_service.users().messages().get(
+                                userId="me", id=msg_id, format="full"
+                            ).execute()
+
+                            payload = msg.get("payload", {})
+                            headers = {h["name"].lower(): h["value"] for h in payload.get("headers", [])}
+                            subject = headers.get("subject", "Sem_Assunto")
+                            sender = headers.get("from", "Desconhecido")
+                            date_str = headers.get("date", "")
+
+                            safe_subject = sanitize_filename(subject)
+                            email_folder = lbl_dir / f"{msg_id}_{safe_subject[:40]}"
+                            email_folder.mkdir(parents=True, exist_ok=True)
+
+                            body_content = self._extract_body(payload)
+                            email_meta = {
+                                "id": msg_id,
+                                "label": lbl_name,
+                                "subject": subject,
+                                "from": sender,
+                                "date": date_str,
+                                "attachments": []
+                            }
+
+                            email_md_path = email_folder / "email_body.md"
+                            if not email_md_path.exists():
+                                with open(email_md_path, "w", encoding="utf-8") as f:
+                                    f.write(f"# {subject}\n\n")
+                                    f.write(f"- **De:** {sender}\n")
+                                    f.write(f"- **Data:** {date_str}\n")
+                                    f.write(f"- **Label:** {lbl_name}\n")
+                                    f.write(f"- **ID:** {msg_id}\n\n---\n\n")
+                                    f.write(body_content)
+
+                            self._download_attachments(msg_id, payload, email_folder, email_meta)
+                            results.append(email_meta)
+                        except Exception as em_err:
+                            logger.error(f"Erro no email ID {msg_id}: {em_err}")
+
+                    page_token = res.get("nextPageToken")
+                    if not page_token:
+                        break
 
         except Exception as e:
-            logger.error(f"Erro ao processar label '{label_name}': {e}")
+            logger.error(f"Erro na extração do Gmail: {e}")
 
+        logger.info(f"✅ Extração do Gmail concluída! Total de emails processados: {len(results)}")
         return results
 
     def _extract_body(self, payload: Dict[str, Any]) -> str:
@@ -203,14 +340,11 @@ class GoogleIngestor:
             for part in payload["parts"]:
                 mime_type = part.get("mimeType", "")
                 if mime_type == "text/plain" and "data" in part.get("body", {}):
-                    data = part["body"]["data"]
-                    return base64.urlsafe_b64decode(data).decode("utf-8", errors="replace")
+                    return base64.urlsafe_b64decode(part["body"]["data"]).decode("utf-8", errors="replace")
                 elif mime_type == "text/html" and "data" in part.get("body", {}):
-                    data = part["body"]["data"]
-                    body = base64.urlsafe_b64decode(data).decode("utf-8", errors="replace")
+                    body = base64.urlsafe_b64decode(part["body"]["data"]).decode("utf-8", errors="replace")
         elif "body" in payload and "data" in payload["body"]:
-            data = payload["body"]["data"]
-            body = base64.urlsafe_b64decode(data).decode("utf-8", errors="replace")
+            body = base64.urlsafe_b64decode(payload["body"]["data"]).decode("utf-8", errors="replace")
         return body
 
     def _download_attachments(self, msg_id: str, payload: Dict[str, Any], email_folder: Path, email_meta: Dict[str, Any]):
@@ -221,162 +355,75 @@ class GoogleIngestor:
             filename = part.get("filename")
             if filename and "attachmentId" in part.get("body", {}):
                 att_id = part["body"]["attachmentId"]
-                att = self.gmail_service.users().messages().attachments().get(
-                    userId="me", messageId=msg_id, id=att_id
-                ).execute()
-
-                file_data = base64.urlsafe_b64decode(att["data"])
                 safe_name = sanitize_filename(filename)
                 file_path = email_folder / safe_name
 
-                with open(file_path, "wb") as f:
-                    f.write(file_data)
+                if not file_path.exists():
+                    try:
+                        att = self.gmail_service.users().messages().attachments().get(
+                            userId="me", messageId=msg_id, id=att_id
+                        ).execute()
 
-                sha256 = get_file_hash(file_path)
-                logger.info(f"  📎 Anexo guardado: {safe_name} ({len(file_data)} bytes)")
-                email_meta["attachments"].append({
-                    "filename": safe_name,
-                    "path": str(file_path),
-                    "size_bytes": len(file_data),
-                    "sha256": sha256
-                })
+                        file_data = base64.urlsafe_b64decode(att["data"])
+                        with open(file_path, "wb") as f:
+                            f.write(file_data)
+                        logger.info(f"    📎 Anexo guardado: {safe_name}")
+                    except Exception as e:
+                        logger.error(f"    ❌ Erro anexo {safe_name}: {e}")
+
+                if file_path.exists():
+                    sha256 = get_file_hash(file_path)
+                    email_meta["attachments"].append({
+                        "filename": safe_name,
+                        "path": str(file_path),
+                        "size_bytes": file_path.stat().st_size,
+                        "sha256": sha256
+                    })
 
             if "parts" in part:
                 self._download_attachments(msg_id, part, email_folder, email_meta)
 
-    def ingest_gdrive_folder(self, folder_name: str) -> List[Dict[str, Any]]:
-        """Pesquisa e descarrega recursivamente ficheiros de uma pasta do Google Drive."""
-        if not self.drive_service:
-            logger.error("Drive service não autenticado.")
-            return []
-
-        logger.info(f"📂 A pesquisar pasta no Google Drive: {folder_name}")
-        results = []
-        try:
-            query = f"mimeType = 'application/vnd.google-apps.folder' and name = '{folder_name}' and trashed = false"
-            res = self.drive_service.files().list(q=query, fields="files(id, name)").execute()
-            folders = res.get("files", [])
-
-            if not folders:
-                logger.warning(f"Pasta '{folder_name}' não encontrada no Google Drive.")
-                return []
-
-            folder_id = folders[0]["id"]
-            safe_folder_name = sanitize_filename(folder_name)
-            target_dir = self.gdrive_dir / safe_folder_name
-            target_dir.mkdir(parents=True, exist_ok=True)
-
-            self._download_drive_children(folder_id, target_dir, results)
-
-        except Exception as e:
-            logger.error(f"Erro ao processar pasta Drive '{folder_name}': {e}")
-
-        return results
-
-    def _download_drive_children(self, parent_id: str, current_dir: Path, results: List[Dict[str, Any]]):
-        from googleapiclient.http import MediaIoBaseDownload
-        import io
-
-        query = f"'{parent_id}' in parents and trashed = false"
-        res = self.drive_service.files().list(q=query, fields="files(id, name, mimeType, size)").execute()
-        items = res.get("files", [])
-
-        for item in items:
-            item_id = item["id"]
-            item_name = item["name"]
-            mime_type = item["mimeType"]
-
-            if mime_type == "application/vnd.google-apps.folder":
-                sub_dir = current_dir / sanitize_filename(item_name)
-                sub_dir.mkdir(parents=True, exist_ok=True)
-                self._download_drive_children(item_id, sub_dir, results)
-            else:
-                safe_name = sanitize_filename(item_name)
-                file_path = current_dir / safe_name
-
-                if mime_type == "application/vnd.google-apps.document":
-                    safe_name = f"{Path(safe_name).stem}.pdf"
-                    file_path = current_dir / safe_name
-                    request = self.drive_service.files().export_media(fileId=item_id, mimeType="application/pdf")
-                elif mime_type == "application/vnd.google-apps.spreadsheet":
-                    safe_name = f"{Path(safe_name).stem}.xlsx"
-                    file_path = current_dir / safe_name
-                    request = self.drive_service.files().export_media(
-                        fileId=item_id,
-                        mimeType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-                    )
-                else:
-                    request = self.drive_service.files().get_media(fileId=item_id)
-
-                logger.info(f"  ⬇️ A descarregar da Drive: {safe_name}")
-                fh = io.FileIO(str(file_path), "wb")
-                downloader = MediaIoBaseDownload(fh, request)
-                done = False
-                while not done:
-                    status, done = downloader.next_chunk()
-
-                sha256 = get_file_hash(file_path)
-                results.append({
-                    "id": item_id,
-                    "name": safe_name,
-                    "path": str(file_path),
-                    "size_bytes": file_path.stat().st_size,
-                    "sha256": sha256
-                })
-
-    def generate_manifest(self, gmail_data: List[Any], drive_data: List[Any]):
-        manifest_path = self.index_dir / "GOOGLE_INGEST_MANIFEST.json"
+    def generate_manifest(self, drive_data: List[Any], gmail_data: List[Any]):
+        """Gera o manifesto JSON consolidado de toda a sincronização."""
+        manifest_path = self.index_dir / "FULL_GOOGLE_INGEST_MANIFEST.json"
         manifest = {
-            "total_emails_processed": len(gmail_data),
-            "total_drive_files_downloaded": len(drive_data),
-            "gmail_records": gmail_data,
-            "drive_records": drive_data
+            "total_drive_files": len(drive_data),
+            "total_gmail_emails": len(gmail_data),
+            "drive_files": drive_data,
+            "gmail_emails": gmail_data
         }
         with open(manifest_path, "w", encoding="utf-8") as f:
             json.dump(manifest, f, indent=2, ensure_ascii=False)
-        logger.info(f"📄 Manifesto de ingestão gerado em: {manifest_path}")
+        logger.info(f"📄 Manifesto Total de Ingestão guardado em: {manifest_path}")
 
 
 def main():
     package_dir = Path(__file__).resolve().parent
     default_out = package_dir / "data" / "raw"
 
-    parser = argparse.ArgumentParser(description="Ingestão de Dados Google (Gmail & Google Drive)")
+    parser = argparse.ArgumentParser(description="Extração e Sincronização TOTAL Google (Drive + Gmail)")
     parser.add_argument("--output", "-o", default=str(default_out),
-                        help="Diretório de destino para os ficheiros descarregados")
-    parser.add_argument("--credentials", "-c", default=None,
-                        help="Caminho para o ficheiro credentials.json do Google Cloud")
-    parser.add_argument("--labels", nargs="+", default=DEFAULT_GMAIL_LABELS,
-                        help="Lista de labels do Gmail para descarregar")
-    parser.add_argument("--folders", nargs="+", default=DEFAULT_GDRIVE_FOLDERS,
-                        help="Lista de pastas do Google Drive para descarregar")
-    parser.add_argument("--skip-gmail", action="store_true", help="Ignorar Gmail")
-    parser.add_argument("--skip-drive", action="store_true", help="Ignorar Google Drive")
+                        help="Diretório de destino local para os ficheiros")
+    parser.add_argument("--skip-drive", action="store_true", help="Não extrair Google Drive")
+    parser.add_argument("--skip-gmail", action="store_true", help="Não extrair Gmail")
 
     args = parser.parse_args()
 
-    ingestor = GoogleIngestor(
-        base_output_dir=Path(args.output),
-        credentials_path=Path(args.credentials) if args.credentials else None
-    )
+    ingestor = GoogleTotalIngestor(base_output_dir=Path(args.output))
 
     if not ingestor.authenticate():
         sys.exit(1)
 
-    gmail_results = []
-    if not args.skip_gmail:
-        for lbl in args.labels:
-            res = ingestor.ingest_gmail_label(lbl)
-            gmail_results.extend(res)
-
     drive_results = []
     if not args.skip_drive:
-        for folder in args.folders:
-            res = ingestor.ingest_gdrive_folder(folder)
-            drive_results.extend(res)
+        drive_results = ingestor.sync_all_drive()
 
-    ingestor.generate_manifest(gmail_results, drive_results)
-    logger.info("🎉 Ingestão Google concluída com sucesso!")
+    gmail_results = []
+    if not args.skip_gmail:
+        gmail_results = ingestor.sync_all_gmail()
+
+    ingestor.generate_manifest(drive_results, gmail_results)
+    logger.info("🎉 EXTRAÇÃO TOTAL CONCLUÍDA COM SUCESSO!")
 
 
 if __name__ == "__main__":

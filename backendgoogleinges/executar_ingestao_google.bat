@@ -1,18 +1,18 @@
 @echo off
 REM ==============================================================================
-REM executar_ingestao_google.bat - Sincronizacao de Gmail e Google Drive
+REM executar_ingestao_google.bat - EXTRACAO TOTAL (Google Drive + Gmail)
 REM ==============================================================================
-TITLE Ingestao Google Cloud (Gmail & Drive) - YKF
+TITLE Ingestao Total Google Cloud (Drive Completo & Gmail Completo) - YKF
 
 set SCRIPT_DIR=%~dp0
 cd /d "%SCRIPT_DIR%"
 
 cls
 echo ==============================================================================
-echo            INGESTAO GOOGLE CLOUD: GMAIL (LABELS) & GOOGLE DRIVE
+echo        EXTRACAO E SINCRONIZACAO TOTAL: GOOGLE DRIVE E GMAIL
 echo ==============================================================================
-echo  Labels Gmail : 3719/25.0T8LSB, ANALISTA, CENTENARIO, Finpartner
-echo  Pastas Drive : 1 TRIBUNAL, MAPA PROVAS, SPARK 2926, 02 Assuntos Juridicos...
+echo  Google Drive : Todas as pastas da raiz recursivamente (Processos, Provas, etc.)
+echo  Gmail        : Todas as labels, mensagens e anexos (PDFs, Chats WhatsApp, etc.)
 echo  Destino      : %SCRIPT_DIR%data\raw
 echo ==============================================================================
 echo.
@@ -28,6 +28,7 @@ if %ERRORLEVEL% EQU 0 (
 
 echo.
 echo ==============================================================================
-echo Sincronizacao concluida. Ficheiros e manifestos gravados em data/raw/
+echo Sincronizacao concluida!
+echo Manifesto gerado em: data\raw\_index\FULL_GOOGLE_INGEST_MANIFEST.json
 echo ==============================================================================
 pause
