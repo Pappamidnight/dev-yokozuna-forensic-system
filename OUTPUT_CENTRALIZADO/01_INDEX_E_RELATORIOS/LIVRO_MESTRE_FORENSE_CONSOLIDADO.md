@@ -18,9 +18,9 @@
 ┌──────────────────┐    ┌──────────────────┐         ┌──────────────────┐    ┌──────────────────┐
 │ PILAR 1: TRL     │    │ PILAR 2: POSSE   │         │ PILAR 3: UNICRE  │    │ PILAR 4: CRIME   │
 │ EXECUÇÃO 23142   │    │ RECURSO TRL 3719 │         │ EMBARGOS 10153   │    │ QUEIXAS & CAAJ   │
-│ • Acórdão Extinç.│    │ • Direito Retenç.│         │ • Nulidade Citaç.│    │ • AE Luísa Santos│
-│ • Levant. € 35k  │    │ • 12 Vídeos 2024 │         │ • Compens. € 52k │    │ • Filipe Delgado │
-│ • Nulidade AE    │    │ • Dívida 100k LEA│         │ • Fatura 82.722 €│    │ • Dr. Varela     │
+│ - Acórdão Extinç.│    │ - Direito Retenç.│         │ - Nulidade Citaç.│    │ - AE Luísa Santos│
+│ - Levant. € 35k  │    │ - 12 Vídeos 2024 │         │ - Compens. € 52k │    │ - Filipe Delgado │
+│ - Nulidade AE    │    │ - Dívida 100k LEA│         │ - Fatura 82.722 €│    │ - Dr. Varela     │
 └──────────────────┘    └──────────────────┘         └──────────────────┘    └──────────────────┘
 ```
 
@@ -77,19 +77,19 @@
 ├───────────────────────┬──────────────────────────────┬───────────────────────────────────────────┤
 │ ALVO DA QUEIXA        │ TIPOS DE CRIME / INFRAÇÃO    │ PEÇA DE PARTICIPAÇÃO FORMAL               │
 ├───────────────────────┼──────────────────────────────┼───────────────────────────────────────────┤
-│ Luísa Santos          │ • Abuso de Poder (Art. 382)  │ [10.1_QUEIXA_CRIME_AE_LUISA_SANTOS.md]    │
-│ (Agente de Execução)  │ • Falsidade (Art. 359)       │ (file:///C:/Users/Yokozuna/Dev/OUTPUT_    │
-│                       │ • Desobediência (Art. 348)   │ CENTRALIZADO/01_INDEX_E_RELATORIOS/       │
+│ Luísa Santos          │ - Abuso de Poder (Art. 382)  │ [10.1_QUEIXA_CRIME_AE_LUISA_SANTOS.md]    │
+│ (Agente de Execução)  │ - Falsidade (Art. 359)       │ (file:///C:/Users/Yokozuna/Dev/OUTPUT_    │
+│                       │ - Desobediência (Art. 348)   │ CENTRALIZADO/01_INDEX_E_RELATORIOS/       │
 │                       │                              │ 10.1_QUEIXA_CRIME_AE_LUISA_SANTOS.md)     │
 ├───────────────────────┼──────────────────────────────┼───────────────────────────────────────────┤
-│ Filipe Delgado        │ • Violação Corresp. (Art 194)│ [10.2_QUEIXA_CRIME_FILIPE_DELGADO.md]     │
-│ (Co-executado/Gerente)│ • Burla Qualif. (Art. 217)   │ (file:///C:/Users/Yokozuna/Dev/OUTPUT_    │
-│                       │ • Insolvência Dolosa (Art 227│ CENTRALIZADO/01_INDEX_E_RELATORIOS/       │
+│ Filipe Delgado        │ - Violação Corresp. (Art 194)│ [10.2_QUEIXA_CRIME_FILIPE_DELGADO.md]     │
+│ (Co-executado/Gerente)│ - Burla Qualif. (Art. 217)   │ (file:///C:/Users/Yokozuna/Dev/OUTPUT_    │
+│                       │ - Insolvência Dolosa (Art 227│ CENTRALIZADO/01_INDEX_E_RELATORIOS/       │
 │                       │                              │ 10.2_QUEIXA_CRIME_FILIPE_DELGADO.md)      │
 ├───────────────────────┼──────────────────────────────┼───────────────────────────────────────────┤
-│ Dr. Varela de Matos   │ • Conflito Interesses (83 EOA│ [DOSSIER_RESPONSABILIZACAO_VARELA_LUISA]  │
-│ (Advogado CP 9878L)   │ • Atuação sem Mandato (38 EOA│ (file:///C:/Users/Yokozuna/Dev/OUTPUT_    │
-│                       │ • Litigância Má-Fé (542 CPC) │ CENTRALIZADO/01_INDEX_E_RELATORIOS/       │
+│ Dr. Varela de Matos   │ - Conflito Interesses (83 EOA│ [DOSSIER_RESPONSABILIZACAO_VARELA_LUISA]  │
+│ (Advogado CP 9878L)   │ - Atuação sem Mandato (38 EOA│ (file:///C:/Users/Yokozuna/Dev/OUTPUT_    │
+│                       │ - Litigância Má-Fé (542 CPC) │ CENTRALIZADO/01_INDEX_E_RELATORIOS/       │
 │                       │                              │ DOSSIER_RESPONSABILIZACAO_VARELA_LUISA_   │
 │                       │                              │ DELGADO.md)                               │
 └───────────────────────┴──────────────────────────────┴───────────────────────────────────────────┘
@@ -100,12 +100,12 @@
 ## 6. Índice Central de Ferramentas e Relatórios
 
 1. **Plataforma Visual de Vínculos (Padrão Maltego)**:
-   👉 [PLATAFORMA_FORENSE_UNIFICADA.html](file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/PLATAFORMA_FORENSE_UNIFICADA.html)
+   [ITEM]  [PLATAFORMA_FORENSE_UNIFICADA.html](file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/PLATAFORMA_FORENSE_UNIFICADA.html)
 2. **Galeria Pericial dos 12 Vídeos de Vistoria**:
-   👉 [GALERIA_VIDEOS_VISTORIA.html](file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/GALERIA_VIDEOS_VISTORIA.html)
+   [ITEM]  [GALERIA_VIDEOS_VISTORIA.html](file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/GALERIA_VIDEOS_VISTORIA.html)
 3. **Catálogo Geral de Conversas WhatsApp (2021–2022)**:
-   👉 [TODAS_CONVERSAS_WHATSAPP_2021_2022.md](file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/TODAS_CONVERSAS_WHATSAPP_2021_2022.md)
+   [ITEM]  [TODAS_CONVERSAS_WHATSAPP_2021_2022.md](file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/TODAS_CONVERSAS_WHATSAPP_2021_2022.md)
 4. **Auditoria de Narrativas Falsas vs. Verdade Real**:
-   👉 [AUDITORIA_FORENSE_NARRATIVAS_FALSAS_VS_VERDADE.md](file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/AUDITORIA_FORENSE_NARRATIVAS_FALSAS_VS_VERDADE.md)
+   [ITEM]  [AUDITORIA_FORENSE_NARRATIVAS_FALSAS_VS_VERDADE.md](file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/01_INDEX_E_RELATORIOS/AUDITORIA_FORENSE_NARRATIVAS_FALSAS_VS_VERDADE.md)
 5. **Base de Dados Unificada**:
-   👉 [`memoria_forense_unificada.db`](file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/memoria_forense_unificada.db)
+   [ITEM]  [`memoria_forense_unificada.db`](file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/memoria_forense_unificada.db)

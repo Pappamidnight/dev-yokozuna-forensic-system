@@ -18,27 +18,27 @@
 │ RUBRICAS CONTABILÍSTICAS                      │ EXERCÍCIO 2021 (€)     │ EXERCÍCIO 2020 (€)      │
 ├───────────────────────────────────────────────┼────────────────────────┼─────────────────────────┤
 │ ATIVO                                         │                        │                         │
-│ • Ativos Fixos Tangíveis                      │ 452,60                 │ 1.590,35                │
-│ • Investimentos Financeiros                   │ 926,87                 │ 926,87                  │
-│ • Clientes                                    │ 1.000,00               │ 1.000,00                │
-│ • Estado e Outros Entes Públicos (Créditos)   │ 222.517,76             │ 229.154,35              │
-│ • Diferimentos e Outros Ativos Correntes      │ 118.264,01             │ 121.940,22              │
-│ • Caixa e Equivalentes de Caixa (Liquidez)    │ 145.697,04             │ 59.360,90               │
+│ - Ativos Fixos Tangíveis                      │ 452,60                 │ 1.590,35                │
+│ - Investimentos Financeiros                   │ 926,87                 │ 926,87                  │
+│ - Clientes                                    │ 1.000,00               │ 1.000,00                │
+│ - Estado e Outros Entes Públicos (Créditos)   │ 222.517,76             │ 229.154,35              │
+│ - Diferimentos e Outros Ativos Correntes      │ 118.264,01             │ 121.940,22              │
+│ - Caixa e Equivalentes de Caixa (Liquidez)    │ 145.697,04             │ 59.360,90               │
 │ TOTAL DO ATIVO                                │ 488.858,28             │ 413.972,69              │
 ├───────────────────────────────────────────────┼────────────────────────┼─────────────────────────┤
 │ CAPITAL PRÓPRIO E PASSIVO                     │                        │                         │
-│ • Capital Subscrito                           │ 3.525,00               │ 3.525,00                │
-│ • Outros Instrumentos de Capital Próprio      │ 58.800,00              │ 58.800,00               │
-│ • Reservas                                    │ 429,89                 │ 429,89                  │
-│ • Resultados Transitados                      │ (176.725,96)           │ (60.598,28)             │
-│ • Resultado Líquido do Exercício              │ (39.510,78)            │ (116.127,68)            │
+│ - Capital Subscrito                           │ 3.525,00               │ 3.525,00                │
+│ - Outros Instrumentos de Capital Próprio      │ 58.800,00              │ 58.800,00               │
+│ - Reservas                                    │ 429,89                 │ 429,89                  │
+│ - Resultados Transitados                      │ (176.725,96)           │ (60.598,28)             │
+│ - Resultado Líquido do Exercício              │ (39.510,78)            │ (116.127,68)            │
 │ TOTAL DO CAPITAL PRÓPRIO                      │ (153.481,85)           │ (113.971,07)            │
 ├───────────────────────────────────────────────┼────────────────────────┼─────────────────────────┤
 │ PASSIVO CORRENTE                              │                        │                         │
-│ • Fornecedores                                │ 201.775,61             │ 119.537,14              │
-│ • Estado e Outros Entes Públicos (Dívidas)    │ 307.973,33             │ 289.715,67              │
-│ • Financiamentos Obtidos                      │ 71.629,08              │ 69.889,48               │
-│ • Outros Passivos Correntes                   │ 60.962,11              │ 48.801,47               │
+│ - Fornecedores                                │ 201.775,61             │ 119.537,14              │
+│ - Estado e Outros Entes Públicos (Dívidas)    │ 307.973,33             │ 289.715,67              │
+│ - Financiamentos Obtidos                      │ 71.629,08              │ 69.889,48               │
+│ - Outros Passivos Correntes                   │ 60.962,11              │ 48.801,47               │
 │ TOTAL DO PASSIVO                              │ 642.340,13             │ 527.943,76              │
 ├───────────────────────────────────────────────┼────────────────────────┼─────────────────────────┤
 │ TOTAL DO CAPITAL PRÓPRIO E PASSIVO            │ 488.858,28             │ 413.972,69              │

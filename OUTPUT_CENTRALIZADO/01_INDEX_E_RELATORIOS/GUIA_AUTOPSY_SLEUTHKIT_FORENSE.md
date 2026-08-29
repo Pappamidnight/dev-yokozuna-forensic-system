@@ -41,11 +41,11 @@ Com o **Autopsy** e o **The Sleuth Kit (TSK)** instalados na sua máquina, disp�
      - `F:\` (Discos externos de 2018, 2019 e 2022)
      - `I:\` e `J:\`
 4. Módulos de Ingestão Recomendados a Ativar:
-   - ✅ **Recent Activity** (histórico e downloads)
-   - ✅ **Keyword Search** (pesquisa de termos como *Varela, Luísa Santos, 82K, Teresa, Unicre*)
-   - ✅ **Email Parser & Communications** (leitura de ficheiros `.eml`, `.msg`, `.txt`)
-   - ✅ **Picture & Video Analyzer (EXIF)** (extração de datas/horas de fotos e vídeos de vistoria)
-   - ✅ **Hash Lookup** (utilizando o nosso manifesto `SHA256SUMS.txt` gerado).
+   - [CONFORME]  **Recent Activity** (histórico e downloads)
+   - [CONFORME]  **Keyword Search** (pesquisa de termos como *Varela, Luísa Santos, 82K, Teresa, Unicre*)
+   - [CONFORME]  **Email Parser & Communications** (leitura de ficheiros `.eml`, `.msg`, `.txt`)
+   - [CONFORME]  **Picture & Video Analyzer (EXIF)** (extração de datas/horas de fotos e vídeos de vistoria)
+   - [CONFORME]  **Hash Lookup** (utilizando o nosso manifesto `SHA256SUMS.txt` gerado).
 
 ---
 
@@ -71,4 +71,4 @@ Se preferir usar o terminal TSK diretamente:
 ## 4. Lançador Rápido de Integração
 
 Criámos o inicializador no seu ambiente:
-👉 [`EXECUTAR_SLEUTHKIT_AUTOPSY.bat`](file:///C:/Users/Yokozuna/Dev/EXECUTAR_SLEUTHKIT_AUTOPSY.bat)
+[ITEM]  [`EXECUTAR_SLEUTHKIT_AUTOPSY.bat`](file:///C:/Users/Yokozuna/Dev/EXECUTAR_SLEUTHKIT_AUTOPSY.bat)

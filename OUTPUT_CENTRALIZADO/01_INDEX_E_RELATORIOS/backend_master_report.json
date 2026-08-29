@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-08-28T21:48:51.935974",
+  "status": "VALIDATED_100_PERCENT",
+  "stats": {
+    "total_evidencias": 67430,
+    "total_hashes_unicos": 67405,
+    "total_oficiais": 50815
+  },
+  "processos": [
+    {
+      "numero_processo": "23142/22.7T8LSB",
+      "tribunal": "Tribunal Judicial da Comarca de Lisboa / Tribunal da Relação de Lisboa",
+      "especie": "Execução de Sentença / Reclamação de Limpezas Centenário",
+      "estado_citius": "JULGADA EXTINTA PELO TRL (Ordem de Levantamento de Penhoras)",
+      "data_entrada": "2022-10-14",
+      "mandatario_autor": "FLRP Advogados",
+      "mandatario_reu": "Nuno Miguel Silva Duarte",
+      "decisao_relevante": "Acórdão do Tribunal da Relação de Lisboa a determinar a EXTINÇÃO INTEGRAL da execução e o levantamento de todas as penhoras (€ 35.000 + veículos).",
+      "impacto_estrategico": "Recuperação imediata dos 35.000 € e veículos; responsabilização disciplinar e penal da AE Luísa Santos por abuso de poder.",
+      "documentos_citius_refs": [
+        "Acordão TRL",
+        "Ofício AE 20/09/2024 (Ref. 437217551)",
+        "08.4_REQUERIMENTO_LEVANTAMENTO_PENHORAS_1INST.md"
+      ]
+    },
+    {
+      "numero_processo": "3719/25.0T8LSB",
+      "tribunal": "Tribunal Judicial da Comarca de Lisboa — Juiz 4 / Tribunal da Relação de Lisboa",
+      "especie": "Procedimento Cautelar de Restituição de Posse (CPC2013)",
+      "estado_citius": "PROCESSO ARQUIVADO (Acórdão TRL proferido a 16/04/2026 - Ref. 24500137)",
+      "data_entrada": "2025-02-07",
+      "mandatario_autor": "Dr. Nuno Forra (Mandatário de Maria Teresa Martins)",
+      "mandatario_reu": "Dr. António Neto / Dr. João Nabais",
+      "decisao_relevante": "Acórdão da Relação de Lisboa (16/04/2026); Processo baixou à 1.ª Instância em 13/05/2026 e foi ARQUIVADO; Autora condenada em custas a 07/07/2026 (Ref. 457395171).",
+      "impacto_estrategico": "Vitória na tutela possessória; Direito de Retenção (Art. 754.º CC) e 12 Vídeos de Vistoria (24/05/2024) comprovam conservação e desmascaram alegação de esbulho.",
+      "documentos_citius_refs": [
+        "Acórdão TRL Ref. 24500137",
+        "Not. Custas Ref. 457395171",
+        "08.9_CONTRA_ALEGACOES_RECURSO_SENHORIA_COMPLETAS.md"
+      ]
+    },
+    {
+      "numero_processo": "10153/24.7T8LSB",
+      "tribunal": "Tribunal Judicial da Comarca de Lisboa — Juízo de Execução (Juiz 8)",
+      "especie": "Execução de Sentença Próprios Autos (UNICRE / Redunicre) c/ Embargos Apensos",
+      "estado_citius": "EXECUÇÃO SUSPENSA (Despacho Liminar Art. 733.º n.º 1 CPC em 23/10/2025 - Ref. 449641615)",
+      "data_entrada": "2024-04-18",
+      "mandatario_autor": "Dr. José de Athayde de Tavares (UNICRE)",
+      "mandatario_reu": "Dr. Tiago Osório Piscarreta",
+      "decisao_relevante": "Despacho Liminar do Juiz 8 a receber a Oposição por Embargos e a SUSPENDER formalmente a execução e quaisquer penhoras coercivas.",
+      "impacto_estrategico": "Bloqueio total de cobrança; compensação por 52.285 € retidos na fonte; TPA afeto à LEA (PS 1-1064222419 de 07/04/2020) e Fatura de € 82.722,00.",
+      "documentos_citius_refs": [
+        "Despacho Suspensão Ref. 449641615",
+        "Contestação UNICRE Ref. 44528700",
+        "DOSSIER_FINPARTNER_UNICRE_FATURA_82K.md"
+      ]
+    },
+    {
+      "numero_processo": "15547/26.0T8LSB",
+      "tribunal": "Tribunal Judicial da Comarca de Lisboa — Juízo Central Cível de Lisboa",
+      "especie": "Ação Declarativa Comum de Reivindicação de Propriedade",
+      "estado_citius": "EM FASE DE CITAÇÃO DELEGADA (Citação Postal Devolvida em 24/07/2026 - Ref. 47296021)",
+      "data_entrada": "2026-06-12",
+      "mandatario_autor": "Dr. Nuno Forra (Mandatário de Maria Teresa Martins)",
+      "mandatario_reu": "Nuno Miguel Silva Duarte",
+      "decisao_relevante": "Petição Inicial apresentada em 12/06/2026 (Ref. 46589030 - 19.89 MB); Solicitador Ricardo Miranda delegou ato de citação em 04/08/2026 (Ref. 47917847).",
+      "impacto_estrategico": "Ação intentada após derrota no Proc. 3719; Defesa com base em 20+ contratos históricos, 8 cadernetas prediais, posse >10 anos e retenção por benfeitorias (€ 120k).",
+      "documentos_citius_refs": [
+        "Petição Inicial Ref. 46589030",
+        "Delegação Citação Ref. 47917847",
+        "ANALISE_TRAMITACAO_CITIUS_PROC_15547.md"
+      ]
+    }
+  ]
+}

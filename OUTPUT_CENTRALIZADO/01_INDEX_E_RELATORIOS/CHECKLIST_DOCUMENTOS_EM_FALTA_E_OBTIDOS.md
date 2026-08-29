@@ -12,24 +12,24 @@
 ┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
 │ PROVAS MATERIAIS JÁ ASSEGURADAS (NÍVEL OFICIAL / FORÇA PLENA)                                    │
 ├─────────────────────┬────────────────────────────────────────────────────────────────────────────┤
-│ PROCESSO 23142/22   │ • Confirmação Oficial do Acórdão de Extinção do Tribunal da Relação;       │
-│                     │ • Despacho Judicial de 1.ª Instância a travar novos atos executivos;       │
-│                     │ • Ofício da AE Luísa Santos de 20/09/2024 (confissão de nulidade citação); │
-│                     │ • Prova de pagamento de € 25.000 em limpezas à Centenário;                 │
-│                     │ • Peça pronta: [08.4_REQUERIMENTO_LEVANTAMENTO_PENHORAS_1INST.md].         │
+│ PROCESSO 23142/22   │ - Confirmação Oficial do Acórdão de Extinção do Tribunal da Relação;       │
+│                     │ - Despacho Judicial de 1.ª Instância a travar novos atos executivos;       │
+│                     │ - Ofício da AE Luísa Santos de 20/09/2024 (confissão de nulidade citação); │
+│                     │ - Prova de pagamento de € 25.000 em limpezas à Centenário;                 │
+│                     │ - Peça pronta: [08.4_REQUERIMENTO_LEVANTAMENTO_PENHORAS_1INST.md].         │
 ├─────────────────────┼────────────────────────────────────────────────────────────────────────────┤
-│ PROCESSO 3719/25    │ • 12 Vídeos de Vistoria Técnica de 24/05/2024 em MP4 (Galeria completa);   │
-│                     │ • Mais de 350 fotografias com metadados EXIF de conservação do imóvel;     │
-│                     │ • Confissão escrita de Filipe Delgado de 23/08/2022 (corte seletivo água); │
-│                     │ • Faturas e avisos da Galp (Palmeira 31 e 33);                             │
-│                     │ • Documento de Benfeitorias `LEA_fornc.pdf` (António Neto);                │
-│                     │ • Contra-Alegações prontas: [08.9_CONTRA_ALEGACOES_RECURSO_SENHORIA_COMP]. │
+│ PROCESSO 3719/25    │ - 12 Vídeos de Vistoria Técnica de 24/05/2024 em MP4 (Galeria completa);   │
+│                     │ - Mais de 350 fotografias com metadados EXIF de conservação do imóvel;     │
+│                     │ - Confissão escrita de Filipe Delgado de 23/08/2022 (corte seletivo água); │
+│                     │ - Faturas e avisos da Galp (Palmeira 31 e 33);                             │
+│                     │ - Documento de Benfeitorias `LEA_fornc.pdf` (António Neto);                │
+│                     │ - Contra-Alegações prontas: [08.9_CONTRA_ALEGACOES_RECURSO_SENHORIA_COMP]. │
 ├─────────────────────┼────────────────────────────────────────────────────────────────────────────┤
-│ PROCESSO 15547/26   │ • 8 Cadernetas Prediais Históricas;                                        │
-│                     │ • Mais de 20 Contratos e Adendas de Arrendamento (2015 a 2022);            │
-│                     │ • Mapas de rendas emitidos pela Autora Teresa Martins (2015 a 2021);       │
-│                     │ • Contrato da Loja 58;                                                     │
-│                     │ • Fatura N.º 1000002 de € 82.722,00 e Balanço 2021 da Tecnempresa.         │
+│ PROCESSO 15547/26   │ - 8 Cadernetas Prediais Históricas;                                        │
+│                     │ - Mais de 20 Contratos e Adendas de Arrendamento (2015 a 2022);            │
+│                     │ - Mapas de rendas emitidos pela Autora Teresa Martins (2015 a 2021);       │
+│                     │ - Contrato da Loja 58;                                                     │
+│                     │ - Fatura N.º 1000002 de € 82.722,00 e Balanço 2021 da Tecnempresa.         │
 └─────────────────────┴────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -37,7 +37,7 @@
 
 ## 2. O Que Falta / Documentos Recomendados para Obter (Checklist)
 
-### 📌 A. Para a Execução 23142/22 (Desbloqueio de Valores)
+### [NOTA]  A. Para a Execução 23142/22 (Desbloqueio de Valores)
 1. `[ ]` **Certidão Bancária / Comprovativo de IBAN de Nuno Duarte**:
    - Necessário para instruir o Requerimento à Secretaria do Tribunal de Execução para creditar os **€ 35.000,00** penhorados na sua conta pessoal.
 2. `[ ]` **Cópia Integral em PDF do Acórdão do TRL**:
@@ -45,7 +45,7 @@
 
 ---
 
-### 📌 B. Para a Tutela de Posse (Proc. 3719/25) e Reivindicação (Proc. 15547/26)
+### [NOTA]  B. Para a Tutela de Posse (Proc. 3719/25) e Reivindicação (Proc. 15547/26)
 3. `[ ]` **Carta / Notificação Oficial da EPAL sobre o Desligamento da Água (Março de 2024)**:
    - Temos a confissão de WhatsApp de 23/08/2022 (*"ligaram o 31 e 33 todo menos a Heaven e a Sky"*).
    - Se existir a carta em papel ou e-mail da EPAL de março de 2024 a notificar o corte a pedido da LEA/senhoria, deve ser digitalizada para comprovar a autoria do pedido.
@@ -54,7 +54,7 @@
 
 ---
 
-### 📌 C. Para as Queixas-Crime (Ministério Público e CAAJ)
+### [NOTA]  C. Para as Queixas-Crime (Ministério Público e CAAJ)
 5. `[ ]` **Cópia do Cartão de Cidadão de Nuno Duarte**:
    - Para assinar a Queixa-Crime contra a AE Luísa Santos e Filipe Delgado.
 6. `[ ]` **Comprovativo de Concessão de Apoio Judiciário da Segurança Social**:

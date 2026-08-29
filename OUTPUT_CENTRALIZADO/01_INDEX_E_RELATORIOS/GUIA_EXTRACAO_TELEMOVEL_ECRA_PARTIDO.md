@@ -82,5 +82,5 @@ Get-ChildItem -Path "C:\Users\Yokozuna\Dev\OUTPUT_CENTRALIZADO" -Recurse -Filter
 ## 4. Script Automático Criado no Seu PC
 
 Pode executar diretamente na raiz do Dev:
-- 👉 [`PESQUISAR_CONVERSAS.bat`](file:///C:/Users/Yokozuna/Dev/PESQUISAR_CONVERSAS.bat) (digite o termo a pesquisar e ele varre tudo instantaneamente).
-- 👉 [`EXTRAIR_DADOS_TELEMOVEL_ADB.bat`](file:///C:/Users/Yokozuna/Dev/EXTRAIR_DADOS_TELEMOVEL_ADB.bat) (extração automática do telemóvel por USB).
+- [ITEM]  [`PESQUISAR_CONVERSAS.bat`](file:///C:/Users/Yokozuna/Dev/PESQUISAR_CONVERSAS.bat) (digite o termo a pesquisar e ele varre tudo instantaneamente).
+- [ITEM]  [`EXTRAIR_DADOS_TELEMOVEL_ADB.bat`](file:///C:/Users/Yokozuna/Dev/EXTRAIR_DADOS_TELEMOVEL_ADB.bat) (extração automática do telemóvel por USB).

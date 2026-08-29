@@ -1,0 +1,263 @@
+diff --git a/LEA-Organizador/config.py b/LEA-Organizador/config.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..4f8fe97d4047a3a796bf8b92ca8d3153d69f11f9
+--- /dev/null
++++ b/LEA-Organizador/config.py
+@@ -0,0 +1,55 @@
++"""Configurações globais do Organizador LEA"""
++import os
++
++# Caminho base com os ficheiros originais
++BASE_DIR = r"C:\\Users\\nunom\\Desktop\\ORGANIZER LEA"
++
++# Pasta de saída padrão
++OUTPUT_DIR = os.path.join(BASE_DIR, "LEA Organizado")
++
++# Categorias fixas para classificação
++CATEGORIES = [
++    "Processo Judicial",
++    "Financeiro",
++    "Contratos",
++    "Comunicações",
++    "Societário",
++    "Provas",
++    "Outros",
++]
++
++# Extensões e arquivos a ignorar
++IGNORE_EXT = [
++    ".tmp",
++    ".DS_Store",
++    "Thumbs.db",
++    ".zip",
++    ".eml",
++]
++
++# Mapeamento de padrões para categorias (automatização)
++KEYWORD_MAPPING = {
++    "DRE": "Financeiro",
++    "Recibo": "Financeiro",
++    "FACTURA": "Financeiro",
++    "extratos": "Financeiro",
++    "Pagamentos": "Financeiro",
++    "Reservas": "Financeiro",
++    "tabela": "Financeiro",
++    "transferencias": "Financeiro",
++    "emails": "Comunicações",
++    "eml": "Comunicações",
++    "grelha": "Comunicações",
++    "whatsapp": "Comunicações",
++    "Contrato": "Contratos",
++    "CASPER": "Contratos",
++    "TECNEMPRESA": "Societário",
++    "Atos SOC": "Societário",
++    "Provas": "Provas",
++    "levantamento": "Provas",
++    "Caso LEA": "Processo Judicial",
++    "nsd.prc": "Processo Judicial",
++    "sentenca": "Processo Judicial",
++    "recurso": "Processo Judicial",
++    "injuncao": "Processo Judicial",
++}
+diff --git a/LEA-Organizador/main.py b/LEA-Organizador/main.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..9de7629420e5427c74177a69e6314f9c3c95ee38
+--- /dev/null
++++ b/LEA-Organizador/main.py
+@@ -0,0 +1,42 @@
++"""Controlador principal do Organizador LEA."""
++import os
++import time
++from modules.scan_files import list_files
++from modules.classify_files import classify_file
++from modules.folder_organizer import move_to_category, ensure_directory_structure
++from ui import UserInterface
++from config import CATEGORIES
++
++def main():
++    # Prepara ambiente
++    ensure_directory_structure()
++    
++    # Obtém arquivos para processar
++    files = list_files()
++    total_files = len(files)
++    
++    if not total_files:
++        print("Nenhum arquivo encontrado para organizar!")
++        return
++    
++    print(f"\nIniciando organização de {total_files} arquivos...")
++    
++    # Processa arquivos
++    stats = {category: 0 for category in CATEGORIES}
++    start_time = time.time()
++    
++    for i, filepath in enumerate(files):
++        UserInterface.show_progress(i+1, total_files, filepath)
++        
++        # Classifica e move arquivo
++        category = classify_file(os.path.basename(filepath))
++        move_to_category(filepath, category)
++        stats[category] += 1
++    
++    # Exibe resultados
++    elapsed = time.time() - start_time
++    print(f"\nProcesso concluído em {elapsed:.2f} segundos")
++    UserInterface.show_summary(stats)
++
++if __name__ == "__main__":
++    main()
+diff --git a/LEA-Organizador/modules/__init__.py b/LEA-Organizador/modules/__init__.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..e69de29bb2d1d6434b8b29ae775ad8c2e48c5391
+diff --git a/LEA-Organizador/modules/classify_files.py b/LEA-Organizador/modules/classify_files.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..8a103ed9afcb5223ec0cef4adf53095c1315d2a9
+--- /dev/null
++++ b/LEA-Organizador/modules/classify_files.py
+@@ -0,0 +1,19 @@
++"""Classifica arquivos conforme palavras-chave no nome."""
++from config import KEYWORD_MAPPING
++
++def classify_file(filename: str) -> str:
++    """Classifica arquivo baseado em palavras-chave com priorização"""
++    name = (filename or "").lower()
++    
++    # Verificação prioritária para casos especiais
++    if "nsd.prc" in name:
++        return "Processo Judicial"
++    if "casper" in name:
++        return "Contratos"
++    
++    # Verificação no mapeamento geral
++    for key, category in KEYWORD_MAPPING.items():
++        if key.lower() in name:
++            return category
++    
++    return "Outros"
+diff --git a/LEA-Organizador/modules/folder_organizer.py b/LEA-Organizador/modules/folder_organizer.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..945df357ac1dc97396b4112de720d744cf89fbbf
+--- /dev/null
++++ b/LEA-Organizador/modules/folder_organizer.py
+@@ -0,0 +1,27 @@
++"""Move arquivos para pastas categorizadas com tratamento de duplicados."""
++import os
++import shutil
++from config import OUTPUT_DIR, CATEGORIES
++
++def ensure_directory_structure():
++    """Cria estrutura de pastas necessárias"""
++    os.makedirs(OUTPUT_DIR, exist_ok=True)
++    for category in CATEGORIES:
++        os.makedirs(os.path.join(OUTPUT_DIR, category), exist_ok=True)
++
++def move_to_category(filepath, category):
++    """Move arquivo para sua categoria com tratamento de colisões"""
++    filename = os.path.basename(filepath)
++    dest_folder = os.path.join(OUTPUT_DIR, category)
++    dest_path = os.path.join(dest_folder, filename)
++    
++    # Trata arquivos duplicados
++    counter = 1
++    while os.path.exists(dest_path):
++        name, ext = os.path.splitext(filename)
++        new_name = f"{name}_{counter}{ext}"
++        dest_path = os.path.join(dest_folder, new_name)
++        counter += 1
++    
++    shutil.move(filepath, dest_path)
++    return dest_path
+diff --git a/LEA-Organizador/modules/scan_files.py b/LEA-Organizador/modules/scan_files.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..218408589a3a18bc46518517dab2dbf75cf3ab2d
+--- /dev/null
++++ b/LEA-Organizador/modules/scan_files.py
+@@ -0,0 +1,29 @@
++"""Lista arquivos válidos para organização com filtros."""
++import os
++from config import BASE_DIR, IGNORE_EXT, OUTPUT_DIR
++
++def list_files():
++    """Retorna lista de arquivos válidos para processamento"""
++    valid_files = []
++    
++    # Ignora a própria pasta de saída
++    output_base = os.path.basename(OUTPUT_DIR)
++    
++    for root, dirs, files in os.walk(BASE_DIR):
++        # Pula a pasta de saída
++        if output_base in root:
++            continue
++            
++        for file in files:
++            full_path = os.path.join(root, file)
++            
++            # Verifica extensões/nomes a ignorar
++            ignore = any(
++                file.endswith(ext) or file == ext 
++                for ext in IGNORE_EXT
++            )
++            
++            if not ignore:
++                valid_files.append(full_path)
++    
++    return valid_files
+diff --git a/LEA-Organizador/test_classify.py b/LEA-Organizador/test_classify.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..87956444cd632de63c3da286dcd92115b2eef224
+--- /dev/null
++++ b/LEA-Organizador/test_classify.py
+@@ -0,0 +1,24 @@
++"""Testes para o classificador de arquivos."""
++import unittest
++from modules.classify_files import classify_file
++
++class TestClassify(unittest.TestCase):
++    def test_categorias_prioritarias(self):
++        self.assertEqual(classify_file("Documento_nsd.prc.pdf"), "Processo Judicial")
++        self.assertEqual(classify_file("CASPER_contrato_v1.doc"), "Contratos")
++    
++    def test_financeiro(self):
++        self.assertEqual(classify_file("DRE_2023_Q1.xlsx"), "Financeiro")
++        self.assertEqual(classify_file("Recibo_12345.pdf"), "Financeiro")
++        self.assertEqual(classify_file("transferencias_bancarias.csv"), "Financeiro")
++    
++    def test_processo_judicial(self):
++        self.assertEqual(classify_file("sentenca_do_tribunal.pdf"), "Processo Judicial")
++        self.assertEqual(classify_file("recurso_criminal.doc"), "Processo Judicial")
++    
++    def test_outros(self):
++        self.assertEqual(classify_file("relatorio_final.txt"), "Outros")
++        self.assertEqual(classify_file("documento_sem_palavra_chave.pdf"), "Outros")
++
++if __name__ == "__main__":
++    unittest.main()
+diff --git a/LEA-Organizador/ui.py b/LEA-Organizador/ui.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..87e9f33cf5df54a6a4c92628f4436cc74a893ad1
+--- /dev/null
++++ b/LEA-Organizador/ui.py
+@@ -0,0 +1,22 @@
++"""Interface de usuário e relatórios."""
++import os
++from config import CATEGORIES, OUTPUT_DIR
++
++class UserInterface:
++    @staticmethod
++    def show_summary(stats):
++        """Exibe resumo da operação"""
++        print("\nRESUMO DA ORGANIZAÇÃO:")
++        print("======================")
++        for category in CATEGORIES:
++            count = stats.get(category, 0)
++            print(f"{category}: {count} arquivos")
++        
++        total = sum(stats.values())
++        print(f"\nTOTAL: {total} arquivos organizados")
++        print(f"Local: {os.path.abspath(OUTPUT_DIR)}")
++
++    @staticmethod
++    def show_progress(current, total, filename):
++        """Exibe progresso atual"""
++        print(f"[{current}/{total}] Processando: {os.path.basename(filename)}")

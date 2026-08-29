@@ -63,7 +63,7 @@ Código
 27/09/2023, 12:01 - Nuno Duarte: Para as transferências da heaven
 27/09/2023, 12:36 - Filipe Delgado: Bom dia
 27/09/2023, 12:36 - Filipe Delgado: Ok
-👍
+
 28/09/2023, 14:41 - Nuno Duarte: Filipe tudo bem, ja avisou a heaven da transferência?
 28/09/2023, 14:54 - Filipe Delgado: Ola Nuno . Ainda não
 28/09/2023, 14:54 - Filipe Delgado: Só vão transferir na segunda
@@ -185,7 +185,7 @@ Possível , agora não sei qual é a logística delas com o valor.
 03/03/23, 21:31 - Utilizador: Já tá achas que não?
 03/03/23, 21:31 - Utilizador: Vai sair tudo daqui com uma broa
 03/03/23, 22:12 - Nuno Duarte: Vai entrar tudo em obito
-03/03/23, 22:12 - Nuno Duarte: 🌚
+03/03/23, 22:12 - Nuno Duarte: 
 03/03/23, 22:47 - Utilizador: Vai e ficar tudo em altas
 03/03/23, 22:47 - Utilizador: Restaurante hoje cai da falésia
 04/03/23, 00:34 - Nuno Duarte: ‎IMG-20230303-WA0002.jpg (ficheiro anexado)

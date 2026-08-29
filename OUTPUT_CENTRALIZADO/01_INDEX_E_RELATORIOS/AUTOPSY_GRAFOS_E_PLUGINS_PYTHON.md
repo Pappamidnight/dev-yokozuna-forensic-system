@@ -18,15 +18,15 @@ O Autopsy possui uma ferramenta nativa avançada chamada **"Communications Visua
 ┌──────────────────────────────────────┐                  ┌──────────────────────────────────────┐
 │  VINCULAÇÃO DE CONTACTOS (NÓS)       │                  │  ARESTAS DE INTERAÇÃO                │
 │  Mapeia automaticamente:             │                  │  Linhas que unem as pessoas com:     │
-│  • Nuno Duarte                       │                  │  • Número total de mensagens         │
-│  • Dr. Varela de Matos               │                  │  • Chamadas e anexos trocados        │
-│  • AE Luísa Santos                   │                  │  • Linha temporal de frequência      │
-│  • Filipe Delgado / Teresa Martins   │                  │  • Deteção de conluio e grupos       │
+│  - Nuno Duarte                       │                  │  - Número total de mensagens         │
+│  - Dr. Varela de Matos               │                  │  - Chamadas e anexos trocados        │
+│  - AE Luísa Santos                   │                  │  - Linha temporal de frequência      │
+│  - Filipe Delgado / Teresa Martins   │                  │  - Deteção de conluio e grupos       │
 └──────────────────────────────────────┘                  └──────────────────────────────────────┘
 ```
 
 ### Como Ativar o Gráfico no Autopsy:
-1. No menu superior do Autopsy, clique em **"Tools" ➔ "Communications"** (ou no ícone de mensagens na barra de ferramentas).
+1. No menu superior do Autopsy, clique em **"Tools"  "Communications"** (ou no ícone de mensagens na barra de ferramentas).
 2. Na aba lateral, selecione **"Accounts"** (Contas) ou **"Contacts"** (Contactos).
 3. Selecione os intervenientes (ex: *Filipe Delgado, Teresa, Nuno, Dr. Varela*).
 4. Clique no separador **"Browse Graph" / "Relationship Graph"**:
@@ -55,10 +55,10 @@ O Autopsy foi desenhado com uma API aberta em **Python (Jython)**, permitindo ad
 ## 3. O Plugin Python Criado para o Seu Caso
 
 Criámos o módulo Python específico para injetar todo o acervo de dados do Dev Yokozuna no Autopsy:
-- 👉 [`autopsy_yokozuna_ingest_plugin.py`](file:///C:/Users/Yokozuna/Dev/AI/skills/mcp-fs-pydantic-org/scripts/autopsy_yokozuna_ingest_plugin.py)
+- [ITEM]  [`autopsy_yokozuna_ingest_plugin.py`](file:///C:/Users/Yokozuna/Dev/AI/skills/mcp-fs-pydantic-org/scripts/autopsy_yokozuna_ingest_plugin.py)
 
 ### Como Instalar o Plugin no Autopsy:
-1. No Autopsy, vá ao menu: **Tools ➔ Python Plugins**.
+1. No Autopsy, vá ao menu: **Tools  Python Plugins**.
 2. Clique no botão **"Open Python Plugin Folder"** (Abre a pasta `%APPDATA%\autopsy\python_modules`).
 3. Copie o ficheiro `autopsy_yokozuna_ingest_plugin.py` para dentro dessa pasta.
 4. Reinicie o Autopsy — o módulo aparecerá na lista de opções de ingestão!

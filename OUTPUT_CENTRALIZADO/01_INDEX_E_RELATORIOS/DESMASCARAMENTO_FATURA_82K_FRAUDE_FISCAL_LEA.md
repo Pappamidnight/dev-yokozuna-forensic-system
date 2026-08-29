@@ -39,11 +39,11 @@ A análise cruzada entre a **Fatura de € 82.722,00**, o **Balanço da Tecnempr
          ▼                                                                             ▼
 ┌──────────────────────────────────────┐                      ┌──────────────────────────────────────┐
 │ NA ESFERA DE NUNO DUARTE             │                      │ NA LISBON EXPERIENCE (LEA)           │
-│ • Imputação de passivo fiscal de     │                      │ • Deduziu € 15.468,34 de IVA a seu   │
+│ - Imputação de passivo fiscal de     │                      │ - Deduziu € 15.468,34 de IVA a seu   │
 │   € 15.468,34 de IVA na AT.          │                      │   favor no Balanço Oficial.          │
-│ • Cobrança coerciva e guias de IVA da│                      │ • Abateu € 67.253,66 em custos para  │
+│ - Cobrança coerciva e guias de IVA da│                      │ - Abateu € 67.253,66 em custos para  │
 │   AT emitidas no seu NIF 254048382.  │                      │   reduzir o lucro tributável.        │
-│ • NUNCA recebeu o valor de € 82.722. │                      │ • Retém a liquidez de € 145.697.     │
+│ - NUNCA recebeu o valor de € 82.722. │                      │ - Retém a liquidez de € 145.697.     │
 └──────────────────────────────────────┘                      └──────────────────────────────────────┘
 ```
 

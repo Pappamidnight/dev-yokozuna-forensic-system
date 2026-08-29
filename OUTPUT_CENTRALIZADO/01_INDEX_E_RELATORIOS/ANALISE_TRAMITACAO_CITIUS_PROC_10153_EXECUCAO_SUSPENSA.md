@@ -49,10 +49,10 @@
 ┌──────────────────────────────────────┐                  ┌──────────────────────────────────────┐
 │ PROCESSO PRINCIPAL (EXECUÇÃO)        │                  │ PROCESSO APENSO (EMBARGOS)           │
 │ Proc. 10153/24.7T8LSB                │                  │ Proc. 10153/24.7T8LSB-A              │
-│ • Sentença de 16/04/2024 (311 KB)    │                  │ • Petição de Embargos (12/05/2025)   │
-│ • Citação pessoal em 23/04/2025      │                  │ • Recebida pelo Juiz em 23/10/2025   │
-│ • SUSPENSÃO DA EXECUÇÃO (23/10/2025) │                  │ • Contestação UNICRE em 17/11/2025   │
-│ • Bloqueio total de penhoras         │                  │ • Aguarda Julgamento de Mérito       │
+│ - Sentença de 16/04/2024 (311 KB)    │                  │ - Petição de Embargos (12/05/2025)   │
+│ - Citação pessoal em 23/04/2025      │                  │ - Recebida pelo Juiz em 23/10/2025   │
+│ - SUSPENSÃO DA EXECUÇÃO (23/10/2025) │                  │ - Contestação UNICRE em 17/11/2025   │
+│ - Bloqueio total de penhoras         │                  │ - Aguarda Julgamento de Mérito       │
 └──────────────────────────────────────┘                  └──────────────────────────────────────┘
 ```
 
@@ -60,6 +60,6 @@
 
 ## 4. Documentos Essenciais a Extrair do Citius (Proc. 10153)
 
-1. 📥 **Despacho de Suspensão da Execução** (Ref. Citius: `449641615` de 23/10/2025 — 321 KB);
-2. 📥 **Sentença Condenatória Judicial Base da Execução** (Ref. Citius: `39096021` de 16/04/2024 — 311 KB);
-3. 📥 **Requerimento Executivo da UNICRE** (Ref. Citius: `39094911` de 16/04/2024 — 2,29 MB).
+1.  **Despacho de Suspensão da Execução** (Ref. Citius: `449641615` de 23/10/2025 — 321 KB);
+2.  **Sentença Condenatória Judicial Base da Execução** (Ref. Citius: `39096021` de 16/04/2024 — 311 KB);
+3.  **Requerimento Executivo da UNICRE** (Ref. Citius: `39094911` de 16/04/2024 — 2,29 MB).

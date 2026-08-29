@@ -1,0 +1,160 @@
+{
+  "total_docs_analisados": 250,
+  "termos_vocabulario": 1500,
+  "clusters_kmeans": {
+    "Cluster_0": 62,
+    "Cluster_1": 152,
+    "Cluster_2": 8,
+    "Cluster_3": 28
+  },
+  "amostras_pesquisa_semantica": {
+    "indeferimento liminar titulo inexistente luisa santos": [
+      {
+        "filename": "04_DESPACHOS_2022-10-19_23142-22_7T8LSB_verificado_o_titulo_executivo_parece_a_aqui_signataria_que_s.md",
+        "filepath": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\04_DOCUMENTOS_CITIUS_E_PECAS\\ARQUIVO_OFICIAL_TRIBUNAL\\PROC_23142_EXECUCAO_TRL\\04_DESPACHOS_2022-10-19_23142-22_7T8LSB_verificado_o_titulo_executivo_parece_a_aqui_signataria_que_s.md",
+        "score_similaridade": 0.2659,
+        "entidades_ner": {
+          "NIF": [],
+          "REF_CITIUS": [],
+          "VALOR_EUR": [],
+          "ARTIGO_LEI": [],
+          "PROCESSO": [],
+          "AGENTE_EXECUCAO": [
+            "LUISA SANTOS"
+          ],
+          "ADVOGADO": []
+        }
+      },
+      {
+        "filename": "04_DESPACHOS_2022-10-19_23142-_alt.md",
+        "filepath": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\04_DOCUMENTOS_CITIUS_E_PECAS\\ARQUIVO_OFICIAL_TRIBUNAL\\PROC_23142_EXECUCAO_TRL\\04_DESPACHOS_2022-10-19_23142-_alt.md",
+        "score_similaridade": 0.2659,
+        "entidades_ner": {
+          "NIF": [],
+          "REF_CITIUS": [],
+          "VALOR_EUR": [],
+          "ARTIGO_LEI": [],
+          "PROCESSO": [],
+          "AGENTE_EXECUCAO": [
+            "LUISA SANTOS"
+          ],
+          "ADVOGADO": []
+        }
+      },
+      {
+        "filename": "07_DESPACHOS_2022-10-19_23142-_alt.md",
+        "filepath": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\04_DOCUMENTOS_CITIUS_E_PECAS\\ARQUIVO_OFICIAL_TRIBUNAL\\PROC_23142_EXECUCAO_TRL\\07_DESPACHOS_2022-10-19_23142-_alt.md",
+        "score_similaridade": 0.2656,
+        "entidades_ner": {
+          "NIF": [],
+          "REF_CITIUS": [],
+          "VALOR_EUR": [],
+          "ARTIGO_LEI": [],
+          "PROCESSO": [],
+          "AGENTE_EXECUCAO": [
+            "LUISA SANTOS"
+          ],
+          "ADVOGADO": []
+        }
+      }
+    ],
+    "corte de agua 2 anos retencao palmeira vistoria": [
+      {
+        "filename": "INJUCAO_ITENCIONADA_PARA_FILIPEFLR_CONTEXTO_EMAIL_1_1.md",
+        "filepath": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\04_DOCUMENTOS_CITIUS_E_PECAS\\ARQUIVO_OFICIAL_TRIBUNAL\\PROC_10153_UNICRE_SUSPENSO\\INJUCAO_ITENCIONADA_PARA_FILIPEFLR_CONTEXTO_EMAIL_1_1.md",
+        "score_similaridade": 0.1787,
+        "entidades_ner": {
+          "NIF": [],
+          "REF_CITIUS": [],
+          "VALOR_EUR": [
+            "380.000"
+          ],
+          "ARTIGO_LEI": [],
+          "PROCESSO": [],
+          "AGENTE_EXECUCAO": [],
+          "ADVOGADO": []
+        }
+      },
+      {
+        "filename": "SCAN_INJUCAO_ITENCIONADA_PARA__alt.md",
+        "filepath": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\04_DOCUMENTOS_CITIUS_E_PECAS\\ARQUIVO_OFICIAL_TRIBUNAL\\PROC_10153_UNICRE_SUSPENSO\\SCAN_INJUCAO_ITENCIONADA_PARA__alt.md",
+        "score_similaridade": 0.1784,
+        "entidades_ner": {
+          "NIF": [],
+          "REF_CITIUS": [],
+          "VALOR_EUR": [
+            "380.000"
+          ],
+          "ARTIGO_LEI": [],
+          "PROCESSO": [],
+          "AGENTE_EXECUCAO": [],
+          "ADVOGADO": []
+        }
+      },
+      {
+        "filename": "UNIQUE_INJUCAO_ITENCIONADA_PAR_alt.md",
+        "filepath": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\04_DOCUMENTOS_CITIUS_E_PECAS\\ARQUIVO_OFICIAL_TRIBUNAL\\PROC_10153_UNICRE_SUSPENSO\\UNIQUE_INJUCAO_ITENCIONADA_PAR_alt.md",
+        "score_similaridade": 0.1784,
+        "entidades_ner": {
+          "NIF": [],
+          "REF_CITIUS": [],
+          "VALOR_EUR": [
+            "380.000"
+          ],
+          "ARTIGO_LEI": [],
+          "PROCESSO": [],
+          "AGENTE_EXECUCAO": [],
+          "ADVOGADO": []
+        }
+      }
+    ],
+    "falta de citacao unicre certidao negativa suspensao": [
+      {
+        "filename": "INDICE_UNICRE_alt.md",
+        "filepath": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\04_DOCUMENTOS_CITIUS_E_PECAS\\ARQUIVO_OFICIAL_TRIBUNAL\\PROC_10153_UNICRE_SUSPENSO\\INDICE_UNICRE_alt.md",
+        "score_similaridade": 0.4038,
+        "entidades_ner": {
+          "NIF": [],
+          "REF_CITIUS": [],
+          "VALOR_EUR": [],
+          "ARTIGO_LEI": [],
+          "PROCESSO": [],
+          "AGENTE_EXECUCAO": [],
+          "ADVOGADO": []
+        }
+      },
+      {
+        "filename": "2023-06-05_CITACAO_CITIUS_A_23_alt.md",
+        "filepath": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\04_DOCUMENTOS_CITIUS_E_PECAS\\ARQUIVO_OFICIAL_TRIBUNAL\\PROC_10153_UNICRE_SUSPENSO\\2023-06-05_CITACAO_CITIUS_A_23_alt.md",
+        "score_similaridade": 0.3169,
+        "entidades_ner": {
+          "NIF": [],
+          "REF_CITIUS": [
+            "426029750"
+          ],
+          "VALOR_EUR": [],
+          "ARTIGO_LEI": [],
+          "PROCESSO": [],
+          "AGENTE_EXECUCAO": [],
+          "ADVOGADO": []
+        }
+      },
+      {
+        "filename": "2023-08-31_CITACAO_CITIUS_A_31_alt.md",
+        "filepath": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\04_DOCUMENTOS_CITIUS_E_PECAS\\ARQUIVO_OFICIAL_TRIBUNAL\\PROC_10153_UNICRE_SUSPENSO\\2023-08-31_CITACAO_CITIUS_A_31_alt.md",
+        "score_similaridade": 0.2765,
+        "entidades_ner": {
+          "NIF": [
+            "153858818"
+          ],
+          "REF_CITIUS": [],
+          "VALOR_EUR": [],
+          "ARTIGO_LEI": [],
+          "PROCESSO": [],
+          "AGENTE_EXECUCAO": [],
+          "ADVOGADO": []
+        }
+      }
+    ]
+  }
+}

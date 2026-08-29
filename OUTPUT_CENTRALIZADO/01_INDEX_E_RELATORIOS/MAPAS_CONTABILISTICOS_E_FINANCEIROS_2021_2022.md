@@ -16,14 +16,14 @@ O biénio de 2021–2022 constitui o período nuclear em que ocorreram os princi
 ┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
 │ CRONOLOGIA FORENSE DE EVENTOS FINANCEIROS E FISCAIS (2021–2022)                                  │
 ├─────────────────┬────────────────────────────────────────────────────────────────────────────────┤
-│ 2021            │ • Emissão regular de recibos de arrendamento e alojamento (mapas 2021).        │
-│                 │ • 09/12/2021: Celebração do acordo simulado do Dr. Varela (sem procuração).     │
+│ 2021            │ - Emissão regular de recibos de arrendamento e alojamento (mapas 2021).        │
+│                 │ - 09/12/2021: Celebração do acordo simulado do Dr. Varela (sem procuração).     │
 ├─────────────────┼────────────────────────────────────────────────────────────────────────────────┤
-│ 2022            │ • 08/02/2022: Emissão não autorizada de fatura/fecho de contas a Nuno Duarte. │
-│                 │ • Julho/2022: Contratos de Arrendamento Loja 58 (Trindade/Misericórdia).       │
-│                 │ • 19/08/2022 e 16/11/2022: Guias oficiais de IVA da AT (NIF 254048382).       │
-│                 │ • 19/09/2022: Outorga tardia de procuração forense pela Centenário (283 dias). │
-│                 │ • 19/10/2022: Emissão do mapa de fornecedores LEA_fornc.pdf por Joana.         │
+│ 2022            │ - 08/02/2022: Emissão não autorizada de fatura/fecho de contas a Nuno Duarte. │
+│                 │ - Julho/2022: Contratos de Arrendamento Loja 58 (Trindade/Misericórdia).       │
+│                 │ - 19/08/2022 e 16/11/2022: Guias oficiais de IVA da AT (NIF 254048382).       │
+│                 │ - 19/09/2022: Outorga tardia de procuração forense pela Centenário (283 dias). │
+│                 │ - 19/10/2022: Emissão do mapa de fornecedores LEA_fornc.pdf por Joana.         │
 └─────────────────┴────────────────────────────────────────────────────────────────────────────────┘
 ```
 

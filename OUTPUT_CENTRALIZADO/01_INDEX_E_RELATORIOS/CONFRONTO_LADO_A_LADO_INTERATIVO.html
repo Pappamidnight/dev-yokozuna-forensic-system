@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confronto Forense: Documentos Oficiais vs Provas Materiais</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --accent-blue: #38bdf8;
+            --accent-green: #34d399;
+            --accent-amber: #fbbf24;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            margin: 0;
+            padding: 24px;
+            line-height: 1.5;
+        }
+        .header {
+            max-width: 1200px;
+            margin: 0 auto 30px auto;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0 0 8px 0;
+            font-size: 24px;
+            color: #ffffff;
+            font-weight: 700;
+        }
+        .header p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .confronto-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        }
+        .card-header {
+            padding: 16px 20px;
+            background: rgba(15, 23, 42, 0.6);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .card-id {
+            background: #0284c7;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 12px;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+        .card-proc {
+            color: var(--accent-amber);
+            font-size: 13px;
+            font-family: monospace;
+            font-weight: 600;
+        }
+        .card-header h3 {
+            margin: 0;
+            font-size: 16px;
+            color: #ffffff;
+            font-weight: 600;
+        }
+        .columns-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        .col {
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 16px;
+        }
+        .col h4 {
+            margin: 0 0 12px 0;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .col-oficial h4 { color: #f87171; }
+        .col-prova h4 { color: var(--accent-green); }
+        .doc-title {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin: 0 0 10px 0;
+        }
+        .allegation-box, .fact-box {
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+        .allegation-box {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 3px solid #ef4444;
+            color: #fecaca;
+        }
+        .fact-box {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 3px solid #10b981;
+            color: #a7f3d0;
+        }
+        .conclusion-box {
+            padding: 16px 20px;
+            background: rgba(15, 23, 42, 0.7);
+            border-top: 1px solid var(--border);
+            font-size: 13.5px;
+        }
+        .norma {
+            color: var(--accent-blue);
+            margin-bottom: 8px;
+        }
+        .norma code {
+            background: #0f172a;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #e2e8f0;
+        }
+        .argument {
+            color: #e2e8f0;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Confronto Forense Lado a Lado: Documentos Oficiais vs Provas Materiais</h1>
+        <p>Sistema Dev Yokozuna — Auditoria Factual e Estruturada sem Conflitos Retoricos (Tom Institucional e Neutro)</p>
+    </div>
+    <div class="container">
+        
+        <div class="confronto-card">
+            <div class="card-header">
+                <span class="card-id">CONF-01</span>
+                <span class="card-proc">23142/22.7T8LSB</span>
+                <h3>Execucao Centenario e Penhoras de 35.000 EUR</h3>
+            </div>
+            <div class="columns-grid">
+                <div class="col col-oficial">
+                    <h4>Coluna A: Documento Oficial / Citius</h4>
+                    <p class="doc-title"><strong>Peça:</strong> Despacho de Indeferimento Liminar (Ref. 419855940 de 16/03/2023) e Admissao em Efeito Devolutivo (Ref. 424977808 de 20/04/2023).</p>
+                    <div class="allegation-box">
+                        <strong>Alegação Formal:</strong><br>
+                        <em>"A Exequente e mandatario alegaram titulo valido e promoveram penhoras coercivas sobre contas bancarias (35.000 EUR) e veiculos."</em>
+                    </div>
+                </div>
+                <div class="col col-prova">
+                    <h4>Coluna B: Prova Material e Factos</h4>
+                    <p class="doc-title"><strong>Prova:</strong> Oficio de Confissao da AE Luisa Santos (Ref. 437217551 de 20/09/2024) e Acordao do Tribunal da Relacao de Lisboa (Ref. 24500137 de 16/04/2026).</p>
+                    <div class="fact-box">
+                        <strong>Facto Provado:</strong><br>
+                        A AE confessou expressamente por escrito nao ter entregue as alegacoes de recurso; o TRL julgou a execucao integralmente extinta.
+                    </div>
+                </div>
+            </div>
+            <div class="conclusion-box">
+                <div class="norma"><strong>Normas Legais:</strong> <code>Artigos 703.o, 726.o n.o 2 al. a) e 641.o n.o 7 do CPC; Artigo 382.o do Codigo Penal.</code></div>
+                <div class="argument"><strong>Argumentação Factual:</strong> O indeferimento liminar transitado e o acordao de extincao do TRL destroem a base executiva, determinando o levantamento imediato e incondicional de todas as quantias cativas.</div>
+            </div>
+        </div>
+        
+        <div class="confronto-card">
+            <div class="card-header">
+                <span class="card-id">CONF-02</span>
+                <span class="card-proc">10153/24.7T8LSB / 20203/22.6T8LSB</span>
+                <h3>Execucao UNICRE e Falta Absoluta de Citacao</h3>
+            </div>
+            <div class="columns-grid">
+                <div class="col col-oficial">
+                    <h4>Coluna A: Documento Oficial / Citius</h4>
+                    <p class="doc-title"><strong>Peça:</strong> Sentenca Condenatoria a Revelia de 19/01/2024 (Proc. 20203/22.6T8LSB).</p>
+                    <div class="allegation-box">
+                        <strong>Alegação Formal:</strong><br>
+                        <em>"A UNICRE alegou que o reu foi regularmente citado e transitou em julgado o montante em divida."</em>
+                    </div>
+                </div>
+                <div class="col col-prova">
+                    <h4>Coluna B: Prova Material e Factos</h4>
+                    <p class="doc-title"><strong>Prova:</strong> 2 Cartas Devolvidas no Citius (13/10/2022 e 28/06/2023), 2 Certidoes Negativas da AE Catrau (04/10/2023 e 09/01/2024) e Fatura N.o 1000002 de 82.722 EUR no Portal das Financas.</p>
+                    <div class="fact-box">
+                        <strong>Facto Provado:</strong><br>
+                        O executado nunca recebeu citacao postal ou pessoal; a UNICRE reteve 52.285 EUR em terminais TPA e o executado detem credito compensavel de 82.722 EUR.
+                    </div>
+                </div>
+            </div>
+            <div class="conclusion-box">
+                <div class="norma"><strong>Normas Legais:</strong> <code>Artigo 188.o n.o 1 al. e) e Artigo 729.o al. d) do CPC; Artigo 733.o n.o 1 CPC; Artigo 847.o do Codigo Civil.</code></div>
+                <div class="argument"><strong>Argumentação Factual:</strong> A falta absoluta de citacao gera nulidade insanavel de todo o processo anterior, justificando a suspensao da execucao pelo Juiz 8 a 23/10/2025 (Ref. 449641615) e a compensacao integral de creditos.</div>
+            </div>
+        </div>
+        
+        <div class="confronto-card">
+            <div class="card-header">
+                <span class="card-id">CONF-03</span>
+                <span class="card-proc">3719/25.0T8LSB</span>
+                <h3>Providencia Cautelar e Estado do Imovel</h3>
+            </div>
+            <div class="columns-grid">
+                <div class="col col-oficial">
+                    <h4>Coluna A: Documento Oficial / Citius</h4>
+                    <p class="doc-title"><strong>Peça:</strong> Peticao Cautelar de Restituicao Provisoria de Posse da Autora Maria Teresa Martins.</p>
+                    <div class="allegation-box">
+                        <strong>Alegação Formal:</strong><br>
+                        <em>"A requerente alegou esbulho violento recente e degradacao do imovel para obter mandado de desocupacao urgente."</em>
+                    </div>
+                </div>
+                <div class="col col-prova">
+                    <h4>Coluna B: Prova Material e Factos</h4>
+                    <p class="doc-title"><strong>Prova:</strong> Acordao do TRL de 16/04/2026 (Ref. 24500137), 12 Videos de Vistoria de 24/05/2024 e Notificacao de Custas de 07/07/2026 (Ref. 457395171).</p>
+                    <div class="fact-box">
+                        <strong>Facto Provado:</strong><br>
+                        Nuno Duarte foi impedido de entrar na audiencia de 06/11/2025; o TRL julgou a providencia arquivada em definitivo; os videos comprovam o imovel integralmente conservado.
+                    </div>
+                </div>
+            </div>
+            <div class="conclusion-box">
+                <div class="norma"><strong>Normas Legais:</strong> <code>Artigo 20.o da CRP; Artigo 3.o do CPC; Artigo 1251.o e 754.o do Codigo Civil.</code></div>
+                <div class="argument"><strong>Argumentação Factual:</strong> O arquivamento definitivo no TRL com custas a cargo da requerente demonstra a inexistencia de fundamento cautelar e a publicidade pacifica da posse do requerido.</div>
+            </div>
+        </div>
+        
+        <div class="confronto-card">
+            <div class="card-header">
+                <span class="card-id">CONF-04</span>
+                <span class="card-proc">15547/26.0T8LSB</span>
+                <h3>Acao de Reivindicacao e Litisconsorcio Necessario</h3>
+            </div>
+            <div class="columns-grid">
+                <div class="col col-oficial">
+                    <h4>Coluna A: Documento Oficial / Citius</h4>
+                    <p class="doc-title"><strong>Peça:</strong> Peticao Inicial de 12/06/2026 (Ref. 46589030) - Juizo Central Civel de Lisboa.</p>
+                    <div class="allegation-box">
+                        <strong>Alegação Formal:</strong><br>
+                        <em>"A Autora intentou acao contra Nuno Duarte individualmente alegando posse sem titulo e apresentando faturas do predio."</em>
+                    </div>
+                </div>
+                <div class="col col-prova">
+                    <h4>Coluna B: Prova Material e Factos</h4>
+                    <p class="doc-title"><strong>Prova:</strong> LISTA_CONTRATOS_TERESA.xls (Contrato N.o 1195528 da Lisbon Experience), Matrizes Prediais 110661-U-229 vs 110661-U-231 e Contrato em Tinta Azul.</p>
+                    <div class="fact-box">
+                        <strong>Facto Provado:</strong><br>
+                        O contrato formal de arrendamento do 4.o andar foi celebrado com a sociedade Lisbon Experience Lda.; as faturas juntas pela Autora pertencem ao predio vizinho n.o 31; Nuno Duarte investiu 120.000 EUR em obras.
+                    </div>
+                </div>
+            </div>
+            <div class="conclusion-box">
+                <div class="norma"><strong>Normas Legais:</strong> <code>Artigo 33.o e Artigo 577.o al. e) do CPC; Artigo 542.o do CPC; Artigo 754.o do Codigo Civil.</code></div>
+                <div class="argument"><strong>Argumentação Factual:</strong> Verifica-se pretericao de litisconsorcio necessario (ilegitimidade passiva singular) que impoe a absolvicao da instancia, assistindo subsidiariamente ao reu o Direito de Retencao pelas benfeitorias suportadas.</div>
+            </div>
+        </div>
+        
+        <div class="confronto-card">
+            <div class="card-header">
+                <span class="card-id">CONF-05</span>
+                <span class="card-proc">15547/26.0T8LSB / 3719/25.0T8LSB</span>
+                <h3>Corte de Agua e Coacao Habitacional</h3>
+            </div>
+            <div class="columns-grid">
+                <div class="col col-oficial">
+                    <h4>Coluna A: Documento Oficial / Citius</h4>
+                    <p class="doc-title"><strong>Peça:</strong> Alegacao da senhoria de que o reu se recusava a sair voluntariamente.</p>
+                    <div class="allegation-box">
+                        <strong>Alegação Formal:</strong><br>
+                        <em>"A contraparte alegou inexistencia de relacao contratual ou debitos para com o residente."</em>
+                    </div>
+                </div>
+                <div class="col col-prova">
+                    <h4>Coluna B: Prova Material e Factos</h4>
+                    <p class="doc-title"><strong>Prova:</strong> Transcricao pericial de mensagens WhatsApp de 23 e 24/08/2022 entre Nuno Duarte e Filipe Delgado.</p>
+                    <div class="fact-box">
+                        <strong>Facto Provado:</strong><br>
+                        Filipe Delgado confessa que usou os fundos da empresa para outras fracoes ('nao tenho dinheiro para pagar a heaven'), admitindo que a renda de Nuno dependia daquelas receitas e que este teve de colocar as filhas num hotel devido ao corte de agua.
+                    </div>
+                </div>
+            </div>
+            <div class="conclusion-box">
+                <div class="norma"><strong>Normas Legais:</strong> <code>Artigo 70.o do Codigo Civil (Tutela Geral da Personalidade); Artigo 754.o do Codigo Civil.</code></div>
+                <div class="argument"><strong>Argumentação Factual:</strong> As confissoes escritas provam asfixia e coacao habitacional deliberada, afastando qualquer culpa do reu e fundamentando o seu direito a indemnizacao e retencao.</div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
+    

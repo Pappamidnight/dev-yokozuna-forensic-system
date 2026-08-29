@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafo Forense Interativo de Análise de Vínculos (Link Analysis - Padrão Maltego)</title>
+    <!-- Vis.js Network para renderizacao ultra-rapida de grafos estilo Maltego -->
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+        :root {
+            --bg-main: #0b0f19;
+            --bg-panel: #111827;
+            --bg-card: #1f2937;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent-blue: #38bdf8;
+            --accent-red: #ef4444;
+            --accent-green: #22c55e;
+            --accent-gold: #f59e0b;
+            --accent-purple: #a855f7;
+            --border: #374151;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Top Header Bar */
+        header {
+            background-color: var(--bg-panel);
+            border-bottom: 1px solid var(--border);
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-logo {
+            background: linear-gradient(135deg, #38bdf8, #6366f1);
+            color: #fff;
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .brand-title {
+            font-size: 17px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+
+        .brand-subtitle {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .toolbar {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .search-input {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: #fff;
+            padding: 7px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            width: 240px;
+            outline: none;
+        }
+        .search-input:focus {
+            border-color: var(--accent-blue);
+        }
+
+        .filter-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 7px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--accent-blue);
+            color: #0b0f19;
+            border-color: var(--accent-blue);
+        }
+
+        /* Main Workspace Layout */
+        .workspace {
+            display: flex;
+            flex: 1;
+            position: relative;
+            height: calc(100vh - 60px);
+        }
+
+        #network-container {
+            flex: 1;
+            height: 100%;
+            background: radial-gradient(circle at center, #131d31 0%, #0b0f19 100%);
+        }
+
+        /* Inspector Side Panel */
+        .inspector {
+            width: 400px;
+            background: var(--bg-panel);
+            border-left: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            padding: 20px;
+            z-index: 5;
+        }
+
+        .inspector-empty {
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 100px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .node-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .node-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .node-subtitle {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .prop-group {
+            margin-bottom: 18px;
+        }
+
+        .prop-label {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .prop-value {
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--text-main);
+            background: var(--bg-card);
+            padding: 10px 12px;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .evidence-link {
+            display: inline-block;
+            background: #0284c7;
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+        .evidence-link:hover {
+            background: #0369a1;
+        }
+
+        /* Legend Footer */
+        .legend {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(17, 24, 39, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--border);
+            padding: 12px 18px;
+            border-radius: 8px;
+            display: flex;
+            gap: 16px;
+            font-size: 12px;
+            z-index: 5;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="brand">
+        <div class="brand-logo">G</div>
+        <div>
+            <div class="brand-title">Visual Link Analysis Forense (Padrão Maltego)</div>
+            <div class="brand-subtitle">Cruzamento Relacional Multi-Processual, Provas Criptográficas e Ilícitos</div>
+        </div>
+    </div>
+    <div class="toolbar">
+        <input type="text" id="search-box" class="search-input" placeholder="Pesquisar entidade, prova ou processo...">
+        <button class="filter-btn active" onclick="filterGraph('ALL')">Todos</button>
+        <button class="filter-btn" onclick="filterGraph('PROCESSO')">Processos</button>
+        <button class="filter-btn" onclick="filterGraph('PESSOA')">Intervenientes</button>
+        <button class="filter-btn" onclick="filterGraph('PROVA')">Provas Oficiais</button>
+        <button class="filter-btn" onclick="filterGraph('CRIME')">Ilícitos / Nulidades</button>
+        <button class="filter-btn" onclick="resetZoom()">Centrar</button>
+    </div>
+</header>
+
+<div class="workspace">
+    <div id="network-container"></div>
+
+    <div class="inspector" id="inspector-panel">
+        <div class="inspector-empty">
+            <strong>Nenhum nó selecionado</strong><br><br>
+            Clique em qualquer entidade, processo, interveniente ou prova material no grafo para inspecionar os detalhes probatórios, hashes SHA-256 e fundamentos jurídicos.
+        </div>
+    </div>
+
+    <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#ef4444"></div> Intervenientes Alvo / Réus</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#38bdf8"></div> Vítima / Autor</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div> Processos Judiciais</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#22c55e"></div> Provas Oficiais / Vitórias TRL</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#a855f7"></div> Ilícitos / Nulidades Criminais</div>
+    </div>
+</div>
+
+<script>
+    // Definicao das Entidades / Nos (Nodes)
+    const rawNodes = [
+        // 1. Vitima
+        { id: "NUNO", label: "Nuno Miguel Silva Duarte\n(Executado / Recorrente)", group: "PESSOA_VITIMA", shape: "box", color: { background: "#0284c7", border: "#38bdf8" }, font: { color: "#fff", bold: true }, size: 25,
+          meta: { tipo: "Pessoa / Parte Principal", status: "Posseiro Legítimo / Lesado", detalhes: "Vítima do esquema de asfixia financeira, confisco ilegal de € 35.000 e interceção de citação. Recorrente vitorioso no TRL." } },
+
+        // 2. Intervenientes Alvo
+        { id: "VARELA", label: "Dr. Varela de Matos\n(Advogado CP 9878L)", group: "PESSOA_ALVO", shape: "box", color: { background: "#dc2626", border: "#ef4444" }, font: { color: "#fff", bold: true },
+          meta: { tipo: "Advogado da Exequente", status: "Sob Investigação / Queixa OA", detalhes: "Conflito de interesses direto (Art. 83 EOA); redigiu acordo sem mandato a 09/12/2021 (procuração só 283 dias depois). Inexistência de título executivo reconhecida em 16/03/2023." } },
+
+        { id: "LUISA", label: "Luísa Santos\n(Agente Execução CP 5840)", group: "PESSOA_ALVO", shape: "box", color: { background: "#dc2626", border: "#ef4444" }, font: { color: "#fff", bold: true },
+          meta: { tipo: "Agente de Execução", status: "Sob Queixa-Crime MP (Art. 382 CP)", detalhes: "Confessou por escrito em 20/09/2024 nulidade insanável da citação. Promoveu penhoras ilegais de € 35.000 e automóveis após decisão judicial de inexistência de título." } },
+
+        { id: "FILIPE", label: "Filipe Delgado\n(Co-executado / Interveniente)", group: "PESSOA_ALVO", shape: "box", color: { background: "#dc2626", border: "#ef4444" }, font: { color: "#fff", bold: true },
+          meta: { tipo: "Interveniente / Co-executado", status: "Sob Queixa-Crime MP (Art. 194 e 217 CP)", detalhes: "Recebeu e ocultou dolosamente a citação de Nuno Duarte em 04/07/2023; confessou em WhatsApp de 23/08/2022 conluio e desvio de fundos." } },
+
+        { id: "TERESA", label: "Teresa de Jesus Martins\n(Senhoria / Recorrente 3719)", group: "PESSOA_ALVO", shape: "box", color: { background: "#dc2626", border: "#ef4444" }, font: { color: "#fff", bold: true },
+          meta: { tipo: "Senhoria / Requerente", status: "Litigância de Má-Fé", detalhes: "Alegou falso abandono e deterioração para se apropriar de 10 anos de obras e exploração turística. Desmentida por 12 vídeos de vistoria de 24/05/2024." } },
+
+        { id: "CENTENARIO", label: "Centenário Unipessoal, Lda.\n(Exequente / Cléber)", group: "ENTIDADE_ALVO", shape: "box", color: { background: "#991b1b", border: "#dc2626" }, font: { color: "#fff" },
+          meta: { tipo: "Sociedade Exequente", status: "Execução Extinta", detalhes: "Exequente no Processo 23142/22 cuja instância executiva foi integralmente extinta por Acórdão do Tribunal da Relação de Lisboa." } },
+
+        // 3. Tribunais e Entidades Oficiais
+        { id: "TRL", label: "Tribunal da Relação de Lisboa\n(2.ª Instância)", group: "TRIBUNAL", shape: "ellipse", color: { background: "#166534", border: "#22c55e" }, font: { color: "#fff", bold: true },
+          meta: { tipo: "Tribunal Superior", status: "Decisão Favorável", detalhes: "Proferiu Acórdão determinando a extinção integral da execução 23142/22 e a desoneração total de todos os bens penhorados." } },
+
+        { id: "AT", label: "Autoridade Tributária (AT)\n& Segurança Social", group: "OFICIAL", shape: "ellipse", color: { background: "#1e3a8a", border: "#3b82f6" }, font: { color: "#fff" },
+          meta: { tipo: "Entidade Pública Oficial", status: "Certidão Emitida", detalhes: "Certidão oficial comprovativa de morada fiscal permanente e ininterrupta de Nuno Duarte com descontos ativos, desmentindo paradeiro desconhecido." } },
+
+        { id: "UNICRE", label: "UNICRE / TPA\n(Instituição Financeira)", group: "OFICIAL", shape: "ellipse", color: { background: "#1e3a8a", border: "#3b82f6" }, font: { color: "#fff" },
+          meta: { tipo: "Instituição de Pagamentos", status: "Retenção Comprovada", detalhes: "Reteve na fonte € 52.285,00 via terminais TPA, quantia que extinguiu por compensação legal a dívida executada de € 105.633,00." } },
+
+        // 4. Processos Judiciais
+        { id: "PROC_23142", label: "Proc. 23142/22.7T8LSB\n(Execução Centenário)", group: "PROCESSO", shape: "hexagon", color: { background: "#d97706", border: "#f59e0b" }, font: { color: "#fff", bold: true },
+          meta: { tipo: "Processo Executivo", status: "EXTINTO POR ACÓRDÃO DO TRL", detalhes: "Juízo de Execução de Lisboa (Juiz 3). Execução extinta; penhoras de € 35.000 e veículos em fase de cancelamento e restituição imediata." } },
+
+        { id: "PROC_3719", label: "Proc. 3719/25.0T8LSB\n(Providência Posse / TRL)", group: "PROCESSO", shape: "hexagon", color: { background: "#d97706", border: "#f59e0b" }, font: { color: "#fff", bold: true },
+          meta: { tipo: "Providência Cautelar e Recurso", status: "Em Julgamento / Recurso TRL", detalhes: "Tutela possessória e constitucional da habitação (Art. 65 CRP e 754 CC). Sustentada por 12 vídeos de vistoria técnica e histórico 2012-2024." } },
+
+        { id: "PROC_10153", label: "Proc. 10153/24.7T8LSB\n(Oposição Unicre)", group: "PROCESSO", shape: "hexagon", color: { background: "#d97706", border: "#f59e0b" }, font: { color: "#fff", bold: true },
+          meta: { tipo: "Embargos de Executado", status: "Compensação de € 52.285", detalhes: "Oposição à execução com fundamento em extinção de dívida por compensação legal de pagamentos retidos via TPA (Art. 847 CC)." } },
+
+        { id: "PROC_15547", label: "Proc. 15547/26.0T8LSB\n(Propriedade Plena)", group: "PROCESSO", shape: "hexagon", color: { background: "#d97706", border: "#f59e0b" }, font: { color: "#fff", bold: true },
+          meta: { tipo: "Ação Cível de Reivindicação", status: "8 Cadernetas Prediais", detalhes: "Reivindicação da compropriedade e litisconsórcio necessário de Teresa de Jesus Martins (Art. 33 CPC e 1311 CC)." } },
+
+        { id: "CLUSTER_SPARK", label: "SPARKGEST / CMVM\n(Fraude e Laboral)", group: "PROCESSO", shape: "hexagon", color: { background: "#7c3aed", border: "#a855f7" }, font: { color: "#fff" },
+          meta: { tipo: "Contencioso Societário e Laboral", status: "Queixa Formal CMVM", detalhes: "Denúncia de irregularidades regulatórias e despedimento forçado sem pagamento de créditos laborais." } },
+
+        // 5. Provas Materiais Decisivas
+        { id: "PROVA_ACORDAO_TRL", label: "Acórdão de Extinção TRL\n(Processo 23142)", group: "PROVA", shape: "dot", size: 18, color: { background: "#22c55e", border: "#4ade80" },
+          meta: { tipo: "Decisão Judicial Transitada", status: "Prova Oficial Máxima", detalhes: "Acórdão do Tribunal da Relação que julgou extinta a execução e ordenou a desoneração de todos os bens penhorados." } },
+
+        { id: "PROVA_VIDEOS_2024", label: "12 Vídeos de Vistoria\n(24/05/2024 - MP4)", group: "PROVA", shape: "dot", size: 18, color: { background: "#22c55e", border: "#4ade80" },
+          meta: { tipo: "Prova Pericial Vídeo", status: "Ficheiros MP4 em F:\\", detalhes: "12 filmagens contínuas gravadas no imóvel em 24/05/2024 provando conservação exemplar, instalações ativas e posse física ininterrupta." } },
+
+        { id: "PROVA_OFICIO_AE", label: "Ofício Confissão AE\n(20/09/2024 - Ref. 437217551)", group: "PROVA", shape: "dot", size: 18, color: { background: "#22c55e", border: "#4ade80" },
+          meta: { tipo: "Documento Citius Oficial", status: "Confissão Escrita", detalhes: "Confissão formal da Agente de Execução admitindo erro insanável na citação por omissão dos documentos de recurso." } },
+
+        { id: "PROVA_AUDIOS_VARELA", label: "Gravações Áudio Varela/Cléber\n(Prova Conflito Interesses)", group: "PROVA", shape: "dot", size: 16, color: { background: "#22c55e", border: "#4ade80" },
+          meta: { tipo: "Registo Áudio Pericial", status: "Ficheiro MP3/Opus", detalhes: "Registo áudio comprovando que o Dr. Varela instruiu o credor a não retirar Nuno Duarte da dívida, violando o Art. 83 EOA." } },
+
+        { id: "PROVA_RETENCAO_UNICRE", label: "Retenções TPA € 52.285\n(Relatórios Unicre)", group: "PROVA", shape: "dot", size: 16, color: { background: "#22c55e", border: "#4ade80" },
+          meta: { tipo: "Extratos Financeiros", status: "Compensação Provada", detalhes: "Comprovativos bancários de retenção na fonte direta que extinguem o crédito executado de € 105.633." } },
+
+        { id: "PROVA_8_CADERNETAS", label: "8 Cadernetas Prediais Urbanas\n(001 a 008)", group: "PROVA", shape: "dot", size: 16, color: { background: "#22c55e", border: "#4ade80" },
+          meta: { tipo: "Certidão Oficial AT", status: "Propriedade Plena", detalhes: "Matrizes prediais atualizadas comprovando a titularidade e indivisão das frações." } },
+
+        // 6. Ilícitos / Nulidades
+        { id: "CRIME_PENHORAS_ILEGAIS", label: "Penhoras Ilegais € 35.000\n(Confisco Sem Título)", group: "CRIME", shape: "triangle", size: 16, color: { background: "#ef4444", border: "#f87171" },
+          meta: { tipo: "Ilícito Executivo / Abuso Poder", status: "Art. 382 CP / Art. 703 CPC", detalhes: "Execução de penhoras patrimoniais após declaração de inexistência de título de 16/03/2023 sob recurso com efeito devolutivo." } },
+
+        { id: "CRIME_OCULTACAO_CITACAO", label: "Interceção de Citação\n(Revelia Forçada)", group: "CRIME", shape: "triangle", size: 16, color: { background: "#ef4444", border: "#f87171" },
+          meta: { tipo: "Crime Art. 194 CP", status: "Violação de Correspondência", detalhes: "Citação de 04/07/2023 entregue a Filipe Delgado que a ocultou dolosamente de Nuno Duarte." } },
+
+        { id: "CRIME_EXTORSAO_WHATSAPP", label: "Extorsão WhatsApp\n(+1 809 394-6586)", group: "CRIME", shape: "triangle", size: 16, color: { background: "#ef4444", border: "#f87171" },
+          meta: { tipo: "Crime Art. 223 e 154 CP", status: "Extorsão e Coação", detalhes: "Tentativa de intimidação com fotos violentas a partir de número VoIP (+1 809) sob o nome falso 'Comando Vermelho'." } }
+    ];
+
+    // Definicao das Conexoes / Arestas (Edges)
+    const rawEdges = [
+        // Conexoes da Vitima
+        { from: "NUNO", to: "PROC_23142", label: "Executado Vítima", color: { color: "#38bdf8" }, arrows: "to" },
+        { from: "NUNO", to: "PROC_3719", label: "Recorrente Posseiro", color: { color: "#38bdf8" }, arrows: "to" },
+        { from: "NUNO", to: "PROC_10153", label: "Embargante", color: { color: "#38bdf8" }, arrows: "to" },
+        { from: "NUNO", to: "PROC_15547", label: "Comproprietário", color: { color: "#38bdf8" }, arrows: "to" },
+        { from: "NUNO", to: "CLUSTER_SPARK", label: "Sócio / Trabalhador", color: { color: "#38bdf8" }, arrows: "to" },
+
+        // Tribunais
+        { from: "TRL", to: "PROC_23142", label: "Extinguiu por Acórdão", color: { color: "#22c55e", highlight: "#4ade80" }, width: 3, arrows: "to" },
+        { from: "TRL", to: "PROVA_ACORDAO_TRL", label: "Emissão Oficial", color: { color: "#22c55e" }, arrows: "to" },
+        { from: "AT", to: "NUNO", label: "Atesta Morada Fiscal Ativa", color: { color: "#3b82f6" }, arrows: "to" },
+        { from: "UNICRE", to: "PROVA_RETENCAO_UNICRE", label: "Reteve € 52.285", color: { color: "#3b82f6" }, arrows: "to" },
+
+        // Atores Alvo -> Processos / Crimes
+        { from: "VARELA", to: "CENTENARIO", label: "Patrocínio sem Mandato", color: { color: "#ef4444" }, arrows: "to" },
+        { from: "VARELA", to: "PROVA_AUDIOS_VARELA", label: "Conflito Gravado", color: { color: "#ef4444" }, arrows: "to" },
+        { from: "VARELA", to: "PROC_23142", label: "Mandatário Exequente", color: { color: "#ef4444" }, arrows: "to" },
+
+        { from: "LUISA", to: "CRIME_PENHORAS_ILEGAIS", label: "Executou Penhoras", color: { color: "#ef4444" }, width: 2, arrows: "to" },
+        { from: "LUISA", to: "PROVA_OFICIO_AE", label: "Confessou Erro Citius", color: { color: "#ef4444" }, arrows: "to" },
+        { from: "CRIME_PENHORAS_ILEGAIS", to: "NUNO", label: "Bloqueou € 35.000", color: { color: "#ef4444" }, arrows: "to" },
+
+        { from: "FILIPE", to: "CRIME_OCULTACAO_CITACAO", label: "Intercetou Carta", color: { color: "#ef4444" }, arrows: "to" },
+        { from: "CRIME_OCULTACAO_CITACAO", to: "NUNO", label: "Revelia Forçada", color: { color: "#ef4444" }, arrows: "to" },
+
+        { from: "TERESA", to: "PROC_3719", label: "Requerente Esbulho", color: { color: "#ef4444" }, arrows: "to" },
+        { from: "PROVA_VIDEOS_2024", to: "PROC_3719", label: "Desmente Falso Abandono", color: { color: "#22c55e" }, width: 3, arrows: "to" },
+
+        { from: "PROVA_RETENCAO_UNICRE", to: "PROC_10153", label: "Compensou Dívida", color: { color: "#22c55e" }, width: 3, arrows: "to" },
+        { from: "PROVA_8_CADERNETAS", to: "PROC_15547", label: "Prova Titularidade", color: { color: "#22c55e" }, arrows: "to" },
+
+        { from: "CRIME_EXTORSAO_WHATSAPP", to: "NUNO", label: "Tentativa Extorsão", color: { color: "#ef4444" }, dashes: true, arrows: "to" }
+    ];
+
+    // Inicializacao do Grafo Vis.js
+    const container = document.getElementById("network-container");
+    const nodes = new vis.DataSet(rawNodes);
+    const edges = new vis.DataSet(rawEdges);
+
+    const data = { nodes: nodes, edges: edges };
+    const options = {
+        nodes: {
+            borderWidth: 2,
+            shadow: true,
+            font: { size: 13, face: "sans-serif" }
+        },
+        edges: {
+            width: 1.5,
+            shadow: true,
+            smooth: { type: "continuous" },
+            font: { size: 11, align: "middle", color: "#9ca3af", strokeWidth: 0 }
+        },
+        physics: {
+            solver: "forceAtlas2Based",
+            forceAtlas2Based: {
+                gravitationalConstant: -70,
+                centralGravity: 0.01,
+                springLength: 150,
+                springConstant: 0.08,
+                damping: 0.85
+            },
+            stabilization: { iterations: 200 }
+        },
+        interaction: {
+            hover: true,
+            tooltipDelay: 100,
+            zoomView: true,
+            dragView: true
+        }
+    };
+
+    const network = new vis.Network(container, data, options);
+
+    // Evento de Clique para Painel Inspetor
+    network.on("click", function(params) {
+        if (params.nodes.length > 0) {
+            const nodeId = params.nodes[0];
+            const nodeData = rawNodes.find(n => n.id === nodeId);
+            if (nodeData) {
+                renderInspector(nodeData);
+            }
+        }
+    });
+
+    function renderInspector(n) {
+        const panel = document.getElementById("inspector-panel");
+        const meta = n.meta || {};
+        
+        let tagColor = "#38bdf8";
+        if (n.group.includes("ALVO") || n.group === "CRIME") tagColor = "#ef4444";
+        if (n.group === "PROCESSO") tagColor = "#f59e0b";
+        if (n.group === "PROVA" || n.group === "TRIBUNAL") tagColor = "#22c55e";
+
+        panel.innerHTML = `
+            <div>
+                <span class="node-tag" style="background:${tagColor}22; color:${tagColor}; border:1px solid ${tagColor}55;">${meta.tipo || n.group}</span>
+                <div class="node-title">${n.label.split('\n')[0]}</div>
+                <div class="node-subtitle">${n.label.split('\n')[1] || ''}</div>
+
+                <div class="prop-group">
+                    <div class="prop-label">Status Processual / Estado</div>
+                    <div class="prop-value"><strong>${meta.status || 'Ativo'}</strong></div>
+                </div>
+
+                <div class="prop-group">
+                    <div class="prop-label">Fundamentação e Detalhes Forenses</div>
+                    <div class="prop-value">${meta.detalhes || 'Sem detalhes adicionais.'}</div>
+                </div>
+
+                <div class="prop-group">
+                    <div class="prop-label">Conexões no Grafo</div>
+                    <div class="prop-value">
+                        ${getConnectedNodesSummary(n.id)}
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    function getConnectedNodesSummary(nodeId) {
+        const connectedEdges = rawEdges.filter(e => e.from === nodeId || e.to === nodeId);
+        if (connectedEdges.length === 0) return "Sem ligações ativas.";
+        return connectedEdges.map(e => {
+            const otherId = (e.from === nodeId) ? e.to : e.from;
+            const otherNode = rawNodes.find(n => n.id === otherId);
+            const otherName = otherNode ? otherNode.label.split('\n')[0] : otherId;
+            return `• <strong>${e.label}</strong> ➔ ${otherName}`;
+        }).join('<br>');
+    }
+
+    // Filtros de Grafo
+    function filterGraph(category) {
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        if (category === 'ALL') {
+            nodes.clear();
+            nodes.add(rawNodes);
+            edges.clear();
+            edges.add(rawEdges);
+            return;
+        }
+
+        const filteredNodes = rawNodes.filter(n => {
+            if (category === 'PROCESSO') return n.group === 'PROCESSO';
+            if (category === 'PESSOA') return n.group.startsWith('PESSOA') || n.group.startsWith('ENTIDADE');
+            if (category === 'PROVA') return n.group === 'PROVA' || n.group === 'TRIBUNAL' || n.group === 'OFICIAL';
+            if (category === 'CRIME') return n.group === 'CRIME';
+            return true;
+        });
+
+        const allowedIds = new Set(filteredNodes.map(n => n.id));
+        const filteredEdges = rawEdges.filter(e => allowedIds.has(e.from) && allowedIds.has(e.to));
+
+        nodes.clear();
+        nodes.add(filteredNodes);
+        edges.clear();
+        edges.add(filteredEdges);
+    }
+
+    // Pesquisa Dinamica
+    document.getElementById("search-box").addEventListener("input", function(e) {
+        const term = e.target.value.toLowerCase().trim();
+        if (!term) {
+            network.unselectAll();
+            return;
+        }
+        const match = rawNodes.find(n => n.label.toLowerCase().includes(term) || (n.meta && n.meta.detalhes.toLowerCase().includes(term)));
+        if (match) {
+            network.selectNodes([match.id]);
+            network.focus(match.id, { scale: 1.2, animation: true });
+            renderInspector(match);
+        }
+    });
+
+    function resetZoom() {
+        network.fit({ animation: { duration: 500, easingFunction: "easeInOutQuad" } });
+    }
+</script>
+
+</body>
+</html>

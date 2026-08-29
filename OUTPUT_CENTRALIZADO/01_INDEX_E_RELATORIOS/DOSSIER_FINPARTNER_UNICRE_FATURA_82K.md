@@ -17,22 +17,22 @@
 ┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
 │ CADEIA DE CAUSALIDADE E TRANSFERÊNCIA DE PASSIVOS                                                │
 ├────────────────────────────────┬─────────────────────────────────────────────────────────────────┤
-│ 1. FATURA N.º 1000002          │ • Emitida em 12/01/2021 no valor de € 82.722,00 (€ 67.253 base  │
+│ 1. FATURA N.º 1000002          │ - Emitida em 12/01/2021 no valor de € 82.722,00 (€ 67.253 base  │
 │    (12/01/2021)                │   + € 15.468 IVA) à Lisbon Experience (LEA).                    │
-│                                │ • A LEA deduziu o IVA e custos, mas NUNCA pagou a fatura a Nuno.│
+│                                │ - A LEA deduziu o IVA e custos, mas NUNCA pagou a fatura a Nuno.│
 ├────────────────────────────────┼─────────────────────────────────────────────────────────────────┤
-│ 2. DESPESAS DE LIMPEZA         │ • Nuno Duarte suportou do seu bolso +€ 25.000 em limpezas à     │
+│ 2. DESPESAS DE LIMPEZA         │ - Nuno Duarte suportou do seu bolso +€ 25.000 em limpezas à     │
 │    PAGAS À CENTENÁRIO          │   Centenário em nome da LEA sem receber o devido reembolso.     │
 ├────────────────────────────────┼─────────────────────────────────────────────────────────────────┤
-│ 3. TERMINAL TPA REDUNICRE      │ • Contratado formalmente como ENI, mas afeto 100% à operação LEA│
-│    (N.º RU:003087339)          │ • Nome comercial alterado pela Unicre para "Lisbon Experience"  │
+│ 3. TERMINAL TPA REDUNICRE      │ - Contratado formalmente como ENI, mas afeto 100% à operação LEA│
+│    (N.º RU:003087339)          │ - Nome comercial alterado pela Unicre para "Lisbon Experience"  │
 │                                │   a 07/04/2020 (Pedido PS 1-1064222419).                        │
-│                                │ • Notificações enviadas aos e-mails da LEA (lisbonexp@gmail.com)│
+│                                │ - Notificações enviadas aos e-mails da LEA (lisbonexp@gmail.com)│
 ├────────────────────────────────┼─────────────────────────────────────────────────────────────────┤
-│ 4. FALTA DE CITAÇÃO NA         │ • Nuno Duarte NUNCA foi citado na Ação Declarativa 20203/22     │
-│    AÇÃO DECLARATIVA            │ • Revelia forçada ➔ Formação de título executivo viciado.       │
+│ 4. FALTA DE CITAÇÃO NA         │ - Nuno Duarte NUNCA foi citado na Ação Declarativa 20203/22     │
+│    AÇÃO DECLARATIVA            │ - Revelia forçada  Formação de título executivo viciado.       │
 ├────────────────────────────────┼─────────────────────────────────────────────────────────────────┤
-│ 5. FALHAS DA FINPARTNER        │ • Contratada a € 300/mês para regularizar IVA e dívidas da LEA; │
+│ 5. FALHAS DA FINPARTNER        │ - Contratada a € 300/mês para regularizar IVA e dívidas da LEA; │
 │                                │   omitiu o contraditório e não solucionou as pendências fiscais.│
 └────────────────────────────────┴─────────────────────────────────────────────────────────────────┘
 ```

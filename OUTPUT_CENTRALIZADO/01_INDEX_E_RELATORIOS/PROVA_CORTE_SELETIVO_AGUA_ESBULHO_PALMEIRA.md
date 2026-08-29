@@ -17,9 +17,9 @@ Nas comunicações oficiais de **23 de Agosto de 2022**, ficou formalmente regis
 ┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
 │ PROVA MATERIAL DO CORTE CIRÚRGICO E DISCRIMINATÓRIO                                              │
 ├──────────────────────────────────────────────────────────────────────────────────────────────────┤
-│ • Nuno Duarte: "Eu não entendo: ligaram o 31 e 33 todo ontem menos a Heaven e a Sky?"           │
-│ • Nuno Duarte: "Ainda não está marcado? Tenho as miúdas num hotel."                              │
-│ • Filipe Delgado: "Ia pagar a Heaven mas lá com tanta coisa o senhor pagou a Family e Penthouse, │
+│ - Nuno Duarte: "Eu não entendo: ligaram o 31 e 33 todo ontem menos a Heaven e a Sky?"           │
+│ - Nuno Duarte: "Ainda não está marcado? Tenho as miúdas num hotel."                              │
+│ - Filipe Delgado: "Ia pagar a Heaven mas lá com tanta coisa o senhor pagou a Family e Penthouse, │
 │                   já não dava para reverter, já não havia mais dinheiro."                        │
 └──────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -33,7 +33,7 @@ Nas comunicações oficiais de **23 de Agosto de 2022**, ficou formalmente regis
 │  TODAS AS OUTRAS FRAÇÕES     │              │  FRAÇÃO DE NUNO DUARTE       │
 │  (Family, Penthouse, 31 5,   │              │  (HEAVEN / 5.º ANDAR)        │
 │  33 4, 33 2, etc.)           │              │                              │
-│  💧 ÁGUA E LUZ LIGADAS       │              │  🚫 SEM ÁGUA HÁ MAIS DE      │
+│   ÁGUA E LUZ LIGADAS       │              │   SEM ÁGUA HÁ MAIS DE      │
 │  (Exploradas para turistas)  │              │     2 ANOS (2022–2024)       │
 │                              │              │  (Alvo de asfixia seletiva)  │
 └──────────────────────────────┘              └──────────────────────────────┘

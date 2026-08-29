@@ -1,4 +1,4 @@
-# Relatório Pericial Contabilístico e Fiscal: Rastreamento de Impostos, Rendimentos Prediais, Faturas Não Autorizadas e Transferências LEA ➔ Teresa Martins
+# Relatório Pericial Contabilístico e Fiscal: Rastreamento de Impostos, Rendimentos Prediais, Faturas Não Autorizadas e Transferências LEA  Teresa Martins
 
 **Data de Emissão**: 2026-08-28  
 **Autoridade**: `AI/DIRETRIZES-GLOBAIS-DEV.md`, `AGENTS.md` e [`memoria_forense_unificada.db`](file:///C:/Users/Yokozuna/Dev/OUTPUT_CENTRALIZADO/02_DADOS_ESTRUTURADOS/memoria_forense_unificada.db)  
@@ -73,15 +73,15 @@ A alegação judicial da senhoria Teresa de Jesus Martins de que "desconhecia a 
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ FLUXO BANCÁRIO COMPROVADO: LISBON EXPERIENCE ➔ TERESA DE JESUS MARTINS                           │
+│ FLUXO BANCÁRIO COMPROVADO: LISBON EXPERIENCE  TERESA DE JESUS MARTINS                           │
 ├───────────────────────────────┬──────────────────────────────────────────────────────────────────┤
 │ 1. TRANSFERÊNCIAS REGULARES   │ - A Lisbon Experience (LEA) transferia mensalmente os montantes │
 │                               │   de renda diretamente para a conta da senhoria Teresa.          │
 ├───────────────────────────────┼──────────────────────────────────────────────────────────────────┤
 │ 2. RECIBOS E COMPROVATIVOS    │ - Registados nos e-mails oficiais de gestão:                     │
-│                               │   • Listagem Novembro.eml e Listagem Dezembro 19.eml             │
-│                               │   • Acerto.eml e Transferencia.eml                               │
-│                               │   • sky renda.pdf e Rent receipt.txt                             │
+│                               │   - Listagem Novembro.eml e Listagem Dezembro 19.eml             │
+│                               │   - Acerto.eml e Transferencia.eml                               │
+│                               │   - sky renda.pdf e Rent receipt.txt                             │
 ├───────────────────────────────┼──────────────────────────────────────────────────────────────────┤
 │ 3. IMPACTO PROCESSUAL NO TRL  │ - A senhoria recebeu os frutos da exploração turística e validou │
 │                               │   a ocupação de Nuno Duarte ao longo de anos.                    │

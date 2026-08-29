@@ -56,9 +56,9 @@ Se tinha a conta Huawei ativa no telemóvel:
 ### Opção B: Desbloqueio e Extração via Cabo USB (ADB)
 Com o telemóvel ligado por USB ao PC:
 1. Execute na pasta do projeto:
-   👉 [`DESBLOQUEAR_TELEMOVEL_ADB.bat`](file:///C:/Users/Yokozuna/Dev/DESBLOQUEAR_TELEMOVEL_ADB.bat) (digite o PIN no teclado do PC).
+   [ITEM]  [`DESBLOQUEAR_TELEMOVEL_ADB.bat`](file:///C:/Users/Yokozuna/Dev/DESBLOQUEAR_TELEMOVEL_ADB.bat) (digite o PIN no teclado do PC).
 2. Execute a seguir:
-   👉 [`EXTRAIR_DADOS_TELEMOVEL_ADB.bat`](file:///C:/Users/Yokozuna/Dev/EXTRAIR_DADOS_TELEMOVEL_ADB.bat) (extrai todo o WhatsApp e DCIM).
+   [ITEM]  [`EXTRAIR_DADOS_TELEMOVEL_ADB.bat`](file:///C:/Users/Yokozuna/Dev/EXTRAIR_DADOS_TELEMOVEL_ADB.bat) (extrai todo o WhatsApp e DCIM).
 
 ---
 
