@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Forense Unificada de Investigação e Inteligência Judicial</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+        :root {
+            --bg-body: #090d16;
+            --bg-nav: #0f172a;
+            --bg-card: #1e293b;
+            --bg-card-hover: #273549;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-green: #22c55e;
+            --accent-red: #ef4444;
+            --accent-gold: #f59e0b;
+            --accent-purple: #a855f7;
+            --border: #334155;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background: var(--bg-body); color: var(--text-main); height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+
+        /* Top Navigation */
+        .top-nav {
+            background: var(--bg-nav);
+            border-bottom: 1px solid var(--border);
+            padding: 10px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-icon {
+            background: linear-gradient(135deg, #0284c7, #6366f1);
+            color: #fff;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+        }
+
+        .brand-name { font-size: 16px; font-weight: 700; }
+        .brand-desc { font-size: 11px; color: var(--text-muted); }
+
+        .tabs {
+            display: flex;
+            gap: 6px;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: 1px solid transparent;
+            color: var(--text-muted);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tab-btn:hover { color: #fff; background: var(--bg-card); }
+        .tab-btn.active {
+            background: var(--bg-card);
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* Content Areas */
+        .content-area { flex: 1; position: relative; overflow: hidden; }
+        .view-pane { display: none; height: 100%; width: 100%; }
+        .view-pane.active { display: flex; }
+
+        /* View 1: Graph View */
+        #pane-graph { flex-direction: row; }
+        #network-viewport { flex: 1; height: 100%; background: radial-gradient(circle at center, #111d33 0%, #090d16 100%); }
+        .graph-sidebar {
+            width: 380px;
+            background: var(--bg-nav);
+            border-left: 1px solid var(--border);
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        /* View 2: Search View */
+        #pane-search { flex-direction: column; padding: 30px; overflow-y: auto; }
+        .search-hero { max-width: 900px; margin: 0 auto 30px auto; width: 100%; }
+        .search-hero h2 { font-size: 24px; margin-bottom: 8px; color: var(--accent); }
+        .search-input-lg {
+            width: 100%;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: #fff;
+            padding: 14px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            margin-top: 10px;
+        }
+        .search-input-lg:focus { border-color: var(--accent); }
+
+        .search-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .search-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .search-card:hover { transform: translateY(-2px); border-color: var(--accent); }
+        .search-card h4 { font-size: 15px; margin-bottom: 6px; color: #fff; }
+        .search-card p { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
+
+        /* View 3: Evidence View */
+        #pane-evidence { flex-direction: column; padding: 30px; overflow-y: auto; }
+        .evidence-table {
+            width: 100%;
+            border-collapse: collapse;
+            max-width: 1100px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        .evidence-table th { background: #111827; padding: 12px 16px; font-size: 12px; text-transform: uppercase; color: var(--text-muted); text-align: left; }
+        .evidence-table td { padding: 12px 16px; font-size: 13px; border-top: 1px solid var(--border); }
+        .badge { padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; }
+        .badge-green { background: #14532d; color: #86efac; }
+        .badge-gold { background: #78350f; color: #fde68a; }
+        .badge-red { background: #7f1d1d; color: #fca5a5; }
+
+        /* View 4: Monitor / Threats View */
+        #pane-monitor { flex-direction: column; padding: 30px; overflow-y: auto; max-width: 1000px; margin: 0 auto; width: 100%; }
+        .threat-card {
+            background: var(--bg-card);
+            border-left: 4px solid var(--accent-red);
+            border-radius: 6px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        .threat-card h3 { font-size: 16px; margin-bottom: 6px; color: #fca5a5; }
+        .threat-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin-bottom: 10px; }
+        .threat-meta { font-size: 11px; color: #94a3b8; }
+    </style>
+</head>
+<body>
+
+<nav class="top-nav">
+    <div class="brand-box">
+        <div class="brand-icon">M</div>
+        <div>
+            <div class="brand-name">Plataforma Forense Unificada</div>
+            <div class="brand-desc">Investigação de Vínculos, Provas e Inteligência Criminal (Padrão Maltego)</div>
+        </div>
+    </div>
+    <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('graph')">Graph (Análise de Vínculos)</button>
+        <button class="tab-btn" onclick="switchTab('search')">Search (Busca Inteligente)</button>
+        <button class="tab-btn" onclick="switchTab('evidence')">Evidence (Matriz Probatória)</button>
+        <button class="tab-btn" onclick="switchTab('monitor')">Monitor (Ameaças & Ilícitos)</button>
+    </div>
+</nav>
+
+<div class="content-area">
+    <!-- PANE 1: GRAPH (Maltego Graph) -->
+    <div id="pane-graph" class="view-pane active">
+        <div id="network-viewport"></div>
+        <div class="graph-sidebar" id="graph-sidebar">
+            <h3 style="font-size:16px; margin-bottom:12px; color:var(--accent);">Painel de Inspeção Forense</h3>
+            <p style="font-size:13px; color:var(--text-muted); line-height:1.5;">Clique em qualquer nó do grafo para auditar os metadados, hashes SHA-256 e fundamentos jurídicos.</p>
+        </div>
+    </div>
+
+    <!-- PANE 2: SEARCH (Maltego Search) -->
+    <div id="pane-search" class="view-pane">
+        <div class="search-hero">
+            <h2>Pesquisa Forense Inteligente no Acervo</h2>
+            <p style="color:var(--text-muted); font-size:14px;">Mais de 133.000 registos indexados com busca por palavras-chave, nomes de intervenientes e números de processo.</p>
+            <input type="text" class="search-input-lg" placeholder="Pesquisar por 'Varela', 'Luísa Santos', 'Unicre', 'Acórdão TRL', 'Loja 58'..." oninput="handleSearch(this.value)">
+        </div>
+        <div class="search-grid" id="search-results">
+            <div class="search-card">
+                <h4>Acórdão do Tribunal da Relação de Lisboa</h4>
+                <p>Processo 23142/22.7T8LSB — Extinção integral da instância executiva e ordem de desoneração de bens.</p>
+            </div>
+            <div class="search-card">
+                <h4>12 Vídeos de Vistoria Técnica (24/05/2024)</h4>
+                <p>Processo 3719/25.0T8LSB — Prova material de conservação exemplar e posse física ininterrupta.</p>
+            </div>
+            <div class="search-card">
+                <h4>Ofício de Confissão da AE Luísa Santos</h4>
+                <p>Ref. 437217551 — Confissão expressa de nulidade insanável na citação por omissão dos documentos do recurso.</p>
+            </div>
+            <div class="search-card">
+                <h4>Retenções TPA Unicre (€ 52.285)</h4>
+                <p>Processo 10153/24.7T8LSB — Compensação legal automática que extinguiu a dívida executada.</p>
+            </div>
+            <div class="search-card">
+                <h4>Contratos Loja 58 (Trindade / Misericórdia)</h4>
+                <p>Processo 15547/26.0T8LSB — Contratos de arrendamento comercial com prazo certo de julho de 2022.</p>
+            </div>
+            <div class="search-card">
+                <h4>Gravações Áudio Dr. Varela / Cléber</h4>
+                <p>Prova de conflito de interesses (Art. 83.º EOA) e instrução dolosa para manter Nuno Duarte na dívida.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PANE 3: EVIDENCE (Maltego Evidence) -->
+    <div id="pane-evidence" class="view-pane">
+        <div style="max-width:1100px; margin:0 auto 20px auto; width:100%;">
+            <h2 style="font-size:22px; color:var(--accent); margin-bottom:6px;">Matriz Probatória Oficial</h2>
+            <p style="color:var(--text-muted); font-size:13px;">Provas documentais, relatórios periciais e peças judiciais com rigor criptográfico.</p>
+        </div>
+        <table class="evidence-table">
+            <thead>
+                <tr>
+                    <th>Designação da Prova</th>
+                    <th>Processo Vinculado</th>
+                    <th>Tipo Probatório</th>
+                    <th>Nível de Força</th>
+                    <th>Status Processual</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Acórdão do Tribunal da Relação de Lisboa</strong></td>
+                    <td>23142/22.7T8LSB</td>
+                    <td>Decisão Superior</td>
+                    <td><span class="badge badge-green">OFICIAL</span></td>
+                    <td>Execução Extinta / Bens Desonerados</td>
+                </tr>
+                <tr>
+                    <td><strong>12 Vídeos de Vistoria Técnica (MP4)</strong></td>
+                    <td>3719/25.0T8LSB</td>
+                    <td>Prova Pericial Vídeo</td>
+                    <td><span class="badge badge-green">ALTA</span></td>
+                    <td>Posse Provada / Desmonte Abandono</td>
+                </tr>
+                <tr>
+                    <td><strong>Ofício Confissão AE (Ref. 437217551)</strong></td>
+                    <td>23142/22.7T8LSB</td>
+                    <td>Documento Citius</td>
+                    <td><span class="badge badge-green">OFICIAL</span></td>
+                    <td>Nulidade Insanável Confessada</td>
+                </tr>
+                <tr>
+                    <td><strong>Extratos Retenção TPA Unicre (€ 52.285)</strong></td>
+                    <td>10153/24.7T8LSB</td>
+                    <td>Extratos Bancários</td>
+                    <td><span class="badge badge-gold">ALTA</span></td>
+                    <td>Compensação Legal de Dívida</td>
+                </tr>
+                <tr>
+                    <td><strong>8 Cadernetas Prediais Urbanas (001-008)</strong></td>
+                    <td>15547/26.0T8LSB</td>
+                    <td>Certidão da AT</td>
+                    <td><span class="badge badge-green">OFICIAL</span></td>
+                    <td>Propriedade Plena e Titularidade</td>
+                </tr>
+                <tr>
+                    <td><strong>Termos de Autenticação Notarial LEA</strong></td>
+                    <td>3719/25.0T8LSB</td>
+                    <td>Documento Notarial</td>
+                    <td><span class="badge badge-green">OFICIAL</span></td>
+                    <td>Mandato e Posse Certificados</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- PANE 4: MONITOR (Maltego Monitor) -->
+    <div id="pane-monitor" class="view-pane">
+        <h2 style="font-size:22px; color:var(--accent-red); margin-bottom:8px;">Monitorização de Ameaças, Queixas e Ilícitos</h2>
+        <p style="color:var(--text-muted); font-size:13px; margin-bottom:24px;">Painel de acompanhamento de procedimentos disciplinares, participações criminais e incidentes de extorsão.</p>
+
+        <div class="threat-card">
+            <h3>Extorsão e Coação Psicológica via WhatsApp (+1 809 394-6586)</h3>
+            <p>Tentativa de coação e extorsão internacional com recurso a fotografias de violência extrema a partir de número VoIP dominicano sob a denominação "Comando Vermelho".</p>
+            <div class="threat-meta"><strong>Ação Tomada:</strong> Cadeia de prova preservada; contacto bloqueado e denunciado; queixa-crime à PJ (UNC3T) nos termos dos Arts. 223.º e 154.º do CP.</div>
+        </div>
+
+        <div class="threat-card">
+            <h3>Queixa-Crime contra a Agente de Execução Luísa Santos (CP 5840)</h3>
+            <p>Imputação dos crimes de <strong>Abuso de Poder (Art. 382.º CP)</strong>, <strong>Falsidade em Juízo (Art. 359.º CP)</strong> e <strong>Desobediência (Art. 348.º CP)</strong> por penhoras ilegais de € 35.000 sem título válido.</p>
+            <div class="threat-meta"><strong>Peça Vinculada:</strong> 10.1_QUEIXA_CRIME_AE_LUISA_SANTOS.md (Ministério Público e CAAJ).</div>
+        </div>
+
+        <div class="threat-card">
+            <h3>Queixa-Crime contra Filipe Delgado</h3>
+            <p>Imputação dos crimes de <strong>Violação de Correspondência (Art. 194.º CP)</strong>, <strong>Burla Qualificada (Art. 217.º CP)</strong> e <strong>Insolvência Dolosa (Art. 227.º CP)</strong> por interceção e ocultação da citação judicial.</p>
+            <div class="threat-meta"><strong>Peça Vinculada:</strong> 10.2_QUEIXA_CRIME_FILIPE_DELGADO.md (DIAP de Lisboa).</div>
+        </div>
+
+        <div class="threat-card">
+            <h3>Participação Deontológica contra o Dr. Varela de Matos (CP 9878L)</h3>
+            <p>Conflito de interesses direto (Art. 83.º EOA), atuação sem mandato/procuração (outorgada 283 dias após autenticação) e litigância de má-fé dolosa.</p>
+            <div class="threat-meta"><strong>Órgão Destinatário:</strong> Conselho de Deontologia da Ordem dos Advogados.</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function switchTab(tabId) {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.view-pane').forEach(p => p.classList.remove('active'));
+        
+        event.target.classList.add('active');
+        document.getElementById('pane-' + tabId).classList.add('active');
+
+        if (tabId === 'graph' && network) {
+            setTimeout(() => { network.fit(); }, 100);
+        }
+    }
+
+    // Inicializacao do Grafo
+    const nodes = new vis.DataSet([
+        { id: 1, label: "Nuno Miguel Silva Duarte\n(Vítima / Executado)", color: { background: "#0284c7", border: "#38bdf8" }, font: { color: "#fff", bold: true }, shape: "box" },
+        { id: 2, label: "Dr. Varela de Matos\n(Advogado CP 9878L)", color: { background: "#dc2626", border: "#ef4444" }, font: { color: "#fff", bold: true }, shape: "box" },
+        { id: 3, label: "Luísa Santos\n(AE CP 5840)", color: { background: "#dc2626", border: "#ef4444" }, font: { color: "#fff", bold: true }, shape: "box" },
+        { id: 4, label: "Filipe Delgado\n(Co-executado)", color: { background: "#dc2626", border: "#ef4444" }, font: { color: "#fff", bold: true }, shape: "box" },
+        { id: 5, label: "Teresa de Jesus Martins\n(Senhoria)", color: { background: "#dc2626", border: "#ef4444" }, font: { color: "#fff", bold: true }, shape: "box" },
+        { id: 6, label: "Acórdão de Extinção TRL\n(Processo 23142)", color: { background: "#166534", border: "#22c55e" }, font: { color: "#fff", bold: true }, shape: "ellipse" },
+        { id: 7, label: "12 Vídeos de Vistoria\n(24/05/2024)", color: { background: "#166534", border: "#22c55e" }, font: { color: "#fff" }, shape: "dot" },
+        { id: 8, label: "Retenção TPA € 52.285\n(UNICRE)", color: { background: "#166534", border: "#22c55e" }, font: { color: "#fff" }, shape: "dot" },
+        { id: 9, label: "Penhoras Ilegais € 35.000\n(Confisco)", color: { background: "#991b1b", border: "#ef4444" }, font: { color: "#fff" }, shape: "triangle" },
+        { id: 10, label: "Ocultação de Citação\n(Crime Art. 194 CP)", color: { background: "#991b1b", border: "#ef4444" }, font: { color: "#fff" }, shape: "triangle" }
+    ]);
+
+    const edges = new vis.DataSet([
+        { from: 1, to: 6, label: "Vitória Judicial", color: { color: "#22c55e" }, width: 2 },
+        { from: 2, to: 1, label: "Conflito Interesses", color: { color: "#ef4444" }, dashes: true },
+        { from: 3, to: 9, label: "Executou sem título", color: { color: "#ef4444" } },
+        { from: 9, to: 1, label: "Prejudicou", color: { color: "#ef4444" } },
+        { from: 4, to: 10, label: "Intercetou", color: { color: "#ef4444" } },
+        { from: 10, to: 1, label: "Revelia Forçada", color: { color: "#ef4444" } },
+        { from: 7, to: 5, label: "Desmente Falsidade", color: { color: "#22c55e" }, width: 2 },
+        { from: 8, to: 1, label: "Extingue Dívida", color: { color: "#22c55e" } }
+    ]);
+
+    const container = document.getElementById("network-viewport");
+    const network = new vis.Network(container, { nodes, edges }, {
+        physics: { stabilization: true },
+        interaction: { hover: true, zoomView: true }
+    });
+
+    network.on("click", function(params) {
+        if (params.nodes.length > 0) {
+            const nodeId = params.nodes[0];
+            const node = nodes.get(nodeId);
+            document.getElementById("graph-sidebar").innerHTML = `
+                <h3 style="font-size:16px; margin-bottom:10px; color:var(--accent);">${node.label.split('\n')[0]}</h3>
+                <p style="font-size:13px; color:var(--text-main); margin-bottom:12px;"><strong>Papel:</strong> ${node.label.split('\n')[1] || 'Entidade'}</p>
+                <div style="background:var(--bg-card); padding:12px; border-radius:6px; font-size:12px; line-height:1.5; color:var(--text-muted);">
+                    Entidade mapeada no grafo de inteligência com ligações processuais e prova documental associada.
+                </div>
+            `;
+        }
+    });
+
+    function handleSearch(val) {
+        const v = val.toLowerCase();
+        const cards = document.querySelectorAll('.search-card');
+        cards.forEach(c => {
+            const text = c.innerText.toLowerCase();
+            c.style.display = text.includes(v) ? 'block' : 'none';
+        });
+    }
+</script>
+
+</body>
+</html>

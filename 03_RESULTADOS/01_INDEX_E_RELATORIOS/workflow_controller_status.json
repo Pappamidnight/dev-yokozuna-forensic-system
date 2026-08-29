@@ -1,0 +1,58 @@
+{
+  "status": "APPROVED",
+  "verified_at": "2026-08-28T07:05:04.882264",
+  "total_deliverables_required": 8,
+  "total_deliverables_present": 8,
+  "frozen_judge_score": 100,
+  "eval_pipeline_status": "PASS",
+  "deliverables": [
+    {
+      "entregavel": "pipeline_report.json",
+      "descricao": "Relatorio do Scanner Deterministico",
+      "tamanho_bytes": 1024,
+      "status": "OK"
+    },
+    {
+      "entregavel": "atos_processuais.jsonl",
+      "descricao": "Atos Processuais Normalizados CPC",
+      "tamanho_bytes": 206008202,
+      "status": "OK"
+    },
+    {
+      "entregavel": "pontos_factuais.jsonl",
+      "descricao": "Pontos Factuais e Proposicoes",
+      "tamanho_bytes": 222308631,
+      "status": "OK"
+    },
+    {
+      "entregavel": "cronologia_mestre.jsonl",
+      "descricao": "Cronologia Ordenada ISO-8601",
+      "tamanho_bytes": 88876726,
+      "status": "OK"
+    },
+    {
+      "entregavel": "relevance_matrix.json",
+      "descricao": "Matriz de Relevancia Probatoria",
+      "tamanho_bytes": 5376,
+      "status": "OK"
+    },
+    {
+      "entregavel": "frozen_judge_report.json",
+      "descricao": "Relatorio do Frozen Judge (100/100)",
+      "tamanho_bytes": 2691,
+      "status": "OK"
+    },
+    {
+      "entregavel": "eval_report.json",
+      "descricao": "Relatorio do Eval Pipeline (PASS)",
+      "tamanho_bytes": 855,
+      "status": "OK"
+    },
+    {
+      "entregavel": "quality_factuality_report.json",
+      "descricao": "Relatorio do Agente de Factualidade",
+      "tamanho_bytes": 394,
+      "status": "OK"
+    }
+  ]
+}

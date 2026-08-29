@@ -1,0 +1,46 @@
+---
+tipo: documento_convertido
+titulo: Gmail - Summons - Case 23142_22.7T8LSB (2)_ocr
+data_conversao: '2026-04-17 01:30:44'
+ficheiro_original: Gmail - Summons - Case 23142_22.7T8LSB (2)_ocr.txt
+tags: []
+status: recem_convertido
+---
+
+
+           METADADOS DO FICHEIRO          
+
+Nome: Gmail - Summons - Case 23142_22.7T8LSB (2).pdf
+Tipo: PDF
+Tamanho: 1.93 MB
+Data Upload: 28102025, 15:35:16
+Hash: 80f0fb95dd3e4c07069b5a00b79158bb
+
+
+              TEXTO EXTRAÍDO              
+
+
+
+
+      PÁGINA 1 de 4
+
+
+Lus Cent grandlusitaniaapartmentsgmail.com  Summons - Case 2314222.7T8LSB  Ciara S   ciara.j.stokesgmail.com   13 de maio de 2024 às 12:48  Para: grandlusitaniaapartmentsgmail.com  Cc: prcardosoflrp.pt  Hi Nuno,  Following our discussion, after my stay at the apartment 110622 - 110722, in which the deposit was never returned  to me, please see attached:  - Rental agreement  - Proof of deposit transfer  - Screenshots of my most recent conversation with Filipe  As you can see from the conversation, no part of the deposit was ever returned. I have more extensive conversation  evidence with Filipe, and also yourself, let me know if you need to see these and if you need any further information.  Many Thanks,  Ciara  52924, 12:28 PM   Gmail - Summons - Case 2314222.7T8LSB  https:mail.google.commailu1?ik5f542f466cviewptsearchallpermmsgidmsg-f:1798937956931401977simplmsg-f:17989379569314   14
+
+
+      PÁGINA 2 de 4
+
+
+52924, 12:28 PM   Gmail - Summons - Case 2314222.7T8LSB  https:mail.google.commailu1?ik5f542f466cviewptsearchallpermmsgidmsg-f:1798937956931401977simplmsg-f:17989379569314   24
+
+
+      PÁGINA 3 de 4
+
+
+52924, 12:28 PM   Gmail - Summons - Case 2314222.7T8LSB  https:mail.google.commailu1?ik5f542f466cviewptsearchallpermmsgidmsg-f:1798937956931401977simplmsg-f:17989379569314   34
+
+
+      PÁGINA 4 de 4
+
+
+52924, 12:28 PM   Gmail - Summons - Case 2314222.7T8LSB  https:mail.google.commailu1?ik5f542f466cviewptsearchallpermmsgidmsg-f:1798937956931401977simplmsg-f:17989379569314   44

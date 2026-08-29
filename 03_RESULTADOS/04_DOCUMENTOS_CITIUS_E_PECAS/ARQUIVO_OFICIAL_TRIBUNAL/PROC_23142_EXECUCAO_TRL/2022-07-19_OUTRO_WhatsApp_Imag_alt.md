@@ -1,0 +1,34 @@
+---
+tipo: OUTRO
+data: 2022-07-19
+processo: 23142/22.7T8LSB + 33934
+processo_nome: CENTENARIO
+tribunal: null
+fonte: documento-oficial
+ficheiro: "WhatsApp Image 2022-07-19 at 11.05.46 AM.jpeg"
+extensao: .jpeg
+tamanho_kb: 238.3
+texto_extraido: true
+caminho_original: "C:/Users/nunom/Desktop/CENTENARIOTRL\Cofre-Juridico-Nuno\providen\WhatsApp Image 2022-07-19 at 11.05.46 AM.jpeg"
+tags:
+  - tipo/outro
+  - processo/centenario
+  - ano/2022
+---
+
+# OUTRO -- WhatsApp Image 2022-07-19 at 11.05.46 AM
+
+**Data:** 2022-07-19
+**Tipo:** OUTRO
+**Processo:** 23142/22.7T8LSB + 33934 (Execucao Centenario)
+**Resumo:** Screenshot Gmail. Mensagem sobre cobranca UNICRE/ATPR. Valor referido: EUR 3.553,57.
+**Ficheiro:** `WhatsApp Image 2022-07-19 at 11.05.46 AM.jpeg` (238.3 KB)
+**Origem:** `C:/Users/nunom/Desktop/CENTENARIOTRL\Cofre-Juridico-Nuno\providen\WhatsApp Image 2022-07-19 at 11.05.46 AM.jpeg`
+
+> Voltar: [[_INDICE_CENTENARIO]] | [[HOME]]
+
+## Conteudo
+
+```
+Screenshot Gmail. Mensagem sobre cobranca UNICRE/ATPR. Valor referido: EUR 3.553,57.
+```

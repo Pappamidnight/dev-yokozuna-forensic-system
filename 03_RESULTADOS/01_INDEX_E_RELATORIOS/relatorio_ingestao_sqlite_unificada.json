@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-08-28T10:51:19.227283",
+  "database_path": "C:\\Users\\Yokozuna\\Dev\\OUTPUT_CENTRALIZADO\\02_DADOS_ESTRUTURADOS\\memoria_forense_unificada.db",
+  "total_scanned": 134923,
+  "total_inserted": 133039,
+  "unique_hashes": 67395,
+  "duplicates": 65657,
+  "by_process": {
+    "GERAL_ACERVO": 126526,
+    "10153/24.7T8LSB": 142,
+    "15547/26.0T8LSB": 294,
+    "23142/22.7T8LSB": 1099,
+    "3719/25.0T8LSB": 1156,
+    "CLUSTER_SOCIETARIO": 3822
+  },
+  "by_category": {
+    "DOCUMENTO_GERAL": 101006,
+    "COMUNICACAO_WHATSAPP": 1970,
+    "FINANCEIRO_GERAL": 4617,
+    "IMAGEM_GERAL": 20691,
+    "FINANCEIRO_UNICRE_TPA": 91,
+    "PECA_JUDICIAL_CITIUS": 1756,
+    "COMUNICACAO_EMAIL": 723,
+    "IMAGEM_WHATSAPP": 461,
+    "CONTRATO_OU_ESCRITURA": 1290,
+    "IMAGEM_VISTORIA_IMOVEL": 53,
+    "FINANCEIRO_EXTRATO_BANCARIO": 209,
+    "IMAGEM_PORTAL_OFICIAL": 2,
+    "VIDEO_GERAL": 169,
+    "VIDEO_DILIGENCIA": 1
+  }
+}

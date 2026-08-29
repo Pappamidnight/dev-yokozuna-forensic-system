@@ -1,0 +1,104 @@
+---
+tipo: documento_convertido
+titulo: Accommodation-Rental-Agreement-Heaven signed Nuno
+data_conversao: '2026-04-17 01:06:56'
+ficheiro_original: Accommodation-Rental-Agreement-Heaven signed Nuno.docx
+tags: []
+processo_ref: null
+compliance_validado: false
+status: recem_convertido
+---
+
+Accommodation Rental Agreement
+
+between
+
+1st party
+
+Lisbon Experience – Administração de Imóveis Lda, with VAT nº 510287549, Short and midterm rental apartments company, having as their legal representatives, Renato Gil de Azevedo Duarte, Portuguese Citizen with National Identity Number 10099910, and VAT number 206326840, resident in Rua da Palmeira 33, 2º Andar 1200 Lisboa, and
+
+Filipe José Rodrigues Delgado, Portuguese Citizen with National Identity Number
+
+11789397, and VAT number 223031239, resident in Rua Cecilio de Sousa nº20 1º Esq
+
+1200 Lisbon, both hereinafter referred to as Landlord. and
+
+2nd party
+
+Name Lea Biesterfeld Citizen from Hamburg, Germany  Identity number L1TYP25LC and valid 08.02.2023 hereinafter referred to as the tenant
+
+Whom will be sharing an apartment with:
+
+Name Anna Mitschke Citizen from Hamburg , Germany Identity number L1TY43M3N and valid 10.07.2022 hereinafter referred to as the tenant
+
+Name Diellza Asllani  Citizen from Berlin, Germany  Identity number L3G3592VR and valid 04.02.2025 hereinafter referred to as the tenant
+
+Considering that the tenant is interested in the accommodation services of the apartment listed in the 1st clause of this agreement as is and that the landlord is responsible for running this same apartment, the landlord and tenant hereby come to conclude the present agreement which will be ruled by the clauses contained therein.
+
+1st Clause – Object of this agreement:
+
+The apartment is located at the following address:
+
+Rua da Palmeira 31, 5th floor, 1200-311 Lisboa, Príncipe Real, Lisboa
+
+2nd Clause – Duration
+
+This agreement lasts from September 2022 and finishes end of February 2023
+
+3rd Clause – Payment specifications
+
+The accommodation has the price of 2.500 euros a month and a total rental amount of 2500 euros -Two Thousand Five Hundred Euros
+
+First Payment comprehends Deposit and 1st-month rent as a retainer of Five thousand euros –5.000 euros
+
+The First payment must be 5.000 euros (Five thousand euros) which should be made by instantaneous bank transfer or Cash upon signing of the contract into this bank account nº PT50003503260000429380092
+
+Deposit of 2.500 euros is due to the tenants upon the return of the keys and if there are no damages: in case of damages were found, the cost suffered to repair them will be deducted by the deposit and the invoice related to the repair itself will be sent to the tenant as proof.
+
+Water and Electricity will be paid separately at the end of each month
+
+VAT and other taxes or fees are included in the total amount.
+
+4th Clause – Obligations
+
+The landlord and the tenant undertake to scrupulously comply with all the rules and obligations arising from the clauses contained in this agreement as well as the ones required by law.
+
+Specific obligations of the landlord:
+
+The landlord is responsible for the maintenance and quality of housing conditions. When any technical or another kind of problem occurs in the apartment, the tenant must communicate them to the landlord as soon as possible for it to be solved.
+
+The landlord holds insurance in each apartment that covers injuries from accidents or malfunctions that are the landlord´s objective and subjective responsibility.
+
+Specific obligations of the tenant:
+
+The tenant accepts the apartments as is, and must maintain the premises in a good, clean and use them only carefully and lawfully.
+
+Respect and comply with the condominium regulations and shall be good neighbors respecting the rights of the surrounding property owners.
+
+Respect and comply with the current legislation regarding noise emission
+
+The tenant shall dispose of all waste material generated during the rental period just outside of the building´s main entrance in proper trash bags.
+
+Return the keys to the urban building and the apartment at the end of this agreement and leave the apartments ready to rent.
+
+Return the apartment vacant of people and goods at the end of the contract
+
+The tenant agrees and accepts to keep the premises in the present state in which it was found, all the water electricity gas, heating, sewage installations, floors windows doors, and other equipment and furniture, should be in good condition.
+
+Any deteriorations or malfunctions, which are not due to their prudent use should be repaired or replaced and the costs inherent to it must be borne by the tenant.
+
+The tenant will perform good management of the equipment regarding energy and water consumption.
+
+Conclusion:
+
+Landlord and Tenant agree to the above conditions on this and hereby swear that the information provided is accurate and true.
+
+Lisbon, 30 Mai 2022
+
+Tenant´s Signature
+
+_________________________________________________________________
+
+Landlord´s Signature
+
+_________________________________________________________________

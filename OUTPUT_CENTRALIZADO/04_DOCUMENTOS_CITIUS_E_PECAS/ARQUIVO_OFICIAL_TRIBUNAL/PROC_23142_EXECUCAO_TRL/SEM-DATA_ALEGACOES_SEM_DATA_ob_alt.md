@@ -1,0 +1,64 @@
+---
+tipo: ALEGACOES
+data: null
+processo: 23142/22.7T8LSB + 33934
+processo_nome: CENTENARIO
+tribunal: null
+fonte: documento-oficial
+ficheiro: "SEM_DATA__obter-conteudo-documento_2__v04.pdf"
+extensao: .pdf
+tamanho_kb: 407.9
+texto_extraido: true
+caminho_original: "C:/Users/nunom/Desktop/CENTENARIOTRL\18_OUTROS\SEM_DATA__obter-conteudo-documento_2__v04.pdf"
+tags:
+  - tipo/alegacoes
+  - processo/centenario
+---
+
+# ALEGACOES -- SEM_DATA__obter-conteudo-documento_2__v04
+
+**Tipo:** ALEGACOES
+**Processo:** 23142/22.7T8LSB + 33934 (Execucao Centenario)
+**Resumo:** Ed. Concórdia,
+**Ficheiro:** `SEM_DATA__obter-conteudo-documento_2__v04.pdf` (407.9 KB)
+**Origem:** `C:/Users/nunom/Desktop/CENTENARIOTRL\18_OUTROS\SEM_DATA__obter-conteudo-documento_2__v04.pdf`
+
+> Voltar: [[_INDICE_CENTENARIO]] | [[HOME]]
+
+## Conteudo
+
+```
+Ed. Concórdia, 
+ Rot. Nuno Rodrigues dos Santos, n.º 1 – 10º A e B                          Av. D. Afonso Henriques, nº 460                                       Rua de Santo António, nº 21 – 1ºAndar 
+             2685-223 Portela de Sacavém, Portugal                                  4450-009 Matosinhos, Portugal                                                  8000-283 Faro, Portugal 
+                        Telefone: 218 622 100                                                     Telefone: 229 364 270 / 9                                                        Telefone: 289 828 175 
+                            Fax: 218 622 111                                                               Fax: 229 388 491                                                                   Fax: 289 894 039 
+             advogados@jnabais-advogados.pt                                    jnabais-porto@jnabais-advogados.pt                                      jnabais-faro@jnabais-advogados.pt  
+1 
+TRIBUNAL JUDICIAL DA COMARCA DE LISBOA 
+JUÍZO CENTRAL CÍVEL DE LISBOA – J4 
+PROCESSO N.º 3179/25.0T8LSB 
+ 
+Exmo. (a) Sr. (a) Juiz de Direito, 
+ 
+ 
+NUNO MIGUEL SILVA DUARTE, Requerido nos autos à margem referenciados e aí melhor 
+identificado, vem, em face das alegações de recurso apresentadas pela Requerente, apresentar as suas  
+ 
+CONTRA-ALEGAÇÕES 
+ 
+Ao abrigo do artigo 638º n.º 5 e 7 do C.P.C., sendo as mesmas apresentadas tempestivamente1 e tendo 
+o Requerente legitimidade. 
+ 
+O que faz nos termos seguintes: 
+ 
+EXMOS. SENHORES JUÍZES DESEMBARGADORES 
+DO TRIBUNAL DA RELAÇÃO DE LISBOA 
+ 
+A Requerente desencadeou procedimento cautelar comum junto do tribunal recorrido, peticionando: 
+“Nestes termos e nos melhores de direito, deve a presente providenciar ser decreta, 
+devendo o Réu ser condenado:  
+A) a desocupar o imóvel, com recurso à força policial,  
+B) dispensando-se a Autora da apresentação da ação principal, na medida em que o litígio 
+se compõe definitivame
+```

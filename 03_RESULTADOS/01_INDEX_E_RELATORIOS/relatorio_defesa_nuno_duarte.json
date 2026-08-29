@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-08-28T04:05:59.480264",
+  "total_defense_agents": 6,
+  "agents": [
+    {
+      "agent_id": "agente-defesa-10153-inexigibilidade",
+      "nome": "Agente de Defesa: Inexigibilidade de Titulo e Retencao TPA Unicre",
+      "processo_alvo": "10153/24.7T8LSB",
+      "juizo": "Juizo de Execucao de Lisboa",
+      "normas_chave": "Art. 729.º al. a) e 731.º do CPC c/c Art. 847.º do Codigo Civil",
+      "tese_principal": "Nulidade e inexigibilidade da divida de € 105.633 face a retencao na fonte direta TPA de € 52.285 operada pela Unicre e omitida na liquidacao executiva.",
+      "tipo_peca": "EMBARGOS_DE_EXECUTADO",
+      "ficheiro_saida": "PECA_EMBARGOS_EXECUCAO_10153.md",
+      "status": "BLINDADO"
+    },
+    {
+      "agent_id": "agente-defesa-23142-nulidade-citacao",
+      "nome": "Agente de Defesa: Nulidade Absoluta da Citacao e Domicilio Fiscal Ativo",
+      "processo_alvo": "23142/22.7T8LSB",
+      "juizo": "Juizo de Execucao / Juizo Local Civel de Lisboa",
+      "normas_chave": "Art. 188.º n.º 1 al. e), 191.º e 195.º do CPC c/c Art. 20.º da CRP",
+      "tese_principal": "Nulidade insanavel da citacao por certidao negativa forjada, comprovando-se domicilio fiscal ativo na AT e contribuicoes regulares ininterruptas na Seguranca Social.",
+      "tipo_peca": "REQUERIMENTO_NULIDADE_CITACAO",
+      "ficheiro_saida": "REQUERIMENTO_NULIDADE_CITACAO_23142.md",
+      "status": "BLINDADO"
+    },
+    {
+      "agent_id": "agente-defesa-15547-litisconsorcio-propriedade",
+      "nome": "Agente de Defesa: Propriedade Plena e Litisconsorcio de Teresa de Jesus Martins",
+      "processo_alvo": "15547/26.0T8LSB",
+      "juizo": "Juizo Central Civel de Lisboa",
+      "normas_chave": "Art. 1311.º e 892.º do Codigo Civil c/c Art. 33.º do CPC",
+      "tese_principal": "Propriedade plena da titular Teresa de Jesus Martins e nulidade absoluta de qualquer ato de alienacao executiva sem o seu consentimento e intervencao formal.",
+      "tipo_peca": "ARTICULADO_REIVINDICACAO_PROPRIEDADE",
+      "ficheiro_saida": "ARTICULADO_LITISCONSORCIO_15547.md",
+      "status": "BLINDADO"
+    },
+    {
+      "agent_id": "agente-defesa-3719-tutela-cautelar-habitacao",
+      "nome": "Agente de Defesa: Providencia Cautelar Urgente e Tutela da Habitacao",
+      "processo_alvo": "3719/25.0T8LSB",
+      "juizo": "Juizo Local Civel do Seixal / Lisboa",
+      "normas_chave": "Art. 362.º, 368.º e 377.º do CPC c/c Art. 65.º da CRP",
+      "tese_principal": "Restituicao provisoria de posse e tutela cautelar urgente da habitacao propria e permanente da familia face a atos de desapossamento nulos.",
+      "tipo_peca": "PROVIDENCIA_CAUTELAR_URGENTE",
+      "ficheiro_saida": "PROVIDENCIA_CAUTELAR_POSSE_3719.md",
+      "status": "BLINDADO"
+    },
+    {
+      "agent_id": "agente-defesa-penal-disciplinar",
+      "nome": "Agente de Defesa: Responsabilidade Penal, Deontologica e Falsidade Documental",
+      "processo_alvo": "ARRENTELA_DEFESA_PENAL",
+      "juizo": "Departamento de Investigacao e Acao Penal (DIAP) / Ordem dos Advogados",
+      "normas_chave": "Art. 369.º, 370.º e 373.º do Codigo Penal c/c Estatuto da Ordem dos Advogados",
+      "tese_principal": "Participacao criminal por falsidade de depoimento/certidao negativa e participacao disciplinar por violacao grave de deveres deontologicos de patrocinio.",
+      "tipo_peca": "QUEIXA_CRIME_E_PARTICIPACAO_DISCIPLINAR",
+      "ficheiro_saida": "PARTICIPACAO_PENAL_E_DISCIPLINAR.md",
+      "status": "BLINDADO"
+    },
+    {
+      "agent_id": "agente-sintese-articulados-citius",
+      "nome": "Agente de Sintese: Consolidacao Forense e Manifestos Citius",
+      "processo_alvo": "ACERVO_GLOBAL_NUNO_DUARTE",
+      "juizo": "Comarca de Lisboa e Seixal",
+      "normas_chave": "Portaria n.º 280/2013 (Tramitacao Eletronica Citius) c/c Protocolo Deterministico",
+      "tese_principal": "Consolidacao de todas as certidoes, comprovativos bancarios, matriciais e extratos com hash SHA-256 indexado para submissao formal.",
+      "tipo_peca": "DOSSIER_ESTRATEGICO_CITIUS",
+      "ficheiro_saida": "ESTRATEGIA_DEFESA_NUNO_DUARTE_CONSOLIDADA.md",
+      "status": "BLINDADO"
+    }
+  ],
+  "facts_summary": {
+    "total": 190799,
+    "documentados": 48619,
+    "alegacoes": 142180
+  },
+  "status": "APPROVED_ROUTING_AUTHORIZED"
+}

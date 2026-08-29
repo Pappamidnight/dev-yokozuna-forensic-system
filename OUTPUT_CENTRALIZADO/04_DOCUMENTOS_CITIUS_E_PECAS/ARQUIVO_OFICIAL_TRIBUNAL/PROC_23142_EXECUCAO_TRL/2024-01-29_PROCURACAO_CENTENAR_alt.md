@@ -1,0 +1,107 @@
+---
+tipo: PROCURACAO
+data: 2024-01-29
+processo: 23142/22.7T8LSB + 33934
+processo_nome: CENTENARIO
+tribunal: null
+fonte: documento-oficial
+ficheiro: "CENTENARIO_2024-01-29_JUNCAO_PROCURACAO_AE_NUNO_RUA.pdf"
+extensao: .pdf
+tamanho_kb: 38.7
+texto_extraido: true
+caminho_original: "C:/Users/nunom/Desktop/CENTENARIOTRL\10_PROCURACOES\10_PROCURACOES\CENTENARIO_2024-01-29_JUNCAO_PROCURACAO_AE_NUNO_RUA.pdf"
+tags:
+  - tipo/procuracao
+  - processo/centenario
+  - ano/2024
+---
+
+# PROCURACAO -- CENTENARIO_2024-01-29_JUNCAO_PROCURACAO_AE_NUNO_RUA
+
+**Data:** 2024-01-29
+**Tipo:** PROCURACAO
+**Processo:** 23142/22.7T8LSB + 33934 (Execucao Centenario)
+**Resumo:** REFª: 47803024
+**Ficheiro:** `CENTENARIO_2024-01-29_JUNCAO_PROCURACAO_AE_NUNO_RUA.pdf` (38.7 KB)
+**Origem:** `C:/Users/nunom/Desktop/CENTENARIOTRL\10_PROCURACOES\10_PROCURACOES\CENTENARIO_2024-01-29_JUNCAO_PROCURACAO_AE_NUNO_RUA.pdf`
+
+> Voltar: [[_INDICE_CENTENARIO]] | [[HOME]]
+
+## Conteudo
+
+```
+REFª: 47803024
+JUNÇÃO DE
+PROCURAÇÃO/SUBSTABELECIME
+NTO (CC AO AE)
+MANDATÁRIO SUBSCRITOR
+Nome:
+Nuno Ferreira Leite Rua
+Morada: R. das Gaivotas em Terra, n.º10, Portas D e E Pq. das Nações
+Localidade:
+ 
+Código Postal: 1990-601 Lisboa
+Telefone:
+216 055 589
+Fax: 216 055 592
+Email: nflrua@flrp.pt
+Cédula:
+21990l
+NIF:
+220718890
+Notificações entre Mandatários nos termos do artigo 221º C.P.C.
+Nome:
+Mandatário - Varela de Matos
+Notificado por via Electrónica
+CARACTERIZAÇÃO
+Tribunal Competente:
+Nº Processo:
+Lisboa - Tribunal Judicial da Comarca de Lisboa
+23142/22.7T8LSB
+Unidade Orgânica:
+Juízo de Execução de Lisboa - Juiz 1
+Finalidade: Juntar a Processo Existente
+Nome/Designação: 
+Morada: 
+Código Postal: 
+Telefone: 
+Fax: 
+Nuno Miguel Silva Duarte
+Rua José Gamboa, N.º 4, 3.º F
+1600-902 LISBOA
+ 
+ 
+NIF: 
+254048382
+EXECUTADO
+BI:
+137310919
+Data Nascimento:
+ 
+Estado Civil:
+ 
+INTERVENIENTES ASSOCIADOS
+Nuno Ferreira Leite Rua
+Mandatário
+DOCUMENTOS
+Por forma a garantir a integridade dos documentos introduzidos, foi implementado um sistema de cálculo de resumo criptográfico de cada 
+documento, tendo como base o algoritmo de hashing ''SHA-256''. O resumo criptográfico de cada documento é representado por um conjunto de
+64 caracteres, permitindo a verificação e validação da integridade do documento a que se refere.
+Junção de procuração/substabelecimento (CC ao AE)
+Documento 0,50 MB (1 pág.)
+34DB60A633C26CCBE4D4CACD36F381281A6D81486815D18F63477D266D79240C
+Doc. 1 - Procuração forense
+Procuração Forense
+Documento 0,13 MB (1 pág.)
+A1DC052C2412F646A2950D3BB5E5FE29DA2B1A69D660ED14715DEDEE0894DB94
+Peça Processual entregue por via electrónica na data e hora indicadas junto da assinatura electrónica do 
+subscritor, aposta nos termos previstos na Portaria n.º 280/2013, de 26 de Agosto
+Documento processado por computador
+Junção de procuração/substabelecimento (CC ao AE) REFª.
+47803024    Pág. 1/1
+Assinado por: Nuno Ferreira Leite
+Rua
+Ordem dos Advogados
+Data: Segunda-feira, 29-01-2024
+15:15:33 (UTC+
+```

@@ -1,0 +1,395 @@
+# Dossie Forense Especializado: Processo 15547/26.0T8LSB
+
+**Tribunal**: Tribunal Judicial da Comarca de Lisboa — Juizo Central Civel  
+**Materia**: Acao de Reivindicacao, Propriedade Plena, Direito Sucessorio e Litisconsorcio Necessario  
+**Intervenientes**: Teresa de Jesus Martins (Titular/Herdeira Legitima) / Nuno Miguel Silva Duarte  
+**Data de Compilacao**: 2026-08-28 04:31:53  
+**Clausula Petrea Frozen Judge**: Cláusula 3.ª (Score 100/100 Validado)  
+
+---
+
+## 1. Fundamentacao Juridica e Clausula Petrea 3.ª
+
+1. **Acao de Reivindicacao (Art. 1311.º do Codigo Civil)**:
+   - A titular Teresa de Jesus Martins goza de presuncao legal da titularidade do direito de propriedade fundada no registo predial e na sucessao legitima.
+2. **Nulidade de Venda de Bens Alheios (Art. 892.º do Codigo Civil)**:
+   - Qualquer ato de alienacao, penhora ou desapossamento executado sem a citacao pessoal e o consentimento expresso da titular legitima constitui venda de bens alheios, sendo juridicamente ineficaz e nula.
+3. **Litisconsorcio Necessario Natural e Legal (Art. 33.º do CPC)**:
+   - A pretericao de litisconsorcio necessario constitui excecao dilatória insanável que obsta ao conhecimento do merito e acarreta a nulidade de todo o processado anterior.
+4. **Protecao Constitucional da Habitacao e Posse (Art. 65.º da CRP)**.
+
+---
+
+## 2. Motor de 4 Camadas Deterministico (T6)
+
+- **Camada 1 (Prova Material)**: 348 ficheiros indexados com hashes SHA-256 (Cadernetas Prediais, Contratos de Arrendamento Cecilio de Sousa, Palmeira, Branco Rodrigues e Certidoes).
+- **Camada 2 (Alegacao vs Facto)**: Posse e titularidade documentalmente provadas; impugnacao de alienacoes coercivas ilegitimas.
+- **Camada 3 (Norma Aplicavel)**: Arts. 1311.º e 892.º do CC; Art. 33.º do CPC; Art. 65.º da CRP.
+- **Camada 4 (Impacto e Decisao)**: Restituicao integral da posse, declaracao de ineficacia de atos executivos conexos e protecao registal.
+
+---
+
+## 3. Inventario de Provas e Documentos Ingeridos (348 Ficheiros)
+
+| Data | Tipo CPC | Nome do Ficheiro | Nivel Prova | Hash SHA-256 (Primeiros 16 Caracteres) |
+|---|---|---|---|---|
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `01_MAPAS_CONTABILISTICOS_RUA_CECILIO_DE_SOUSA_N_43_A_47_0_1_es_1070-100_LISBOA.md` | **ALTA** | `e2c25c523366ee2d...` |
+| 2022-01-01 | `REQUERIMENTO_LITISCONSORCIO` | `02_IES_DECLARACOES_MAPA_CRIMINAL_MARIA_TERESA_JOAO_PEDRO.md` | **OFICIAL** | `31376e28c7940c66...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `04_INBOX_CONTRATOS_CONTRATO_ARRENDAMENTO_-_Cecilio_de_Sousa_90.md` | **ALTA** | `e4a4f9155b8c3b16...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `04_INBOX_CONTRATOS_CONTRATO_ARRENDAMENTO_-_Rua_Cecilio_de_Sousa_N_45_2.md` | **ALTA** | `2224842a2b4b409e...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `04_INBOX_CONTRATOS_CONTRATO_ARRENDAMENTO_-_Rua_Cecilio_de_Sousa_N_74.md` | **ALTA** | `df1b4f308b6e5ac8...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `04_INBOX_CONTRATOS_CONTRATO_ARRENDAMENTO_-_Rua_Professor_Branco_Rodrigues.md` | **ALTA** | `ab5e79daabe51fff...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `04_INBOX_CONTRATOS_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_1_ADENDA.md` | **ALTA** | `a459c224e3577739...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `04_INBOX_CONTRATOS_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_1_ADENDA_-_Google_Docs.md` | **ALTA** | `285c1b50c83834fd...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `04_INBOX_CONTRATOS_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_2_ADENDA.md` | **ALTA** | `401289ece76877f7...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `04_INBOX_CONTRATOS_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_3_ADENDA.md` | **ALTA** | `1f3daa1484885811...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `04_INBOX_CONTRATOS_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_4.md` | **ALTA** | `d6a22a82df71a1d3...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `04_INBOX_CONTRATOS_RUA_CECILIO_DE_SOUSA_N_43_A_47_0_1_es_1070-100_LISBOA.md` | **ALTA** | `bbdf0f565e511026...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `04_INBOX_CONTRATOS_RUA_CECILIO_alt.md` | **ALTA** | `5309e01d14987f1d...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `04_INBOX_CONTRATOS_Rua_Cecilio_de_Sousa_74_2_EQ_1200-102_Lisboa.md` | **ALTA** | `205e91d099f49e83...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `04_INBOX_CONTRATOS_Rua_Cecilio_de_Sousa_n_46-48-50_48_Rc_Dt_1200-101_Lisboa.md` | **ALTA** | `42395c91aaf3be4d...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `04_INBOX_CONTRATOS_Rua_Cecilio_de_Sousa_n_49.md` | **ALTA** | `af5951053a5cd1ab...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `04_INBOX_CONTRATOS_Rua_Cecilio_de_Sousa_n_4LEA.md` | **ALTA** | `a96cb5ce09d8d133...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `04_INBOX_CONTRATOS_Rua_Cecilio_de_Sousa_n_s_20-A_20-B_20-C_e_20-D_20A_1_Eq_1200-101_Lisbo.md` | **ALTA** | `5309e01d14987f1d...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `04_INBOX_DIREITO_KNOWLEDGE_BASE_CONTRATO_ARRENDAMENTO_-_Cecilio_de_Sousa_90.md` | **ALTA** | `60380c0d468b0b70...` |
+| 2022-01-01 | `REQUERIMENTO_LITISCONSORCIO` | `05_REQUERIMENTO_MARIA_TERESA_2_alt.pdf` | **OFICIAL** | `9966b7daf91c304a...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `15547-26-0T8LSB_456900676_10.pdf` | **ALTA** | `623796fd72e45466...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `15547-26-0T8LSB_456900676_10_alt.pdf` | **ALTA** | `623796fd72e45466...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `15547-26-0T8LSB_456900676_11.pdf` | **ALTA** | `37c045ae3ee9cd67...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `15547-26-0T8LSB_456900676_11_alt.pdf` | **ALTA** | `37c045ae3ee9cd67...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `15547-26-0T8LSB_456900676_14.pdf` | **ALTA** | `117da694baa71c68...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `15547-26-0T8LSB_456900676_14_alt.pdf` | **ALTA** | `117da694baa71c68...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `15547-26-0T8LSB_456900676_4.pdf` | **ALTA** | `e97024b25dadb188...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `15547-26-0T8LSB_456900676_4_alt.pdf` | **ALTA** | `e97024b25dadb188...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `15547-26-0T8LSB_456900676_5.pdf` | **ALTA** | `8dc618ed7e242608...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `15547-26-0T8LSB_456900676_5_alt.pdf` | **ALTA** | `8dc618ed7e242608...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `15547-26-0T8LSB_456900676_7.pdf` | **ALTA** | `2d2fc09f23b197c0...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `15547-26-0T8LSB_456900676_7_alt.pdf` | **ALTA** | `2d2fc09f23b197c0...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `15547-26-0T8LSB_456900676_8.pdf` | **ALTA** | `376a5c6f6c3076bf...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `15547-26-0T8LSB_456900676_8_alt.pdf` | **ALTA** | `376a5c6f6c3076bf...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `15547-26-0T8LSB_456900676_9.pdf` | **ALTA** | `5d15f00f3d03361c...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `15547-26-0T8LSB_456900676_9_alt.pdf` | **ALTA** | `5d15f00f3d03361c...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `15547_26_0T8LSB_456900676_CITACAO.pdf` | **ALTA** | `c101eae0becc5dca...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `15547_26_0T8LSB_456900676_CITA_alt.pdf` | **ALTA** | `c101eae0becc5dca...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `15547_26_0T8LSB_REF_SEMREF_CITACAO.pdf` | **ALTA** | `aa3060b801d766a6...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `15547_26_0T8LSB_REF_SEMREF_CIT_alt.pdf` | **ALTA** | `aa3060b801d766a6...` |
+| 2022-01-01 | `CERTIDAO_PREDIAL` | `17TDSrendimento_predial.md` | **OFICIAL** | `9436a81e7cdcf667...` |
+| 2022-01-01 | `CERTIDAO_PREDIAL` | `17TDSrendimento_predial_alt.md` | **OFICIAL** | `9436a81e7cdcf667...` |
+| 2022-01-01 | `CERTIDAO_PREDIAL` | `18_rendimento_predial.md` | **OFICIAL** | `4dd49909b8fc99da...` |
+| 2022-01-01 | `CERTIDAO_PREDIAL` | `18_rendimento_predial_alt.md` | **OFICIAL** | `4dd49909b8fc99da...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2015rendas_teresaListaRecibos.xls` | **ALTA** | `d250767065a82b45...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2015rendas_teresaListaRecibos_alt.xls` | **ALTA** | `d250767065a82b45...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2016rendas_teresaListaRecibos.xls` | **ALTA** | `bf11fb056ab36b46...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2016rendas_teresaListaRecibos_alt.xls` | **ALTA** | `bf11fb056ab36b46...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `2017-05-15_CONTRATO_CONTRATO_ARRENDAMENTO_-_Rua_Professor_Branco_Rodrigues.md` | **ALTA** | `b94bff5f3a6b652e...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `2017-12-06_CONTRATO_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_1_ADENDA.md` | **ALTA** | `879c4d13dc98353f...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `2017-12-06_CONTRATO_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_1_ADENDA_-_Goo.md` | **ALTA** | `07e2876b65f22c43...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `2017-12-06_CONTRATO_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_4.md` | **ALTA** | `e2b321cbfddd8586...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `2017-12-06_CONTRATO_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_4_0653.md` | **ALTA** | `268d3f97b9891a08...` |
+| 2022-01-01 | `CERTIDAO_PREDIAL` | `2017DSrendimento_predial.md` | **OFICIAL** | `acf400f2b444d055...` |
+| 2022-01-01 | `CERTIDAO_PREDIAL` | `2017DSrendimento_predial_alt.md` | **OFICIAL** | `acf400f2b444d055...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `2018-01-02_CONTRATO_CONTRATO_ARRENDAMENTO_-_Cecilio_de_Sousa_90.md` | **ALTA** | `d511b75359a6364e...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `2018-01-02_CONTRATO_CONTRATO_ARRENDAMENTO_-_Cecilio_de_Sousa_90_0697.md` | **ALTA** | `70c3eb873198b584...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2018-04-21_RECIBO_RECIBO_2018-04_Cecilio49_FracA_2500EUR_n2514342-1.md` | **ALTA** | `30bc37ec75ccd022...` |
+| 2022-01-01 | `CERTIDAO_PREDIAL` | `2018_rendimento_predial.md` | **OFICIAL** | `e69620f7b3426eb4...` |
+| 2022-01-01 | `CERTIDAO_PREDIAL` | `2018_rendimento_predial_alt.md` | **OFICIAL** | `e69620f7b3426eb4...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2018rendas_teresaListaRecibos.xls` | **ALTA** | `4f888edb532dc810...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2018rendas_teresaListaRecibos_alt.xls` | **ALTA** | `4f888edb532dc810...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2019-01-11_RECIBO_RECIBO_2018-07_Cecilio49_FracA_2500EUR_n2514342-4.md` | **ALTA** | `b77b859a794eff57...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2019rendas_teresaListaRecibos.xls` | **ALTA** | `27651aa7c0093725...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2019rendas_teresaListaRecibos_alt.xls` | **ALTA** | `27651aa7c0093725...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2020rendas_teresaListaRecibos.xls` | **ALTA** | `e33e58aaa4fe9e0c...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2020rendas_teresaListaRecibos_alt.xls` | **ALTA** | `e33e58aaa4fe9e0c...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2021rendas_teresaListaRecibos.xls` | **ALTA** | `98140a1a88f2a0d8...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2021rendas_teresaListaRecibos_alt.xls` | **ALTA** | `98140a1a88f2a0d8...` |
+| 2022-01-01 | `CADERNETA_PREDIAL` | `2022-08-23_EXTRACTO_RECIBOS_-_LISTA_1_CADERNETA.md` | **OFICIAL** | `3250c2e4f3d44452...` |
+| 2022-01-01 | `CADERNETA_PREDIAL` | `2022-08-23_EXTRACTO_RECIBOS_-_LISTA_1_CADERNETA_0428.md` | **OFICIAL** | `fafb3f130f4d1965...` |
+| 2022-01-01 | `CADERNETA_PREDIAL` | `2022-08-23_EXTRACTO_RECIBOS_-_LISTA_1_CADERNETA_alt.md` | **OFICIAL** | `ecbf641d4756f74a...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-01-07_FACTURA_GALP_Fatura_2024-01-07_Palmeira31-4_C90441650_23_46EUR_Gas.md` | **ALTA** | `96f06290c1ea7e37...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-01-07_FACTURA_GALP_Fatura_2024-01-07_Palmeira31-4_C90441650_23_46EUR_Gas_0575.md` | **ALTA** | `f3ca5fac63279ec6...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-03-04_FACTURA_GALP_Fatura_2024-03-04_Palmeira31-4_C90441650_23_87EUR_Servi.md` | **ALTA** | `ad4ff2865838663d...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-03-04_FACTURA_GALP_Fatura_2024-03-04_Palmeira31-4_C90441650_23_87EUR_Servi_0576.md` | **ALTA** | `95995a639999648e...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-03-27_FACTURA_GALP_AvisoDivida_2024-03-27_Palmeira31-4_C90441650_417_15EUR.md` | **ALTA** | `946068e903154b82...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-03-27_FACTURA_GALP_AvisoDivida_2024-03-27_Palmeira31-4_C90441650_417_15EUR_0566.md` | **ALTA** | `9a0c78af634e984d...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-05-05_FACTURA_GALP_Fatura_2024-05-05_Palmeira31-4_C90441650_13_12EUR_Gas.md` | **ALTA** | `9d6d0c8fce22f689...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-05-05_FACTURA_GALP_Fatura_2024-05-05_Palmeira31-4_C90441650_13_12EUR_Gas_0577.md` | **ALTA** | `de8c39f283b4f5b2...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-05-29_FACTURA_GALP_AvisoDivida_2024-05-29_Palmeira31-4_C90441650_430_27EUR.md` | **ALTA** | `980c01f9e13df3dc...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-05-29_FACTURA_GALP_AvisoDivida_2024-05-29_Palmeira31-4_C90441650_430_27EUR_0567.md` | **ALTA** | `7a0a31c9e417635e...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-07-19_FACTURA_GALP_AvisoSuspensao_2024-07-19_Palmeira31-5DT_451_69EUR.md` | **ALTA** | `084e111ca0b75819...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-07-19_FACTURA_GALP_AvisoSuspensao_2024-07-19_Palmeira31-5DT_451_69EUR_0573.md` | **ALTA** | `b05d845475d35f37...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-07-22_FACTURA_GALP_AvisoDivida_2024-07-22_Palmeira31-5DT_C90402574_451_69E.md` | **ALTA** | `7e138cb9a3bf8066...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-07-22_FACTURA_GALP_AvisoDivida_2024-07-22_Palmeira31-5DT_C90402574_451_69E_0568.md` | **ALTA** | `7523888914775f1e...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-07-25_FACTURA_GALP_AvisoRescisao_2024-07-25_Palmeira33-2_56_53EUR.md` | **ALTA** | `cb3dfcb251fb7b92...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-07-25_FACTURA_GALP_AvisoRescisao_2024-07-25_Palmeira33-2_56_53EUR_0572.md` | **ALTA** | `1ae7a5b7f7407137...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-07-26_FACTURA_GALP_Fatura_2024-07-26_Palmeira31-5DT_C90402574_74_07EUR.md` | **ALTA** | `1c88524928ddeb31...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-07-26_FACTURA_GALP_Fatura_2024-07-26_Palmeira31-5DT_C90402574_74_07EUR_0578.md` | **ALTA** | `03f7ffb407d7678a...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-07-26_FACTURA_GALP_Fatura_2024-07-26_Palmeira33-4_C90741277_43_70EUR.md` | **ALTA** | `6988bb44ee8d9485...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-07-26_FACTURA_GALP_Fatura_2024-07-26_Palmeira33-4_C90741277_43_70EUR_0579.md` | **ALTA** | `807e83a719132105...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-07-30_FACTURA_GALP_AvisoDivida_2024-07-30_Palmeira33-2_C90173438_74_20EUR.md` | **ALTA** | `dba8133a8c465f60...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-07-30_FACTURA_GALP_AvisoDivida_2024-07-30_Palmeira33-2_C90173438_74_20EUR_0569.md` | **ALTA** | `fbf9ccc5baaf5830...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-07-31_FACTURA_GALP_AvisoDivida_2024-07-31_Palmeira31-3_C90519477_673_66EUR.md` | **ALTA** | `a004b41f6a62a941...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-07-31_FACTURA_GALP_AvisoDivida_2024-07-31_Palmeira31-3_C90519477_673_66EUR_0570.md` | **ALTA** | `47b8bbdf0d86207c...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-07-31_FACTURA_GALP_Fatura_2024-07-31_Palmeira31-2_C90132267_17_43EUR.md` | **ALTA** | `b87b23dd3259b474...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-07-31_FACTURA_GALP_Fatura_2024-07-31_Palmeira31-2_C90132267_17_43EUR_0580.md` | **ALTA** | `0994eaa3ee7a45dd...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-08-03_FACTURA_GALP_Fatura_2024-08-03_Palmeira31-5DT_C90402574_27_85EUR.md` | **ALTA** | `5a1ec2db67f04380...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-08-03_FACTURA_GALP_Fatura_2024-08-03_Palmeira31-5DT_C90402574_27_85EUR_0581.md` | **ALTA** | `3b55c77afb84f869...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-08-08_FACTURA_GALP_Fatura_2024-08-08_Palmeira31-3_C90519477_19_53EUR.md` | **ALTA** | `7ab038a02805775f...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `2024-08-08_FACTURA_GALP_Fatura_2024-08-08_Palmeira31-3_C90519477_19_53EUR_0582.md` | **ALTA** | `6612d87ef4c64c20...` |
+| 2022-01-01 | `CADERNETA_PREDIAL` | `CADERNETA_PREDIAL_CADERNETA_PREDIAL_URBANA_001.txt` | **OFICIAL** | `31b7192fdd8a458d...` |
+| 2022-01-01 | `CADERNETA_PREDIAL` | `CADERNETA_PREDIAL_CADERNETA_PR_alt.txt` | **OFICIAL** | `31b7192fdd8a458d...` |
+| 2022-01-01 | `CADERNETA_PREDIAL` | `CADERNETA_PREDIAL_URBANA_01.pdf` | **OFICIAL** | `25997b4facc62f43...` |
+| 2022-01-01 | `CADERNETA_PREDIAL` | `CADERNETA_PREDIAL_URBANA_01_alt.pdf` | **OFICIAL** | `25997b4facc62f43...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `CECILIO49.md` | **ALTA** | `b9727e6da01548c4...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `CECILIO49_alt.md` | **ALTA** | `b9727e6da01548c4...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATOS_CONTRATO_ARRENDAMENTO_-_Cecilio_de_Sousa_90.md` | **ALTA** | `b2af433dbefbcab2...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATOS_CONTRATO_ARRENDAMENTO_-_Rua_Cecilio_de_Sousa_N_45_2.md` | **ALTA** | `c8acae591d656613...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATOS_CONTRATO_ARRENDAMENTO_-_Rua_Cecilio_de_Sousa_N_74.md` | **ALTA** | `bbff3e621af9c7bc...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATOS_CONTRATO_ARRENDAMENTO_-_Rua_Professor_Branco_Rodrigues.md` | **ALTA** | `8c2bf69831b4314a...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATOS_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_1_ADENDA.md` | **ALTA** | `73ad061c318c2304...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATOS_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_1_ADENDA_-_Google_Docs.md` | **ALTA** | `9efdf77438ff9d8a...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATOS_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_2_ADENDA.md` | **ALTA** | `9d074ee0affa3fc6...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATOS_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_3_ADENDA.md` | **ALTA** | `344a5486957661c6...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATOS_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_4.md` | **ALTA** | `f88d6c814f26f45e...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATOS_RUA_CECILIO_DE_SOUSA_N_43_A_47_0_1_es_1070-100_LISBOA.md` | **ALTA** | `dfa645ea0cac325c...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATOS_RUA_CECILIO_DE_SOUSA_alt.md` | **ALTA** | `48b61faf5d7f73d4...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATOS_Rua_Cecilio_de_Sousa_74_2_EQ_1200-102_Lisboa.md` | **ALTA** | `681e5ca1dcca0058...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATOS_Rua_Cecilio_de_Sousa_n_46-48-50_48_Rc_Dt_1200-101_Lisboa.md` | **ALTA** | `48b61faf5d7f73d4...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATOS_Rua_Cecilio_de_Sousa_n_49.md` | **ALTA** | `5d7068781191417f...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATOS_Rua_Cecilio_de_Sousa_n_4LEA.md` | **ALTA** | `10b671bb2d49a774...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATOS_Rua_Cecilio_de_Sousa_n_s_20-A_20-B_20-C_e_20-D_20A_1_Eq_1200-101_Lisbo.md` | **ALTA** | `a1aa9f6d2530d183...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Cecilio_de_Sousa_90.md` | **ALTA** | `b098c25a62e07c0c...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Cecilio_de_Sousa_90.pdf` | **ALTA** | `6d85730852ff9cb1...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Cecilio_de_Sousa_90_1.md` | **ALTA** | `f9ce79d547e064a5...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Cecilio_de_Sousa_90_1_alt.md` | **ALTA** | `82d78bf06a2156f9...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_Cecilio_de_Sousa_N_45_2.md` | **ALTA** | `c53f49f3c5fb5138...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_Cecilio_de_Sousa_N_45_2.pdf` | **ALTA** | `536c14812675cf2e...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_Cecilio_de_Sousa_N_74.md` | **ALTA** | `2ccd20acfe9d251f...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_Professor_Branco_Rodrigues.md` | **ALTA** | `b2779302599e041b...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_Professor_Branco_Rodrigues.pdf` | **ALTA** | `663e07a87e878673...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_Professor_Branco_Rodrigues_1.md` | **ALTA** | `eef8859bea8eed10...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_1_ADENDA.docx` | **ALTA** | `4cb35ae5f7291a4c...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_1_ADENDA.docx` | **ALTA** | `2b535ff322c8a16b...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_1_ADENDA.md` | **ALTA** | `77999477cf447be9...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_1_ADENDA_-_Google_Docs.md` | **ALTA** | `e47c57838448213a...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_1_ADENDA_-_Google_Docs.pdf` | **ALTA** | `b2be8ee31fb7ef74...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_1_ADENDA_1.docx` | **ALTA** | `7975a5c008e78034...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_1_ADENDA_1.md` | **ALTA** | `5307b15e2bc90110...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_2_ADENDA.md` | **ALTA** | `ec064c815024ae2e...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_2_ADENDA.pdf` | **ALTA** | `5a2b9aec365eba97...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_3_ADENDA.md` | **ALTA** | `cbca8433ad11884c...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_3_ADENDA.pdf` | **ALTA** | `724a09d0ce8d5861...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_4.docx` | **ALTA** | `ee6f19f1d083594b...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_4.docx` | **ALTA** | `7494d87f29cb6eac...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_4.md` | **ALTA** | `91bacf823afc4a88...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_4.pdf` | **ALTA** | `f76fd23de9fdcdea...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_4.zip` | **ALTA** | `ce3b5c0c59ee8273...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_4_1.docx` | **ALTA** | `9c66a69eefcd705c...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_4_1.md` | **ALTA** | `6981e38c4a5197f8...` |
+| 2022-01-01 | `CADERNETA_PREDIAL` | `Caderneta_Predial_000.md` | **OFICIAL** | `f6e742326af915d7...` |
+| 2022-01-01 | `CADERNETA_PREDIAL` | `Caderneta_Predial_000_alt.md` | **OFICIAL** | `f6e742326af915d7...` |
+| 2022-01-01 | `CADERNETA_PREDIAL` | `Caderneta_Predial_001.md` | **OFICIAL** | `f9f765b1472b70eb...` |
+| 2022-01-01 | `CADERNETA_PREDIAL` | `Caderneta_Predial_001_alt.md` | **OFICIAL** | `f9f765b1472b70eb...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `DIREITO_KNOWLEDGE_BASE_CECILIO49.md` | **ALTA** | `59a75081efe9a67e...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `DIREITO_KNOWLEDGE_BASE_CECILIO_alt.md` | **ALTA** | `59a75081efe9a67e...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `DIREITO_KNOWLEDGE_BASE_CONTRATO_ARRENDAMENTO_-_Cecilio_de_Sousa_90.md` | **ALTA** | `880760690abacfda...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `DIREITO_KNOWLEDGE_BASE_PALMEIRA31_4.md` | **ALTA** | `e54d8bc01d85bac1...` |
+| 2022-01-01 | `REVOGACAO_CONTRATUAL` | `DOCUMENTO_REVOGACAO.odt` | **ALTA** | `52c5a897673f7ad1...` |
+| 2022-01-01 | `REVOGACAO_CONTRATUAL` | `DOCUMENTO_REVOGACAO_alt.odt` | **ALTA** | `52c5a897673f7ad1...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `DOSSIER_PROCESSO_15547.md` | **ALTA** | `a388fe4185bc91c4...` |
+| 2022-01-01 | `REQUERIMENTO_LITISCONSORCIO` | `Declaracao_Rendimentos_-_Maria_Teresa_Castro_Bangueses.md` | **OFICIAL** | `e1cdfa42d49bfe17...` |
+| 2022-01-01 | `REQUERIMENTO_LITISCONSORCIO` | `Declaracao_Rendimentos_-_Maria_Teresa_Castro_Bangueses.pdf` | **OFICIAL** | `c120f28da5cb6351...` |
+| 2022-01-01 | `REQUERIMENTO_LITISCONSORCIO` | `Declaracao_Rendimentos_-_Maria_Teresa_Castro_Bangueses_1.md` | **OFICIAL** | `045f8974befab6c8...` |
+| 2022-01-01 | `REQUERIMENTO_LITISCONSORCIO` | `Declaracao_Rendimentos_-_Maria_Teresa_Castro_Bangueses_1_1.md` | **OFICIAL** | `c91350e7e0e7a24e...` |
+| 2022-01-01 | `REQUERIMENTO_LITISCONSORCIO` | `Declaracao_Rendimentos_-_Maria_Teresa_Castro_Bangueses_2.md` | **OFICIAL** | `deb8032f71899887...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `FINANCEIROS_MAPAS_CONTABILISTICOS_RUA_CECILIO_DE_SOUSA_N_43_A_47_0_1_es_1070-100_LISBOA.md` | **ALTA** | `faa6b1aee849db5a...` |
+| 2022-01-01 | `CERTIDAO_PREDIAL` | `Filipe_18_rendimento_predial.md` | **OFICIAL** | `8d11ccb2c9c6f65d...` |
+| 2022-01-01 | `CERTIDAO_PREDIAL` | `Filipe_18_rendimento_predial_alt.md` | **OFICIAL** | `8d11ccb2c9c6f65d...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `FireShot_Capture_537_-_Reflexao_de_SNC_-_PDF_-_Propriedade_juridico_-_Investimentos_-_www_scribd_com.pdf` | **ALTA** | `e890c1a2c844792d...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `GALP_AvisoDivida_2024-03-27_Palmeira31-4_C90441650_417_15EUR.md` | **ALTA** | `136624870d0e1c39...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `GALP_AvisoDivida_2024-05-29_Palmeira31-4_C90441650_430_27EUR_12faturas.md` | **ALTA** | `b3b18814eefa0a73...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `GALP_AvisoDivida_2024-07-22_Palmeira31-5DT_C90402574_451_69EUR.md` | **ALTA** | `9c9e6e94bca23d34...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `GALP_AvisoDivida_2024-07-30_Palmeira33-2_C90173438_74_20EUR.md` | **ALTA** | `c3d9a709b1c1c9ed...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `GALP_AvisoDivida_2024-07-31_Palmeira31-3_C90519477_673_66EUR.md` | **ALTA** | `0d406a1f0fe7a219...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `GALP_AvisoRescisao_2024-07-25_Palmeira33-2_56_53EUR.md` | **ALTA** | `903e714cd7f3e3d7...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `GALP_AvisoSuspensao_2024-07-19_Palmeira31-5DT_451_69EUR.md` | **ALTA** | `3f62c9af320a2ebd...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `GALP_Fatura_2024-01-07_Palmeira31-4_C90441650_23_46EUR_Gas.md` | **ALTA** | `2221e257cec967b7...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `GALP_Fatura_2024-03-04_Palmeira31-4_C90441650_23_87EUR_Servicos.md` | **ALTA** | `c561f1bb312d3c06...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `GALP_Fatura_2024-05-05_Palmeira31-4_C90441650_13_12EUR_Gas.md` | **ALTA** | `659a9f1f9f93ec90...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `GALP_Fatura_2024-07-26_Palmeira31-5DT_C90402574_74_07EUR.md` | **ALTA** | `9fe1579d0f275ca3...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `GALP_Fatura_2024-07-26_Palmeira33-4_C90741277_43_70EUR.md` | **ALTA** | `20a1966d822cad05...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `GALP_Fatura_2024-07-31_Palmeira31-2_C90132267_17_43EUR.md` | **ALTA** | `330ddd9f375b5ef1...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `GALP_Fatura_2024-08-03_Palmeira31-5DT_C90402574_27_85EUR.md` | **ALTA** | `30d69e87d4f5cbef...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `GALP_Fatura_2024-08-08_Palmeira31-3_C90519477_19_53EUR.md` | **ALTA** | `ed9e2c04603fbac3...` |
+| 2022-01-01 | `REQUERIMENTO_LITISCONSORCIO` | `IES-2020-2024_MAPA_CRIMINAL_MARIA_TERESA_JOAO_PEDRO.md` | **OFICIAL** | `a8006ee20ad0126b...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `INVERSAO_CONTENT_CONTRATO_ARRENDAMENTO_-_Cecilio_de_Sousa_90.md` | **ALTA** | `d25de82480ddfd00...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `INVERSAO_CONTENT_CONTRATO_ARRENDAMENTO_-_Rua_Professor_Branco_Rodrigues.md` | **ALTA** | `b5b4da938d2ef7a5...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `INVERSAO_CONTENT_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_1_ADENDA.md` | **ALTA** | `c536b563b2620df1...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `INVERSAO_CONTENT_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_4.md` | **ALTA** | `8dcc0c267eafb1fb...` |
+| 2022-01-01 | `REQUERIMENTO_LITISCONSORCIO` | `INVERSAO_CONTENT_Declaracao_Rendimentos_-_Maria_Teresa_Castro_Bangueses.md` | **OFICIAL** | `124ff08485446aca...` |
+| 2022-01-01 | `REQUERIMENTO_LITISCONSORCIO` | `INVERSAO_CONTENT_Declaracao_Rendimentos_-_Maria_Teresa_Castro_Bangueses_1.md` | **OFICIAL** | `2a7dc5b829d09279...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `KNWLEDGE_BASE_LEA_CONTRATO_ARRENDAMENTO_-_Cecilio_de_Sousa_90.md` | **ALTA** | `4dee453712690890...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `KNWLEDGE_BASE_LEA_CONTRATO_ARRENDAMENTO_-_Rua_Cecilio_de_Sousa_N_45_2.md` | **ALTA** | `9c29f6a20a05e864...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `KNWLEDGE_BASE_LEA_CONTRATO_ARRENDAMENTO_-_Rua_Professor_Branco_Rodrigues.md` | **ALTA** | `d195d7ef49620c9d...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `KNWLEDGE_BASE_LEA_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_1_ADENDA.md` | **ALTA** | `0d6051b8e4aa39bb...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `KNWLEDGE_BASE_LEA_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_4.md` | **ALTA** | `708feaeb27f8f83e...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `LEA_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_1_ADENDA.md` | **ALTA** | `30b8880d87e416ee...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `LEA_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_1_ADENDA_1.md` | **ALTA** | `f7c45f015644a799...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `LEA_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_1_ADENDA_1_1.md` | **ALTA** | `c43711a89d2b3c8a...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `LEA_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_1_ADENDA_1_2.md` | **ALTA** | `b1216eb76664e540...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `LEA_Copy_of_Passports_Tentants_Rua_da_Palmeira_31.md` | **ALTA** | `0ab874f5783fb6ef...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `MAPAS_CONTABILISTICOS_RUA_CECILIO_DE_SOUSA_N_43_A_47_0_1_es_1070-100_LISBOA.md` | **ALTA** | `0ec1083fed112897...` |
+| 2022-01-01 | `REQUERIMENTO_LITISCONSORCIO` | `MAPAS_CONT_Declaracao_Rendimentos_-_Maria_Teresa_Castro_Bangueses.md` | **OFICIAL** | `c1346ff49337c562...` |
+| 2022-01-01 | `REQUERIMENTO_LITISCONSORCIO` | `MAPAS_CONT_Declaracao_Rendimentos_-_Maria_Teresa_Castro_Bangueses_1.md` | **OFICIAL** | `ae216b03e4ead44f...` |
+| 2022-01-01 | `REQUERIMENTO_LITISCONSORCIO` | `MAPAS_CONT_Declaracao_Rendimentos_-_Maria_Teresa_Castro_Bangueses_2.md` | **OFICIAL** | `237c8d47b700f676...` |
+| 2022-01-01 | `REQUERIMENTO_LITISCONSORCIO` | `MAPA_CRIMINAL_MARIA_TERESA_JOAO_PEDRO.md` | **OFICIAL** | `39e58e2ad6e12b23...` |
+| 2022-01-01 | `REQUERIMENTO_LITISCONSORCIO` | `MAPA_CRIMINAL_MARIA_TERESA_JOAO_PEDRO.pdf` | **OFICIAL** | `d1c1ea3e79440b23...` |
+| 2022-01-01 | `REQUERIMENTO_LITISCONSORCIO` | `MAPA_CRIMINAL_MARIA_TERESA_JOA_alt.md` | **OFICIAL** | `39e58e2ad6e12b23...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `PALMEIRA31_4.md` | **ALTA** | `32d64bbeaba6a008...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `PALMEIRA31_4_alt.md` | **ALTA** | `32d64bbeaba6a008...` |
+| 2022-01-01 | `CERTIDAO_PREDIAL` | `PREDIAIS_RENDIMENTOS_CERTIDAO_LEA_17TDSrendimento_predial.md` | **OFICIAL** | `0ca67d2324940be2...` |
+| 2022-01-01 | `CERTIDAO_PREDIAL` | `PREDIAIS_RENDIMENTOS_CERTIDAO_LEA_18_rendimento_predial.md` | **OFICIAL** | `a71a4fee993e111a...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `PROC_15547_FACTOS_PROVADOS.pdf` | **ALTA** | `5a7922ddfc497674...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `PROC_15547_FACTOS_PROVADOS_alt.pdf` | **ALTA** | `5a7922ddfc497674...` |
+| 2022-01-01 | `CADERNETA_PREDIAL` | `RECIBOS_-_LISTA_1_CADERNETA.md` | **OFICIAL** | `dd65ae5b972e1187...` |
+| 2022-01-01 | `CADERNETA_PREDIAL` | `RECIBOS_-_LISTA_1_CADERNETA.odt` | **OFICIAL** | `f2d6d7a4ae0bf258...` |
+| 2022-01-01 | `CADERNETA_PREDIAL` | `RECIBOS_-_LISTA_1_CADERNETA.txt` | **OFICIAL** | `34a41961739c0dca...` |
+| 2022-01-01 | `CADERNETA_PREDIAL` | `RECIBOS_-_LISTA_1_CADERNETA_alt.md` | **OFICIAL** | `dd65ae5b972e1187...` |
+| 2022-01-01 | `CADERNETA_PREDIAL` | `RECIBOS_-_LISTA_1_CADERNETA_alt.odt` | **OFICIAL** | `f2d6d7a4ae0bf258...` |
+| 2022-01-01 | `CADERNETA_PREDIAL` | `RECIBOS_-_LISTA_1_CADERNETA_alt.txt` | **OFICIAL** | `34a41961739c0dca...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `RECIBO_2018-04_Cecilio49_FracA_2500EUR_n2514342-1.md` | **ALTA** | `23a79100eb4d5945...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `RECIBO_2018-04_Cecilio49_FracA_alt.md` | **ALTA** | `23a79100eb4d5945...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `RECIBO_2018-07_Cecilio49_FracA_2500EUR_n2514342-4.md` | **ALTA** | `e83a73e8cf625e39...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `RECIBO_2018-07_Cecilio49_FracA_alt.md` | **ALTA** | `e83a73e8cf625e39...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `RECIBO_2022-03_Palmeira27_Frac4_900EUR_n276410-85.md` | **ALTA** | `3f5cbdad18767f9c...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `RECIBO_2022-03_Palmeira27_Frac_alt.md` | **ALTA** | `3f5cbdad18767f9c...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `RUA_CECILIO_DE_SOUSA_N_43_A_47_0_1_es_1070-100_LISBOA.md` | **ALTA** | `1a30c9e4ba5bcd23...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `RUA_CECILIO_DE_SOUSA_N_43_A_47_0_1_es_1070-100_LISBOA.pdf` | **ALTA** | `3dca98721819bde0...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `RUA_CECILIO_DE_SOUSA_N_43_A_47_0_1_es_1070-100_LISBOA.pdf` | **ALTA** | `fde5e86d50d5aaf6...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `RUA_CECILIO_DE_SOUSA_N_43_A_47_alt.md` | **ALTA** | `1a30c9e4ba5bcd23...` |
+| 2022-01-01 | `REVOGACAO_CONTRATUAL` | `Revogacao_1.jpg` | **ALTA** | `6f891954d81ba52c...` |
+| 2022-01-01 | `REVOGACAO_CONTRATUAL` | `Revogacao_1_alt.jpg` | **ALTA** | `6f891954d81ba52c...` |
+| 2022-01-01 | `REVOGACAO_CONTRATUAL` | `Revogacao_2.jpg` | **ALTA** | `8106f73bfb8a4e2d...` |
+| 2022-01-01 | `REVOGACAO_CONTRATUAL` | `Revogacao_2_alt.jpg` | **ALTA** | `8106f73bfb8a4e2d...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `Rua_Cecilio_de_Sousa_74_2_EQ_1200-102_Lisboa.md` | **ALTA** | `cb6d16eeab4d8038...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `Rua_Cecilio_de_Sousa_74_2_EQ_1200-102_Lisboa.pdf` | **ALTA** | `5d823b8484182134...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `Rua_Cecilio_de_Sousa_74_2_EQ_1_alt.md` | **ALTA** | `cb6d16eeab4d8038...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `Rua_Cecilio_de_Sousa_n_46-48-50_48_Rc_Dt_1200-101_Lisboa.md` | **ALTA** | `1a0461e0b11c1415...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `Rua_Cecilio_de_Sousa_n_46-48-50_48_Rc_Dt_1200-101_Lisboa.pdf` | **ALTA** | `dd37c0d0c4cbed5a...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `Rua_Cecilio_de_Sousa_n_46-48-5_alt.md` | **ALTA** | `1a0461e0b11c1415...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `Rua_Cecilio_de_Sousa_n_49.md` | **ALTA** | `f09639a2f6dfe31c...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `Rua_Cecilio_de_Sousa_n_49.pdf` | **ALTA** | `98b268156630eaf6...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `Rua_Cecilio_de_Sousa_n_49_1.md` | **ALTA** | `89e6416b275869b5...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `Rua_Cecilio_de_Sousa_n_49_1.pdf` | **ALTA** | `81991aee19aae843...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `Rua_Cecilio_de_Sousa_n_49_1_alt.md` | **ALTA** | `c67ec452f498e010...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `Rua_Cecilio_de_Sousa_n_49_4.md` | **ALTA** | `44a673c5dc040e1c...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `Rua_Cecilio_de_Sousa_n_49_4.pdf` | **ALTA** | `63101350c0c3acfe...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `Rua_Cecilio_de_Sousa_n_49_4_alt.md` | **ALTA** | `20dbb27ee6ef9bf2...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `Rua_Cecilio_de_Sousa_n_49_alt.md` | **ALTA** | `f09639a2f6dfe31c...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `Rua_Cecilio_de_Sousa_n_4LEA.md` | **ALTA** | `6d225298b51fe694...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `Rua_Cecilio_de_Sousa_n_4LEA.pdf` | **ALTA** | `46b27318811c403b...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `Rua_Cecilio_de_Sousa_n_4LEA_alt.md` | **ALTA** | `6d225298b51fe694...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `Rua_Cecilio_de_Sousa_n_s_20-A_20-B_20-C_e_20-D_20A_1_Eq_1200-101_Lisbo.md` | **ALTA** | `bc06bcc689db7c33...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `Rua_Cecilio_de_Sousa_n_s_20-A_20-B_20-C_e_20-D_20A_1_Eq_1200-101_Lisbo.pdf` | **ALTA** | `55c6ad64a19952f1...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `Rua_Cecilio_de_Sousa_n_s_20-A__alt.md` | **ALTA** | `bc06bcc689db7c33...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `SEM-DATA_CONTRATO_CECILIO49.md` | **ALTA** | `8d74e85e40c48403...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `SEM-DATA_CONTRATO_CECILIO49_alt.md` | **ALTA** | `8d74e85e40c48403...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `SEM-DATA_CONTRATO_CONTRATO_ARRENDAMENTO_-_Rua_Cecilio_de_Sousa_N_45_2.md` | **ALTA** | `e334ba0e77776ed4...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `SEM-DATA_CONTRATO_CONTRATO_ARRENDAMENTO_-_Rua_Cecilio_de_Sousa_N_74.md` | **ALTA** | `f231ac9c3394b414...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `SEM-DATA_CONTRATO_CONTRATO_ARRENDAMENTO_-_Rua_Professor_Branco_Rodrigues_ocr.md` | **ALTA** | `f84a287127344d59...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `SEM-DATA_CONTRATO_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_1_ADENDA.md` | **ALTA** | `359df47388a4ec78...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `SEM-DATA_CONTRATO_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_2_ADENDA.md` | **ALTA** | `d3be3af680e8707e...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `SEM-DATA_CONTRATO_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_3_ADENDA.md` | **ALTA** | `4ae678797e2c0123...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `SEM-DATA_CONTRATO_PALMEIRA31_4.md` | **ALTA** | `305c13eff7fb6485...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `SEM-DATA_CONTRATO_PALMEIRA31_4_alt.md` | **ALTA** | `305c13eff7fb6485...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `SEM-DATA_CONTRATO_RUA_CECILIO_DE_SOUSA_N_43_A_47_0_1_es_1070-100_LISBOA.md` | **ALTA** | `ee2d1a92f70ca089...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `SEM-DATA_CONTRATO_RUA_CECILIO_DE_SOUSA_N_43_A_47_0_1_es_1070-100_LISBOA_1308.md` | **ALTA** | `308a01a67b8b35c5...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `SEM-DATA_CONTRATO_RUA_CECILIO__alt.md` | **ALTA** | `fec2c9619e5682b1...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `SEM-DATA_CONTRATO_Rua_Cecilio_de_Sousa_74_2_EQ_1200-102_Lisboa.md` | **ALTA** | `fe77796613f645b3...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `SEM-DATA_CONTRATO_Rua_Cecilio_de_Sousa_n_46-48-50_48_Rc_Dt_1200-101_Lisboa.md` | **ALTA** | `fec2c9619e5682b1...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `SEM-DATA_CONTRATO_Rua_Cecilio_de_Sousa_n_49.md` | **ALTA** | `0573f9638a2a6815...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `SEM-DATA_CONTRATO_Rua_Cecilio_de_Sousa_n_4LEA.md` | **ALTA** | `53eaf3aca6501160...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `SEM-DATA_CONTRATO_Rua_Cecilio_de_Sousa_n_s_20-A_20-B_20-C_e_20-D_20A_1_Eq.md` | **ALTA** | `d4386af829ee817f...` |
+| 2022-01-01 | `REQUERIMENTO_LITISCONSORCIO` | `SEM-DATA_DECLARACAO_MAPA_CRIMINAL_MARIA_TERESA_JOAO_PEDRO.md` | **OFICIAL** | `0f040335d2a06e87...` |
+| 2022-01-01 | `CERTIDAO_PREDIAL` | `SEM-DATA_EMAIL_17TDSrendimento_predial.md` | **OFICIAL** | `177018c1508678f2...` |
+| 2022-01-01 | `REVOGACAO_CONTRATUAL` | `SEM-DATA_EMAIL_DOCUMENTO_REVOGACAO.md` | **ALTA** | `fd017b381b5fc013...` |
+| 2022-01-01 | `REVOGACAO_CONTRATUAL` | `SEM-DATA_EMAIL_DOCUMENTO_REVOGACAO_1349.md` | **ALTA** | `2b654c55c17948ab...` |
+| 2022-01-01 | `REVOGACAO_CONTRATUAL` | `SEM-DATA_EMAIL_REVOGACAO.md` | **ALTA** | `c288c49d1c32a4f8...` |
+| 2022-01-01 | `REVOGACAO_CONTRATUAL` | `SEM-DATA_EMAIL_REVOGACAO_alt.md` | **ALTA** | `c288c49d1c32a4f8...` |
+| 2022-01-01 | `CERTIDAO_PREDIAL` | `SEM-DATA_OUTRO_18_rendimento_predial.md` | **OFICIAL** | `367f82dab450e97d...` |
+| 2022-01-01 | `REVOGACAO_CONTRATUAL` | `SPARK_TABELA_IRREGULARIDADES_NA_EXTINCAO_DO_POSTO_DE_TRABALHO_E_REVOGACAO_CONTRATUAL.md` | **ALTA** | `9666150f863dacf3...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `Teresa_CONTRATO_ARRENDAMENTO_-_Rua_Cecilio_de_Sousa_N_74.md` | **ALTA** | `cd05c68344f9af14...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `Teresa_CONTRATO_ARRENDAMENTO_-_Rua_da_Palmeira_33_4.md` | **ALTA** | `1613737c177be061...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `cecilio_2IMG_0034_1.mov` | **ALTA** | `59ef819266a59641...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `cecilio_2IMG_0034_1_alt.mov` | **ALTA** | `59ef819266a59641...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `conflict_423d4237715547eb56b3.md` | **ALTA** | `584cae9fd9522e87...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `conflict_423d4237715547eb56b3_alt.md` | **ALTA** | `584cae9fd9522e87...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `downloads_falhados_GALP_AvisoDivida_2024-03-27_Palmeira31-4_C90441650_417_15EUR.md` | **ALTA** | `e728a1530bae74e2...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `downloads_falhados_GALP_AvisoDivida_2024-05-29_Palmeira31-4_C90441650_430_27EUR_12faturas.md` | **ALTA** | `db30d72eef251f80...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `downloads_falhados_GALP_AvisoDivida_2024-07-22_Palmeira31-5DT_C90402574_451_69EUR.md` | **ALTA** | `27a6de1678cf2983...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `downloads_falhados_GALP_AvisoDivida_2024-07-30_Palmeira33-2_C90173438_74_20EUR.md` | **ALTA** | `605a28036250011a...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `downloads_falhados_GALP_AvisoDivida_2024-07-31_Palmeira31-3_C90519477_673_66EUR.md` | **ALTA** | `d15aefca2d2ff9f8...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `downloads_falhados_GALP_AvisoRescisao_2024-07-25_Palmeira33-2_56_53EUR.md` | **ALTA** | `29d8a72b19e99baa...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `downloads_falhados_GALP_AvisoSuspensao_2024-07-19_Palmeira31-5DT_451_69EUR.md` | **ALTA** | `ff0dde6c618a6b8b...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `downloads_falhados_GALP_Fatura_2024-01-07_Palmeira31-4_C90441650_23_46EUR_Gas.md` | **ALTA** | `68c9ffa0c114c90b...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `downloads_falhados_GALP_Fatura_2024-03-04_Palmeira31-4_C90441650_23_87EUR_Servicos.md` | **ALTA** | `620d6ba0e780b158...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `downloads_falhados_GALP_Fatura_2024-05-05_Palmeira31-4_C90441650_13_12EUR_Gas.md` | **ALTA** | `3b8907175e744aae...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `downloads_falhados_GALP_Fatura_2024-07-26_Palmeira31-5DT_C90402574_74_07EUR.md` | **ALTA** | `909af4e0ec75167b...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `downloads_falhados_GALP_Fatura_2024-07-26_Palmeira33-4_C90741277_43_70EUR.md` | **ALTA** | `641358494c1dc90e...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `downloads_falhados_GALP_Fatura_2024-07-31_Palmeira31-2_C90132267_17_43EUR.md` | **ALTA** | `04671af4da64f85d...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `downloads_falhados_GALP_Fatura_2024-08-03_Palmeira31-5DT_C90402574_27_85EUR.md` | **ALTA** | `70741d1062b1cb3b...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `downloads_falhados_GALP_Fatura_2024-08-08_Palmeira31-3_C90519477_19_53EUR.md` | **ALTA** | `318106f395b21073...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `nomes_antigos_1554726_0T8LSB.csv` | **ALTA** | `dcefd13a1c47d067...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `nomes_antigos_1554726_0T8LSB_alt.csv` | **ALTA** | `dcefd13a1c47d067...` |
+| 2022-01-01 | `CERTIDAO_PREDIAL` | `rendimento_predial.md` | **OFICIAL** | `f7385cc0aa911dfa...` |
+| 2022-01-01 | `CERTIDAO_PREDIAL` | `rendimento_predial_alt.md` | **OFICIAL** | `f7385cc0aa911dfa...` |
+| 2022-01-01 | `CONTRATO_ARRENDAMENTO` | `textos_ocr_CONTRATO_ARRENDAMENTO_-_Rua_Professor_Branco_Rodrigues_ocr.md` | **ALTA** | `cec974ab29fa2ce3...` |
+| 2022-01-01 | `DOCUMENTO_PROBATORIO` | `travessadaPalmeira.pdf` | **ALTA** | `707140f4d5ec9e9c...` |
+| 2023-01-01 | `CADERNETA_PREDIAL` | `14_CADERNETA_PREDIAL_20230101_024.pdf` | **OFICIAL** | `4ddaa3f3a929386d...` |
+| 2023-01-01 | `CADERNETA_PREDIAL` | `14_CADERNETA_PREDIAL_20230101__alt.pdf` | **OFICIAL** | `4ddaa3f3a929386d...` |
+| 2023-01-01 | `DOCUMENTO_PROBATORIO` | `2023-03-08_FACTURA_GALP_Fatura_2023-03-08_Palmeira31-4_C90441650_69_90EUR_ElecG.md` | **ALTA** | `ffaa8b895715fb85...` |
+| 2023-01-01 | `DOCUMENTO_PROBATORIO` | `2023-03-08_FACTURA_GALP_Fatura_2023-03-08_Palmeira31-4_C90441650_69_90EUR_ElecG_0574.md` | **ALTA** | `6381d371f2bd0c23...` |
+| 2023-01-01 | `DOCUMENTO_PROBATORIO` | `2023-11-03_RECIBO_RECIBO_2022-03_Palmeira27_Frac4_900EUR_n276410-85.md` | **ALTA** | `3543ff63f193616d...` |
+| 2023-01-01 | `CERTIDAO_PREDIAL` | `A107_P001_2023-10-16_Consulta_ao_Registo_Predial_AE_Consulta_ao_Registo_P.pdf` | **OFICIAL** | `fa31090fe2e34250...` |
+| 2023-01-01 | `CERTIDAO_PREDIAL` | `A108_P001_2023-10-16_Consulta_ao_Registo_Predial_AE_Consulta_ao_Registo_P.pdf` | **OFICIAL** | `5ef546d431353539...` |
+| 2023-01-01 | `DOCUMENTO_PROBATORIO` | `GALP_Fatura_2023-03-08_Palmeira31-4_C90441650_69_90EUR_ElecGas.md` | **ALTA** | `2daddb66019def4e...` |
+| 2023-01-01 | `DOCUMENTO_PROBATORIO` | `downloads_falhados_GALP_Fatura_2023-03-08_Palmeira31-4_C90441650_69_90EUR_ElecGas.md` | **ALTA** | `9d73818007f30145...` |
+| 2025-08-18 | `REQUERIMENTO_LITISCONSORCIO` | `05_REQUERIMENTO_MARIA_TERESA_20250818.pdf` | **OFICIAL** | `9966b7daf91c304a...` |
+| 2025-08-18 | `DOCUMENTO_PROBATORIO` | `2025-10-07_FACTURA_GALP_AvisoDivida_2025-10-07_Palmeira31-3_C90519477_923_09EUR.md` | **ALTA** | `e24bd1dbaa97c926...` |
+| 2025-08-18 | `DOCUMENTO_PROBATORIO` | `2025-10-07_FACTURA_GALP_AvisoDivida_2025-10-07_Palmeira31-3_C90519477_923_09EUR_0571.md` | **ALTA** | `0f58713c288e9057...` |
+| 2025-08-18 | `DOCUMENTO_PROBATORIO` | `GALP_AvisoDivida_2025-10-07_Palmeira31-3_C90519477_923_09EUR.md` | **ALTA** | `9128d8429530f1e4...` |
+| 2025-08-18 | `REQUERIMENTO_LITISCONSORCIO` | `PROC_3719-25_0T8LSB_CITACAO_DATA_2025-03-11_MARIA_TERESA_CASTRO_BANGUESES_RIBEI_NUNO_MIGUEL_SILVA_DU.txt` | **OFICIAL** | `7eb3ac60802b341b...` |
+| 2025-08-18 | `REQUERIMENTO_LITISCONSORCIO` | `PROC_3719-25_0T8LSB_CITACAO_DATA_2025-03-11_MARIA_TERESA_CASTRO_BANGUESES_RIBEI_NUNO_MIGUEL_SILVA_DUARTE_012.txt` | **OFICIAL** | `7eb3ac60802b341b...` |
+| 2025-08-18 | `REQUERIMENTO_LITISCONSORCIO` | `PROC_3719-25_0T8LSB_CITACAO_DATA_2025-08-07_MARIA_TERESA_CASTRO_BANGUESES_RIBEI_NUNO_MIGUEL_SILVA_DU.txt` | **OFICIAL** | `64460072e5e487b4...` |
+| 2025-08-18 | `REQUERIMENTO_LITISCONSORCIO` | `PROC_3719-25_0T8LSB_CITACAO_DATA_2025-08-07_MARIA_TERESA_CASTRO_BANGUESES_RIBEI_NUNO_MIGUEL_SILVA_DUARTE_014.txt` | **OFICIAL** | `64460072e5e487b4...` |
+| 2025-08-18 | `REQUERIMENTO_LITISCONSORCIO` | `PROC_3719-25_0T8LSB_DECISAO_DATA_2025-02-11_MARIA_TERESA_CASTRO_BANGUESES_RIBEI_NUNO_MIGUEL_SILVA_DU.txt` | **OFICIAL** | `c5d6ef4c4b9e8b8f...` |
+| 2025-08-18 | `REQUERIMENTO_LITISCONSORCIO` | `PROC_3719-25_0T8LSB_DECISAO_DATA_2025-02-11_MARIA_TERESA_CASTRO_BANGUESES_RIBEI_NUNO_MIGUEL_SILVA_DUARTE_018.txt` | **OFICIAL** | `c5d6ef4c4b9e8b8f...` |
+| 2025-08-18 | `REQUERIMENTO_LITISCONSORCIO` | `PROC_3719-25_0T8LSB_DECISAO_DATA_2025-03-11_MARIA_TERESA_CASTRO_BANGUESES_RIBEI_NUNO_MIGUEL_SILVA_DU.txt` | **OFICIAL** | `b90fafe80a9c0885...` |
+| 2025-08-18 | `REQUERIMENTO_LITISCONSORCIO` | `PROC_3719-25_0T8LSB_DECISAO_DATA_2025-03-11_MARIA_TERESA_CASTRO_BANGUESES_RIBEI_NUNO_MIGUEL_SILVA_DUARTE_019.txt` | **OFICIAL** | `b90fafe80a9c0885...` |
+| 2025-08-18 | `REQUERIMENTO_LITISCONSORCIO` | `PROC_3719-25_0T8LSB_DESPACHO_DATA_2025-02-11_MARIA_TERESA_CASTRO_BANGUESES_RIBEI_NUNO_MIGUEL_SILVA_D.txt` | **OFICIAL** | `45d67d12175f0830...` |
+| 2025-08-18 | `REQUERIMENTO_LITISCONSORCIO` | `PROC_3719-25_0T8LSB_DESPACHO_DATA_2025-02-11_MARIA_TERESA_CASTRO_BANGUESES_RIBEI_NUNO_MIGUEL_SILVA_DUARTE_022.txt` | **OFICIAL** | `45d67d12175f0830...` |
+| 2025-08-18 | `REQUERIMENTO_LITISCONSORCIO` | `PROC_3719-25_0T8LSB_DESPACHO_DATA_2025-07-10_MARIA_TERESA_CASTRO_BANGUESES_RIBEI_NUNO_MIGUEL_SILVA_D.txt` | **OFICIAL** | `236a18dc206297a7...` |
+| 2025-08-18 | `REQUERIMENTO_LITISCONSORCIO` | `PROC_3719-25_0T8LSB_DESPACHO_DATA_2025-07-10_MARIA_TERESA_CASTRO_BANGUESES_RIBEI_NUNO_MIGUEL_SILVA_DUARTE_023.txt` | **OFICIAL** | `236a18dc206297a7...` |
+| 2025-08-18 | `REQUERIMENTO_LITISCONSORCIO` | `PROC_3719-25_0T8LSB_DOC_DATA_2025-05-07_MARIA_TERESA_CASTRO_BANGUESES_RIBEI_NUNO_MIGUEL_SILVA_DUARTE.txt` | **OFICIAL** | `20021aeaa0e22b05...` |
+| 2025-08-18 | `REQUERIMENTO_LITISCONSORCIO` | `PROC_3719-25_0T8LSB_DOC_DATA_2025-05-07_MARIA_TERESA_CASTRO_BANGUESES_RIBEI_NUNO_MIGUEL_SILVA_DUARTE_032.txt` | **OFICIAL** | `20021aeaa0e22b05...` |
+| 2025-08-18 | `REQUERIMENTO_LITISCONSORCIO` | `PROC_3719-25_0T8LSB_DOC_DATA_2025-05-13_MARIA_TERESA_CASTRO_BANGUESES_RIBEI_NUNO_MIGUEL_SILVA_DUARTE.txt` | **OFICIAL** | `feb00a9e69b12232...` |
+| 2025-08-18 | `REQUERIMENTO_LITISCONSORCIO` | `PROC_3719-25_0T8LSB_DOC_DATA_2025-05-13_MARIA_TERESA_CASTRO_BANGUESES_RIBEI_NUNO_MIGUEL_SILVA_DUARTE_033.txt` | **OFICIAL** | `feb00a9e69b12232...` |
+| 2025-08-18 | `REQUERIMENTO_LITISCONSORCIO` | `PROC_3719-25_0T8LSB_NOTIFICACAO_DATA_2025-02-26_MARIA_TERESA_CASTRO_BANGUESES_RIBEI_NUNO_MIGUEL_SILV.txt` | **OFICIAL** | `49c92be0fb53f0c0...` |
+| 2025-08-18 | `REQUERIMENTO_LITISCONSORCIO` | `PROC_3719-25_0T8LSB_NOTIFICACAO_DATA_2025-04-01_MARIA_TERESA_CASTRO_BANGUESES_RIBEI_NUNO_MIGUEL_SILV.txt` | **OFICIAL** | `c982f524ec9ef1cd...` |
+| 2025-08-18 | `REQUERIMENTO_LITISCONSORCIO` | `PROC_3719-25_0T8LSB_NOTIFICACAO_DATA_2025-04-30_MARIA_TERESA_CASTRO_BANGUESES_RIBEI_NUNO_MIGUEL_SILV.txt` | **OFICIAL** | `21043d49ec953e04...` |
+| 2025-08-18 | `REQUERIMENTO_LITISCONSORCIO` | `PROC_3719-25_0T8LSB_NOTIFICACAO_DATA_2025-05-26_MARIA_TERESA_CASTRO_BANGUESES_RIBEI_NUNO_MIGUEL_SILV.txt` | **OFICIAL** | `58c93a1834a13593...` |
+| 2025-08-18 | `DOCUMENTO_PROBATORIO` | `downloads_falhados_GALP_AvisoDivida_2025-10-07_Palmeira31-3_C90519477_923_09EUR.md` | **ALTA** | `4344a971e05c34b1...` |
+| 2026-06-22 | `CONTRATO_ARRENDAMENTO` | `A006_P006_2026-06-22_DOC_3_Revogacao_Contratos_Arrendamento_Contrato.pdf` | **ALTA** | `03a6370099cd9f85...` |
+| 2026-06-22 | `DOCUMENTO_PROBATORIO` | `OUTPUT_DOCUMENTOS_CITIUS_PECA_JUDICIAL_15547_26_0T8LSB_20260818_150504.docx` | **ALTA** | `930a222f6ace9ca1...` |
+| 2026-06-22 | `DOCUMENTO_PROBATORIO` | `OUTPUT_DOCUMENTOS_CITIUS_PECA_JUDICIAL_15547_26_0T8LSB_20260818_150504.pdf` | **ALTA** | `b7c0a4a4b1762bed...` |
+
+---
+
+## 4. Estrutura de Pastas SFF no Acervo
+
+As pecas e provas estao sincronizadas nos estagios:
+- `01_INICIAL/`
+- `02_CONTESTACAO/`
+- `03_PROVAS/input/`, `03_PROVAS/output/`, `03_PROVAS/processed/`
+- `04_ALEGACOES/`
+- `05_SENTENCA/`
+- `06_RECURSOS/`

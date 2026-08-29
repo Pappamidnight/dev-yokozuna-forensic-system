@@ -1,0 +1,48 @@
+---
+tipo: documento_convertido
+titulo: 2023-04-20__2023-04-20__23142-227T8LSB__SAgente_de_Execução_Sol_Sola_LUISA_SANTOS__v05
+data_conversao: '2026-04-17 01:05:41'
+ficheiro_original: 2023-04-20__2023-04-20__23142-227T8LSB__SAgente_de_Execução_Sol_Sola_LUISA_SANTOS__v05.pdf
+tags: []
+processo_ref: null
+compliance_validado: false
+status: recem_convertido
+---
+
+<!-- Pagina 1 -->
+Tribunal Judicial da Comarca de Lisboa
+Juízo de Execução de Lisboa - Juiz 6 Certificação Citius: elaborado em 2023-04-24
+Av. D. João II, Nº1.08.01 Edifício I
+1990-097 Lisboa
+Telef: 218642000 Fax: 211545196
+Mail: lisboa.execucao@tribunais.org.pt
+23142/22.7T8LSB
+Exmo(a) Senhor(a)
+Sol(a). LUISA SANTOS
+R. de Santa Marta, Ed. Santa Marta, 43 E e F, 1ºB - Lisboa
+1150-293 LISBOA
+Referência:425280522 Execução Sumária (Ag.Execução) 23142/22.7T8LSB
+Exequente: Centenário Unipessoal, Lda.
+Executado: Nuno Miguel Silva Duarte e outro(s)...
+Data: 2023-04-24
+Agente de Execução (Sol.): Sol(a). LUISA SANTOS, NIF 218469632, BI - 11039123, Cartão
+profissional - 5840, Endereço: R. de Santa Marta, Ed. Santa Marta, 43 E e F, 1ºB, Lisboa,
+1150-293 LISBOA
+Assunto: Despacho - citação dos executados - Artº. 641º, nº 7 do cPC
+Fica deste modo V. Exª. notificado(a), na qualidade de Agente de Execução (Sol.), relativamente
+ao processo supra identificado, do conteúdo do despacho datado de 2023-04-20 e do despacho
+datado de 2023-04-21, cuja cópia se anexam.
+Conforme ordenado, deverá proceder à citação dos executados, nos tyermos do disposto no Artº
+641º, nº 7 do CPC, tanto para os termos da execução e do recurso.
+Remetem-se em anexo: Cópias de requerimento executivo e documentos que o acompanham,
+cópia da sentença, alvo de recurso
+Remetem-se cópias das alegações apresentadas, que deverão ser entregues aos executados
+no ato de citação, como ordenado.
+A Oficial de Justiça,
+Ângela Pereira
+Indicar na resposta a referência deste documento e o n.º de processo
+Pág.1
+
+<!-- Pagina 2 -->
+Indicar na resposta a referência deste documento e o n.º de processo
+Pág.2

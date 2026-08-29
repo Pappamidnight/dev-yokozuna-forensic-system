@@ -1,0 +1,129 @@
+---
+tipo: FACTURA
+data: 2022-12-05
+processo: 10153/21.0T8LSB
+processo_nome: UNICRE
+tribunal: null
+fonte: documento-oficial
+ficheiro: "DOCUMENTO_2.pdf"
+extensao: .pdf
+tamanho_kb: 131.1
+texto_extraido: true
+caminho_original: "C:/Users/nunom/Desktop/UNICRE\06_DOWNLOADS\DOCUMENTO_2.pdf"
+tags:
+  - tipo/factura
+  - processo/unicre
+  - ano/2022
+---
+
+# FACTURA -- DOCUMENTO_2
+
+**Data:** 2022-12-05
+**Tipo:** FACTURA
+**Processo:** 10153/21.0T8LSB (Execucao Unicre)
+**Resumo:** DATA DE EMISSÃO
+**Ficheiro:** `DOCUMENTO_2.pdf` (131.1 KB)
+**Origem:** `C:/Users/nunom/Desktop/UNICRE\06_DOWNLOADS\DOCUMENTO_2.pdf`
+
+> Voltar: [[_INDICE_UNICRE]] | [[HOME]]
+
+## Conteudo
+
+```
+FATURA N.º
+DATA DE EMISSÃO
+ATIVIDADE EXERCIDA
+DOMICÍLIO FISCAL /
+ESTABELECIMENTO ESTÁVEL
+1000014
+05/12/2022
+ALOJAMENTO MOBILADO PARA TURISTAS
+R JOSÉ GAMBOA, Nº 4, 3º F   1600-902 LISBOA
+DESCRIÇÃO
+VALOR BASE
+IMPOSTO DO SELO
+TOTAL DA FATURA
+Prestaçao de serviços
+621,00
+2.700,00
+0,00
+3.321,00
+€
+€
+€
+€
+05/12/2022
+DADOS DA TRANSMISSÃO DE BENS OU DA PRESTAÇÃO DE SERVIÇOS
+DADOS DO TRANSMITENTE DE BENS OU DO PRESTADOR DE SERVIÇOS
+NOME NUNO MIGUEL SILVA DUARTE
+NIF
+254048382
+DADOS DO ADQUIRENTE DE BENS OU DE SERVIÇOS
+NOME
+SUBSISTEMA DE SAÚDE
+TESTCORONADIRECT LDA
+ - - -
+N.º DE BENEFICIÁRIO
+ - - -
+517024071
+DATA DA TRANSMISSÃO DE BENS OU DA PRESTAÇÃO DE SERVIÇOS
+Fatura
+ - - -
+NIF ESTRANGEIRO/OUTRO DOC.IDENT.
+ - - -
+PAÍS
+NIF
+Documento emitido eletronicamente. Disponível para consulta no Portal das Finanças (https://www.portaldasfinancas.gov.pt).
+MORADA
+Avenida Marechal Craveiro Lopes N8 B 1700-284 Lisboa
+IVA : Continente - 23% [taxa normal atual] ;
+Original
+FATURA N.º
+DATA DE EMISSÃO
+ATIVIDADE EXERCIDA
+DOMICÍLIO FISCAL /
+ESTABELECIMENTO ESTÁVEL
+1000014
+05/12/2022
+ALOJAMENTO MOBILADO PARA TURISTAS
+R JOSÉ GAMBOA, Nº 4, 3º F   1600-902 LISBOA
+DESCRIÇÃO
+VALOR BASE
+IMPOSTO DO SELO
+TOTAL DA FATURA
+Prestaçao de serviços
+621,00
+2.700,00
+0,00
+3.321,00
+€
+€
+€
+€
+05/12/2022
+DADOS DA TRANSMISSÃO DE BENS OU DA PRESTAÇÃO DE SERVIÇOS
+DADOS DO TRANSMITENTE DE BENS OU DO PRESTADOR DE SERVIÇOS
+NOME NUNO MIGUEL SILVA DUARTE
+NIF
+254048382
+DADOS DO ADQUIRENTE DE BENS OU DE SERVIÇOS
+NOME
+SUBSISTEMA DE SAÚDE
+TESTCORONADIRECT LDA
+ - - -
+N.º DE BENEFICIÁRIO
+ - - -
+517024071
+DATA DA TRANSMISSÃO DE BENS OU DA PRESTAÇÃO DE SERVIÇOS
+Fatura
+ - - -
+NIF ESTRANGEIRO/OUTRO DOC.IDENT.
+ - - -
+PAÍS
+NIF
+Documento emitido eletronicamente. Disponível para consulta no Portal das Finanças (https://www.portaldasfinancas.gov.pt).
+MORADA
+Avenida Marechal Craveiro Lopes N8 B 1700-284 Lisboa
+IVA : Continente - 23% [taxa normal atual] ;
+Duplicado
+```

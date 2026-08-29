@@ -1,0 +1,24 @@
+---
+tipo: documento_convertido
+titulo: SEMDATA__23142-22.7T8LSB.L1__DOCUMENTO__REF24364987
+data_conversao: '2026-04-17 01:06:20'
+ficheiro_original: SEMDATA__23142-22.7T8LSB.L1__DOCUMENTO__REF24364987.pdf
+tags: []
+processo_ref: null
+compliance_validado: false
+status: recem_convertido
+---
+
+<!-- Pagina 1 -->
+Lisboa - Tribunal da Relação
+2ª Secção
+Rua do Arsenal - Letra G - 1100-038 Lisboa
+Telef: 213222900 - E-Mail: lisboa.tr@tribunais.org.pt
+Apelações em processo comum e especial (2013)
+Referência: 24364987
+23142/22.7T8LSB.L1
+VISTO: Em 2026-03-06 ao 1º Adjunto, Exmo. Juiz Desembargador António Moreira.
+(Termo electrónico elaborado por Técnico de Justiça Ana Maria Fernandes)
+*
+Visto.
+Pág. 1

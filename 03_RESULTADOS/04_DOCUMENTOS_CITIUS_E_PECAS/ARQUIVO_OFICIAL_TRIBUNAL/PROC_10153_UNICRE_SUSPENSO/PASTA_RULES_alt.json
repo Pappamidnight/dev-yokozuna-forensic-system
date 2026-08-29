@@ -1,0 +1,16 @@
+{
+  "nome": "Processo 10153-24.7T8LSB-A",
+  "politica": "preservar",
+  "lixo": [
+    "*.tmp",
+    "~$*",
+    "Thumbs.db",
+    "desktop.ini"
+  ],
+  "arquivar_dias": 0,
+  "destinos": {},
+  "excecoes": [
+    "*"
+  ],
+  "notas_ia": "PRESERVAR. Conteudo juridico do processo 10153-24.7T8LSB-A. Apenas relatorio de higiene; nunca mover/apagar provas."
+}

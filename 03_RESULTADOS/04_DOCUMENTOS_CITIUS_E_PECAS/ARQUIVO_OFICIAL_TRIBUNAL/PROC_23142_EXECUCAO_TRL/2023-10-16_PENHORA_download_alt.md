@@ -1,0 +1,76 @@
+---
+tipo: PENHORA
+data: 2023-10-16
+processo: 23142/22.7T8LSB + 33934
+processo_nome: CENTENARIO
+tribunal: null
+fonte: documento-oficial
+ficheiro: "download.pdf"
+extensao: .pdf
+tamanho_kb: 2079.2
+texto_extraido: true
+caminho_original: "C:/Users/nunom/Desktop/CENTENARIOTRL\Cofre-Juridico-Nuno\providen\download.pdf"
+tags:
+  - tipo/penhora
+  - processo/centenario
+  - ano/2023
+---
+
+# PENHORA -- download
+
+**Data:** 2023-10-16
+**Tipo:** PENHORA
+**Processo:** 23142/22.7T8LSB + 33934 (Execucao Centenario)
+**Resumo:** NOTIFICAÇÃO - FASE 1
+**Ficheiro:** `download.pdf` (2079.2 KB)
+**Origem:** `C:/Users/nunom/Desktop/CENTENARIOTRL\Cofre-Juridico-Nuno\providen\download.pdf`
+
+> Voltar: [[_INDICE_CENTENARIO]] | [[HOME]]
+
+## Conteudo
+
+```
+NOTIFICAÇÃO - FASE 1
+PROCESSO: 23142/22.7T8LSB
+Tribunal Judicial da Comarca de Lisboa
+Lisboa - Juízo Execução - Juiz 6
+LUISA SANTOS
+Agente de Execução
+R. de Santa Marta, Ed. Santa Marta, 43 E e F, 1ºB
+1150-293 Lisboa
+Telefone: 219339105 Fax: 213530198
+Email: 5840@solicitador.net
+14h às 16h
+Nif: 218469632
+Exequente: Centenário Unipessoal, Lda.
+Executados: Lisbon Experience - Administração de Imóveis, Lda e outros
+Exmo(a) Senhor(a)
+Dr(a). Varela de Matos
+Ilustre Mandatário(a)
+Via Telemática
+Data: 16-10-2023
+Documento: ywggNA6uMvW
+Referência interna do processo: PE/26/2022
+ywggNA6uMvW
+Modelo: 231/2.00
+Página 1 de 2
+FUNDAMENTO DA NOTIFICAÇÃO
+Fica(m) V. Exa(s). notificado(s) para o término da FASE 1 nos autos em referência. Para o efeito refere-se abaixo, em
+informações complementares, o resultado das consultas efetuadas nos termos do artigo 749.º do Código de Processo Civil
+(CPC) ao registo informático das execuções e dos bens penhoráveis identificados ou do facto de não se ter identificado
+quaisquer bens penhoráveis.
+No caso de terem sido identificados bens penhoráveis, a execução prossegue, sem prejuízo do disposto no 751.º do Código
+de Processo Civil, com a penhora desses bens exceto se, no prazo de 5 dias a contar desta notificação, o exequente:
+a) Declarar que não pretende a penhora de determinados bens imóveis ou móveis não sujeitos a registo identificados;
+ou
+b) Desistir da execução.
+Não tendo sido encontrados bens penhoráveis, o exequente deve indicar bens à penhora no prazo de 10 dias, sendo
+penhorados os bens que ele indique.
+INFORMAÇÕES COMPLEMENTARES
+resultado da consulta ao registo informático das execuções, bens penhoráveis identificados, bens penhoráveis indicados no requerimento
+executivo
+- Consulta ao Registo Informático de Execuções - não foi encontrada qualquer informação dos executados
+- Consulta à base de dados da DGCI -  Trabalho dependente; Categoria B; imóveis
+- Consulta às bases de dados da Segurança Social - entidade patronal
+- Consulta à base
+```

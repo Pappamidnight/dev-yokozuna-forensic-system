@@ -1,0 +1,216 @@
+{
+  "status": "COMPLETED",
+  "timestamp": "2026-08-28T05:02:23.796670",
+  "total_records_analyzed": 342520,
+  "total_facts_extracted": 342520,
+  "facts_provados_documentados": 201687,
+  "alegacoes_unilaterais": 140833,
+  "folder_relevance_metrics": {
+    "01_PDFs_Oficiais": {
+      "total": 1491,
+      "avg_relevance": 0.9815,
+      "facts_count": 1491
+    },
+    "04_Processos_E_Pecas_Escritas": {
+      "total": 195746,
+      "avg_relevance": 0.8037,
+      "facts_count": 195746
+    },
+    "03_Contratos_E_Acordos": {
+      "total": 3196,
+      "avg_relevance": 0.7981,
+      "facts_count": 3196
+    },
+    "05_Correspondencia_E_Comunicacoes": {
+      "total": 1,
+      "avg_relevance": 0.7271,
+      "facts_count": 0
+    },
+    "00_Indice_E_MOCs": {
+      "total": 732,
+      "avg_relevance": 0.5292,
+      "facts_count": 732
+    },
+    "02_Minutas_E_Rascunhos": {
+      "total": 140834,
+      "avg_relevance": 0.25,
+      "facts_count": 2
+    }
+  },
+  "processes_relevance_metrics": {
+    "0153/24.7": {
+      "total_acts": 17,
+      "total_relevance": 16.323,
+      "high_relevance_acts": 14,
+      "avg_relevance": 0.9602
+    },
+    "0203/22.6": {
+      "total_acts": 20,
+      "total_relevance": 19.3954,
+      "high_relevance_acts": 18,
+      "avg_relevance": 0.9698
+    },
+    "09/12.2": {
+      "total_acts": 9,
+      "total_relevance": 3.7081999999999997,
+      "high_relevance_acts": 2,
+      "avg_relevance": 0.412
+    },
+    "16/03.2": {
+      "total_acts": 9,
+      "total_relevance": 3.7081999999999997,
+      "high_relevance_acts": 2,
+      "avg_relevance": 0.412
+    },
+    "17/07.2": {
+      "total_acts": 9,
+      "total_relevance": 3.75,
+      "high_relevance_acts": 2,
+      "avg_relevance": 0.4167
+    },
+    "3142/22.7": {
+      "total_acts": 53,
+      "total_relevance": 43.644700000000014,
+      "high_relevance_acts": 41,
+      "avg_relevance": 0.8235
+    },
+    "6/11.2": {
+      "total_acts": 6,
+      "total_relevance": 4.4373,
+      "high_relevance_acts": 4,
+      "avg_relevance": 0.7395
+    },
+    "05/04.2": {
+      "total_acts": 1,
+      "total_relevance": 0.25,
+      "high_relevance_acts": 0,
+      "avg_relevance": 0.25
+    },
+    "5/12.2": {
+      "total_acts": 4,
+      "total_relevance": 1.0,
+      "high_relevance_acts": 0,
+      "avg_relevance": 0.25
+    },
+    "18/08.2": {
+      "total_acts": 21,
+      "total_relevance": 5.25,
+      "high_relevance_acts": 0,
+      "avg_relevance": 0.25
+    },
+    "2026/05.2": {
+      "total_acts": 28,
+      "total_relevance": 7.0,
+      "high_relevance_acts": 0,
+      "avg_relevance": 0.25
+    },
+    "2026/06.0": {
+      "total_acts": 2,
+      "total_relevance": 0.5,
+      "high_relevance_acts": 0,
+      "avg_relevance": 0.25
+    },
+    "2026/08.1": {
+      "total_acts": 4,
+      "total_relevance": 1.0,
+      "high_relevance_acts": 0,
+      "avg_relevance": 0.25
+    },
+    "30/06.2": {
+      "total_acts": 2,
+      "total_relevance": 0.5,
+      "high_relevance_acts": 0,
+      "avg_relevance": 0.25
+    },
+    "29/07.2": {
+      "total_acts": 2,
+      "total_relevance": 0.5,
+      "high_relevance_acts": 0,
+      "avg_relevance": 0.25
+    },
+    "24/02.2": {
+      "total_acts": 2,
+      "total_relevance": 0.5,
+      "high_relevance_acts": 0,
+      "avg_relevance": 0.25
+    },
+    "2026/01.0": {
+      "total_acts": 1,
+      "total_relevance": 0.25,
+      "high_relevance_acts": 0,
+      "avg_relevance": 0.25
+    },
+    "04/25.2": {
+      "total_acts": 23,
+      "total_relevance": 5.75,
+      "high_relevance_acts": 0,
+      "avg_relevance": 0.25
+    },
+    "05/15.2": {
+      "total_acts": 23,
+      "total_relevance": 5.75,
+      "high_relevance_acts": 0,
+      "avg_relevance": 0.25
+    },
+    "07/10.0": {
+      "total_acts": 2,
+      "total_relevance": 0.5,
+      "high_relevance_acts": 0,
+      "avg_relevance": 0.25
+    },
+    "08/10.0": {
+      "total_acts": 2,
+      "total_relevance": 0.5,
+      "high_relevance_acts": 0,
+      "avg_relevance": 0.25
+    },
+    "2025/07.1": {
+      "total_acts": 2,
+      "total_relevance": 0.5,
+      "high_relevance_acts": 0,
+      "avg_relevance": 0.25
+    },
+    "3179/25.0": {
+      "total_acts": 2,
+      "total_relevance": 0.5,
+      "high_relevance_acts": 0,
+      "avg_relevance": 0.25
+    },
+    "23/10.2": {
+      "total_acts": 2,
+      "total_relevance": 0.5,
+      "high_relevance_acts": 0,
+      "avg_relevance": 0.25
+    },
+    "10153/24.7": {
+      "total_acts": 103,
+      "total_relevance": 86.64839999999994,
+      "high_relevance_acts": 21,
+      "avg_relevance": 0.8412
+    },
+    "15547/26.0": {
+      "total_acts": 77,
+      "total_relevance": 62.16499999999995,
+      "high_relevance_acts": 2,
+      "avg_relevance": 0.8073
+    },
+    "23142/22.7": {
+      "total_acts": 864,
+      "total_relevance": 745.1524000000006,
+      "high_relevance_acts": 266,
+      "avg_relevance": 0.8624
+    },
+    "3719/25.0": {
+      "total_acts": 771,
+      "total_relevance": 672.1960000000049,
+      "high_relevance_acts": 275,
+      "avg_relevance": 0.8718
+    },
+    "12/08.2": {
+      "total_acts": 13,
+      "total_relevance": 10.4286,
+      "high_relevance_acts": 0,
+      "avg_relevance": 0.8022
+    }
+  }
+}

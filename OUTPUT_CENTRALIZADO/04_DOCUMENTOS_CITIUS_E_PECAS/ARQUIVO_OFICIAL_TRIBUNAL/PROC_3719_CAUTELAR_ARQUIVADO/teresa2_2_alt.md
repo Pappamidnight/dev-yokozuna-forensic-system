@@ -1,0 +1,81 @@
+---
+tipo: documento_convertido
+titulo: teresa2 (2)
+data_conversao: '2026-04-17 01:06:56'
+ficheiro_original: teresa2 (2).txt
+tags: []
+processo_ref: null
+compliance_validado: false
+status: recem_convertido
+---
+
+**FATOS**
+**FATOS**
+
+21. Após contactar João Pedro por telefone, fui informado que teria de me mudar no prazo de duas semanas, sem qualquer fundamento legal, aviso prévio formal ou esclarecimento sobre as razões dessa exigência, aumentando ainda mais a pressão psicológica, instabilidade e sentimento de insegurança relativamente à minha situação habitacional.
+
+**DEFESA**
+
+XVII. A exigência de mudança em apenas duas semanas, comunicada por João Pedro sem qualquer base documental ou legal, caracteriza abuso, coação e cerceamento dos meus direitos, agravando a insegurança e instabilidade criadas pelo grupo.
+
+**REQUERIMENTO**
+
+- Que seja reconhecida a nulidade de qualquer exigência de mudança sem base legal ou documental, salvaguardando o meu direito à estabilidade habitacional e proteção contra pressões e abusos.
+33. Fui forçado a realizar a mudança durante uma hora de almoço, sob forte pressão emocional, com Filipe chorando compulsivamente ("baba e ranho") na tentativa de me convencer a sair imediatamente, agravando o ambiente de coação, instabilidade e abuso.
+
+34. Manifestei por diversas vezes minha perplexidade e incompreensão em relação às relações e decisões tomadas pelos envolvidos, sublinhando que tudo o que ocorreu é extremamente difícil de aceitar, não apenas pela falta de transparência, mas também pela ausência de lógica ou justiça nas ações praticadas contra mim.
+
+35. Ao contrário do que Filipe alegava anteriormente — que não tinha dinheiro para nada —, durante o período em que fui obrigado a mudar de residência, fiquei saltando de hotel em hotel e Filipe acabou pagando €1.000 mais os valores dos hotéis, comprovando que ele ficou efetivamente com o dinheiro envolvido, agravando ainda mais o prejuízo e a injustiça sofrida por mim.
+
+36. Ressaltei por diversas vezes que, se existem dívidas entre os envolvidos e Filipe, fui eu quem efetuou os pagamentos, cabendo exclusivamente a mim resolver minha vida e buscar a regularização da minha situação, não podendo ser responsabilizado ou prejudicado por questões internas entre terceiros.
+
+37. Registo expressamente que recusei vir para este prédio, nunca tendo sido minha vontade ou opção residir aqui, o que reforça ainda mais o caráter forçado e não consentido da minha mudança.
+
+38. Sempre fui eu quem tratou de problemas como percevejos e demais questões de manutenção no imóvel, evidenciando minha responsabilidade e cuidado com o espaço, motivo pelo qual não queria me sujeitar a esta situação de instabilidade, imposição e falta de reconhecimento.
+
+39. Fui obrigado a mudar de residência, sem o meu consentimento, por imposição dos envolvidos, o que caracteriza coação, abuso e violação dos meus direitos enquanto legítimo ocupante do imóvel.
+
+40. Nessa altura, deixei de atuar como consultora e abri um laboratório de análises clínicas de Covid, buscando novas alternativas profissionais e tentando recomeçar minha vida diante das dificuldades e instabilidades causadas por toda a situação.
+
+41. O endereço relevante para os acontecimentos e para a presente defesa é Rua do Norte, nº 20, devendo ser considerado para a correta identificação do imóvel e da situação em análise.
+
+42. O bairro Alto continuou a tomar decisões que recaíram diretamente sobre mim, deixando-me numa posição de ter que "agarrar" o que foi imposto, evidenciando a ausência de alternativas e a continuidade da pressão e falta de autonomia sobre minha situação.
+
+---
+
+**DEFESA E FUNDAMENTOS**
+
+XXVII. O episódio da mudança forçada durante o horário de almoço, sob intensa pressão emocional de Filipe, caracteriza coação, abuso psicológico e total desrespeito à minha dignidade e direitos enquanto ocupante legítimo do imóvel.
+
+XXVIII. O sentimento de perplexidade e dificuldade de aceitação dos fatos reforça o impacto emocional, psicológico e jurídico que toda a situação me causou, evidenciando a necessidade de tutela judicial para restaurar meus direitos e garantir justiça.
+
+XXIX. O fato de Filipe ter recursos para pagar hotéis e €1.000 durante minha mudança, apesar de alegar anteriormente falta de dinheiro, reforça a manipulação dos fatos e a apropriação injusta dos valores que eram devidos a mim, agravando o prejuízo e a violação dos meus direitos.
+
+XXX. A responsabilidade pelas dívidas já quitadas por mim deve ser reconhecida, não podendo ser transferida ou utilizada como justificativa para coações, abusos ou prejuízos à minha situação pessoal e patrimonial.
+
+XXXI. A ausência de vontade ou consentimento para residir neste prédio evidencia o caráter impositivo e abusivo da situação, agravando o prejuízo e a violação dos meus direitos.
+
+XXXII. Minha postura ativa na resolução de problemas e manutenção do imóvel reforça minha boa-fé e responsabilidade, tornando ainda mais injusto e prejudicial ser forçado a aceitar condições impostas, sem reconhecimento ou segurança.
+
+XXXIII. A obrigatoriedade da mudança, sem minha vontade, evidencia a falta de respeito à minha autonomia e reforça o caráter abusivo do processo, devendo ser considerado agravante na apreciação judicial.
+
+XXXIV. A decisão de abrir um laboratório de análises clínicas demonstra minha iniciativa de reconstruir minha trajetória profissional, evidenciando o impacto direto dos acontecimentos na necessidade de buscar novas oportunidades e superar os prejuízos causados.
+
+XXXV. A correta identificação do imóvel situado na Rua do Norte, nº 20 é essencial para a apreciação dos fatos e para a tutela dos meus direitos relacionados à posse, uso e eventuais prejuízos sofridos.
+
+XXXVI. O padrão de decisões impostas pelo bairro Alto, sem consideração à minha vontade ou circunstâncias, reforça o contexto de abuso, pressão e injustiça enfrentados, devendo ser considerado como elemento agravante na apreciação judicial.
+
+---
+
+**REQUERIMENTO**
+
+- Reconhecimento da coação emocional e do abuso praticado por Filipe durante o processo de mudança, como agravantes para tutela judicial dos meus direitos e reparação dos prejuízos sofridos.
+- Consideração do impacto emocional, da perplexidade e da dificuldade de aceitação da situação criada, como elementos relevantes para a apreciação judicial e para a reparação dos danos sofridos.
+- Reconhecimento do comportamento contraditório e injusto de Filipe, que apropriou-se dos valores e pagou despesas de hotel durante minha mudança, como agravante para assegurar a tutela judicial dos meus direitos e reparação integral dos danos sofridos.
+- Reconhecimento de que os pagamentos das dívidas foram efetuados por mim, e que a resolução de minha vida e regularização da situação habitacional dependem exclusivamente das decisões que me dizem respeito, sem interferência ou responsabilização por conflitos alheios entre terceiros.
+- Reconhecimento de que a minha mudança para este prédio não foi voluntária, mas sim resultado de imposição e ausência de alternativa, devendo ser considerado como agravante na apreciação judicial dos meus direitos e na reparação dos danos sofridos.
+- Reconhecimento do meu papel e responsabilidade na manutenção do imóvel, e da injustiça de ser obrigado a aceitar situações adversas e desrespeitosas, devendo ser considerado como agravante na apreciação dos meus direitos e na reparação dos danos sofridos.
+- Reconhecimento de que fui obrigado a mudar de residência contra a minha vontade, caracterizando coação e abuso, e requerendo tutela judicial para reparação dos danos sofridos e restabelecimento dos meus direitos.
+- Reconhecimento da mudança significativa em minha vida profissional, causada pelas circunstâncias impostas, como elemento relevante para apreciação judicial e para a reparação dos danos sofridos.
+- Reconhecimento do endereço Rua do Norte, nº 20 como referência para os fatos narrados e para os direitos e obrigações discutidos nesta defesa.
+- Reconhecimento de que as decisões tomadas pelo bairro Alto recaíram sobre mim de forma impositiva, sem alternativa, agravando os prejuízos sofridos e justificando a necessidade de tutela judicial para reparação e proteção dos meus direitos.

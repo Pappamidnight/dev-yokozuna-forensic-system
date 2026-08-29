@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Forense Master de Fotografias - Dev Yokozuna</title>
+    <style>
+        :root {
+            --bg-main: #090d16;
+            --bg-card: #111827;
+            --bg-card-alt: #1f2937;
+            --accent-cyan: #06b6d4;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
+            --text-light: #f9fafb;
+            --text-dim: #9ca3af;
+            --border-line: #374151;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background: var(--bg-main); color: var(--text-light); min-height: 100vh; padding: 24px; }
+        .container { max-width: 1400px; margin: 0 auto; }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border-line);
+        }
+
+        .logo-box h1 { font-size: 24px; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 10px; }
+        .logo-box p { font-size: 13px; color: var(--text-dim); margin-top: 4px; }
+
+        .count-badge {
+            background: rgba(6, 182, 212, 0.12);
+            color: var(--accent-cyan);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            border: 1px solid rgba(6, 182, 212, 0.3);
+        }
+
+        /* Filter & Search Bar */
+        .controls-bar {
+            background: var(--bg-card);
+            border: 1px solid var(--border-line);
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 24px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-input {
+            flex: 1;
+            min-width: 250px;
+            padding: 12px 16px;
+            background: #0d121e;
+            border: 1px solid var(--border-line);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .search-input:focus { border-color: var(--accent-cyan); }
+
+        .chip-btn {
+            background: var(--bg-card-alt);
+            color: var(--text-dim);
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.2s;
+        }
+        .chip-btn:hover, .chip-btn.active {
+            background: rgba(6, 182, 212, 0.2);
+            color: var(--accent-cyan);
+            border-color: var(--accent-cyan);
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 16px;
+        }
+
+        .img-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-line);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.2s, border-color 0.2s;
+            cursor: pointer;
+        }
+        .img-card:hover { transform: translateY(-3px); border-color: var(--accent-cyan); }
+
+        .img-thumb {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background: #000;
+            display: block;
+        }
+
+        .img-info {
+            padding: 12px;
+        }
+        .img-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+            word-break: break-all;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .img-meta {
+            font-size: 11px;
+            color: var(--text-dim);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Lightbox Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(8px);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .modal.active { display: flex; }
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            background: var(--bg-card);
+            border: 1px solid var(--border-line);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .modal-img {
+            max-width: 100%;
+            max-height: 75vh;
+            object-fit: contain;
+            background: #000;
+        }
+        .modal-footer {
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-card-alt);
+        }
+        .close-btn {
+            background: #ef4444;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="logo-box">
+            <h1>Galeria Forense Master de Fotografias</h1>
+            <p>Vistorias Técnicas, Provas Materiais, Anexos Judiciais e Imagens WhatsApp</p>
+        </div>
+        <div class="count-badge" id="photo-counter">20.445 FOTOGRAFIAS CONSOLIDADAS</div>
+    </header>
+
+    <!-- Barra de Controlos e Filtros -->
+    <div class="controls-bar">
+        <input type="text" id="filter-input" class="search-input" placeholder="Pesquisar por nome de ficheiro (Ex: WA, Samsung, 2024, 2025, IMG, Vistoria)..." onkeyup="filterGallery()">
+        <button class="chip-btn active" onclick="applyTag('')">Todas (20.445)</button>
+        <button class="chip-btn" onclick="applyTag('WA')">WhatsApp</button>
+        <button class="chip-btn" onclick="applyTag('2025')">Ano 2025</button>
+        <button class="chip-btn" onclick="applyTag('2024')">Ano 2024</button>
+        <button class="chip-btn" onclick="applyTag('2026')">Ano 2026</button>
+        <button class="chip-btn" onclick="applyTag('IMG')">Câmaras / Fotos</button>
+    </div>
+
+    <!-- Grelha de Imagens -->
+    <div class="gallery-grid" id="gallery-container">
+        <!-- Renderizado dinamicamente -->
+    </div>
+</div>
+
+<!-- Modal Lightbox -->
+<div class="modal" id="img-modal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <img src="" id="modal-img-tag" class="modal-img" alt="Zoom">
+        <div class="modal-footer">
+            <div>
+                <div id="modal-img-name" style="font-weight:700; font-size:13px;"></div>
+                <div style="font-size:11px; color:var(--accent-cyan); font-family:monospace; margin-top:3px;" id="modal-img-path"></div>
+            </div>
+            <button class="close-btn" onclick="closeModal()">Fechar</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Carregamento dinamico das imagens da pasta centralizada
+    async function loadGalleryImages() {
+        try {
+            const resp = await fetch('/api/search?q=.jpg&proc=');
+            const data = await resp.json();
+            renderImages(data.results);
+        } catch (e) {
+            console.log("A carregar imagens locais...");
+        }
+    }
+
+    function renderImages(items) {
+        const container = document.getElementById('gallery-container');
+        if (!container) return;
+        container.innerHTML = '';
+
+        items.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'img-card';
+            const imgUrl = `../02_DADOS_ESTRUTURADOS/GALERIA_FOTOS_COMPLETA/${item.filename}`;
+            card.onclick = () => openModal(imgUrl, item.filename, item.filepath);
+            card.innerHTML = `
+                <img src="${imgUrl}" class="img-thumb" alt="${item.filename}" loading="lazy">
+                <div class="img-info">
+                    <div class="img-title" title="${item.filename}">${item.filename}</div>
+                    <div class="img-meta">
+                        <span>Forense</span>
+                        <span>${(item.size_bytes / 1024).toFixed(1)} KB</span>
+                    </div>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+    }
+
+    function filterGallery() {
+        const val = document.getElementById('filter-input').value.toLowerCase();
+        const cards = document.querySelectorAll('.img-card');
+        let count = 0;
+        cards.forEach(c => {
+            const txt = c.innerText.toLowerCase();
+            if (txt.includes(val)) {
+                c.style.display = 'block';
+                count++;
+            } else {
+                c.style.display = 'none';
+            }
+        });
+        document.getElementById('photo-counter').innerText = `${count} FOTOGRAFIAS FILTRADAS`;
+    }
+
+    function applyTag(tag) {
+        document.getElementById('filter-input').value = tag;
+        filterGallery();
+    }
+
+    function openModal(src, name, path) {
+        document.getElementById('modal-img-tag').src = src;
+        document.getElementById('modal-img-name').innerText = name;
+        document.getElementById('modal-img-path').innerText = path || src;
+        document.getElementById('img-modal').classList.add('active');
+    }
+
+    function closeModal() {
+        document.getElementById('img-modal').classList.remove('active');
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
+
+    loadGalleryImages();
+</script>
+
+</body>
+</html>

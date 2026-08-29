@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-08-28T11:01:54.616193",
+  "total_scanned": 24900,
+  "total_inserted": 274,
+  "duplicates": 264,
+  "by_process": {
+    "GERAL_ACERVO": 271,
+    "CLUSTER_SOCIETARIO": 3
+  },
+  "by_category": {
+    "DOCUMENTO_GESTAO": 219,
+    "FINANCEIRO_COMPROVATIVO": 24,
+    "AUDIO_VOZ_WHATSAPP": 1,
+    "PECA_JUDICIAL_CITIUS": 3,
+    "IMAGEM_GERAL": 25,
+    "IMAGEM_WHATSAPP": 2
+  }
+}

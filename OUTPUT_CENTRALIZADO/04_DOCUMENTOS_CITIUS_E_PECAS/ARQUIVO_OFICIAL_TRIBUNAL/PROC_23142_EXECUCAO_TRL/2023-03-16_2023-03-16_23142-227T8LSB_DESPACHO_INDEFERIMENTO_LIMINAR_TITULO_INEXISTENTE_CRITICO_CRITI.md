@@ -1,0 +1,97 @@
+---
+tipo: documento_convertido
+titulo: 2023-03-16__2023-03-16__23142-227T8LSB__DESPACHO__INDEFERIMENTO_LIMINAR_TITULO_INEXISTENTE__CRITICO__CRITICO
+data_conversao: '2026-04-17 01:05:39'
+ficheiro_original: 2023-03-16__2023-03-16__23142-227T8LSB__DESPACHO__INDEFERIMENTO_LIMINAR_TITULO_INEXISTENTE__CRITICO__CRITICO.pdf
+tags: []
+processo_ref: null
+compliance_validado: false
+status: recem_convertido
+---
+
+<!-- Pagina 1 -->
+Processo: 23142/22.7T8LSB
+Referência: 419855940
+Tribunal Judicial da Comarca de Lisboa
+Juízo de Execução de Lisboa - Juiz 6
+Av. D. João II, Nº1.08.01 Edificio I
+1990-097 Lisboa
+Telef: 218642000 Fax: 211545196 Mail: lisboa.execucao@tribunais.org.pt
+Execução Sumária (Ag.Execução)
+Centenário Unipessoal, Lda. veio intentar contra Nuno
+Miguel Silva Duarte, Lisbon Experience - Administração de
+Imóveis, Lda, e Filipe José Rodrigues Delgado a presente
+execução para pagamento de quantia certa, dando à execução um
+documento que indica como sendo "outro documento autenticado",
+a saber documento intitulado "acordo de transmissão,
+confissão, pagamento de dívida e termo de fiança" anexo ao
+requerimento de 13.10.2022, com termo de autenticação com o
+seguinte conteúdo:
+"(…)
+(…)"
+*
+Nos termos do art. 10º, n.º 5, do Código do Processo
+Civil, Toda a execução tem por base um título, pelo qual se
+determinam o fim e os limites da acção executiva.
+Por seu turno, conforme resulta do art. 703º, n.º 1, do
+mesmo diploma legal, apenas podem servir de base à execução:
+a) as sentenças condenatórias; b) os documentos exarados ou
+autenticados por notário que importem constituição ou
+
+<!-- Pagina 2 -->
+Processo: 23142/22.7T8LSB
+Referência: 419855940
+Tribunal Judicial da Comarca de Lisboa
+Juízo de Execução de Lisboa - Juiz 6
+Av. D. João II, Nº1.08.01 Edificio I
+1990-097 Lisboa
+Telef: 218642000 Fax: 211545196 Mail: lisboa.execucao@tribunais.org.pt
+Execução Sumária (Ag.Execução)
+reconhecimento de qualquer obrigação; c) os títulos de
+crédito, ainda que mero quirógrafos; d) os documentos a que,
+por disposição especial, seja atribuída força executiva.
+Com efeito, as condições de validade formal dos actos são
+determinadas pela lei vigente à data em que os mesmos são
+praticados (art. 12.º, n.º 2 do Código Civil).
+Consideram-se autenticados os documentos particulares,
+desde que as partes confirmem o seu conteúdo perante notário
+ou outro serviço com competência para tal, nos termos do art.
+150.º e 151.º do Código do Notariado – cf. artº363º, nº3 do
+CC-. Na verdade, apenas são documentos autenticados,
+designadamente por notário, aqueles que, por ele não exarados,
+lhe são posteriormente levados para que, na presença das
+partes, ateste a conformidade da sua vontade com o respetivo
+conteúdo. Ou seja, necessário é que no termo de autenticação
+conste expressamente a declaração das partes de que leram o
+documento ou estão perfeitamente inteiradas do seu conteúdo e
+de que este conteúdo (do documento a autenticar) exprime a sua
+vontade – art 151º nº1 al. A)do Código do Notariado.
+Ora, no termo de autenticação apresentado em anexo ao
+requerimento executivo não consta a expressa declaração das
+partes de que o conteúdo do documento exprime a sua vontade,
+
+<!-- Pagina 3 -->
+Processo: 23142/22.7T8LSB
+Referência: 419855940
+Tribunal Judicial da Comarca de Lisboa
+Juízo de Execução de Lisboa - Juiz 6
+Av. D. João II, Nº1.08.01 Edificio I
+1990-097 Lisboa
+Telef: 218642000 Fax: 211545196 Mail: lisboa.execucao@tribunais.org.pt
+Execução Sumária (Ag.Execução)
+apenas se referindo que o termo foi lido e explicado o seu
+conteúdo.
+Ou seja, as declarações das partes são feitas por
+referência ao termo de autenticação em si mesmo e não por
+referência ao documento nele referido.
+Acresce que, conforme já se referiu, está em falta a
+declaração de que o conteúdo do referido documento corresponde
+à sua vontade.
+Assim, por falta de menções obrigatórias, as quais não se
+presumem, e consequentemente por falta de requisitos formais
+de autenticação, entende-se inexistir título executivo nos
+presentes autos, razão pela qual, ao abrigo do disposto no
+art.726º, nº2, al.a) do Código de Processo Civil, indefiro
+liminarmente o requerimento executivo.
+Custas pela exequente.
+Registe e notifique.

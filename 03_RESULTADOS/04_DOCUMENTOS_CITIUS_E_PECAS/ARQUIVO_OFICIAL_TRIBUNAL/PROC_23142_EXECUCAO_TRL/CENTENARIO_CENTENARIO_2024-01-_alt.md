@@ -1,0 +1,51 @@
+---
+tipo: documento_convertido
+titulo: CENTENARIO_2024-01-29_JUNCAO_PROCURACAO_AE_NUNO_RUA
+data_conversao: '2026-04-17 01:21:58'
+ficheiro_original: CENTENARIO_2024-01-29_JUNCAO_PROCURACAO_AE_NUNO_RUA.pdf
+tags: []
+status: recem_convertido
+---
+
+<!-- Pagina 1 -->
+Peça Processual entregue por via electrónica na data e hora indicadas junto da assinatura electrónica do
+subscritor, aposta nos termos previstos na Portaria n.º 280/2013, de 26 de Agosto
+JUNÇÃO DE
+PROCURAÇÃO/SUBSTABELECIME
+REFª: 47803024
+NTO (CC AO AE)
+MANDATÁRIO SUBSCRITOR
+Nome: Nuno Ferreira Leite Rua Cédula: 21990l
+Morada: R. das Gaivotas em Terra, n.º10, Portas D e E Pq. das Nações
+Localidade:
+Assinado por: Nuno Ferreira Leite
+Código Postal: 1990-601 Lisboa Rua
+Ordem dos Advogados
+Telefone: 216 055 589 Email: nflrua@flrp.pt Data: Segunda-feira, 2024-01-29
+15:15:33 (UTC+00:00 Europe/Lisbon)
+Fax: 216 055 592 NIF 220718890Notificações entre Mandatários nos termos do artigo 221º C.P.C.
+Nome: Mandatário - Varela de Matos
+Notificado por via Electrónica
+CARACTERIZAÇÃO
+Finalidade: Juntar a Processo Existente
+Tribunal Competente: Lisboa - Tribunal Judicial da Comarca de Lisboa
+Unidade Orgânica: Juízo de Execução de Lisboa - Juiz 1 Nº Processo:23142/22.7T8LSB
+EXECUTADO
+Nome/Designação: Nuno Miguel Silva Duarte
+Morada: Rua José Gamboa, N.º 4, 3.º F
+Código Postal: 1600-902 LISBOA
+Telefone: Fax: NIF 254048382BI: 137310919 Data Nascimento: Estado Civil:
+INTERVENIENTES ASSOCIADOS
+Mandatário
+Nuno Ferreira Leite Rua
+DOCUMENTOS
+Junção de procuração/substabelecimento (CC ao AE)
+Documento 0,50 MB (1 pág.) 34DB60A633C26CCBE4D4CACD36F381281A6D81486815D18F63477D266D79240C
+Doc. 1 - Procuração forense
+Procuração Forense
+Documento 0,13 MB (1 pág.) A1DC052C2412F646A2950D3BB5E5FE29DA2B1A69D660ED14715DEDEE0894DB94
+Por forma a garantir a integridade dos documentos introduzidos, foi implementado um sistema de cálculo de resumo criptográfico de cada
+documento, tendo como base o algoritmo de hashing ''SHA-256''. O resumo criptográfico de cada documento é representado por um conjunto de
+64 caracteres, permitindo a verificação e validação da integridade do documento a que se refere.
+Documento processado por computador Junção de procuração/substabelecimento (CC ao AE) REFª.
+47803024 Pág. 1/1

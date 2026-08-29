@@ -1,0 +1,64 @@
+---
+tipo: ACTA
+data: 2026-03-17
+processo: 23142/22.7T8LSB + 33934
+processo_nome: CENTENARIO
+tribunal: null
+fonte: documento-oficial
+ficheiro: "SEM_DATA__obter-conteudo-documento__v06.pdf"
+extensao: .pdf
+tamanho_kb: 123.8
+texto_extraido: true
+caminho_original: "C:/Users/nunom/Desktop/CENTENARIOTRL\18_OUTROS\SEM_DATA__obter-conteudo-documento__v06.pdf"
+tags:
+  - tipo/acta
+  - processo/centenario
+  - ano/2026
+---
+
+# ACTA -- SEM_DATA__obter-conteudo-documento__v06
+
+**Data:** 2026-03-17
+**Tipo:** ACTA
+**Processo:** 23142/22.7T8LSB + 33934 (Execucao Centenario)
+**Resumo:** COMPROVATIVO
+**Ficheiro:** `SEM_DATA__obter-conteudo-documento__v06.pdf` (123.8 KB)
+**Origem:** `C:/Users/nunom/Desktop/CENTENARIOTRL\18_OUTROS\SEM_DATA__obter-conteudo-documento__v06.pdf`
+
+> Voltar: [[_INDICE_CENTENARIO]] | [[HOME]]
+
+## Conteudo
+
+```
+COMPROVATIVO 
+Pagamento ao Estado
+Numero da Operação
+1753724166
+Nome de Titular
+PAGAMENTO DE SERVICOS
+Tipo de Cartão
+Débito
+Este documento tem caráter meramente informativo, não podendo ser utilizado para efeitos contabilísticos ou fiscais.
+PrintId: hElyRRJlx1MRaE9V2VKcquyIF0J7w9gLTvQI9t2hCqg6kTifE1c5xLy+mxrvfouYGHcf73wAMzz/I5idIJtB8Gzfbd4cqq2L
+CONTA DE ORIGEM
+Titular
+JOAO NABAIS & ASS SOC ADVOGADOS RL
+NIF: 503098817
+Numero do Cartão:
+xxxxxxxxxxxx4341
+IBAN
+PT50003300004530746393005
+Referência 
+702.280.100.634.524 
+Nome da Entidade 
+Taxas da Justiça 
+MONTANTE 
+102,00 EUR 
+DATA DA OPERAÇÃO 
+Terça-feira, 17 de Março de 2026 
+Dados adicionais
+Documento obtido por internet impresso em 17-03-2026 12:12:37 hora de Portugal Continental.
+Banco Comercial Português S.A. com sede em Praça D. João I, 28, Porto - 4000-295 Porto com o Capital Social de 3.000.000.000,00 Euros, matriculado na Conservatória do Registo Comercial do Porto sob o número único de matrícula 
+e de identificação fiscal 501 525 882.
+Página 1 de 1
+```

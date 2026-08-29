@@ -30,6 +30,16 @@ Archive/
 Sandbox/
 Labs/
 INGESTAO-*/
+backendgoogleinges/data/
+**/GALERIA_FOTOS_COMPLETA/
+*.jpg
+*.jpeg
+*.png
+*.mp4
+*.mov
+*.bin
+*.opus
+*.m4a
 
 # Python Caches & Virtual Environments
 __pycache__/

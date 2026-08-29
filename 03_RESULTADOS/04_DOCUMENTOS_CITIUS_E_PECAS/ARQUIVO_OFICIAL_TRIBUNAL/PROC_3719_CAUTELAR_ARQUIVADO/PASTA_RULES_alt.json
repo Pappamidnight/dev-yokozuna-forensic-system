@@ -1,0 +1,16 @@
+{
+  "nome": "Processo 3719-25.0T8LSB",
+  "politica": "preservar",
+  "lixo": [
+    "*.tmp",
+    "~$*",
+    "Thumbs.db",
+    "desktop.ini"
+  ],
+  "arquivar_dias": 0,
+  "destinos": {},
+  "excecoes": [
+    "*"
+  ],
+  "notas_ia": "PRESERVAR. Conteudo juridico do processo 3719-25.0T8LSB. Apenas relatorio de higiene; nunca mover/apagar provas."
+}

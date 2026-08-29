@@ -1,0 +1,55 @@
+---
+tipo: DESPACHO
+data: 2023-04-21
+processo: 23142/22.7T8LSB + 33934
+processo_nome: CENTENARIO
+tribunal: null
+fonte: documento-oficial
+ficheiro: "SEM_DATA____v07.pdf"
+extensao: .pdf
+tamanho_kb: 56.8
+texto_extraido: true
+caminho_original: "C:/Users/nunom/Desktop/CENTENARIOTRL\18_OUTROS\SEM_DATA____v07.pdf"
+tags:
+  - tipo/despacho
+  - processo/centenario
+  - ano/2023
+---
+
+# DESPACHO -- SEM_DATA____v07
+
+**Data:** 2023-04-21
+**Tipo:** DESPACHO
+**Processo:** 23142/22.7T8LSB + 33934 (Execucao Centenario)
+**Resumo:** Processo: 23142/22.7T8LSB
+**Ficheiro:** `SEM_DATA____v07.pdf` (56.8 KB)
+**Origem:** `C:/Users/nunom/Desktop/CENTENARIOTRL\18_OUTROS\SEM_DATA____v07.pdf`
+
+> Voltar: [[_INDICE_CENTENARIO]] | [[HOME]]
+
+## Conteudo
+
+```
+Processo: 23142/22.7T8LSB 
+Referência: 425248302 
+Tribunal Judicial da Comarca de Lisboa 
+Juízo de Execução de Lisboa - Juiz 6 
+Av. D. João II, Nº1.08.01 Edifício I 
+1990-097 Lisboa 
+Telef: 218642000 Fax: 211545196 Mail: lisboa.execucao@tribunais.org.pt 
+ 
+ 
+Execução Sumária (Ag.Execução) 
+ 
+Por lapso, no despacho de 20.04.2023 que admitiu o recurso interposto por requerimento de 
+12.04.2023 (recurso da decisão de indeferimento liminar do requerimento executivo) não se ordenou a 
+citação dos executados tanto para os termos do recurso como para os da causa, conforme impõe o art 
+641 nº7 do CPC, pelo que cumpre ora proceder em conformidade, determinando-se, pois, a citação dos 
+executados tanto para os termos do recurso como para os da causa. 
+Notifique. 
+ 
+ 
+ 
+Assinado em 21-04-2023, por
+Carla Matos, Juiz de Direito
+```
