@@ -1,0 +1,60 @@
+{
+  "id": "05_filtros",
+  "classificacao": "consultas",
+  "prioridade": 2,
+  "descricao": "Filtros combinados",
+  "filtros": [
+    {
+      "nome": "Ficheiros muito grandes",
+      "query": "size:>1gb"
+    },
+    {
+      "nome": "Videos grandes",
+      "query": "video: size:>100mb"
+    },
+    {
+      "nome": "Imagens grandes",
+      "query": "image: size:>10mb"
+    },
+    {
+      "nome": "PDFs grandes",
+      "query": "ext:pdf size:>10mb"
+    },
+    {
+      "nome": "Ficheiros de sistema",
+      "query": "attrib:S size:>500mb"
+    },
+    {
+      "nome": "Ocultos grandes",
+      "query": "attrib:H size:>500mb"
+    },
+    {
+      "nome": "Modificados recentemente",
+      "query": "dm:lastweek size:>100mb"
+    },
+    {
+      "nome": "Antigos e grandes",
+      "query": "dm:<2020 size:>500mb"
+    },
+    {
+      "nome": "Duplicados de video",
+      "query": "video: dupe:size"
+    },
+    {
+      "nome": "Duplicados de imagem",
+      "query": "image: dupe:name;size"
+    },
+    {
+      "nome": "Fora do santuario",
+      "query": "dupe-from:\"C:\\ACERVO\\storage\\\""
+    },
+    {
+      "nome": "Temporarios",
+      "query": "ext:tmp;temp;bak;old size:>10mb"
+    },
+    {
+      "nome": "Downloads incompletos",
+      "query": "ext:crdownload;part"
+    }
+  ]
+}

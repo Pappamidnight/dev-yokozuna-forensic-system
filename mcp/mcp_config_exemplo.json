@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "everything": {
+      "command": "C:\\ACERVO\\bin\\es.exe",
+      "args": ["-instance", "1.5a", "-json"],
+      "description": "Everything CLI via es.exe",
+      "disabled": true,
+      "nota": "Este e um exemplo. Para MCP real, instala everything-mcp ou Everything MCP Server."
+    }
+  }
+}

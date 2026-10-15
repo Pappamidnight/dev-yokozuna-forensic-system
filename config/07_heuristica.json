@@ -1,0 +1,54 @@
+{
+  "id": "07_heuristica",
+  "classificacao": "heuristica",
+  "prioridade": 4,
+  "descricao": "Regras heuristicas para agrupar variantes",
+  "regras": {
+    "video": [
+      {
+        "nome": "Series S01E01",
+        "regex": "^(.*?)[. _\\-](?:s\\d{2}e\\d{2})"
+      },
+      {
+        "nome": "Resolucao",
+        "regex": "^(.*?)[. _\\-](?:1080p|720p|4k|2160p)"
+      },
+      {
+        "nome": "Codec",
+        "regex": "^(.*?)[. _\\-](?:x264|x265|hevc)"
+      }
+    ],
+    "imagem": [
+      {
+        "nome": "Fotos de camera",
+        "regex": "^(.*?)[. _\\-](?:img|dsc|pxl)[_\\-]?\\d+"
+      },
+      {
+        "nome": "Fotos com data",
+        "regex": "^(.*?)[. _\\-](\\d{4})[. _\\-](\\d{2})[. _\\-](\\d{2})"
+      }
+    ],
+    "audio": [
+      {
+        "nome": "Faixas numeradas",
+        "regex": "^(.*?)[. _\\-]\\d{2}[. _\\-]"
+      },
+      {
+        "nome": "Com feat.",
+        "regex": "^(.*?)[. _\\-](?:feat|ft)\\."
+      }
+    ],
+    "pdf": [
+      {
+        "nome": "Com versao",
+        "regex": "^(.*?)[. _\\-](?:v\\d+|final|draft)"
+      }
+    ],
+    "markdown": [
+      {
+        "nome": "Ficheiros comuns",
+        "regex": "^(.*?)[. _\\-](?:readme|changelog|license|todo)"
+      }
+    ]
+  }
+}

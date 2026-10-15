@@ -1,0 +1,103 @@
+{
+  "id": "12_classificacao",
+  "classificacao": "meta",
+  "prioridade": 1,
+  "descricao": "Classificacao de ficheiros",
+  "tipos": {
+    "sistema": {
+      "path": "C:\\Windows",
+      "risco": "intocavel"
+    },
+    "pagefile_hiberfil": {
+      "ficheiros": [
+        "pagefile.sys",
+        "hiberfil.sys"
+      ],
+      "risco": "gerido pelo Windows"
+    },
+    "virtualizacao": {
+      "extensoes": [
+        ".vhdx",
+        ".vhd"
+      ],
+      "risco": "dados de VM"
+    },
+    "media_video": {
+      "extensoes": [
+        ".mp4",
+        ".mkv",
+        ".avi",
+        ".mov"
+      ]
+    },
+    "media_imagem": {
+      "extensoes": [
+        ".jpg",
+        ".jpeg",
+        ".png",
+        ".gif",
+        ".webp"
+      ]
+    },
+    "media_audio": {
+      "extensoes": [
+        ".mp3",
+        ".flac",
+        ".wav",
+        ".m4a"
+      ]
+    },
+    "documentos": {
+      "extensoes": [
+        ".pdf",
+        ".doc",
+        ".docx",
+        ".xls",
+        ".xlsx"
+      ]
+    },
+    "codigo": {
+      "extensoes": [
+        ".py",
+        ".js",
+        ".ts",
+        ".ps1",
+        ".sh",
+        ".bat"
+      ]
+    },
+    "dados": {
+      "extensoes": [
+        ".json",
+        ".yaml",
+        ".csv",
+        ".db",
+        ".duckdb"
+      ]
+    },
+    "backups": {
+      "extensoes": [
+        ".zip",
+        ".rar",
+        ".7z",
+        ".bak",
+        ".old"
+      ]
+    },
+    "temporarios": {
+      "extensoes": [
+        ".tmp",
+        ".temp",
+        ".crdownload",
+        ".part"
+      ]
+    }
+  },
+  "zonas_sensiveis": {
+    "C:\\Windows": "intocavel",
+    "C:\\Program Files": "intocavel",
+    "C:\\ProgramData": "cuidado",
+    "C:\\$Recycle.Bin": "intocavel",
+    "C:\\System Volume Information": "intocavel"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "Filename": "C:\\caminho\\ficheiro.pdf",
+  "Size": 123456,
+  "DateModified": "2024-04-05T10:00:00",
+  "DateCreated": "2024-04-05T10:00:00",
+  "Attributes": "A",
+  "Tags": "processo15547;peticao",
+  "Comment": "Acao reivindicativa",
+  "Rating": 5,
+  "Category": "principal",
+  "Custom": {
+    "caso": "15547",
+    "fase": "inicial",
+    "responsavel": "Nuno"
+  }
+}

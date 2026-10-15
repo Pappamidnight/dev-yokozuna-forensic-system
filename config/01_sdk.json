@@ -1,0 +1,19 @@
+{
+  "id": "01_sdk",
+  "classificacao": "infraestrutura",
+  "prioridade": 1,
+  "descricao": "Configuracao do Everything SDK (DLL)",
+  "config": {
+    "dll_path": "C:\\ACERVO\\bin\\SDK\\Everything64.dll",
+    "versao_minima": "3.0.0.9",
+    "instancia": "1.5a",
+    "requer_gui_a_correr": true,
+    "timeout_ipc_ms": 30000
+  },
+  "verificacao": "python -c \"import ctypes; ctypes.WinDLL(r'C:\\ACERVO\\bin\\SDK\\Everything64.dll'); print('OK')\"",
+  "limitacoes": [
+    "SDK3 so funciona com Everything 1.5.0.1397a ou superior",
+    "Requer Everything GUI a correr",
+    "Se Everything correr como admin, IPC v3 falha em versoes < 1.5.0.1419b"
+  ]
+}

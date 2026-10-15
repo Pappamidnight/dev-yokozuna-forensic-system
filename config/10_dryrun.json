@@ -1,0 +1,15 @@
+{
+  "id": "10_dryrun",
+  "classificacao": "workflow",
+  "prioridade": 1,
+  "descricao": "Regras de dry-run obrigatorio",
+  "regras": [
+    "Sempre --dry-run antes de --executar",
+    "Sempre --raiz-only \"C:\\ACERVO\" para evitar mexer em G:\\",
+    "Exportar EFU antes de qualquer operacao de escrita",
+    "Nunca apagar — so mover para quarentena",
+    "Nunca shutil.move entre drives",
+    "Validar por hash no santuario",
+    "Uma raiz de cada vez"
+  ]
+}

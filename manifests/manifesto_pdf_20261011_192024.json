@@ -1,0 +1,17 @@
+{
+  "tipo": "pdf",
+  "data": "2026-10-11 19:20:24",
+  "filtro": "tipo=pdf | rank<=1",
+  "regs_total": 24945,
+  "grupos": 7601,
+  "originais": 7601,
+  "duplicados": 17344,
+  "espaco_recuperavel_bytes": 19908056143,
+  "espaco_recuperavel_humano": "18.54 GB",
+  "heuristica_ativa": false,
+  "heuristica_grupos": 0,
+  "outputs": {
+    "originais": "C:\\ACERVO\\logs\\filtros\\originais_pdf_20261011_192024.csv",
+    "duplicados": "C:\\ACERVO\\logs\\filtros\\duplicados_pdf_20261011_192024.csv"
+  }
+}

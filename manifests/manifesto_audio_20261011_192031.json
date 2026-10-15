@@ -1,0 +1,17 @@
+{
+  "tipo": "audio",
+  "data": "2026-10-11 19:20:31",
+  "filtro": "tipo=audio",
+  "regs_total": 211,
+  "grupos": 61,
+  "originais": 61,
+  "duplicados": 150,
+  "espaco_recuperavel_bytes": 15931071293,
+  "espaco_recuperavel_humano": "14.84 GB",
+  "heuristica_ativa": false,
+  "heuristica_grupos": 0,
+  "outputs": {
+    "originais": "C:\\ACERVO\\logs\\filtros\\originais_audio_20261011_192031.csv",
+    "duplicados": "C:\\ACERVO\\logs\\filtros\\duplicados_audio_20261011_192031.csv"
+  }
+}

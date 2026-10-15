@@ -1,0 +1,10 @@
+s3:
+  endpoint: "http://localhost:9000"
+  region: "us-east-1"
+  bucket: "acervo"
+  access_key: "acervo"
+  secret_key: "acervo_dev"
+  prefixos:
+    files: "files/"
+    refutacoes: "refutacoes/"
+    backups: "backups/"

@@ -1,0 +1,29 @@
+{
+  "id": "02_mcp",
+  "classificacao": "integracao_llm",
+  "prioridade": 3,
+  "descricao": "Servidores MCP",
+  "implementacoes": [
+    {
+      "nome": "everything-mcp (in-process)",
+      "autor": "Jotaro",
+      "repositorio": "https://github.com/Jotaro2025/everything-mcp",
+      "tipo": "plugin_dll",
+      "dll": "everything_mcp64.dll"
+    },
+    {
+      "nome": "Everything MCP Server",
+      "autor": "Josephur",
+      "tipo": "processo_externo",
+      "depende_de": "HTTP Server plugin ativo",
+      "config": {
+        "host": "localhost",
+        "porta": 80
+      }
+    }
+  ],
+  "config_global": {
+    "path_plugins_everything": "C:\\Program Files\\Everything\\Plugins",
+    "config_ini": "Plugins-1.5a.ini"
+  }
+}

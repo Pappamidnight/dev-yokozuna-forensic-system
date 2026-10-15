@@ -1,0 +1,18 @@
+{
+  "id": "04_cli_es",
+  "classificacao": "motor_principal",
+  "prioridade": 1,
+  "descricao": "Configuracao do es.exe",
+  "versao": "1.1.0.38",
+  "instalacao": {
+    "path_binario": "C:\\ACERVO\\bin\\es.exe",
+    "instancia": "1.5a"
+  },
+  "exemplos": {
+    "contar_pdfs": "es.exe -instance 1.5a -get-result-count \"ext:pdf\"",
+    "tamanho_videos": "es.exe -instance 1.5a -get-total-size \"video:\"",
+    "top_20_videos": "es.exe -instance 1.5a -n 20 -size -dm -sort size-descending \"video:\"",
+    "duplicados": "es.exe -instance 1.5a \"video: dupe:size\"",
+    "exportar_json": "es.exe -instance 1.5a -json -n 1000 \"ext:pdf\" > pdfs.json"
+  }
+}

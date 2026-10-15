@@ -1,0 +1,3 @@
+logging:
+  nivel: "info"
+  path: "C:/ACERVO/logs"

@@ -1,0 +1,57 @@
+{
+  "id": "06_dicionarios",
+  "classificacao": "heuristica",
+  "prioridade": 4,
+  "descricao": "Dicionarios de sinonimos",
+  "localizacao_ficheiro": "%APPDATA%\\Everything\\Synonyms-1.5a.txt",
+  "formato": "termo;sinonimo1;sinonimo2",
+  "dicionarios": {
+    "color": [
+      "colour",
+      "cor",
+      "cores",
+      "colors"
+    ],
+    "brasil": [
+      "brazil",
+      "br"
+    ],
+    "config": [
+      "configuration",
+      "cfg",
+      "settings"
+    ],
+    "imagem": [
+      "image",
+      "img",
+      "picture",
+      "photo"
+    ],
+    "video": [
+      "movie",
+      "film",
+      "clip"
+    ],
+    "documento": [
+      "document",
+      "doc",
+      "file"
+    ],
+    "manual": [
+      "guide",
+      "handbook"
+    ],
+    "temp": [
+      "temporario",
+      "tmp"
+    ],
+    "backup": [
+      "bk",
+      "bkp"
+    ],
+    "relatorio": [
+      "report",
+      "reports"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "tipo": "texto",
+  "data": "2026-10-11 19:20:37",
+  "filtro": "tipo=texto",
+  "regs_total": 8182,
+  "grupos": 1885,
+  "originais": 1885,
+  "duplicados": 6297,
+  "espaco_recuperavel_bytes": 759442238,
+  "espaco_recuperavel_humano": "724.26 MB",
+  "heuristica_ativa": false,
+  "heuristica_grupos": 0,
+  "outputs": {
+    "originais": "C:\\ACERVO\\logs\\filtros\\originais_texto_20261011_192037.csv",
+    "duplicados": "C:\\ACERVO\\logs\\filtros\\duplicados_texto_20261011_192037.csv"
+  }
+}

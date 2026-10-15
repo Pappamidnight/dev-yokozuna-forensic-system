@@ -1,0 +1,17 @@
+{
+  "tipo": "video",
+  "data": "2026-10-11 19:20:30",
+  "filtro": "tipo=video",
+  "regs_total": 5167,
+  "grupos": 684,
+  "originais": 684,
+  "duplicados": 4483,
+  "espaco_recuperavel_bytes": 73639031718,
+  "espaco_recuperavel_humano": "68.58 GB",
+  "heuristica_ativa": false,
+  "heuristica_grupos": 0,
+  "outputs": {
+    "originais": "C:\\ACERVO\\logs\\filtros\\originais_video_20261011_192030.csv",
+    "duplicados": "C:\\ACERVO\\logs\\filtros\\duplicados_video_20261011_192030.csv"
+  }
+}

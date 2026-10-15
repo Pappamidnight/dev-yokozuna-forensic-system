@@ -1,0 +1,20 @@
+[package]
+name = "acervo-files"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+acervo-core = { path = "../../crates/core" }
+acervo-db = { path = "../../crates/db" }
+acervo-events = { path = "../../crates/events" }
+acervo-storage = { path = "../../crates/storage" }
+acervo-proto = { path = "../../crates/proto" }
+tokio.workspace = true
+axum.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+rusqlite.workspace = true
+anyhow.workspace = true
+tracing.workspace = true
+chrono.workspace = true
+uuid.workspace = true

@@ -1,0 +1,34 @@
+{
+  "id": "11_consultas",
+  "classificacao": "consultas",
+  "prioridade": 2,
+  "descricao": "Consultas frequentes",
+  "consultas": {
+    "por_tamanho": {
+      "maior_1gb": "size:>1gb",
+      "vazio": "size:0"
+    },
+    "por_tipo": {
+      "videos": "video:",
+      "imagens": "image:",
+      "pdfs": "ext:pdf"
+    },
+    "por_data": {
+      "hoje": "dm:today",
+      "esta_semana": "dm:lastweek",
+      "antigos": "dm:<2020"
+    },
+    "por_atributo": {
+      "ocultos": "attrib:H",
+      "sistema": "attrib:S"
+    },
+    "duplicados": {
+      "por_nome": "dupe:name",
+      "por_tamanho": "dupe:size",
+      "por_nome_tamanho": "dupe:name;size"
+    },
+    "fantasmas": {
+      "geral": "!EXISTSONDISK($filename:)"
+    }
+  }
+}

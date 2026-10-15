@@ -1,0 +1,17 @@
+{
+  "tipo": "markdown",
+  "data": "2026-10-11 19:20:40",
+  "filtro": "tipo=markdown",
+  "regs_total": 13621,
+  "grupos": 10764,
+  "originais": 10764,
+  "duplicados": 2857,
+  "espaco_recuperavel_bytes": 66426204,
+  "espaco_recuperavel_humano": "63.35 MB",
+  "heuristica_ativa": false,
+  "heuristica_grupos": 0,
+  "outputs": {
+    "originais": "C:\\ACERVO\\logs\\filtros\\originais_markdown_20261011_192040.csv",
+    "duplicados": "C:\\ACERVO\\logs\\filtros\\duplicados_markdown_20261011_192040.csv"
+  }
+}

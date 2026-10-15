@@ -1,0 +1,33 @@
+{
+  "id": "09_workflows",
+  "classificacao": "workflow",
+  "prioridade": 2,
+  "descricao": "Workflows prontos",
+  "workflows": [
+    {
+      "nome": "inventario_inicial",
+      "passos": [
+        "es.exe -instance 1.5a -get-result-count \"path:\\\"C:\\ACERVO\\\"\"",
+        "es.exe -instance 1.5a -get-total-size \"path:\\\"C:\\ACERVO\\\"\""
+      ]
+    },
+    {
+      "nome": "analise_espaco",
+      "passos": [
+        "es.exe -instance 1.5a -n 50 -size -dm -sort size-descending \"size:>100mb\"",
+        "es.exe -instance 1.5a -get-total-size \"video:\"",
+        "es.exe -instance 1.5a -get-total-size \"image:\"",
+        "es.exe -instance 1.5a -get-total-size \"audio:\""
+      ]
+    },
+    {
+      "nome": "deteccao_duplicados",
+      "passos": [
+        "es.exe -instance 1.5a -n 200 \"video: dupe:size\"",
+        "es.exe -instance 1.5a -n 200 \"image: dupe:name;size\"",
+        "es.exe -instance 1.5a -n 200 \"audio: dupe:size\"",
+        "es.exe -instance 1.5a -n 200 \"ext:pdf dupe:name;size\""
+      ]
+    }
+  ]
+}
