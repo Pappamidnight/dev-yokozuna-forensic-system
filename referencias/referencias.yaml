@@ -1,0 +1,91 @@
+versao: "1.0.0"
+data: "2026-10-12T11:19:13.304805"
+
+processo_principal:
+  numero: "15547/26.0T8LSB"
+  tribunal: "Juizo Central Civel de Lisboa"
+  juiz: "Juiz 17"
+
+entidades:
+  autora:
+    nome: "Maria Teresa Castro Bangueses Ribeiro"
+    aliases_errados:
+      - "CENTENARIO DA PALMEIRA - GESTAO DE IMOVEIS, S.A."
+      - "Centenario da Palmeira - Gestao de Imoveis, S.A."
+      - "Centenario da Palmeira"
+  reu:
+    nome: "Nuno Miguel Silva Duarte"
+  procurador:
+    nome: "Filipe"
+  advogado:
+    nome: "Antonio Neto"
+  testemunha_arrendatario:
+    nome: "Ingo Schallig"
+
+documentos:
+  SRC-15547:
+    tipo: PECA_PROCESSUAL
+    descricao: "Peticao Inicial"
+  SRC-3719:
+    tipo: DECISAO_JUDICIAL
+    descricao: "Sentenca e Acordao"
+  SRC-WA-FILIPE:
+    tipo: COMUNICACAO
+    descricao: "Mensagens WhatsApp Filipe"
+  SRC-TRANSFER:
+    tipo: COMPROVATIVO_FINANCEIRO
+    descricao: "Captura transferencia"
+
+normas:
+  CC:
+    nome: "Codigo Civil"
+    artigos: [227, 334, 342, 429, 496, 564, 621, 625, 754, 755, 1038, 1311]
+  CPC:
+    nome: "Codigo de Processo Civil"
+    artigos: [297, 302, 429, 542, 576, 621, 625]
+
+refutacoes:
+  AL-01:
+    risco: BAIXO
+    classificacao: CONFIRMADA_QUANTO_A_TITULARIDADE_E_CONFIGURACAO
+  AL-02:
+    risco: MEDIO
+    classificacao: PARCIAL_CONTRATOS_PRIMITIVOS_OMISSOS
+  AL-03:
+    risco: ALTO
+    classificacao: CONTRADITA_PELA_CLAUSULA_F_E_PROC_3719
+  AL-04:
+    risco: BAIXO
+    classificacao: CONTRATOS_ESTRANHOS_AO_4_ANDAR
+  AL-05:
+    risco: CRITICO
+    classificacao: FATURAS_REFEREM_OUTROS_PREDIOS_E_ANDARES
+  AL-06:
+    risco: CRITICO
+    classificacao: CONTRADITA_POR_DECISAO_TRANSITADA_EM_3719
+  AL-07:
+    risco: MEDIO
+    classificacao: RECUSA_LEGITIMA_CONDICIONADA_A_PAGAMENTO
+  AL-08:
+    risco: MEDIO
+    classificacao: EXCECAO_PERENTORIA_DIREITO_DE_RETENCAO
+  AL-09:
+    risco: BAIXO
+    classificacao: RISCO_NAO_INDICIADO_CORTE_DE_AGUA_ABUSIVO
+  AL-10:
+    risco: ALTO
+    classificacao: ERRO_ARITMETICO_E_FALTA_DE_PROVA_DO_DANO
+  AL-11:
+    risco: BAIXO
+    classificacao: MERA_ALEGACAO_SEM_SUPORTE_CLINICO
+  AL-12:
+    risco: BAIXO
+    classificacao: SUBVALORIZACAO_DA_FRACAO_REIVINDICADA
+
+estatisticas:
+  total_refutacoes: 12
+  riscos:
+    CRITICO: 2
+    ALTO: 2
+    MEDIO: 3
+    BAIXO: 5

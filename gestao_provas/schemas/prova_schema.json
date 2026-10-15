@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Prova Documental - ACERVO Caso 15547",
+  "description": "Schema para validar provas documentais. Cada prova deve ter tipo, tema, fonte, ficheiro e contexto.",
+  "type": "object",
+  "required": ["id", "tipo", "tema", "classificacao", "fonte", "ficheiro"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Identificador unico da prova (ex: PRV-001)",
+      "pattern": "^PRV-[0-9]{3,4}$"
+    },
+    "tipo": {
+      "type": "string",
+      "description": "Tipo de prova",
+      "enum": [
+        "documento",
+        "email",
+        "whatsapp",
+        "captura",
+        "fatura",
+        "contrato",
+        "sentenca",
+        "testemunho",
+        "foto",
+        "video",
+        "audio"
+      ]
+    },
+    "tema": {
+      "type": "string",
+      "description": "Tema principal da prova"
+    },
+    "classificacao": {
+      "type": "string",
+      "description": "Classificacao da prova face a alegacao",
+      "enum": ["CONFIRMADA", "PARCIAL", "CONTRADITA", "LACUNA", "NEUTRA"]
+    },
+    "fonte": {
+      "type": "object",
+      "required": ["ficheiro"],
+      "properties": {
+        "ficheiro": {"type": "string", "description": "Caminho do ficheiro original"},
+        "sha256": {"type": "string", "description": "Hash SHA-256 do ficheiro"},
+        "pagina": {"type": "string", "description": "Pagina/localizador (ex: pp. 23, doc. 3)"},
+        "autor": {"type": "string", "description": "Quem criou/submeteu"},
+        "data": {"type": "string", "format": "date", "description": "Data do documento"}
+      }
+    },
+    "ficheiro": {
+      "type": "object",
+      "required": ["nome"],
+      "properties": {
+        "nome": {"type": "string"},
+        "caminho": {"type": "string"},
+        "tamanho": {"type": "integer"},
+        "extensao": {"type": "string"}
+      }
+    },
+    "alegacoes_relacionadas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {"type": "string"},
+          "tipo": {"type": "string", "enum": ["suporte", "contradicao", "contexto"]},
+          "extrato": {"type": "string", "description": "Texto citado do documento"}
+        }
+      }
+    },
+    "entidades": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Entidades mencionadas (Nuno Duarte, Lisbon Experience, etc)"
+    },
+    "unidades": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Unidades mencionadas (31-4, 31-5, etc)"
+    },
+    "conceitos": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Conceitos juridicos (retencao, reivindicacao, risco de incendio)"
+    },
+    "peso": {
+      "type": "string",
+      "enum": ["critico", "importante", "contexto", "irrelevante"],
+      "description": "Relevancia da prova para o caso"
+    },
+    "notas": {
+      "type": "string",
+      "description": "Notas do mandatario ou analista"
+    }
+  }
+}

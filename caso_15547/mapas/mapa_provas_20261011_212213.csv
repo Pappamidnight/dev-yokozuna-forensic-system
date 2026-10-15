@@ -1,0 +1,30 @@
+cat,chave,n,bytes,h,query
+por_processo,15547,16666,13880117206,12.93 GB,15547
+por_processo,3719,40561,10608321429,9.88 GB,3719
+por_processo,20203,5670,2639964066,2.46 GB,20203
+por_processo,10153,10348,2096011727,1.95 GB,10153
+por_processo,10153-A,3,7368,7.20 KB,10153-A
+por_processo,23142,37694,4836458769,4.50 GB,23142
+por_tipo,peticao,0,18446744073709551615,16384.00 PB,ext:pdf peticao
+por_tipo,sentenca,0,18446744073709551615,16384.00 PB,ext:pdf sentenca
+por_tipo,acordao,0,18446744073709551615,16384.00 PB,ext:pdf acordao
+por_tipo,contrato,0,18446744073709551615,16384.00 PB,ext:pdf contrato
+por_tipo,aditamento,0,18446744073709551615,16384.00 PB,ext:pdf aditamento
+por_tipo,fatura,0,18446744073709551615,16384.00 PB,ext:pdf fatura
+por_tipo,email,0,18446744073709551615,16384.00 PB,ext:eml OR ext:msg OR ext:txt email
+por_tipo,whatsapp,0,18446744073709551615,16384.00 PB,ext:odt whatsapp OR ext:txt whatsapp
+por_tipo,captura,0,18446744073709551615,16384.00 PB,ext:jpg captura OR ext:png captura
+por_tipo,e_redes,0,18446744073709551615,16384.00 PB,E-REDES OR EREDES OR e-redes
+por_entidade,maria,25,7206,7.04 KB,Maria Teresa
+por_entidade,nuno,1603,406573635,387.74 MB,Nuno Duarte
+por_entidade,lea,245,56082493,53.48 MB,Lisbon Experience
+por_entidade,filipe,1399,194694453,185.68 MB,Filipe Delgado
+por_entidade,joao,0,18446744073709551615,16384.00 PB,Joao Cerqueira
+por_entidade,ingo,0,18446744073709551615,16384.00 PB,Ingo Schallig
+por_entidade,unicre,2132,105039567,100.17 MB,Unicre
+por_entidade,centenario,7234,14972354549,13.94 GB,Centenario
+por_unidade,31-4,0,18446744073709551615,16384.00 PB,"regex:""31[-_. ]?4"""
+por_unidade,31-5,0,18446744073709551615,16384.00 PB,"regex:""31[-_. ]?5"""
+por_unidade,31-1,0,18446744073709551615,16384.00 PB,"regex:""31[-_. ]?1"""
+por_unidade,33-2,0,18446744073709551615,16384.00 PB,"regex:""33[-_. ]?2"""
+por_unidade,20-3,0,18446744073709551615,16384.00 PB,"regex:""20[-_. ]?3"""

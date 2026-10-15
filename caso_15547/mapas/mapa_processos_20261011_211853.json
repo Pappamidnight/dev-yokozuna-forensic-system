@@ -1,0 +1,121 @@
+{
+  "data": "2026-10-11T21:18:52.439617",
+  "processos": {
+    "15547": {
+      "nome_completo": "15547-26.0T8LSB",
+      "tipo": "principal",
+      "acao": "Reivindicacao",
+      "tribunal": "Lisboa (LSB)",
+      "autora": "Maria Teresa Castro Bangueses Ribeiro",
+      "reu": "Nuno Miguel Silva Duarte",
+      "estado": "Em curso",
+      "resumo": "Acao reivindicativa da propriedade do 31-4",
+      "relacao_15547": "Processo principal",
+      "documentos_chave": [
+        "Peticao (pp. 1-10)",
+        "Doc. 3: aditamento revogacao 05/04/2024",
+        "Doc. 4: aditamento divida (105.633,75 EUR)",
+        "Doc. 5: contrato 31-1 (2.250 EUR)",
+        "Doc. 6: contrato Ingo 31-5 (2.500 EUR)",
+        "Docs. 7-8: faturas obras",
+        "Doc. 9: email E-REDES"
+      ],
+      "ficheiros": 16666,
+      "bytes": 13880117206,
+      "tamanho": "12.93 GB"
+    },
+    "3719": {
+      "nome_completo": "3719-25.0T8LSB",
+      "tipo": "conexo",
+      "acao": "Providencia cautelar",
+      "tribunal": "Lisboa (LSB)",
+      "autora": "Maria Teresa Castro Bangueses Ribeiro",
+      "reu": "Nuno Miguel Silva Duarte",
+      "estado": "Improcedente (27/01/2026), confirmada em recurso (16/04/2026)",
+      "resumo": "Cautelar de restituicao do 31-4; indeferida",
+      "relacao_15547": "Decisao cautelar que antecipa factos",
+      "documentos_chave": [
+        "Sentenca 27/01/2026 (pp. 293-302)",
+        "Acordao Relacao 16/04/2026 (pp. 442-468)",
+        "Factos indiciados: residencia desde 2021, LEA sabia, Nuno condicionou saida ao pagamento",
+        "Factos NAO indiciados: descoberta junho 2024, hostilidade, perigo eletrico, arrendamento frustrado"
+      ],
+      "ficheiros": 40561,
+      "bytes": 10608321429,
+      "tamanho": "9.88 GB"
+    },
+    "20203": {
+      "nome_completo": "20203-22.6T8LSB",
+      "tipo": "conexo",
+      "acao": "Acao comercial",
+      "tribunal": "Lisboa (LSB)",
+      "autor": "Unicre - Instituicao Financeira de Credito, S.A. (Redunicre)",
+      "reu": "Nuno Miguel Silva Duarte",
+      "estado": "Condenacao em 19/01/2024 (3.205,77 EUR + juros)",
+      "resumo": "Acao comercial ligada a Lisbon Experience Apartments",
+      "relacao_15547": "Nao prova ocupacao do 31-4 nem credito contra Autora",
+      "documentos_chave": [
+        "Peticao",
+        "Sentenca assinada 19/01/2024 (pp. 1-12)"
+      ],
+      "ficheiros": 5670,
+      "bytes": 2639964066,
+      "tamanho": "2.46 GB"
+    },
+    "10153": {
+      "nome_completo": "10153-24.7T8LSB",
+      "tipo": "execucao",
+      "acao": "Execucao",
+      "tribunal": "Lisboa (LSB)",
+      "exequente": "Unicre",
+      "executado": "Nuno Miguel Silva Duarte",
+      "estado": "Embargos admitidos em 23/10/2025, execucao suspensa",
+      "resumo": "Execucao da sentenca de 20203",
+      "relacao_15547": "Estado processual provisorio; nao e decisao sobre imovel ou retencao",
+      "documentos_chave": [
+        "Requerimento executivo (pp. 1-3)",
+        "Despacho admissao embargos e suspensao (pp. 138-139)"
+      ],
+      "ficheiros": 10348,
+      "bytes": 2096011727,
+      "tamanho": "1.95 GB"
+    },
+    "10153-A": {
+      "nome_completo": "10153-24.7T8LSB-A",
+      "tipo": "execucao",
+      "acao": "Embargos de executado",
+      "tribunal": "Lisboa (LSB)",
+      "exequente": "Unicre",
+      "executado": "Nuno Miguel Silva Duarte",
+      "estado": "Em curso (decisao final nao localizada na copia)",
+      "resumo": "Embargos a execucao 10153",
+      "relacao_15547": "Estado processual provisorio",
+      "documentos_chave": [
+        "Requerimento embargos",
+        "Resposta",
+        "Notificacoes (30 pp.)"
+      ],
+      "ficheiros": 3,
+      "bytes": 7368,
+      "tamanho": "7.20 KB"
+    },
+    "23142": {
+      "nome_completo": "23142-22.7T8LSB",
+      "tipo": "execucao",
+      "acao": "Execucao",
+      "tribunal": "Lisboa (LSB)",
+      "exequente": "Centenario Rent, Lda.",
+      "executado": "Nuno Miguel Silva Duarte",
+      "estado": "Improcedente em 19/03/2026 (maioria); voto de vencido",
+      "resumo": "Execucao relacionada com alegados servicos de limpeza/acordo; tambem envolve LEA",
+      "relacao_15547": "Execucao distinta; nao prova credito de Nuno contra Autora nem retencao sobre o 31-4",
+      "documentos_chave": [
+        "Requerimento executivo",
+        "Acordao Relacao de Lisboa 19/03/2026 (pp. 13-17)"
+      ],
+      "ficheiros": 37694,
+      "bytes": 4836458769,
+      "tamanho": "4.50 GB"
+    }
+  }
+}

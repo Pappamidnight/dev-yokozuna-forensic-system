@@ -1,0 +1,85 @@
+# ============================================================
+# PROVA: Conversa WhatsApp - Filipe Delgado
+# Data: 12-13/12/2023
+# Tema: Transferencia de 2.500 EUR e relacao Ingo
+# ============================================================
+
+id: PRV-002
+tipo: whatsapp
+tema: Conversa Filipe Delgado sobre transferencia 2.500 EUR
+classificacao: CONFIRMADA
+
+fonte:
+  ficheiro: C:\ACERVO\caso_15547\docs\Filipe_WhatsApp.odt
+  sha256: 333404e01a906b9d82ba50cda77b228f99c210d36d662226f39f5fd06a6cc6fc
+  pagina: "Mensagens 12/12/2023 20:51-21:13 e 13/12/2023 08:16-17:48"
+  autor: Filipe Delgado
+  data: 2023-12-13
+
+ficheiro:
+  nome: Filipe_WhatsApp.odt
+  caminho: C:\ACERVO\caso_15547\docs\Filipe_WhatsApp.odt
+  tamanho: 45678
+  extensao: .odt
+
+extratos:
+  - texto: "Ingo vai pagar"
+    data_hora: "12/12/2023 21:05"
+    autor: Filipe
+    significado: "Filipe confirma que Ingo vai pagar"
+  - texto: "Fara a transferencia"
+    data_hora: "12/12/2023 21:08"
+    autor: Filipe
+    significado: "Filipe compromete-se com a transferencia"
+  - texto: "O pagamento ainda nao chegou"
+    data_hora: "13/12/2023 08:16"
+    autor: Nuno
+    significado: "Nuno reclama que nao recebeu"
+  - texto: "Ja foi feito"
+    data_hora: "13/12/2023 17:48"
+    autor: Filipe
+    significado: "Filipe confirma que a transferencia foi feita"
+
+alegacoes_relacionadas:
+  - id: AL-04
+    tipo: suporte
+    extrato: "Transferencia de 2.500 EUR de 13/12/2023 corrobora conversa de Filipe"
+
+entidades:
+  - Filipe Delgado
+  - Nuno Duarte
+  - Ingo Schallig
+
+conceitos:
+  - transferencia
+  - pagamento
+  - relacao comercial
+
+peso: critico
+
+notas: |
+  Esta prova e CRITICA porque:
+    1. Mostra que Filipe estava envolvido na transferencia
+    2. Confirma que Ingo era o pagador
+    3. Mostra Nuno a reclamar o pagamento
+    4. Filipe confirma que foi feito
+  
+  PRESERVAR: nao editar, nao reenviar, guardar hash SHA-256.
+
+lacunas:
+  - Comprovativo bancario integral da transferencia
+  - Confirmacao do ordenante (Ingo)
+  - Identificacao da unidade a que respeita
+
+refutacao:
+  tese: "A conversa prova que Ingo pagou e Nuno recebeu, no contexto do 31-5 Direito"
+  argumentos:
+    - "Chat contemporaneo associa Ingo ao pagamento"
+    - "Filipe confirma que foi feito"
+    - "Nuno reclamou o pagamento"
+  contra_argumentos_esperados:
+    - "A conversa nao identifica a fracao (31-4 ou 31-5)"
+    - "A captura isolada da transferencia nao mostra ordenante"
+  prova_a_pedir:
+    - "Comprovativo bancario com IBAN do ordenante"
+    - "Contrato do Ingo (31-5 Direito) completo"

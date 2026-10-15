@@ -1,0 +1,53 @@
+{
+  "versao": "1.0.0",
+  "data": "2026-10-12T11:19:13.302509",
+  "documentos": {
+    "SRC-15547": {
+      "tipo": "PECA_PROCESSUAL",
+      "descricao": "Peticao Inicial",
+      "processo": "15547",
+      "localizadores": {
+        "pp. 1": "valor da causa 65.000 EUR",
+        "pp. 3-4": "caderneta e certidao (docs. 1 e 2)",
+        "p. 3": "contrato LEA",
+        "p. 9": "alegacoes de sofrimento",
+        "p. 10": "pedido de restituicao",
+        "pp. 22-24": "doc. 3 - aditamento 05/04/2024",
+        "pp. 26-30": "doc. 4 - divida 105.633,75 EUR",
+        "pp. 32-40": "doc. 5 - contrato 31-1",
+        "pp. 41-46": "doc. 6 - Ingo Schallig",
+        "pp. 47-48": "doc. 7 - Rua Palmeira 33, 2.o",
+        "pp. 49-50": "doc. 8 - Rua Palmeira 20, 3.o",
+        "p. 51": "doc. 9 - email E-REDES"
+      }
+    },
+    "SRC-3719": {
+      "tipo": "DECISAO_JUDICIAL",
+      "descricao": "Sentenca e Acordao",
+      "processo": "3719",
+      "localizadores": {
+        "pp. 293-294": "sentenca",
+        "pp. 294-298": "fundamentacao",
+        "p. 295": "rendas",
+        "pp. 297-298": "conclusoes",
+        "p. 453": "acordao",
+        "pp. 454-457": "fundamentos",
+        "pp. 467-468": "dispositivo"
+      }
+    },
+    "SRC-WA-FILIPE": {
+      "tipo": "COMUNICACAO",
+      "descricao": "Mensagens WhatsApp Filipe",
+      "localizadores": {
+        "12-13/12/2023": "mensagens"
+      }
+    },
+    "SRC-TRANSFER": {
+      "tipo": "COMPROVATIVO_FINANCEIRO",
+      "descricao": "Captura transferencia",
+      "localizadores": {
+        "13/12/2023": "captura"
+      }
+    }
+  }
+}

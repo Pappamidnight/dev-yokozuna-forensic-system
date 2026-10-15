@@ -1,0 +1,115 @@
+{
+  "data": "2026-10-11T21:22:07.325358",
+  "processos": {
+    "15547": {
+      "nome": "15547-26.0T8LSB",
+      "tipo": "principal",
+      "acao": "Reivindicacao",
+      "tribunal": "Lisboa",
+      "autora": "Maria Teresa",
+      "reu": "Nuno Duarte",
+      "estado": "Em curso",
+      "relacao": "Processo principal",
+      "docs": [
+        "Peticao pp.1-10",
+        "Doc.3 aditamento 05/04/2024",
+        "Doc.4 divida 105.633,75",
+        "Doc.5 contrato 31-1",
+        "Doc.6 contrato Ingo",
+        "Docs.7-8 faturas",
+        "Doc.9 E-REDES"
+      ],
+      "n": 16666,
+      "b": 13880117206,
+      "h": "12.93 GB"
+    },
+    "3719": {
+      "nome": "3719-25.0T8LSB",
+      "tipo": "conexo",
+      "acao": "Cautelar",
+      "tribunal": "Lisboa",
+      "autora": "Maria Teresa",
+      "reu": "Nuno Duarte",
+      "estado": "Improcedente 27/01/2026; confirmada 16/04/2026",
+      "relacao": "Decisao cautelar que antecipa factos",
+      "docs": [
+        "Sentenca 27/01/2026 pp.293-302",
+        "Acordao 16/04/2026 pp.442-468",
+        "Residencia desde 2021 (indiciado)",
+        "Surpresa junho 2024 (NAO indiciado)"
+      ],
+      "n": 40561,
+      "b": 10608321429,
+      "h": "9.88 GB"
+    },
+    "20203": {
+      "nome": "20203-22.6T8LSB",
+      "tipo": "conexo",
+      "acao": "Comercial",
+      "tribunal": "Lisboa",
+      "autor": "Unicre",
+      "reu": "Nuno Duarte",
+      "estado": "Condenacao 19/01/2024 (3.205,77 EUR)",
+      "relacao": "Nao prova ocupacao do 31-4",
+      "docs": [
+        "Peticao",
+        "Sentenca 19/01/2024 pp.1-12"
+      ],
+      "n": 5670,
+      "b": 2639964066,
+      "h": "2.46 GB"
+    },
+    "10153": {
+      "nome": "10153-24.7T8LSB",
+      "tipo": "execucao",
+      "acao": "Execucao",
+      "tribunal": "Lisboa",
+      "exequente": "Unicre",
+      "executado": "Nuno Duarte",
+      "estado": "Embargos admitidos 23/10/2025",
+      "relacao": "Estado provisorio",
+      "docs": [
+        "Requerimento pp.1-3",
+        "Despacho admissao pp.138-139"
+      ],
+      "n": 10348,
+      "b": 2096011727,
+      "h": "1.95 GB"
+    },
+    "10153-A": {
+      "nome": "10153-24.7T8LSB-A",
+      "tipo": "execucao",
+      "acao": "Embargos",
+      "tribunal": "Lisboa",
+      "exequente": "Unicre",
+      "executado": "Nuno Duarte",
+      "estado": "Em curso",
+      "relacao": "Estado provisorio",
+      "docs": [
+        "Requerimento embargos",
+        "Resposta",
+        "Notificacoes"
+      ],
+      "n": 3,
+      "b": 7368,
+      "h": "7.20 KB"
+    },
+    "23142": {
+      "nome": "23142-22.7T8LSB",
+      "tipo": "execucao",
+      "acao": "Execucao",
+      "tribunal": "Lisboa",
+      "exequente": "Centenario Rent",
+      "executado": "Nuno Duarte",
+      "estado": "Improcedente 19/03/2026 (maioria)",
+      "relacao": "Execucao distinta",
+      "docs": [
+        "Requerimento",
+        "Acordao 19/03/2026 pp.13-17"
+      ],
+      "n": 37694,
+      "b": 4836458769,
+      "h": "4.50 GB"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "versao": "1.0.0",
+  "data": "2026-10-12T11:19:13.300504",
+  "processo": "15547/26.0T8LSB",
+  "entidades": {
+    "AUTORA": {
+      "nome_correto": "Maria Teresa Castro Bangueses Ribeiro",
+      "aliases_errados": [
+        "CENTENARIO DA PALMEIRA - GESTAO DE IMOVEIS, S.A.",
+        "Centenario da Palmeira - Gestao de Imoveis, S.A.",
+        "Centenario da Palmeira"
+      ],
+      "papel": "Autora"
+    },
+    "REU": {
+      "nome_correto": "Nuno Miguel Silva Duarte",
+      "aliases_errados": [],
+      "papel": "Reu"
+    },
+    "PROCURADOR": {
+      "nome_correto": "Filipe",
+      "aliases_errados": [],
+      "papel": "Procurador da Autora"
+    },
+    "ADVOGADO_AUTORA": {
+      "nome_correto": "Antonio Neto",
+      "aliases_errados": [],
+      "papel": "Advogado"
+    },
+    "TESTEMUNHA_ARRENDATARIO": {
+      "nome_correto": "Ingo Schallig",
+      "aliases_errados": [],
+      "papel": "Arrendatario 31-5 Direito"
+    }
+  }
+}

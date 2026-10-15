@@ -1,0 +1,44 @@
+{
+  "versao": "1.0.0",
+  "data": "2026-10-11T22:00:00",
+  "caso": "15547",
+  "total_provas": 2,
+  "por_tipo": {
+    "email": 1,
+    "whatsapp": 1
+  },
+  "por_classificacao": {
+    "PARCIAL": 1,
+    "CONFIRMADA": 1
+  },
+  "provas": [
+    {
+      "id": "PRV-001",
+      "tipo": "email",
+      "tema": "Risco de incendio - instalacao eletrica clandestina",
+      "classificacao": "PARCIAL",
+      "peso": "contexto",
+      "ficheiro": "C:\\ACERVO\\caso_15547\\docs\\doc9_eredes_email.pdf",
+      "yaml": "C:\\ACERVO\\gestao_provas\\provas\\PRV-001_risco_incendio.yaml",
+      "alegacoes": ["AL-09", "AL-07"]
+    },
+    {
+      "id": "PRV-002",
+      "tipo": "whatsapp",
+      "tema": "Conversa Filipe Delgado sobre transferencia 2.500 EUR",
+      "classificacao": "CONFIRMADA",
+      "peso": "critico",
+      "ficheiro": "C:\\ACERVO\\caso_15547\\docs\\Filipe_WhatsApp.odt",
+      "yaml": "C:\\ACERVO\\gestao_provas\\provas\\PRV-002_filipe_whatsapp.yaml",
+      "alegacoes": ["AL-04"]
+    }
+  ],
+  "alegacoes_suportadas": {
+    "AL-04": ["PRV-002"],
+    "AL-07": ["PRV-001"],
+    "AL-09": ["PRV-001"]
+  },
+  "alegacoes_sem_prova": [
+    "AL-11"
+  ]
+}

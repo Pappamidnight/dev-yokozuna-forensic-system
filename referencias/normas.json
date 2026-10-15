@@ -1,0 +1,35 @@
+{
+  "versao": "1.0.0",
+  "data": "2026-10-12T11:19:13.302509",
+  "normas": {
+    "CC": {
+      "nome": "Codigo Civil",
+      "artigos": {
+        "227": "Culpa na formacao de contratos",
+        "334": "Abuso de direito",
+        "342": "Onus da prova",
+        "429": "Arrendamento - forma",
+        "496": "Dano moral",
+        "564": "Dano - calculo",
+        "621": "Autoridade do caso julgado",
+        "625": "Caso julgado",
+        "754": "Direito de retencao",
+        "755": "Requisitos da retencao",
+        "1038": "Subarrendamento",
+        "1311": "Acao de reivindicacao"
+      }
+    },
+    "CPC": {
+      "nome": "Codigo de Processo Civil",
+      "artigos": {
+        "297": "Valor da causa",
+        "302": "Correcao do valor",
+        "429": "Onus da prova",
+        "542": "Ma-fe processual",
+        "576": "Excecoes",
+        "621": "Autoridade do caso julgado",
+        "625": "Caso julgado"
+      }
+    }
+  }
+}

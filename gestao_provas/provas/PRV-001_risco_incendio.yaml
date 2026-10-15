@@ -1,0 +1,106 @@
+# ============================================================
+# PROVA: Risco de incendio no 31-4
+# Caso: 15547
+# Tipo: email + captura + testemunho
+# ============================================================
+
+id: PRV-001
+tipo: email
+tema: Risco de incendio - instalacao eletrica clandestina
+classificacao: PARCIAL
+
+fonte:
+  ficheiro: C:\ACERVO\caso_15547\docs\doc9_eredes_email.pdf
+  sha256: f6cc1655ce9bc44c0082d37288ff858b17d9e91df5f446c3b66a0cccae3d113a
+  pagina: "p. 51, doc. 9"
+  autor: Maria Teresa (submetido a E-REDES)
+  data: 2024-06-15
+
+ficheiro:
+  nome: doc9_eredes_email.pdf
+  caminho: C:\ACERVO\caso_15547\docs\doc9_eredes_email.pdf
+  tamanho: 245678
+  extensao: .pdf
+
+# ============================================================
+# EXTRATOS - o que o documento diz
+# ============================================================
+extratos:
+  - texto: "Submissao de pedido/report de fraude a E-REDES"
+    local: "p. 51"
+    significado: "Prova que alguem submeteu um pedido"
+  - texto: "Nao contem inspecao tecnica"
+    local: "p. 51"
+    significado: "NAO prova existencia, origem ou autoria da ligacao"
+
+# ============================================================
+# ALEGACOES RELACIONADAS
+# ============================================================
+alegacoes_relacionadas:
+  - id: AL-09
+    tipo: suporte
+    extrato: "Autora alega ligacao eletrica clandestina com risco de incendio"
+    forca: fraca
+  - id: AL-07
+    tipo: contexto
+    extrato: "Referencia a risco eletrico no contexto da recusa"
+
+# ============================================================
+# ENTIDADES / UNIDADES / CONCEITOS
+# ============================================================
+entidades:
+  - Maria Teresa
+  - E-REDES
+  - Nuno Duarte
+
+unidades:
+  - "31-4"
+
+conceitos:
+  - risco de incendio
+  - instalacao eletrica clandestina
+  - falta de contrato ativo
+
+# ============================================================
+# PESO E NOTAS
+# ============================================================
+peso: contexto
+
+notas: |
+  Doc. 9 prova que alguem submeteu um pedido a E-REDES.
+  NAO prova:
+    - existencia real de ligacao clandestina
+    - origem da energia
+    - autoria (nao imputavel a Nuno sem relatorio tecnico)
+    - risco concreto de incendio
+  
+  Em 3719, o tribunal nao deu por indiciado o risco de incendio.
+  Falta: relatorio tecnico E-REDES + inspecao + fotografias originais.
+
+# ============================================================
+# O QUE FALTA PARA SUSTENTAR A ALEGACAO
+# ============================================================
+lacunas:
+  - Relatorio tecnico E-REDES com identificacao da instalacao
+  - Inspecao no local (data, participantes, resultado)
+  - Fotografias originais com metadados (data, GPS)
+  - Identificacao da autoria (quem fez a ligacao)
+  - Prova de nexo causal entre ligacao e risco de incendio
+
+# ============================================================
+# ESTRATEGIA DE REFUTACAO
+# ============================================================
+refutacao:
+  tese: "Doc. 9 nao prova o que a Autora alega. E um pedido, nao uma prova."
+  argumentos:
+    - "Um pedido/report a E-REDES nao equivale a uma inspecao tecnica"
+    - "A decisao de 3719 nao indiciou o risco de incendio"
+    - "A origem da energia ficou desconhecida"
+    - "Nao ha relatorio tecnico nem identificacao de autoria"
+  contra_argumentos_esperados:
+    - "A Autora pode alegar que submeteu o pedido por seguranca"
+    - "A E-REDES pode ter confirmado por email (verificar)"
+  prova_a_pedir:
+    - "Relatorio tecnico E-REDES completo"
+    - "Registo da inspecao no local"
+    - "Email de resposta da E-REDES a Autora"

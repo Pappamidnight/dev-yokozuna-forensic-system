@@ -1,0 +1,211 @@
+{
+  "versao": "1.0.0",
+  "data": "2026-10-12T11:19:13.303917",
+  "processo": "15547/26.0T8LSB",
+  "autora": "Maria Teresa Castro Bangueses Ribeiro",
+  "reu": "Nuno Miguel Silva Duarte",
+  "total": 12,
+  "refutacoes": {
+    "AL-01": {
+      "artigos": "1-2",
+      "classificacao": "CONFIRMADA_QUANTO_A_TITULARIDADE_E_CONFIGURACAO",
+      "risco": "BAIXO",
+      "entidades": [
+        "AUTORA",
+        "REU"
+      ],
+      "documentos": [
+        "SRC-15547",
+        "SRC-3719"
+      ],
+      "normas": [
+        "CC.1311.2"
+      ]
+    },
+    "AL-02": {
+      "artigos": "3-4",
+      "classificacao": "PARCIAL_CONTRATOS_PRIMITIVOS_OMISSOS",
+      "risco": "MEDIO",
+      "entidades": [
+        "AUTORA",
+        "REU"
+      ],
+      "documentos": [
+        "SRC-15547"
+      ],
+      "normas": [
+        "CPC.429",
+        "CC.1038"
+      ]
+    },
+    "AL-03": {
+      "artigos": "5-6",
+      "classificacao": "CONTRADITA_PELA_CLAUSULA_F_E_PROC_3719",
+      "risco": "ALTO",
+      "entidades": [
+        "AUTORA",
+        "REU"
+      ],
+      "documentos": [
+        "SRC-15547",
+        "SRC-3719"
+      ],
+      "normas": [
+        "CC.227",
+        "CPC.625"
+      ]
+    },
+    "AL-04": {
+      "artigos": "7-8",
+      "classificacao": "CONTRATOS_ESTRANHOS_AO_4_ANDAR",
+      "risco": "BAIXO",
+      "entidades": [
+        "AUTORA",
+        "TESTEMUNHA_ARRENDATARIO"
+      ],
+      "documentos": [
+        "SRC-15547",
+        "SRC-3719"
+      ],
+      "normas": [
+        "CC.342",
+        "CC.564.2"
+      ]
+    },
+    "AL-05": {
+      "artigos": "9 e 16",
+      "classificacao": "FATURAS_REFEREM_OUTROS_PREDIOS_E_ANDARES",
+      "risco": "CRITICO",
+      "entidades": [
+        "AUTORA",
+        "REU"
+      ],
+      "documentos": [
+        "SRC-15547"
+      ],
+      "normas": [
+        "CPC.542"
+      ]
+    },
+    "AL-06": {
+      "artigos": "10",
+      "classificacao": "CONTRADITA_POR_DECISAO_TRANSITADA_EM_3719",
+      "risco": "CRITICO",
+      "entidades": [
+        "AUTORA",
+        "REU",
+        "PROCURADOR"
+      ],
+      "documentos": [
+        "SRC-3719",
+        "SRC-15547",
+        "SRC-WA-FILIPE",
+        "SRC-TRANSFER"
+      ],
+      "normas": [
+        "CPC.625",
+        "CPC.621"
+      ]
+    },
+    "AL-07": {
+      "artigos": "11-13",
+      "classificacao": "RECUSA_LEGITIMA_CONDICIONADA_A_PAGAMENTO",
+      "risco": "MEDIO",
+      "entidades": [
+        "AUTORA",
+        "REU",
+        "PROCURADOR"
+      ],
+      "documentos": [
+        "SRC-3719"
+      ],
+      "normas": [
+        "CC.334"
+      ]
+    },
+    "AL-08": {
+      "artigos": "14",
+      "classificacao": "EXCECAO_PERENTORIA_DIREITO_DE_RETENCAO",
+      "risco": "MEDIO",
+      "entidades": [
+        "AUTORA",
+        "REU"
+      ],
+      "documentos": [
+        "SRC-15547",
+        "SRC-3719"
+      ],
+      "normas": [
+        "CC.1311.2",
+        "CC.754",
+        "CC.755.1.d",
+        "CPC.576.3"
+      ]
+    },
+    "AL-09": {
+      "artigos": "15",
+      "classificacao": "RISCO_NAO_INDICIADO_CORTE_DE_AGUA_ABUSIVO",
+      "risco": "BAIXO",
+      "entidades": [
+        "AUTORA",
+        "REU"
+      ],
+      "documentos": [
+        "SRC-15547",
+        "SRC-3719"
+      ],
+      "normas": [
+        "CC.70"
+      ]
+    },
+    "AL-10": {
+      "artigos": "17",
+      "classificacao": "ERRO_ARITMETICO_E_FALTA_DE_PROVA_DO_DANO",
+      "risco": "ALTO",
+      "entidades": [
+        "AUTORA",
+        "REU",
+        "TESTEMUNHA_ARRENDATARIO"
+      ],
+      "documentos": [
+        "SRC-15547",
+        "SRC-3719"
+      ],
+      "normas": [
+        "CC.564.2",
+        "CC.342"
+      ]
+    },
+    "AL-11": {
+      "artigos": "18-19",
+      "classificacao": "MERA_ALEGACAO_SEM_SUPORTE_CLINICO",
+      "risco": "BAIXO",
+      "entidades": [
+        "AUTORA",
+        "REU"
+      ],
+      "documentos": [
+        "SRC-15547",
+        "SRC-3719"
+      ],
+      "normas": [
+        "CC.496.1"
+      ]
+    },
+    "AL-12": {
+      "artigos": "Pedido/Valor",
+      "classificacao": "SUBVALORIZACAO_DA_FRACAO_REIVINDICADA",
+      "risco": "BAIXO",
+      "entidades": [
+        "AUTORA"
+      ],
+      "documentos": [
+        "SRC-15547"
+      ],
+      "normas": [
+        "CPC.297.1",
+        "CPC.302"
+      ]
+    }
+  }
+}

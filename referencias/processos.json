@@ -1,0 +1,35 @@
+{
+  "versao": "1.0.0",
+  "data": "2026-10-12T11:19:13.302509",
+  "processos": {
+    "15547": {
+      "numero_completo": "15547/26.0T8LSB",
+      "tribunal": "Juizo Central Civel de Lisboa",
+      "juiz": "Juiz 17",
+      "papel": "Processo principal",
+      "autora": "Maria Teresa Castro Bangueses Ribeiro",
+      "reu": "Nuno Miguel Silva Duarte"
+    },
+    "3719": {
+      "numero_completo": "3719/24.0T8LSB",
+      "papel": "Processo relacionado",
+      "relevancia": "CRITICA",
+      "nota": "Decisao transitada em julgado"
+    },
+    "20203": {
+      "numero_completo": "20203/23.0T8LSB",
+      "papel": "Relacionado",
+      "relevancia": "MEDIA"
+    },
+    "10153": {
+      "numero_completo": "10153/22.0T8LSB",
+      "papel": "Relacionado",
+      "relevancia": "MEDIA"
+    },
+    "23142": {
+      "numero_completo": "23142/21.0T8LSB",
+      "papel": "Relacionado",
+      "relevancia": "BAIXA"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Indice de Provas - Caso 15547",
+  "description": "Indice consolidado de todas as provas do caso",
+  "type": "object",
+  "required": ["versao", "data", "caso", "provas"],
+  "properties": {
+    "versao": {"type": "string"},
+    "data": {"type": "string", "format": "date-time"},
+    "caso": {"type": "string"},
+    "total_provas": {"type": "integer"},
+    "por_tipo": {
+      "type": "object",
+      "additionalProperties": {"type": "integer"}
+    },
+    "por_classificacao": {
+      "type": "object",
+      "additionalProperties": {"type": "integer"}
+    },
+    "provas": {
+      "type": "array",
+      "items": {"$ref": "prova_schema.json"}
+    }
+  }
+}
