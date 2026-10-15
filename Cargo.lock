@@ -121,6 +121,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "acervo-forensic-ml"
+version = "0.1.0"
+dependencies = [
+ "acervo-core",
+ "anyhow",
+ "blake3",
+ "chrono",
+ "serde",
+ "serde_json",
+ "sha2",
+ "thiserror",
+ "tokio",
+ "uuid",
+]
+
+[[package]]
 name = "acervo-gateway"
 version = "0.1.0"
 dependencies = [
