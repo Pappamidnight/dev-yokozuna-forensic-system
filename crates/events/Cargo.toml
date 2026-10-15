@@ -1,0 +1,13 @@
+[package]
+name = "acervo-events"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+acervo-core = { path = "../core" }
+tokio.workspace = true
+tokio-stream.workspace = true
+async-stream.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tracing.workspace = true

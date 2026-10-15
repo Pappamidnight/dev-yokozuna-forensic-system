@@ -1,0 +1,15 @@
+[package]
+name = "acervo-core"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+serde_yaml.workspace = true
+chrono.workspace = true
+uuid.workspace = true
+thiserror.workspace = true
+anyhow.workspace = true
+config.workspace = true
+dotenvy.workspace = true
