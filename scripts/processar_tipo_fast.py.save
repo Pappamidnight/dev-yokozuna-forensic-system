@@ -1,0 +1,300 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+processar_tipo_fast.py
+Versao otimizada com multiprocessing + async I/O
+Uso: python processar_tipo_fast.py <tipo> [--workers N]
+"""
+
+import sys
+import os
+import json
+import csv
+import hashlib
+import time
+import argparse
+from pathlib import Path
+from datetime import datetime
+from collections import defaultdict
+from concurrent.futures import ProcessPoolExecutor, as_completed
+from multiprocessing import cpu_count
+
+# ============================================================
+# CONFIGURACAO
+# ============================================================
+BASE = Path(r"C:\ACERVO")
+INPUT_BASE = BASE / "logs" / "por_tipo"
+OUTPUT_BASE = BASE / "logs" / "deduplicado"
+
+# Numero de workers (default = cpu_count)
+DEFAULT_WORKERS = cpu_count()
+
+# Chunk size para leitura de ficheiros
+CHUNK_SIZE = 1024 * 1024  # 1 MB
+
+def log(msg):
+    ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print(f"[{ts}] {msg}", flush=True)
+
+def sha256_file(path_str):
+    """SHA-256 com resiliencia a erros de SO"""
+    h = hashlib.sha256()
+    try:
+        p = Path(path_str)
+        if not p.is_file():
+            return (path_str, None)
+        
+        # Verificar tamanho antes
+        size = p.stat().st_size
+        if size == 0:
+            return (path_str, 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855')
+        
+        with open(p, 'rb') as f:
+            for chunk in iter(lambda: f.read(CHUNK_SIZE), b''):
+                h.update(chunk)
+        return (path_str, h.hexdigest())
+    except (OSError, PermissionError, MemoryError):
+        return (path_str, None)
+
+def construir_caminho(item):
+    """Constroi caminho completo"""
+    path_pai = item.get('path', '')
+    nome = item.get('name', '')
+    if path_pai and nome:
+        return str(Path(path_pai) / nome)
+    return path_pai or nome
+
+def processar_grupo(args):
+    """
+    Processa um grupo de ficheiros candidatos (nome+size iguais).
+    Corre num worker do ProcessPoolExecutor.
+    Retorna (originais, duplicados, erros, bytes_recuperaveis)
+    """
+    chave, itens = args
+    
+    originais = []
+    duplicados = []
+    erros = 0
+    bytes_recuperaveis = 0
+    
+    # Calcular hashes de todos os itens do grupo
+    hashes = defaultdict(list)
+    
+    for item in itens:
+        caminho = construir_caminho(item)
+        if not caminho:
+            continue
+        
+        # Hash inline (dentro do worker)
+        h = hashlib.sha256()
+        try:
+            p = Path(caminho)
+            if not p.is_file():
+                erros += 1
+                continue
+            
+            with open(p, 'rb') as f:
+                for chunk in iter(lambda: f.read(CHUNK_SIZE), b''):
+                    h.update(chunk)
+            hex_hash = h.hexdigest()
+            
+            hashes[hex_hash].append({
+                'caminho': caminho,
+                'nome': item.get('name', ''),
+                'tamanho': int(item.get('size', '0')),
+                'data_mod': item.get('date_modified', '')
+            })
+        except (OSError, PermissionError, MemoryError):
+            erros += 1
+            continue
+    
+    # Processar hashes duplicados
+    for hex_hash, ficheiros in hashes.items():
+        if len(ficheiros) < 2:
+            continue
+        
+        # Ordenar por data (mais antigo primeiro)
+        ficheiros.sort(key=lambda x: x['data_mod'] if x['data_mod'] else '9')
+        
+        original = ficheiros[0]
+        originais.append({
+            'status': 'ORIGINAL',
+            'hash_sha256': hex_hash,
+            'nome': original['nome'],
+            'tamanho_bytes': original['tamanho'],
+            'caminho': original['caminho'],
+            'original_de': '',
+            'data_modificacao': original['data_mod']
+        })
+        
+        for dup in ficheiros[1:]:
+            duplicados.append({
+                'status': 'DUPLICADO',
+                'hash_sha256': hex_hash,
+                'nome': dup['nome'],
+                'tamanho_bytes': dup['tamanho'],
+                'caminho': dup['caminho'],
+                'original_de': original['caminho'],
+                'data_modificacao': dup['data_mod']
+            })
+            bytes_recuperaveis += dup['tamanho']
+    
+    return (originais, duplicados, erros, bytes_recuperaveis)
+
+def processar_tipo(tipo, workers=DEFAULT_WORKERS):
+    """Processa um tipo com multiprocessing"""
+    
+    log("=" * 70)
+    log(f"  PROCESSAR TIPO: {tipo.upper()}")
+    log(f"  Workers: {workers}")
+    log("=" * 70)
+    log("")
+    
+    inicio = time.time()
+    
+    # Paths
+    input_dir = INPUT_BASE / tipo
+    input_json = input_dir / f"candidatos_{tipo}.json"
+    
+    if not input_json.exists():
+        log(f"[ERRO] Nao existe: {input_json}")
+        return False
+    
+    output_dir = OUTPUT_BASE / tipo
+    output_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Ler JSON
+    log(f"[1/5] Ler {input_json.name}")
+    with open(input_json, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    
+    resultados = data.get('results', [])
+    total_candidatos = data.get('totalResults', 0)
+    log(f"  Total: {len(resultados)} itens")
+    log(f"  TotalResults: {total_candidatos}")
+    log("")
+    
+    # Agrupar por (nome + size)
+    log(f"[2/5] Agrupar por (nome + size)")
+    grupos = defaultdict(list)
+    
+    for item in resultados:
+        nome = item.get('name', '')
+        size = item.get('size', '0')
+        chave = f"{nome}|{size}"
+        grupos[chave].append(item)
+    
+    log(f"  Grupos totais: {len(grupos)}")
+    
+    # Filtrar grupos com >1 item
+    grupos_dup = [(k, v) for k, v in grupos.items() if len(v) > 1]
+    log(f"  Grupos com >1 item: {len(grupos_dup)}")
+    log("")
+    
+    # Multiprocessing
+    log(f"[3/5] Calcular SHA-256 (multiprocessing)")
+    log(f"  Workers: {workers}")
+    log(f"  A processar {len(grupos_dup)} grupos...")
+    
+    originais_total = []
+    duplicados_total = []
+    erros_total = 0
+    bytes_recuperaveis_total = 0
+    
+    # Batch size para reduzir overhead
+    batch_size = max(1, len(grupos_dup) // (workers * 4))
+    
+    with ProcessPoolExecutor(max_workers=workers) as executor:
+        futures = []
+        for grupo in grupos_dup:
+            futures.append(executor.submit(processar_grupo, grupo))
+        
+        concluidos = 0
+        for future in as_completed(futures):
+            try:
+                originais, duplicados, erros, bytes_rec = future.result()
+                originais_total.extend(originais)
+                duplicados_total.extend(duplicados)
+                erros_total += erros
+                bytes_recuperaveis_total += bytes_rec
+            except Exception as e:
+                erros_total += 1
+            
+            concluidos += 1
+            if concluidos % 500 == 0:
+                pct = round(concluidos / len(grupos_dup) * 100, 1)
+                log(f"  {concluidos}/{len(grupos_dup)} ({pct}%) | Orig: {len(originais_total)} | Dup: {len(duplicados_total)}")
+    
+    log("")
+    log(f"[4/5] Resultados")
+    log(f"  Originais: {len(originais_total)}")
+    log(f"  Duplicados: {len(duplicados_total)}")
+    log(f"  Erros: {erros_total}")
+    log(f"  Bytes recuperaveis: {bytes_recuperaveis_total / 1024 / 1024 / 1024:.2f} GB")
+    log("")
+    
+    # Guardar CSVs
+    log(f"[5/5] Guardar CSVs")
+    
+    campos = ['tipo', 'status', 'hash_sha256', 'nome', 'tamanho_bytes', 'caminho', 'original_de', 'data_modificacao']
+    
+    # Adicionar tipo em todos
+    for o in originais_total:
+        o['tipo'] = tipo
+    for d in duplicados_total:
+        d['tipo'] = tipo
+    
+    # CSV duplicados
+    if duplicados_total:
+        csv_dup = output_dir /         with open(csv_dup, 'w', newline='', encoding='utf-8-sig') as f:
+            w = csv.DictWriter(f, fieldnames=campos)
+            w.writeheader()
+            w.writerows(duplicados_total)
+        log(f"  [OK] {csv_dup}")
+    
+    # CSV originais
+    if originais_total:
+        csv_orig = output_dir / f"originais_{tipo}.csv"
+        with open(csv_orig, 'w', newline='', encoding='utf-8-sig') as f:
+            w = csv.DictWriter(f, fieldnames=campos)
+            w.writeheader()
+            w.writerows(originais_total)
+        log(f"  [OK] {csv_orig}")
+    
+    # Resumo JSON
+    duracao = round(time.time() - inicio, 2)
+    
+    resumo = {
+        'tipo': tipo,
+        'data': datetime.now().isoformat(),
+        'workers': workers,
+        'duracao_segundos': duracao,
+        'total_candidatos': total_candidatos,
+        'grupos_totais': len(grupos),
+        'grupos_dup': len(grupos_dup),
+        'originais': len(originais_total),
+        'duplicados': len(duplicados_total),
+        'erros': erros_total,
+        'bytes_recuperaveis': bytes_recuperaveis_total,
+        'gb_recuperaveis': round(bytes_recuperaveis_total / 1024 / 1024 / 1024, 2)
+    }
+    
+    json_resumo = output_dir / f"resumo_{tipo}.json"
+    with open(json_resumo, 'w', encoding='utf-8') as f:
+        json.dump(resumo, f, indent=2, ensure_ascii=False)
+    log(f"  [OK] {json_resumo}")
+    
+    log("")
+    log("=" * 70)
+    log(f"  CONCLUIDO: {tipo.upper()}")
+    log("=" * 70)
+    log(f"  Duracao: {duracao}s")
+    log(f"  Originais: {len(originais_total)}")
+    log(f"  Duplicados: {len(duplicados_total)}")
+    log(f"  Recuperavel: {bytes_recuperaveis_total / 1024 / 1024 / 1024:.2f} GB")
+    log("=" * 70)
+    
+    return True
+
+def main():
+    parser = argparse.ArgumentParser(description="Processar t

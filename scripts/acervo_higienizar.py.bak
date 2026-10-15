@@ -1,0 +1,276 @@
+# -*- coding: utf-8 -*-
+"""
+acervo_higienizar.py - Move duplicados para quarentena (NUNCA apaga)
+====================================================================
+Uso:
+    python acervo_higienizar.py --tipo pdf --dry-run
+    python acervo_higienizar.py --tipo pdf --executar
+    python acervo_higienizar.py --lixo --dry-run     # move so lixo (tmp, bak)
+    python acervo_higienizar.py --restaurar <batch>  # restaurar batch
+    python acervo_higienizar.py --listar             # listar batches
+"""
+import os
+import sys
+import json
+import shutil
+import argparse
+from datetime import datetime
+from collections import defaultdict
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from acervo_core import (
+    carregar_csv, gravar_csv, gravar_json, garantir_dirs, humano,
+    segregar, timestamp, agora_str, e_lixo, e_protegido,
+    TIPOS, DIR_QUAR, DIR_MANIF, Filtro,
+)
+
+
+def criar_batch_dir(tipo):
+    """Cria pasta de quarentena datada."""
+    ts = timestamp()
+    bdir = os.path.join(DIR_QUAR, tipo or "lixo", ts)
+    os.makedirs(bdir, exist_ok=True)
+    return bdir
+
+
+def mover_para_quarentena(caminho, batch_dir, preservar_estrutura=True):
+    """
+    Move 1 ficheiro para quarentena, preservando estrutura relativa.
+    Retorna (sucesso, destino).
+    """
+    if not os.path.isfile(caminho):
+        return False, None
+
+    if preservar_estrutura:
+        # Remover drive letter e caminho ACERVO
+        rel = caminho
+        for prefixo in [r"C:\ACERVO\\", "C:\\ACERVO\\", "\\\\?\\C:\\ACERVO\\"]:
+            if rel.startswith(prefixo):
+                rel = rel[len(prefixo):]
+                break
+        rel = rel.lstrip("\\/")
+        # Sanitizar
+        rel = rel.replace(":", "_")
+        destino = os.path.join(batch_dir, rel)
+    else:
+        destino = os.path.join(batch_dir, os.path.basename(caminho))
+
+    os.makedirs(os.path.dirname(destino), exist_ok=True)
+
+    # Evitar overwrite
+    if os.path.exists(destino):
+        base, ext = os.path.splitext(destino)
+        destino = f"{base}_{timestamp()}{ext}"
+
+    try:
+        shutil.move(caminho, destino)
+        return True, destino
+    except (OSError, PermissionError, shutil.Error) as e:
+        return False, str(e)
+
+
+def higienizar_tipo(tipo, dry_run=True, rank_max=None):
+    """Processa 1 tipo, move duplicados para quarentena."""
+    print()
+    print("=" * 88)
+    print(f"  HIGIENIZAR: {tipo.upper()}  |  {'DRY-RUN' if dry_run else 'EXECUTAR'}")
+    print(f"  Data: {agora_str()}")
+    print("=" * 88)
+
+    filtro = Filtro(tipo=tipo, rank_max=rank_max)
+    regs = carregar_csv(filtro, verbose=False)
+    if not regs:
+        print(f"  [VAZIO] Nenhum registo para '{tipo}'.")
+        return None
+
+    originais, duplicados, n_grupos = segregar(regs)
+    print(f"\n  Total: {len(regs):,}  |  Grupos: {n_grupos:,}  |  "
+          f"Orig: {len(originais):,}  |  Dup: {len(duplicados):,}")
+
+    if dry_run:
+        print(f"\n  [DRY-RUN] Nada sera movido.")
+        print(f"  Candidatos a quarentena: {len(duplicados):,}")
+        espaco = sum(r["tamanho"] for r in duplicados)
+        print(f"  Espaco recuperavel: {humano(espaco)}")
+        print(f"\n  Primeiros 10 candidatos:")
+        for r in duplicados[:10]:
+            print(f"    {r['caminho']}")
+        return {"dry_run": True, "duplicados": len(duplicados), "espaco": espaco}
+
+    # Executar
+    batch_dir = criar_batch_dir(tipo)
+    manifest_path = os.path.join(batch_dir, "_manifest.json")
+
+    movidos = 0
+    falhas = 0
+    espaco = 0
+    registos = []
+
+    print(f"\n  Batch: {batch_dir}")
+    print(f"  A mover {len(duplicados):,} ficheiros...\n")
+
+    for i, r in enumerate(duplicados, 1):
+        caminho = r["caminho"]
+        # Nunca mover ficheiros protegidos
+        if e_protegido(os.path.basename(caminho)):
+            continue
+        sucesso, destino = mover_para_quarentena(caminho, batch_dir)
+        if sucesso:
+            movidos += 1
+            espaco += r["tamanho"]
+            registos.append({
+                "origem": caminho,
+                "destino": destino,
+                "tamanho": r["tamanho"],
+                "tipo": tipo,
+            })
+        else:
+            falhas += 1
+
+        # Progresso a cada 100
+        if i % 100 == 0:
+            print(f"    ... {i:,}/{len(duplicados):,}  "
+                  f"(movidos={movidos:,} falhas={falhas:,})")
+
+    # Manifesto do batch
+    manifesto = {
+        "data": agora_str(),
+        "tipo": tipo,
+        "dry_run": False,
+        "batch_dir": batch_dir,
+        "movidos": movidos,
+        "falhas": falhas,
+        "espaco_recuperado_bytes": espaco,
+        "espaco_recuperado_humano": humano(espaco),
+        "ficheiros": registos,
+    }
+    gravar_json(manifest_path, manifesto)
+
+    print()
+    print("-" * 88)
+    print(f"  Movidos:   {movidos:>10,}")
+    print(f"  Falhas:    {falhas:>10,}")
+    print(f"  Espaco:    {humano(espaco):>10}")
+    print(f"  Manifesto: {manifest_path}")
+    print("-" * 88)
+
+    return manifesto
+
+
+def higienizar_lixo(dry_run=True):
+    """Move ficheiros de lixo (tmp, bak, ~$) do ACERVO."""
+    print()
+    print("=" * 88)
+    print(f"  HIGIENIZAR LIXO  |  {'DRY-RUN' if dry_run else 'EXECUTAR'}")
+    print("=" * 88)
+
+    raiz = r"C:\ACERVO"
+    candidatos = []
+    for dirpath, dirnames, filenames in os.walk(raiz, onerror=lambda e: None):
+        # Ignorar quarentena
+        if "quarentena" in dirpath.lower():
+            continue
+        for f in filenames:
+            if e_protegido(f):
+                continue
+            if e_lixo(f):
+                candidatos.append(os.path.join(dirpath, f))
+
+    print(f"\n  Encontrados: {len(candidatos):,} ficheiros de lixo")
+    if not candidatos:
+        return None
+
+    espaco = sum(os.path.getsize(c) for c in candidatos
+                 if os.path.isfile(c))
+
+    if dry_run:
+        print(f"  Espaco: {humano(espaco)}")
+        print(f"\n  Primeiros 20:")
+        for c in candidatos[:20]:
+            print(f"    {c}")
+        return {"dry_run": True, "total": len(candidatos), "espaco": espaco}
+
+    # Executar
+    batch_dir = criar_batch_dir("lixo")
+    movidos = 0
+    for c in candidatos:
+        sucesso, _ = mover_para_quarentena(c, batch_dir)
+        if sucesso:
+            movidos += 1
+
+    manifesto = {
+        "data": agora_str(),
+        "tipo": "lixo",
+        "movidos": movidos,
+        "espaco_recuperado": humano(espaco),
+        "batch_dir": batch_dir,
+    }
+    gravar_json(os.path.join(batch_dir, "_manifest.json"), manifesto)
+    print(f"\n  Movidos: {movidos:,}  |  Espaco: {humano(espaco)}")
+    return manifesto
+
+
+def listar_batches():
+    """Lista batches de quarentena."""
+    if not os.path.isdir(DIR_QUAR):
+        print("  (sem batches)")
+        return
+    print()
+    print("=" * 88)
+    print("  BATCHES DE QUARENTENA")
+    print("=" * 88)
+    for tipo in sorted(os.listdir(DIR_QUAR)):
+        tipo_dir = os.path.join(DIR_QUAR, tipo)
+        if not os.path.isdir(tipo_dir):
+            continue
+        for batch in sorted(os.listdir(tipo_dir)):
+            bdir = os.path.join(tipo_dir, batch)
+            man = os.path.join(bdir, "_manifest.json")
+            n = 0
+            tam = 0
+            if os.path.isfile(man):
+                with open(man, encoding="utf-8") as f:
+                    m = json.load(f)
+                n = m.get("movidos", 0)
+            # Contar ficheiros reais
+            for dp, dn, fn in os.walk(bdir):
+                for f in fn:
+                    if f == "_manifest.json":
+                        continue
+                    try:
+                        tam += os.path.getsize(os.path.join(dp, f))
+                        n_real = 1
+                    except OSError:
+                        pass
+            print(f"  {tipo:<12} {batch:<20} {n:>6} ficheiros  {humano(tam):>12}")
+    print("=" * 88)
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Higienizar ACERVO")
+    parser.add_argument("--tipo", choices=TIPOS, help="Tipo a higienizar")
+    parser.add_argument("--lixo", action="store_true", help="So ficheiros de lixo")
+    parser.add_argument("--dry-run", action="store_true", help="Simulacao (default)")
+    parser.add_argument("--executar", action="store_true", help="Executar de verdade")
+    parser.add_argument("--rank-max", type=int, help="Rank maximo")
+    parser.add_argument("--listar", action="store_true", help="Listar batches")
+    args = parser.parse_args()
+
+    garantir_dirs()
+
+    if args.listar:
+        listar_batches()
+        return
+
+    dry = not args.executar
+
+    if args.lixo:
+        higienizar_lixo(dry_run=dry)
+    elif args.tipo:
+        higienizar_tipo(args.tipo, dry_run=dry, rank_max=args.rank_max)
+    else:
+        parser.print_help()
+
+
+if __name__ == "__main__":
+    main()
