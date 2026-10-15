@@ -1,0 +1,12 @@
+# Config de projeto - overlay restritivo [citation:6]
+[general]
+model = "deepseek-v4-pro"
+model_provider = "deepseek"
+
+[harness]
+kind = "lean"
+max_subagents = 2
+
+[runtime]
+shell_timeout_ms = 180000
+auto_approve = false

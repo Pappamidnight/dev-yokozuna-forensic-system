@@ -1,0 +1,65 @@
+# ==============================================================================
+# ACERVO FORENSE V8 — GITIGNORE DEFINITIVO
+# ==============================================================================
+
+# Rust / Cargo
+target/
+**/*.rs.bk
+Cargo.lock.bak
+
+# Python / Ambientes Virtuais / Caches
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info/
+.venv/
+.uv-cache/
+*.pyc
+
+# Armazenamento Pesado e Blobs de Evidencias (Content-Addressable Storage)
+storage/
+quarentena/
+00_ALTAR_MEMORIAS_PROTEGIDAS_FAMILIA_E_ANIMAIS/
+
+# Logs, Telemetria e Dumps Temporarios
+logs/
+*.log
+gateway_build.log
+
+# Bases de Dados Binarias (apenas schemas DDL sao versionados)
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.db-wal
+!db/schema.sql
+
+# Backups e Credenciais Sensiveis
+backups/
+secrets/
+.env
+.env.*
+*.key
+*.pem
+*.pfx
+
+# Area de Testes e Isolamento Temporario
+SANDBOX/
+_output/
+_index/test_tmp/
+
+# Relatorios e CSVs de Execucao Pesados
+reports/*.csv
+reports/duplicados_*.csv
+reports/originais_*.csv
+
+# Listas Dinamicas Everything EFU (podem exceder centenas de MBs)
+*.efu
+
+# Ficheiros de Sistema e IDE
+.DS_Store
+Thumbs.db
+desktop.ini
+

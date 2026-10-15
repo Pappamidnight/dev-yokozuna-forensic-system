@@ -1,0 +1,82 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/core",
+    "crates/db",
+    "crates/storage",
+    "crates/vector",
+    "crates/events",
+    "crates/proto",
+    "services/files",
+    "services/classification",
+    "services/refutations",
+    "services/custody",
+    "services/cases",
+    "services/search",
+    "services/triggers",
+    "services/gateway",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+
+[workspace.dependencies]
+# Async
+tokio = { version = "1", features = ["full"] }
+
+# HTTP
+axum = { version = "0.7", features = ["ws"] }
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+
+# Serialização
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_yaml = "0.9"
+
+# DB
+rusqlite = { version = "0.31", features = ["bundled", "chrono", "serde_json"] }
+r2d2 = "0.8"
+r2d2_sqlite = "0.24"
+
+# Storage (S3)
+rust-s3 = "0.34"
+
+# Hash
+sha2 = "0.10"
+blake3 = "1"
+
+# IDs
+uuid = { version = "1", features = ["v4", "serde"] }
+
+# Datas
+chrono = { version = "0.4", features = ["serde"] }
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# Erros
+anyhow = "1"
+thiserror = "1"
+
+# Config
+config = "0.14"
+dotenvy = "0.15"
+
+# Streams
+tokio-stream = "0.1"
+async-stream = "0.3"
+
+# Realtime
+axum-extra = { version = "0.9", features = ["typed-header"] }
+
+# Vetorial (opcional — só se quiseres)
+# qdrant-client = "1"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
