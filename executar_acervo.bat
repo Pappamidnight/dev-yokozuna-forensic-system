@@ -13,9 +13,10 @@ echo [5] Executar Fase Excel    (P1 - Tabelas de Saldo e Despesas)
 echo [6] Executar Fase Word     (P2 - Minutas e Articulados)
 echo [7] Executar Todas as Fases Sequencialmente (Modo Auditoria)
 echo [8] Ver Relatorios e Manifestos Gerados
-echo [9] Sair
+echo [9] Executar Motor Rust ML (BLAKE3, Entropia e Features)
+echo [0] Sair
 echo.
-set /p opt="Escolha a opcao [1-9]: "
+set /p opt="Escolha a opcao [0-9]: "
 
 if "%opt%"=="1" (
     python C:\ACERVO\main.py dedupe --tipo pdf
@@ -60,6 +61,12 @@ if "%opt%"=="7" (
 )
 if "%opt%"=="8" (
     explorer C:\ACERVO\reports
+    goto fim
+)
+if "%opt%"=="9" (
+    echo A compilar e executar o motor Rust de Machine Learning...
+    cargo run --manifest-path C:\ACERVO\Cargo.toml -p acervo-forensic-ml --bin forensic-ml
+    pause
     goto fim
 )
 :fim

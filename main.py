@@ -480,10 +480,25 @@ def main():
     p_deploy = subparsers.add_parser("deploy-bat", help="Gera o ficheiro de execucao .bat")
     p_deploy.add_argument("--caminho", default=r"C:\ACERVO\executar_acervo.bat", help="Destino do .bat")
 
+    # Subcomando: rust-ml
+    p_rust = subparsers.add_parser("rust-ml", help="Executa o motor Rust de alta velocidade para extracao de features e hashing")
+    p_rust.add_argument("--acao", choices=["hash", "features", "scan-features"], default="features", help="Acao a executar")
+    p_rust.add_argument("--alvo", required=True, help="Ficheiro ou diretorio alvo")
+    p_rust.add_argument("--saida", default=None, help="Caminho do ficheiro de saida (para scan-features)")
+
     # Subcomando: status
     subparsers.add_parser("status", help="Mostra o estado dos manifestos gerados")
 
     args = parser.parse_args()
+
+    if args.comando == "rust-ml":
+        import subprocess
+        cmd = ["cargo", "run", "--manifest-path", r"C:\ACERVO\Cargo.toml", "-p", "acervo-forensic-ml", "--bin", "forensic-ml", "--", args.acao, args.alvo]
+        if args.saida:
+            cmd.append(args.saida)
+        print(f"[RUST-ML] A executar: {' '.join(cmd)}")
+        res = subprocess.run(cmd)
+        return
 
     if not args.comando or args.comando == "status":
         print("=" * 78)
