@@ -1,0 +1,146 @@
+[
+  {
+    "nome": "storage",
+    "caminho": "C:\\ACERVO\\storage",
+    "subpastas": 257,
+    "ficheiros": 37193,
+    "bytes": 13393090869.0,
+    "gb": 12.47
+  },
+  {
+    "nome": "logs",
+    "caminho": "C:\\ACERVO\\logs",
+    "subpastas": 63,
+    "ficheiros": 319,
+    "bytes": 8933436226.0,
+    "gb": 8.32
+  },
+  {
+    "nome": "target",
+    "caminho": "C:\\ACERVO\\target",
+    "subpastas": 495,
+    "ficheiros": 2818,
+    "bytes": 852635772.0,
+    "gb": 0.79
+  },
+  {
+    "nome": "gestao_documental",
+    "caminho": "C:\\ACERVO\\gestao_documental",
+    "subpastas": 5,
+    "ficheiros": 25,
+    "bytes": 594945592.0,
+    "gb": 0.55
+  },
+  {
+    "nome": "quarentena",
+    "caminho": "C:\\ACERVO\\quarentena",
+    "subpastas": 40,
+    "ficheiros": 17,
+    "bytes": 396133805.0,
+    "gb": 0.37
+  },
+  {
+    "nome": "SANDBOX",
+    "caminho": "C:\\ACERVO\\SANDBOX",
+    "subpastas": 35,
+    "ficheiros": 33,
+    "bytes": 211656032.0,
+    "gb": 0.2
+  },
+  {
+    "nome": "backups",
+    "caminho": "C:\\ACERVO\\backups",
+    "subpastas": 1,
+    "ficheiros": 7,
+    "bytes": 17121149.0,
+    "gb": 0.02
+  },
+  {
+    "nome": "db",
+    "caminho": "C:\\ACERVO\\db",
+    "subpastas": 0,
+    "ficheiros": 2,
+    "bytes": 17119538.0,
+    "gb": 0.02
+  },
+  {
+    "nome": "bin",
+    "caminho": "C:\\ACERVO\\bin",
+    "subpastas": 34,
+    "ficheiros": 120,
+    "bytes": 1872666.0,
+    "gb": 0.0
+  },
+  {
+    "nome": "scripts",
+    "caminho": "C:\\ACERVO\\scripts",
+    "subpastas": 3,
+    "ficheiros": 91,
+    "bytes": 544866.0,
+    "gb": 0.0
+  },
+  {
+    "nome": "caso_15547",
+    "caminho": "C:\\ACERVO\\caso_15547",
+    "subpastas": 6,
+    "ficheiros": 7,
+    "bytes": 28338.0,
+    "gb": 0.0
+  },
+  {
+    "nome": "services",
+    "caminho": "C:\\ACERVO\\services",
+    "subpastas": 16,
+    "ficheiros": 17,
+    "bytes": 11840.0,
+    "gb": 0.0
+  },
+  {
+    "nome": "config",
+    "caminho": "C:\\ACERVO\\config",
+    "subpastas": 0,
+    "ficheiros": 15,
+    "bytes": 11665.0,
+    "gb": 0.0
+  },
+  {
+    "nome": "manifests",
+    "caminho": "C:\\ACERVO\\manifests",
+    "subpastas": 0,
+    "ficheiros": 15,
+    "bytes": 7560.0,
+    "gb": 0.0
+  },
+  {
+    "nome": "crates",
+    "caminho": "C:\\ACERVO\\crates",
+    "subpastas": 12,
+    "ficheiros": 12,
+    "bytes": 6043.0,
+    "gb": 0.0
+  },
+  {
+    "nome": "mcp",
+    "caminho": "C:\\ACERVO\\mcp",
+    "subpastas": 1,
+    "ficheiros": 1,
+    "bytes": 316.0,
+    "gb": 0.0
+  },
+  {
+    "nome": "data",
+    "caminho": "C:\\ACERVO\\data",
+    "subpastas": 1,
+    "ficheiros": 0,
+    "bytes": 0,
+    "gb": 0.0
+  },
+  {
+    "nome": "gestao_pastas",
+    "caminho": "C:\\ACERVO\\gestao_pastas",
+    "subpastas": 5,
+    "ficheiros": 0,
+    "bytes": 0,
+    "gb": 0.0
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "termo": "clausula_F",
+    "query": "path:\"C:\\ACERVO\\caso_15547\" content:\"clausula F\"",
+    "ficheiros": 0
+  },
+  {
+    "termo": "nuno_duarte",
+    "query": "path:\"C:\\ACERVO\\caso_15547\" content:\"Nuno Duarte\"",
+    "ficheiros": 0
+  },
+  {
+    "termo": "clausula_F_regex",
+    "query": "path:\"C:\\ACERVO\\caso_15547\" regex:content:\"clausula\\s*F\"",
+    "ficheiros": 0
+  }
+]

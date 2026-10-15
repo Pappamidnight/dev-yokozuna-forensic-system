@@ -1,0 +1,114 @@
+[
+  {
+    "tipo": "pdf",
+    "descricao": "Documentos PDF",
+    "ficheiros": 83005,
+    "bytes": 165915065195,
+    "gb": 154.52,
+    "query": "ext:pdf"
+  },
+  {
+    "tipo": "word",
+    "descricao": "Word",
+    "ficheiros": 14130,
+    "bytes": 4110647142,
+    "gb": 3.83,
+    "query": "ext:doc;docx;odt;rtf"
+  },
+  {
+    "tipo": "excel",
+    "descricao": "Excel",
+    "ficheiros": 3987,
+    "bytes": 298464258,
+    "gb": 0.28,
+    "query": "ext:xls;xlsx;ods"
+  },
+  {
+    "tipo": "powerpoint",
+    "descricao": "PowerPoint",
+    "ficheiros": 305,
+    "bytes": 624104728,
+    "gb": 0.58,
+    "query": "ext:ppt;pptx;odp"
+  },
+  {
+    "tipo": "texto",
+    "descricao": "Texto",
+    "ficheiros": 1161633,
+    "bytes": 40386476325,
+    "gb": 37.61,
+    "query": "ext:txt;md;log"
+  },
+  {
+    "tipo": "json",
+    "descricao": "JSON",
+    "ficheiros": 471976,
+    "bytes": 56340261394,
+    "gb": 52.47,
+    "query": "ext:json;jsonl"
+  },
+  {
+    "tipo": "yaml",
+    "descricao": "YAML",
+    "ficheiros": 33923,
+    "bytes": 747345850,
+    "gb": 0.7,
+    "query": "ext:yaml;yml"
+  },
+  {
+    "tipo": "csv",
+    "descricao": "CSV",
+    "ficheiros": 32151,
+    "bytes": 116240974233,
+    "gb": 108.26,
+    "query": "ext:csv;tsv"
+  },
+  {
+    "tipo": "imagem",
+    "descricao": "Imagens",
+    "ficheiros": 549130,
+    "bytes": 130763361179,
+    "gb": 121.78,
+    "query": "image:"
+  },
+  {
+    "tipo": "video",
+    "descricao": "Videos",
+    "ficheiros": 437714,
+    "bytes": 316268213742,
+    "gb": 294.55,
+    "query": "video:"
+  },
+  {
+    "tipo": "audio",
+    "descricao": "Audio",
+    "ficheiros": 8140,
+    "bytes": 51127152115,
+    "gb": 47.62,
+    "query": "audio:"
+  },
+  {
+    "tipo": "arquivo",
+    "descricao": "Arquivos",
+    "ficheiros": 16695,
+    "bytes": 90591760105,
+    "gb": 84.37,
+    "query": "ext:zip;rar;7z;tar;gz"
+  },
+  {
+    "tipo": "codigo",
+    "descricao": "Codigo",
+    "ficheiros": 1402232,
+    "bytes": 20356250616,
+    "gb": 18.96,
+    "query": "ext:py;js;ts;cs;ps1;sh;bat"
+  },
+  {
+    "tipo": "email",
+    "descricao": "Emails",
+    "ficheiros": 5244,
+    "bytes": 1004156396,
+    "gb": 0.94,
+    "query": "ext:eml;msg"
+  }
+]

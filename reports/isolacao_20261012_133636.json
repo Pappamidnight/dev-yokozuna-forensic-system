@@ -1,0 +1,1035 @@
+{
+  "timestamp": "2026-10-12T13:36:36.760898",
+  "summary": {
+    "DADOS": {
+      "folders": 5,
+      "size_gb": 23.138854273,
+      "files": 34430
+    },
+    "FERRAMENTAS": {
+      "folders": 31,
+      "size_gb": 24.831089685,
+      "files": 534287
+    },
+    "PRIVADO": {
+      "folders": 0,
+      "size_gb": 0.0,
+      "files": 0
+    },
+    "TEMPORÁRIO": {
+      "folders": 4,
+      "size_gb": 0.057152611,
+      "files": 39
+    },
+    "INDECISO": {
+      "folders": 102,
+      "size_gb": 1313.967034449,
+      "files": 4311331
+    }
+  },
+  "details": {
+    "DADOS": [
+      {
+        "path": "C:\\Users\\Yokozuna\\ARCHIVE",
+        "name": "ARCHIVE",
+        "size_gb": 0.246677523,
+        "size_bytes": 246677523,
+        "files": 5259
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\CASE_3719_CLEAN",
+        "name": "CASE_3719_CLEAN",
+        "size_gb": 0.007667646,
+        "size_bytes": 7667646,
+        "files": 94
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\caso_export",
+        "name": "caso_export",
+        "size_gb": 1.560967029,
+        "size_bytes": 1560967029,
+        "files": 789
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\Dossiers_Master_Vault",
+        "name": "Dossiers_Master_Vault",
+        "size_gb": 21.323526203,
+        "size_bytes": 21323526203,
+        "files": 28278
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\LEGAL",
+        "name": "LEGAL",
+        "size_gb": 1.5872e-05,
+        "size_bytes": 15872,
+        "files": 10
+      }
+    ],
+    "FERRAMENTAS": [
+      {
+        "path": "C:\\Users\\Yokozuna\\.adk",
+        "name": ".adk",
+        "size_gb": 1.58e-07,
+        "size_bytes": 158,
+        "files": 3
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.aider-desk",
+        "name": ".aider-desk",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.android",
+        "name": ".android",
+        "size_gb": 2.457e-06,
+        "size_bytes": 2457,
+        "files": 2
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.bun",
+        "name": ".bun",
+        "size_gb": 7.700830582,
+        "size_bytes": 7700830582,
+        "files": 355902
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.cache",
+        "name": ".cache",
+        "size_gb": 2.68061402,
+        "size_bytes": 2680614020,
+        "files": 23099
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.cargo",
+        "name": ".cargo",
+        "size_gb": 0.652736571,
+        "size_bytes": 652736571,
+        "files": 21456
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.claude",
+        "name": ".claude",
+        "size_gb": 0.002172234,
+        "size_bytes": 2172234,
+        "files": 425
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.cline",
+        "name": ".cline",
+        "size_gb": 0.001100194,
+        "size_bytes": 1100194,
+        "files": 35
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.codeium",
+        "name": ".codeium",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.config",
+        "name": ".config",
+        "size_gb": 0.056521676,
+        "size_bytes": 56521676,
+        "files": 3854
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.continue",
+        "name": ".continue",
+        "size_gb": 0.000720803,
+        "size_bytes": 720803,
+        "files": 93
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.copilot",
+        "name": ".copilot",
+        "size_gb": 0.307611707,
+        "size_bytes": 307611707,
+        "files": 484
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.docker",
+        "name": ".docker",
+        "size_gb": 9.16e-07,
+        "size_bytes": 916,
+        "files": 9
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.dotnet",
+        "name": ".dotnet",
+        "size_gb": 0.000114829,
+        "size_bytes": 114829,
+        "files": 103
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.gemini",
+        "name": ".gemini",
+        "size_gb": 7.547439805,
+        "size_bytes": 7547439805,
+        "files": 16768
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.github-copilot-cli",
+        "name": ".github-copilot-cli",
+        "size_gb": 8.2664e-05,
+        "size_bytes": 82664,
+        "files": 2
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.grok",
+        "name": ".grok",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.ipython",
+        "name": ".ipython",
+        "size_gb": 0.000127347,
+        "size_bytes": 127347,
+        "files": 2
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.kimi-webbridge",
+        "name": ".kimi-webbridge",
+        "size_gb": 0.01049756,
+        "size_bytes": 10497560,
+        "files": 9
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.kimi-work",
+        "name": ".kimi-work",
+        "size_gb": 0.130064102,
+        "size_bytes": 130064102,
+        "files": 31
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.kube",
+        "name": ".kube",
+        "size_gb": 6.12e-07,
+        "size_bytes": 612,
+        "files": 2
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.local",
+        "name": ".local",
+        "size_gb": 0.129928612,
+        "size_bytes": 129928612,
+        "files": 21
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.ollama",
+        "name": ".ollama",
+        "size_gb": 1.929988037,
+        "size_bytes": 1929988037,
+        "files": 30
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.pytest_cache",
+        "name": ".pytest_cache",
+        "size_gb": 1.024e-06,
+        "size_bytes": 1024,
+        "files": 4
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.qwen",
+        "name": ".qwen",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.rustup",
+        "name": ".rustup",
+        "size_gb": 1.442868442,
+        "size_bytes": 1442868442,
+        "files": 69527
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.tabnine",
+        "name": ".tabnine",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.vscode",
+        "name": ".vscode",
+        "size_gb": 2.111658252,
+        "size_bytes": 2111658252,
+        "files": 32688
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.vscode-shared",
+        "name": ".vscode-shared",
+        "size_gb": 0.000139264,
+        "size_bytes": 139264,
+        "files": 2
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\bin",
+        "name": "bin",
+        "size_gb": 0.0,
+        "size_bytes": 0,
+        "files": 0
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\go",
+        "name": "go",
+        "size_gb": 0.125315612,
+        "size_bytes": 125315612,
+        "files": 9621
+      }
+    ],
+    "PRIVADO": [],
+    "TEMPORÁRIO": [
+      {
+        "path": "C:\\Users\\Yokozuna\\BACKUPS",
+        "name": "BACKUPS",
+        "size_gb": 0.057128468,
+        "size_bytes": 57128468,
+        "files": 33
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\Templates",
+        "name": "Templates",
+        "size_gb": 0.0,
+        "size_bytes": 0,
+        "files": 0
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\tests",
+        "name": "tests",
+        "size_gb": 2.4143e-05,
+        "size_bytes": 24143,
+        "files": 2
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\﻿teste-mks",
+        "name": "﻿teste-mks",
+        "size_gb": 0.0,
+        "size_bytes": 0,
+        "files": 4
+      }
+    ],
+    "INDECISO": [
+      {
+        "path": "C:\\Users\\Yokozuna\\.adal",
+        "name": ".adal",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.agents",
+        "name": ".agents",
+        "size_gb": 0.006280924,
+        "size_bytes": 6280924,
+        "files": 986
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.antigravity-ide",
+        "name": ".antigravity-ide",
+        "size_gb": 1.79422088,
+        "size_bytes": 1794220880,
+        "files": 9890
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.archon",
+        "name": ".archon",
+        "size_gb": 0.000894052,
+        "size_bytes": 894052,
+        "files": 6
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.astrbot",
+        "name": ".astrbot",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.augment",
+        "name": ".augment",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.autohand",
+        "name": ".autohand",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.bob",
+        "name": ".bob",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.codeartsdoer",
+        "name": ".codeartsdoer",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.codebuddy",
+        "name": ".codebuddy",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.codemaker",
+        "name": ".codemaker",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.codestudio",
+        "name": ".codestudio",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.codewhale",
+        "name": ".codewhale",
+        "size_gb": 0.006638954,
+        "size_bytes": 6638954,
+        "files": 142
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.codex",
+        "name": ".codex",
+        "size_gb": 2.990421231,
+        "size_bytes": 2990421231,
+        "files": 23820
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.commandcode",
+        "name": ".commandcode",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.cookiecutter_replay",
+        "name": ".cookiecutter_replay",
+        "size_gb": 4.894e-06,
+        "size_bytes": 4894,
+        "files": 1
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.crossnote",
+        "name": ".crossnote",
+        "size_gb": 9.14e-07,
+        "size_bytes": 914,
+        "files": 4
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.dsh",
+        "name": ".dsh",
+        "size_gb": 0.605530958,
+        "size_bytes": 605530958,
+        "files": 50799
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.duckdb",
+        "name": ".duckdb",
+        "size_gb": 0.040062016,
+        "size_bytes": 40062016,
+        "files": 2
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.forge",
+        "name": ".forge",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.fx",
+        "name": ".fx",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.greptile",
+        "name": ".greptile",
+        "size_gb": 1.771e-06,
+        "size_bytes": 1771,
+        "files": 4
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.gsutil",
+        "name": ".gsutil",
+        "size_gb": 5.235e-06,
+        "size_bytes": 5235,
+        "files": 2
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.hermes",
+        "name": ".hermes",
+        "size_gb": 0.000186644,
+        "size_bytes": 186644,
+        "files": 39
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.iflow",
+        "name": ".iflow",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.inferencesh",
+        "name": ".inferencesh",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.jazz",
+        "name": ".jazz",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.junie",
+        "name": ".junie",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.kiro",
+        "name": ".kiro",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.kode",
+        "name": ".kode",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.lingma",
+        "name": ".lingma",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.mcpjam",
+        "name": ".mcpjam",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.minimax",
+        "name": ".minimax",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.moxby",
+        "name": ".moxby",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.mux",
+        "name": ".mux",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.neovate",
+        "name": ".neovate",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.ona",
+        "name": ".ona",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.openclaw",
+        "name": ".openclaw",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.openhands",
+        "name": ".openhands",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.pi",
+        "name": ".pi",
+        "size_gb": 0.001856416,
+        "size_bytes": 1856416,
+        "files": 347
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.pochi",
+        "name": ".pochi",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.posit",
+        "name": ".posit",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.qoder",
+        "name": ".qoder",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.qoder-cn",
+        "name": ".qoder-cn",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.qt_material",
+        "name": ".qt_material",
+        "size_gb": 0.000923244,
+        "size_bytes": 923244,
+        "files": 111
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.reasonix",
+        "name": ".reasonix",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.redhat",
+        "name": ".redhat",
+        "size_gb": 3.6e-08,
+        "size_bytes": 36,
+        "files": 1
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.roo",
+        "name": ".roo",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.rovodev",
+        "name": ".rovodev",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.skills",
+        "name": ".skills",
+        "size_gb": 1.2075e-05,
+        "size_bytes": 12075,
+        "files": 2
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.snowflake",
+        "name": ".snowflake",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.sonar",
+        "name": ".sonar",
+        "size_gb": 3.6e-08,
+        "size_bytes": 36,
+        "files": 1
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.sonarlint",
+        "name": ".sonarlint",
+        "size_gb": 0.381202391,
+        "size_bytes": 381202391,
+        "files": 657
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.terramind",
+        "name": ".terramind",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.tinycloud",
+        "name": ".tinycloud",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.trae",
+        "name": ".trae",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.trae-cn",
+        "name": ".trae-cn",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.twinny",
+        "name": ".twinny",
+        "size_gb": 3.421e-06,
+        "size_bytes": 3421,
+        "files": 13
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.vibe",
+        "name": ".vibe",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.zcode",
+        "name": ".zcode",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\.zencoder",
+        "name": ".zencoder",
+        "size_gb": 0.000110441,
+        "size_bytes": 110441,
+        "files": 23
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\agents",
+        "name": "agents",
+        "size_gb": 9.7601e-05,
+        "size_bytes": 97601,
+        "files": 10
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\app",
+        "name": "app",
+        "size_gb": 0.0,
+        "size_bytes": 0,
+        "files": 0
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\AppData",
+        "name": "AppData",
+        "size_gb": 137.309572891,
+        "size_bytes": 137309572891,
+        "files": 750598
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\Application Data",
+        "name": "Application Data",
+        "size_gb": 0.0,
+        "size_bytes": 0,
+        "files": 0
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\CHAIN_OF_CUSTODY",
+        "name": "CHAIN_OF_CUSTODY",
+        "size_gb": 5.054e-06,
+        "size_bytes": 5054,
+        "files": 5
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\Cookies",
+        "name": "Cookies",
+        "size_gb": 0.0,
+        "size_bytes": 0,
+        "files": 0
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\Desktop",
+        "name": "Desktop",
+        "size_gb": 33.284908517,
+        "size_bytes": 33284908517,
+        "files": 53510
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\Dev",
+        "name": "Dev",
+        "size_gb": 1109.463876749,
+        "size_bytes": 1109463876749,
+        "files": 3281696
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\Documents",
+        "name": "Documents",
+        "size_gb": 4.60048264,
+        "size_bytes": 4600482640,
+        "files": 104616
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\Downloads",
+        "name": "Downloads",
+        "size_gb": 0.541092568,
+        "size_bytes": 541092568,
+        "files": 34
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\EVAL_PIPELINE",
+        "name": "EVAL_PIPELINE",
+        "size_gb": 3.133e-06,
+        "size_bytes": 3133,
+        "files": 3
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\Favorites",
+        "name": "Favorites",
+        "size_gb": 2.9e-07,
+        "size_bytes": 290,
+        "files": 3
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\FILE_MANIP",
+        "name": "FILE_MANIP",
+        "size_gb": 3.4253e-05,
+        "size_bytes": 34253,
+        "files": 19
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\greetings",
+        "name": "greetings",
+        "size_gb": 0.0,
+        "size_bytes": 0,
+        "files": 0
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\Links",
+        "name": "Links",
+        "size_gb": 1.945e-06,
+        "size_bytes": 1945,
+        "files": 3
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\LLM",
+        "name": "LLM",
+        "size_gb": 8.492e-06,
+        "size_bytes": 8492,
+        "files": 7
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\Local Settings",
+        "name": "Local Settings",
+        "size_gb": 0.0,
+        "size_bytes": 0,
+        "files": 0
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\MEMORY",
+        "name": "MEMORY",
+        "size_gb": 7.426e-06,
+        "size_bytes": 7426,
+        "files": 7
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\Music",
+        "name": "Music",
+        "size_gb": 5.04e-07,
+        "size_bytes": 504,
+        "files": 1
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\My Documents",
+        "name": "My Documents",
+        "size_gb": 0.0,
+        "size_bytes": 0,
+        "files": 0
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\NetHood",
+        "name": "NetHood",
+        "size_gb": 0.0,
+        "size_bytes": 0,
+        "files": 0
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\OneDrive",
+        "name": "OneDrive",
+        "size_gb": 22.723938994,
+        "size_bytes": 22723938994,
+        "files": 30385
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\output",
+        "name": "output",
+        "size_gb": 0.002667025,
+        "size_bytes": 2667025,
+        "files": 5
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\Pictures",
+        "name": "Pictures",
+        "size_gb": 0.150990747,
+        "size_bytes": 150990747,
+        "files": 132
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\PrintHood",
+        "name": "PrintHood",
+        "size_gb": 0.0,
+        "size_bytes": 0,
+        "files": 0
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\Recent",
+        "name": "Recent",
+        "size_gb": 0.0,
+        "size_bytes": 0,
+        "files": 0
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\RESEARCH",
+        "name": "RESEARCH",
+        "size_gb": 1.0342e-05,
+        "size_bytes": 10342,
+        "files": 8
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\Saved Games",
+        "name": "Saved Games",
+        "size_gb": 2.82e-07,
+        "size_bytes": 282,
+        "files": 1
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\SCAN_RESULTADO",
+        "name": "SCAN_RESULTADO",
+        "size_gb": 5.6e-08,
+        "size_bytes": 56,
+        "files": 2
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\scripts",
+        "name": "scripts",
+        "size_gb": 8.551e-06,
+        "size_bytes": 8551,
+        "files": 1
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\Searches",
+        "name": "Searches",
+        "size_gb": 1.875e-06,
+        "size_bytes": 1875,
+        "files": 5
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\SendTo",
+        "name": "SendTo",
+        "size_gb": 0.0,
+        "size_bytes": 0,
+        "files": 0
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\skills",
+        "name": "skills",
+        "size_gb": 0.017709859,
+        "size_bytes": 17709859,
+        "files": 2463
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\sqlite",
+        "name": "sqlite",
+        "size_gb": 0.014623744,
+        "size_bytes": 14623744,
+        "files": 4
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\Start Menu",
+        "name": "Start Menu",
+        "size_gb": 0.0,
+        "size_bytes": 0,
+        "files": 0
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\tessdata",
+        "name": "tessdata",
+        "size_gb": 0.015336931,
+        "size_bytes": 15336931,
+        "files": 1
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\Videos",
+        "name": "Videos",
+        "size_gb": 6.94e-07,
+        "size_bytes": 694,
+        "files": 2
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\wa_extract",
+        "name": "wa_extract",
+        "size_gb": 0.008743288,
+        "size_bytes": 8743288,
+        "files": 1
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\WORKFLOW",
+        "name": "WORKFLOW",
+        "size_gb": 2.5384e-05,
+        "size_bytes": 25384,
+        "files": 16
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\WORKSPACE",
+        "name": "WORKSPACE",
+        "size_gb": 0.0,
+        "size_bytes": 0,
+        "files": 0
+      },
+      {
+        "path": "C:\\Users\\Yokozuna\\_Dev",
+        "name": "_Dev",
+        "size_gb": 0.0,
+        "size_bytes": 0,
+        "files": 0
+      }
+    ]
+  }
+}

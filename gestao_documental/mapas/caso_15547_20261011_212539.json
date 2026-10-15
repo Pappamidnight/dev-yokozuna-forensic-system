@@ -1,0 +1,48 @@
+{
+  "data": "2026-10-11 21:25:45",
+  "tipos_prova": {
+    "email": 0,
+    "sentenca": 0,
+    "whatsapp": 0,
+    "fatura": 0,
+    "contrato": 0,
+    "peticao": 0,
+    "captura": 0,
+    "e_redes": 0,
+    "aditamento": 0,
+    "acordao": 0
+  },
+  "raiz": "C:\\ACERVO\\caso_15547",
+  "processos": {
+    "10153": {
+      "ficheiros": 10348,
+      "gb": 1.95
+    },
+    "10153-A": {
+      "ficheiros": 3,
+      "gb": 0.0
+    },
+    "20203": {
+      "ficheiros": 5670,
+      "gb": 2.46
+    },
+    "23142": {
+      "ficheiros": 37694,
+      "gb": 4.5
+    },
+    "15547": {
+      "ficheiros": 16667,
+      "gb": 12.93
+    },
+    "3719": {
+      "ficheiros": 40561,
+      "gb": 9.88
+    }
+  },
+  "classificacoes": {
+    "CONTRADITA": 4,
+    "PARCIAL": 4,
+    "CONFIRMADA": 3,
+    "LACUNA": 1
+  }
+}

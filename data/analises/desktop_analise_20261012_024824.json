@@ -1,0 +1,384 @@
+{
+  "pastas": [
+    {
+      "Nome": "_ACERVO_FLAT",
+      "Tipo": "PROJETO",
+      "Motivo": "Nome contem 'ACERVO'",
+      "Ficheiros": 100,
+      "MB": 13.65
+    },
+    {
+      "Nome": "_ACERVO_MASTER",
+      "Tipo": "PROJETO",
+      "Motivo": "Nome contem 'ACERVO'",
+      "Ficheiros": 7124,
+      "MB": 11314.35
+    },
+    {
+      "Nome": "_ANALISE_SEGURA",
+      "Tipo": "SCAN",
+      "Motivo": "Nome contem '_ANALISE'",
+      "Ficheiros": 0,
+      "MB": 0.0
+    },
+    {
+      "Nome": "_AUDITORIA_DESKTOP_20261011_113854",
+      "Tipo": "ISOLADO",
+      "Motivo": "Sem categoria",
+      "Ficheiros": 13,
+      "MB": 0.09
+    },
+    {
+      "Nome": "_AUDITORIA_EXAUSTIVA_20261011_115027",
+      "Tipo": "ISOLADO",
+      "Motivo": "Sem categoria",
+      "Ficheiros": 9,
+      "MB": 29.12
+    },
+    {
+      "Nome": "_AUDITORIA_FORENSE_20261011_113004",
+      "Tipo": "ISOLADO",
+      "Motivo": "Sem categoria",
+      "Ficheiros": 9,
+      "MB": 0.11
+    },
+    {
+      "Nome": "_BACKUP_PROJETOS",
+      "Tipo": "COPIA",
+      "Motivo": "Nome contem '_backup'",
+      "Ficheiros": 0,
+      "MB": 0.0
+    },
+    {
+      "Nome": "_BACKUP_SEGURO",
+      "Tipo": "COPIA",
+      "Motivo": "Nome contem '_backup'",
+      "Ficheiros": 0,
+      "MB": 0.0
+    },
+    {
+      "Nome": "_CONSOLIDADO_PROJETOS",
+      "Tipo": "SCAN",
+      "Motivo": "Nome contem 'CONSOLIDADO_'",
+      "Ficheiros": 13,
+      "MB": 0.05
+    },
+    {
+      "Nome": "_CONSOLIDADO_SEGURO",
+      "Tipo": "SCAN",
+      "Motivo": "Nome contem 'CONSOLIDADO_'",
+      "Ficheiros": 8,
+      "MB": 0.02
+    },
+    {
+      "Nome": "_CONTEXTO_WORKFLOW",
+      "Tipo": "PROJETO?",
+      "Motivo": "Tem codigo",
+      "Ficheiros": 14,
+      "MB": 0.01
+    },
+    {
+      "Nome": "_DUPLICADOS_REMOVIDOS",
+      "Tipo": "PROJETO?",
+      "Motivo": "Tem codigo",
+      "Ficheiros": 7067,
+      "MB": 7304.41
+    },
+    {
+      "Nome": "_PIPELINE_LOG_20261011_114338",
+      "Tipo": "SCAN",
+      "Motivo": "Nome contem '_LOG'",
+      "Ficheiros": 3,
+      "MB": 0.01
+    },
+    {
+      "Nome": "_repo_docker_1",
+      "Tipo": "PROJETO?",
+      "Motivo": "Tem codigo",
+      "Ficheiros": 1,
+      "MB": 0.0
+    },
+    {
+      "Nome": "_SCAN_v4_2026-10-07_214331",
+      "Tipo": "SCAN",
+      "Motivo": "Nome contem '_SCAN'",
+      "Ficheiros": 1932,
+      "MB": 3707.99
+    },
+    {
+      "Nome": "_SCANS",
+      "Tipo": "SCAN",
+      "Motivo": "Nome contem '_SCAN'",
+      "Ficheiros": 35,
+      "MB": 16.17
+    },
+    {
+      "Nome": "_TRIAGEM_HOME_20261008_071640",
+      "Tipo": "PROJETO?",
+      "Motivo": "Tem codigo",
+      "Ficheiros": 16,
+      "MB": 35.99
+    },
+    {
+      "Nome": "_TRIAGEM_HOME_20261008_071720",
+      "Tipo": "ISOLADO",
+      "Motivo": "Sem categoria",
+      "Ficheiros": 0,
+      "MB": 0.0
+    },
+    {
+      "Nome": "_TRIAGEM_HOME_20261008_071737",
+      "Tipo": "ISOLADO",
+      "Motivo": "Sem categoria",
+      "Ficheiros": 0,
+      "MB": 0.0
+    },
+    {
+      "Nome": "00_DOCUMENTOS_OFICIAIS_TRIBUNAL",
+      "Tipo": "PROJETO?",
+      "Motivo": "Tem codigo",
+      "Ficheiros": 52,
+      "MB": 0.14
+    },
+    {
+      "Nome": "00_DOCUMENTOS_OFICIAIS_TRIBUNAL - Cópia",
+      "Tipo": "ISOLADO",
+      "Motivo": "Sem categoria",
+      "Ficheiros": 8,
+      "MB": 0.01
+    },
+    {
+      "Nome": "ACERVO_FINAL_ORGANIZADO",
+      "Tipo": "PROJETO",
+      "Motivo": "Nome contem 'ACERVO'",
+      "Ficheiros": 14,
+      "MB": 0.05
+    },
+    {
+      "Nome": "ACERVO_FORENSE",
+      "Tipo": "PROJETO",
+      "Motivo": "Nome contem 'ACERVO'",
+      "Ficheiros": 10957,
+      "MB": 2426.73
+    },
+    {
+      "Nome": "agy_forense_15547",
+      "Tipo": "CASO",
+      "Motivo": "Nome contem '_15547'",
+      "Ficheiros": 2513,
+      "MB": 431.75
+    },
+    {
+      "Nome": "agy_forense_15547 - Cópia",
+      "Tipo": "CASO",
+      "Motivo": "Nome contem '_15547'",
+      "Ficheiros": 6,
+      "MB": 0.0
+    },
+    {
+      "Nome": "audit-minmop",
+      "Tipo": "PROJETO",
+      "Motivo": "Nome contem 'audit-minmop'",
+      "Ficheiros": 139,
+      "MB": 0.5
+    },
+    {
+      "Nome": "CONSOLIDADO_FORENSE_20261008_150229",
+      "Tipo": "SCAN",
+      "Motivo": "Nome contem 'CONSOLIDADO_'",
+      "Ficheiros": 11,
+      "MB": 1268.59
+    },
+    {
+      "Nome": "dev-yokozuna-forensic-system",
+      "Tipo": "PROJETO",
+      "Motivo": "Nome contem 'dev-yokozuna'",
+      "Ficheiros": 19240,
+      "MB": 574.06
+    },
+    {
+      "Nome": "docker-1-",
+      "Tipo": "PROJETO?",
+      "Motivo": "Tem codigo",
+      "Ficheiros": 1,
+      "MB": 0.0
+    },
+    {
+      "Nome": "DOSSIER_15547",
+      "Tipo": "CASO",
+      "Motivo": "Nome contem 'DOSSIER_'",
+      "Ficheiros": 60,
+      "MB": 0.1
+    },
+    {
+      "Nome": "googlecloudtools.datacloud_telemetry",
+      "Tipo": "PROJETO?",
+      "Motivo": "Tem codigo",
+      "Ficheiros": 3,
+      "MB": 0.02
+    },
+    {
+      "Nome": "HERMES",
+      "Tipo": "PROJETO",
+      "Motivo": "Nome contem 'hermes'",
+      "Ficheiros": 14,
+      "MB": 0.07
+    },
+    {
+      "Nome": "HERMES_CODIGO",
+      "Tipo": "PROJETO",
+      "Motivo": "Nome contem 'hermes'",
+      "Ficheiros": 0,
+      "MB": 0.0
+    },
+    {
+      "Nome": "JURIDICO",
+      "Tipo": "CASO",
+      "Motivo": "Nome contem 'JURIDICO'",
+      "Ficheiros": 7,
+      "MB": 7.84
+    },
+    {
+      "Nome": "JURIDICO - Cópia",
+      "Tipo": "CASO",
+      "Motivo": "Nome contem 'JURIDICO'",
+      "Ficheiros": 24,
+      "MB": 0.62
+    },
+    {
+      "Nome": "LEA",
+      "Tipo": "ISOLADO",
+      "Motivo": "Sem categoria",
+      "Ficheiros": 0,
+      "MB": 0.0
+    },
+    {
+      "Nome": "ORGANIZACAO",
+      "Tipo": "PROJETO",
+      "Motivo": "Nome contem 'ORGANIZACAO'",
+      "Ficheiros": 2688,
+      "MB": 3520.48
+    },
+    {
+      "Nome": "Pessoal",
+      "Tipo": "ISOLADO",
+      "Motivo": "Sem categoria",
+      "Ficheiros": 0,
+      "MB": 0.0
+    },
+    {
+      "Nome": "PROJETO_15547",
+      "Tipo": "CASO",
+      "Motivo": "Nome contem '_15547'",
+      "Ficheiros": 100,
+      "MB": 36.3
+    },
+    {
+      "Nome": "PROVAS_10153",
+      "Tipo": "CASO",
+      "Motivo": "Nome contem 'PROVAS_'",
+      "Ficheiros": 11,
+      "MB": 0.12
+    },
+    {
+      "Nome": "PROVAS_15547",
+      "Tipo": "CASO",
+      "Motivo": "Nome contem 'PROVAS_'",
+      "Ficheiros": 6,
+      "MB": 0.0
+    },
+    {
+      "Nome": "PROVAS_20203",
+      "Tipo": "CASO",
+      "Motivo": "Nome contem 'PROVAS_'",
+      "Ficheiros": 9,
+      "MB": 0.09
+    },
+    {
+      "Nome": "PROVAS_23142",
+      "Tipo": "CASO",
+      "Motivo": "Nome contem 'PROVAS_'",
+      "Ficheiros": 9,
+      "MB": 0.1
+    },
+    {
+      "Nome": "PROVAS_3719",
+      "Tipo": "CASO",
+      "Motivo": "Nome contem 'PROVAS_'",
+      "Ficheiros": 10,
+      "MB": 0.24
+    },
+    {
+      "Nome": "QUARENTENA_DUPLICADOS",
+      "Tipo": "SCAN",
+      "Motivo": "Nome contem 'QUARENTENA'",
+      "Ficheiros": 36,
+      "MB": 41.53
+    },
+    {
+      "Nome": "Qwen",
+      "Tipo": "PROJETO",
+      "Motivo": "Nome contem 'Qwen'",
+      "Ficheiros": 98,
+      "MB": 456.94
+    },
+    {
+      "Nome": "RECUPERADOS_JURIDICO",
+      "Tipo": "CASO",
+      "Motivo": "Nome contem 'JURIDICO'",
+      "Ficheiros": 82,
+      "MB": 13.14
+    },
+    {
+      "Nome": "SPARK",
+      "Tipo": "ISOLADO",
+      "Motivo": "Sem categoria",
+      "Ficheiros": 0,
+      "MB": 0.0
+    },
+    {
+      "Nome": "wa-crypt-tools",
+      "Tipo": "PROJETO",
+      "Motivo": "Nome contem 'wa-crypt'",
+      "Ficheiros": 207,
+      "MB": 3.73
+    },
+    {
+      "Nome": "whatsapp_backup",
+      "Tipo": "COPIA",
+      "Motivo": "Nome contem '_backup'",
+      "Ficheiros": 7,
+      "MB": 8.24
+    }
+  ],
+  "por_tipo": {
+    "CASO": {
+      "count": 12,
+      "mb": 490.3
+    },
+    "PROJETO": {
+      "count": 11,
+      "mb": 18310.56
+    },
+    "SCAN": {
+      "count": 8,
+      "mb": 5034.36
+    },
+    "COPIA": {
+      "count": 3,
+      "mb": 8.24
+    },
+    "PROJETO?": {
+      "count": 7,
+      "mb": 7340.57
+    },
+    "ISOLADO": {
+      "count": 9,
+      "mb": 29.33
+    }
+  },
+  "total_pastas": 50,
+  "total_mb": 31213.36,
+  "data": "2026-10-12T02:48:24.3636743+01:00",
+  "desktop": "C:\\Users\\Yokozuna\\Desktop"
+}

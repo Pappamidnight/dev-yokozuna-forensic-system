@@ -1,0 +1,14 @@
+{
+  "tipo": "pdf",
+  "timestamp": "2026-10-13T01:19:03.341823",
+  "estado": "VALIDADO",
+  "total_analisado": 4137,
+  "grupos_unicos": 4037,
+  "originais_eleitos": 4037,
+  "duplicados_identificados": 100,
+  "erros_io": 0,
+  "espaco_recuperavel_bytes": 342621922,
+  "espaco_recuperavel_humano": "326.75 MB",
+  "tempo_execucao_segundos": 0.22,
+  "conservacao_cumprida": true
+}
